@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/*
+  Design tokens from the Claude Design home page (Colombian Coffee Origins).
+  Green + lime identity, coffee-brown as the secondary accent.
+*/
+:root {
+  --green-900: #0b3d2a;
+  --green-700: #0f5a3c;
+  --green-600: #13803a;
+  --forest: #1e6b47;
+  --lime-500: #6fd13b;
+  --cream-100: #f6f4ea;
+  --tan: #d9cbb4;
+  --brown: #7a4a2b;
+  --sage: #3e5448;
+  --muted: #5b6f63;
+  --mist: #d6e6db;
+  --line: #cfe0d3;
+  --stone: #e7e3d3;
+  --white: #ffffff;
+  --ink: #0e2a1f;
+}
+
+@theme inline {
+  --color-green-900: var(--green-900);
+  --color-green-700: var(--green-700);
+  --color-green-600: var(--green-600);
+  --color-forest: var(--forest);
+  --color-lime-500: var(--lime-500);
+  --color-cream-100: var(--cream-100);
+  --color-tan: var(--tan);
+  --color-brown: var(--brown);
+  --color-sage: var(--sage);
+  --color-muted: var(--muted);
+  --color-mist: var(--mist);
+  --color-line: var(--line);
+  --color-stone: var(--stone);
+  --color-ink: var(--ink);
+  --font-display: var(--font-instrument-sans);
+  --font-sans: var(--font-inter);
+  --font-hero: var(--font-raleway);
+
+  /* Layout breakpoints from the design */
+  --breakpoint-nav: 82.5rem;  /* 1320px: full pill menu between equal notches */
+  --breakpoint-wide: 85rem;   /* 1360px: cards tuck into the banner, three columns */
+}
+
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--green-900);
+  outline-offset: 3px;
+}
+
+/* Hero banner: deep green with soft lime light streaks */
+.hero-banner {
+  background:
+    linear-gradient(100deg, rgb(111 209 59 / 0) 28%, rgb(111 209 59 / 0.16) 44%, rgb(111 209 59 / 0) 58%),
+    linear-gradient(80deg, rgb(111 209 59 / 0) 55%, rgb(111 209 59 / 0.1) 66%, rgb(111 209 59 / 0) 76%),
+    var(--green-900);
+}
+
+/*
+  "Ears": 28px squares that round the concave corners where a white notch meets
+  a colored shape. The suffix names where the circle's center sits in the square.
+*/
+.ear {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+}
+.ear-br { background: radial-gradient(circle at 100% 100%, transparent 27.5px, var(--white) 28px); }
+.ear-bl { background: radial-gradient(circle at 0 100%, transparent 27.5px, var(--white) 28px); }
+.ear-tr { background: radial-gradient(circle at 100% 0, transparent 27.5px, var(--white) 28px); }
+.ear-tl { background: radial-gradient(circle at 0 0, transparent 27.5px, var(--white) 28px); }
+
+/* Width of one side card column: grid is 1fr 1.1fr 1fr with a 24px gap */
+.side-column-cut {
+  width: calc((100% - 48px) / 3.1 + 24px);
+}
+
+/* Hide the default disclosure triangle on <details> menus */
+summary::-webkit-details-marker { display: none; }
+summary { list-style: none; }

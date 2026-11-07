@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "title": "Colombian Coffee Origins",
+    "description": "Compra café especial directamente a productores colombianos."
+  },
+  "nav": {
+    "home": "Inicio",
+    "coffees": "Cafés",
+    "producers": "Productores",
+    "forBuyers": "Para compradores",
+    "forFarmers": "Para productores",
+    "ourStory": "Nosotros",
+    "contact": "Contacto",
+    "cta": "Solicitar muestras",
+    "menu": "Menú",
+    "mainLabel": "Principal",
+    "footerLabel": "Pie de página",
+    "languageLabel": "Idioma: español. Elegir idioma",
+    "currentLanguage": "ES",
+    "languages": { "en": "English", "es": "Español" }
+  },
+  "hero": {
+    "lead": "Descubre",
+    "emphasis": "café especial",
+    "tail": "colombiano",
+    "subtitle": "Compra café excepcional directamente a quienes lo cultivan. Compara lotes, solicita muestras y compra con apoyo en la exportación.",
+    "primaryCta": "Encuentra tu café",
+    "secondaryCta": "Solicitar muestras",
+    "giantWord": "CAFÉ",
+    "imageAlt": "Acuarela de una finca cafetera en las montañas de Colombia, con granos de café maduros en primer plano"
+  },
+  "audience": {
+    "buyersTitleStart": "Para tostadores",
+    "buyersTitleJoin": "y",
+    "buyersTitleEnd": "compradores",
+    "buyersText": "Explora lotes con especificaciones técnicas y solicita muestras.",
+    "buyersCta": "Comprar café",
+    "farmersTitle": "Para productores",
+    "farmersText": "Muestra tu finca y tus cafés a compradores de todo el mundo.",
+    "farmersCta": "Únete a la plataforma"
+  },
+  "statement": {
+    "start": "Conectamos a",
+    "em": "productores colombianos",
+    "mid": "con compradores de café",
+    "accent": "especial",
+    "end": "de todo el mundo"
+  },
+  "lots": {
+    "titleEm": "Lotes",
+    "titleRest": "destacados",
+    "exploreAll": "Ver todos los lotes",
+    "note": "Datos de lotes de ejemplo. Los lotes reales solo se publican después de una catación documentada.",
+    "code": "LOTE [CÓDIGO]",
+    "name": "[Variedad] — [Proceso]",
+    "farm": "[Finca] · Urrao, Antioquia",
+    "altitude": "Altitud",
+    "available": "Disponible",
+    "harvest": "Cosecha",
+    "cupProfile": "Perfil en taza",
+    "requestSample": "Solicitar muestra",
+    "badges": {
+      "coffeeVerified": "Café verificado",
+      "farmVerified": "Finca verificada",
+      "registered": "Registrado"
+    }
+  },
+  "story": {
+    "em1": "Conectamos fincas colombianas",
+    "mid": "con tostadores, cafeterías e importadores a quienes les importa de dónde viene su café.",
+    "em2": "Cada productor conserva su propio nombre",
+    "end": "y su historia."
+  },
+  "how": {
+    "titleEm": "Cómo",
+    "titleRest": "funciona la compra",
+    "steps": [
+      { "title": "Descubre", "text": "Explora productores y lotes por región, variedad, proceso y altitud." },
+      { "title": "Solicita una muestra", "text": "Pide muestras de los lotes que te gusten, en verde o tostadas." },
+      { "title": "Evalúa", "text": "Cata el café y habla directamente con el productor o con nuestro equipo." },
+      { "title": "Compra con apoyo", "text": "Te ayudamos a coordinar el acuerdo y la logística de exportación." }
+    ]
+  },
+  "trust": {
+    "titleEm": "Confianza",
+    "titleRest": "que puedes verificar",
+    "text": "Una finca verificada no es lo mismo que un café verificado. Cada publicación muestra exactamente qué se ha verificado.",
+    "levels": [
+      { "name": "Registrado", "text": "El productor envió su información." },
+      { "name": "Finca verificada", "text": "Nuestro equipo revisó la identidad, la ubicación de la finca y la información de producción." },
+      { "name": "Café verificado", "text": "Un lote específico fue evaluado y documentado, con información de calidad respaldada por evidencia." }
+    ]
+  },
+  "regions": {
+    "titleEm": "Explora",
+    "titleRest": "por región",
+    "nowSourcing": "Comprando ahora",
+    "urrao": "Urrao, Antioquia",
+    "urraoText": "Nuestra primera región y nuestros primeros productores.",
+    "comingSoon": "Próximamente",
+    "upcoming": ["Antioquia", "Huila"]
+  },
+  "closing": {
+    "titleEm": "¿Buscas",
+    "titleRest": "un café específico?",
+    "text": "Cuéntanos qué necesitas, por ejemplo un Caturra lavado con notas frutales de Antioquia, y te conectamos con productores.",
+    "primary": "Enviar solicitud",
+    "secondary": "Contáctanos"
+  },
+  "footer": {
+    "rights": "© Colombian Coffee Origins. Todos los derechos reservados."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "title": "Colombian Coffee Origins",
+    "description": "Source specialty coffee directly from Colombian producers."
+  },
+  "nav": {
+    "home": "Home",
+    "coffees": "Coffees",
+    "producers": "Producers",
+    "forBuyers": "For Buyers",
+    "forFarmers": "For Farmers",
+    "ourStory": "Our Story",
+    "contact": "Contact",
+    "cta": "Request Samples",
+    "menu": "Menu",
+    "mainLabel": "Main",
+    "footerLabel": "Footer",
+    "languageLabel": "Language: English. Choose a language",
+    "currentLanguage": "EN",
+    "languages": { "en": "English", "es": "Español" }
+  },
+  "hero": {
+    "lead": "Discover",
+    "emphasis": "Colombian",
+    "tail": "specialty",
+    "subtitle": "Source exceptional coffee directly from the producers who grow it. Compare lots, request samples and buy with export support.",
+    "primaryCta": "Find Your Coffee",
+    "secondaryCta": "Request Samples",
+    "giantWord": "COFFEE",
+    "imageAlt": "Watercolor of a coffee farm in the Colombian mountains, with coffee cherries in the foreground"
+  },
+  "audience": {
+    "buyersTitleStart": "For Roasters",
+    "buyersTitleJoin": "&",
+    "buyersTitleEnd": "Buyers",
+    "buyersText": "Browse lots with technical specs and request samples.",
+    "buyersCta": "Source coffee",
+    "farmersTitle": "For Producers",
+    "farmersText": "Show your farm and your coffees to buyers worldwide.",
+    "farmersCta": "Join the platform"
+  },
+  "statement": {
+    "start": "Connecting",
+    "em": "Colombian producers",
+    "mid": "with the world's",
+    "accent": "specialty",
+    "end": "buyers"
+  },
+  "lots": {
+    "titleEm": "Featured",
+    "titleRest": "lots",
+    "exploreAll": "Explore all lots",
+    "note": "Placeholder lot data. Real lots appear only after documented tasting.",
+    "code": "LOT [CODE]",
+    "name": "[Variety] — [Process]",
+    "farm": "[Farm] · Urrao, Antioquia",
+    "altitude": "Altitude",
+    "available": "Available",
+    "harvest": "Harvest",
+    "cupProfile": "Cup profile",
+    "requestSample": "Request sample",
+    "badges": {
+      "coffeeVerified": "Coffee verified",
+      "farmVerified": "Farm verified",
+      "registered": "Registered"
+    }
+  },
+  "story": {
+    "em1": "We connect Colombian farms",
+    "mid": "with roasters, coffee shops and importers who care where their coffee comes from.",
+    "em2": "Every producer keeps their own name",
+    "end": "and story."
+  },
+  "how": {
+    "titleEm": "How",
+    "titleRest": "sourcing works",
+    "steps": [
+      { "title": "Discover", "text": "Browse producers and lots by region, variety, process and altitude." },
+      { "title": "Request a sample", "text": "Ask for samples of the lots you like, green or roasted." },
+      { "title": "Evaluate", "text": "Cup the coffee and talk directly with the producer or our team." },
+      { "title": "Buy with support", "text": "We help coordinate the agreement and export logistics." }
+    ]
+  },
+  "trust": {
+    "titleEm": "Trust",
+    "titleRest": "you can check",
+    "text": "A verified farm is not the same as a verified coffee. Every listing shows exactly what has been checked.",
+    "levels": [
+      { "name": "Registered", "text": "The producer submitted their information." },
+      { "name": "Farm verified", "text": "Identity, farm location and production information reviewed by our team." },
+      { "name": "Coffee verified", "text": "A specific lot was evaluated and documented, with quality information backed by evidence." }
+    ]
+  },
+  "regions": {
+    "titleEm": "Explore",
+    "titleRest": "by region",
+    "nowSourcing": "Now sourcing",
+    "urrao": "Urrao, Antioquia",
+    "urraoText": "Our first region and our first producers.",
+    "comingSoon": "Coming soon",
+    "upcoming": ["Antioquia", "Huila"]
+  },
+  "closing": {
+    "titleEm": "Looking for",
+    "titleRest": "a specific coffee?",
+    "text": "Tell us what you need, for example a washed Caturra with fruity notes from Antioquia, and we will match you with producers.",
+    "primary": "Send a sourcing request",
+    "secondary": "Contact us"
+  },
+  "footer": {
+    "rights": "© Colombian Coffee Origins. All rights reserved."
+  }
+}
