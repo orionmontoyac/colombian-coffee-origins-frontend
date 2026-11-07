@@ -1,8 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { href } from "@/lib/routes";
-import bannerImage from "@/assets/home/banner-urrao-watercolor.png";
 import { SiteHeader } from "./site-header";
 
 /**
@@ -40,21 +38,15 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
         </Link>
       </div>
 
-      {/* Giant word sits behind the watercolor; its transparent sky lets the letters show */}
-      <div className="relative -mx-4 sm:-mx-8 wide:mb-14">
+      {/* Giant hero word. The watercolor banner is hidden in the current design;
+          the image stays in src/assets/home/banner-urrao-watercolor.png if it comes back. */}
+      <div className="relative -mx-4 min-h-72 sm:-mx-8 wide:mb-14">
         <p
           aria-hidden="true"
           className="-mb-[0.2em] mt-7 font-hero text-[clamp(96px,17vw,240px)] font-extrabold italic leading-[0.8] tracking-[-0.02em] text-lime-500"
         >
           {hero.giantWord}
         </p>
-        <Image
-          src={bannerImage}
-          alt={hero.imageAlt}
-          priority
-          sizes="100vw"
-          className="relative block h-auto w-full"
-        />
       </div>
 
       {/* Bottom cut-outs (only when the cards sit in three columns, 1360px and up) */}

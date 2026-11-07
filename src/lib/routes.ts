@@ -10,7 +10,11 @@ const slugs = {
   ourStory: { en: "our-story", es: "nuestra-historia" },
   samples: { en: "samples", es: "muestras" },
   contact: { en: "contact", es: "contacto" },
+  regions: { en: "regions", es: "regiones" },
   urrao: { en: "regions/urrao", es: "regiones/urrao" },
+  journal: { en: "journal", es: "blog" },
+  privacy: { en: "privacy", es: "privacidad" },
+  terms: { en: "terms", es: "terminos" },
 } as const;
 
 export type RouteKey = keyof typeof slugs;

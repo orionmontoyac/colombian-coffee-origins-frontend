@@ -3,12 +3,11 @@ import { AudienceCards } from "@/components/home/audience-cards";
 import { Hero } from "@/components/home/hero";
 import {
   ClosingCta,
+  Facts,
   FeaturedLots,
-  HowItWorks,
   Regions,
   SiteFooter,
   Story,
-  Trust,
 } from "@/components/home/sections";
 import { getDictionary, hasLocale } from "./dictionaries";
 
@@ -24,8 +23,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <AudienceCards lang={lang} dict={dict} />
         <FeaturedLots lang={lang} dict={dict} />
         <Story dict={dict} />
-        <HowItWorks dict={dict} />
-        <Trust dict={dict} />
+        <Facts dict={dict} />
         <Regions lang={lang} dict={dict} />
         <ClosingCta lang={lang} dict={dict} />
       </main>
