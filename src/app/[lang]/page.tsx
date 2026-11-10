@@ -1,9 +1,11 @@
 import { notFound } from "next/navigation";
 import { AudienceCards } from "@/components/home/audience-cards";
 import { Hero } from "@/components/home/hero";
+import { RoastedShop } from "@/components/home/roasted-shop";
+import { OnlyInCountry } from "@/components/only-in-country";
 import {
   ClosingCta,
-  Facts,
+  Farmers,
   FeaturedLots,
   Regions,
   SiteFooter,
@@ -17,13 +19,18 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   const dict = await getDictionary();
 
   return (
-    <div className="min-h-screen p-4">
+    <div className="min-h-screen p-2">
       <Hero lang={lang} dict={dict} />
       <main>
         <AudienceCards lang={lang} dict={dict} />
+        <Farmers lang={lang} dict={dict} />
         <FeaturedLots lang={lang} dict={dict} />
+        {/* Roasted coffee is sold inside Colombia only for now */}
+        <OnlyInCountry country="CO">
+          <RoastedShop lang={lang} dict={dict} />
+        </OnlyInCountry>
         <Story dict={dict} />
-        <Facts dict={dict} />
+        {/* "Why Colombian specialty" (<Facts />) is hidden in the current design */}
         <Regions lang={lang} dict={dict} />
         <ClosingCta lang={lang} dict={dict} />
       </main>

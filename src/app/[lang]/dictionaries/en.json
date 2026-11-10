@@ -8,7 +8,6 @@
     "coffees": "Coffees",
     "producers": "Producers",
     "forBuyers": "For Buyers",
-    "forFarmers": "For Farmers",
     "ourStory": "Our Story",
     "contact": "Contact",
     "cta": "Request Samples",
@@ -45,6 +44,28 @@
     "accent": "specialty",
     "end": "buyers"
   },
+  "farmers": {
+    "eyebrow": "Our producers",
+    "titleStart": "The heart of",
+    "titleEm": "our coffee",
+    "text": "Every coffee we offer comes from family farmers and local producers: people who grow great coffee and are proud to share it with the world. We work with them directly, so their name, their farm and their story travel with every lot.",
+    "points": [
+      {
+        "title": "Family farms",
+        "text": "Small plots, cared for by the families who live on them."
+      },
+      {
+        "title": "Local know-how",
+        "text": "Growers who know their land, their varieties and their harvest."
+      },
+      {
+        "title": "A name behind every lot",
+        "text": "You always know who grew your coffee, and where."
+      }
+    ],
+    "cta": "Meet our producers",
+    "imageAlt": "Smiling coffee picker with a harvest basket among coffee plants on a Colombian hillside"
+  },
   "lots": {
     "eyebrow": "Available now · 2026 harvest",
     "titleEm": "Featured",
@@ -67,6 +88,41 @@
       "registered": "Registered"
     },
     "processes": { "washed": "Washed", "honey": "Honey", "natural": "Natural" }
+  },
+  "shop": {
+    "badge": "New",
+    "eyebrow": "Roasted coffee shop",
+    "titleStart": "Roasted at origin,",
+    "titleEm": "straight from the farm",
+    "text": "A multi-brand shop for Colombian producers who roast their own coffee. Buy bags directly from the farms, for your café or your home.",
+    "cta": "Shop roasted coffee",
+    "sellCta": "Roast your own coffee? Sell it here",
+    "filtersLabel": "Shop filters",
+    "filters": [
+      "All",
+      "Light roast",
+      "Medium roast",
+      "Whole bean",
+      "Ground",
+      "Under USD 20"
+    ],
+    "addToCart": "Add to cart",
+    "note": "Example products and brands for this design preview.",
+    "tags": {
+      "producerBrand": "Producer brand",
+      "bestValue": "Best value",
+      "limited": "Limited lot",
+      "ground": "Ground"
+    },
+    "roast": {
+      "light": "Light roast",
+      "medium": "Medium roast",
+      "mediumDark": "Medium-dark"
+    },
+    "grind": {
+      "wholeBean": "Whole bean",
+      "ground": "Ground"
+    }
   },
   "story": {
     "em1": "We connect Colombian farms",
@@ -94,29 +150,19 @@
     "eyebrow": "Where our coffee grows",
     "titleEm": "Explore",
     "titleRest": "by region",
-    "text": "We start where we know every road and every farm. Urrao is our first origin, and more Colombian regions are on the way.",
+    "text": "We start where we know every road and every farm. Urrao is our first origin; more Colombian regions are on the way.",
     "photoAlt": "The church on Urrao's main square, with its orange spire against a blue sky",
-    "photoCaption": "Urrao's main square",
     "nowSourcing": "Now sourcing",
     "town": "Urrao,",
     "department": "Antioquia",
-    "description": "A mountain town in western Antioquia, at the edge of the Páramo del Sol. High altitude, cool nights and small family farms give slow-ripening cherries, and it's home to the rare Chiroso variety.",
+    "description": "A mountain town at the edge of the Páramo del Sol: high altitude, cool nights, family farms, and home of the rare Chiroso variety.",
     "facts": [
       { "label": "Altitude", "value": "1,800–2,300 m" },
       { "label": "Varieties", "value": "Chiroso, Castillo, Caturra" },
       { "label": "Producers", "value": "Family farms" }
     ],
     "seeLots": "See Urrao lots",
-    "meetProducers": "Meet the producers",
-    "comingNext": "Coming next",
-    "notify": "Get notified when new regions open",
-    "comingSoon": "Coming soon",
-    "upcoming": [
-      { "name": "Antioquia", "note": "More municipalities in the department" },
-      { "name": "Huila", "note": "Southern Andes" },
-      { "name": "Nariño", "note": "High-altitude south" },
-      { "name": "Cauca", "note": "Southwestern Andes" }
-    ]
+    "meetProducers": "Producers"
   },
   "closing": {
     "eyebrow": "Custom sourcing",

@@ -6,6 +6,7 @@ import { sampleLots, type SampleLot } from "@/data/sample-lots";
 import { href, type RouteKey } from "@/lib/routes";
 import beansPattern from "@/assets/home/coffee-beans-pattern.png";
 import urraoSquare from "@/assets/home/urrao-main-square.jpg";
+import farmersHarvest from "@/assets/home/farmers-harvest.jpg";
 
 /* ---------- Shared pieces ---------- */
 
@@ -35,6 +36,68 @@ function LogoMark({ size = 48 }: { size?: number }) {
       <ellipse cx="16" cy="16" rx="9" ry="13" transform="rotate(35 16 16)" fill="#6FD13B" />
       <path d="M10 24 C 14 18, 18 14, 22 8" stroke="#0B3D2A" strokeWidth="2.4" fill="none" strokeLinecap="round" />
     </svg>
+  );
+}
+
+/* ---------- Our farmers ---------- */
+
+function CheckIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M3 7.5l2.5 2.5L11 4.5" />
+    </svg>
+  );
+}
+
+export function Farmers({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+  const f = dict.farmers;
+  return (
+    <section className="px-4 pb-2 pt-14">
+      <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-14">
+        <div>
+          <SectionHeader
+            eyebrow={f.eyebrow}
+            title={
+              <>
+                {f.titleStart} <span className="font-normal italic">{f.titleEm}</span>
+              </>
+            }
+            text={f.text}
+          />
+          <ul className="mt-7 flex flex-col gap-[18px]">
+            {f.points.map((point) => (
+              <li key={point.title} className="flex items-start gap-3.5">
+                <span className="mt-0.5 flex size-7 flex-none items-center justify-center rounded-full bg-lime-500 text-green-900">
+                  <CheckIcon />
+                </span>
+                <div>
+                  <p className="font-display text-xl font-semibold text-green-900">{point.title}</p>
+                  <p className="mt-0.5 text-base leading-normal text-sage">{point.text}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <Link
+            href={href(lang, "producers")}
+            className="mt-8 inline-flex min-h-14 items-center gap-3 rounded-full bg-green-900 px-7 py-4 text-[17px] font-semibold text-white hover:bg-green-700"
+          >
+            {f.cta}
+            <span aria-hidden="true" className="flex size-7 items-center justify-center rounded-full bg-lime-500 text-[15px] text-green-900">
+              →
+            </span>
+          </Link>
+        </div>
+        <div className="relative h-[360px] overflow-hidden rounded-[32px] sm:h-[460px] lg:h-[560px]">
+          <Image
+            src={farmersHarvest}
+            alt={f.imageAlt}
+            fill
+            sizes="(min-width: 1024px) 52vw, 100vw"
+            className="object-cover object-[40%_center]"
+          />
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -142,7 +205,7 @@ function LotCard({ lot, lang, l }: { lot: SampleLot; lang: Locale; l: Dictionary
 export function FeaturedLots({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const l = dict.lots;
   return (
-    <section className="px-4 pb-6 pt-24">
+    <section className="px-4 pb-2 pt-14">
       <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-6">
         <div className="max-w-[720px]">
           <SectionHeader
@@ -182,7 +245,7 @@ export function Story({ dict }: { dict: Dictionary }) {
   const s = dict.story;
   return (
     <section
-      className="mt-10 rounded-[32px] bg-cream-100 bg-repeat px-6 py-16 text-center sm:px-12 sm:py-[88px]"
+      className="mt-8 rounded-[32px] bg-cream-100 bg-repeat px-6 py-14 text-center sm:px-12 sm:py-[72px]"
       style={{ backgroundImage: `url(${beansPattern.src})`, backgroundSize: "384px 384px", backgroundPosition: "center" }}
     >
       <p className="mx-auto max-w-[980px] font-display text-[28px] leading-[1.25] text-green-900 sm:text-[44px]">
@@ -198,7 +261,7 @@ export function Story({ dict }: { dict: Dictionary }) {
 export function Facts({ dict }: { dict: Dictionary }) {
   const f = dict.facts;
   return (
-    <section className="px-4 pb-6 pt-24">
+    <section className="px-4 pb-2 pt-14">
       <SectionHeader
         eyebrow={f.eyebrow}
         title={
@@ -237,85 +300,66 @@ export function Facts({ dict }: { dict: Dictionary }) {
   );
 }
 
-/* ---------- Regions ---------- */
+/* ---------- Regions (compact horizontal band) ---------- */
 
 export function Regions({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const r = dict.regions;
   return (
-    <section className="px-4 pb-6 pt-24">
-      <SectionHeader
-        eyebrow={r.eyebrow}
-        title={
-          <>
+    <section className="px-4 pb-2 pt-12">
+      <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-4">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-green-600">{r.eyebrow}</p>
+          <h2 className="mt-2 font-display text-[34px] font-semibold leading-[1.05] tracking-[-0.015em] text-green-900 sm:text-[44px]">
             <span className="font-normal italic">{r.titleEm}</span> {r.titleRest}
-          </>
-        }
-        text={r.text}
-      />
+          </h2>
+        </div>
+        <p className="max-w-[520px] text-[17px] leading-normal text-sage">{r.text}</p>
+      </div>
 
-      <article className="mt-9 grid overflow-hidden rounded-[32px] bg-green-900 text-white lg:min-h-[520px] lg:grid-cols-2">
-        <div className="relative min-h-[320px] sm:min-h-[420px]">
+      <article className="mt-7 grid overflow-hidden rounded-[28px] bg-green-900 text-white lg:h-[280px] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.25fr)_minmax(0,1fr)]">
+        <div className="relative h-56 lg:h-auto">
           <Image
             src={urraoSquare}
             alt={r.photoAlt}
             fill
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover object-[center_35%]"
+            sizes="(min-width: 1024px) 30vw, 100vw"
+            className="object-cover object-[center_40%]"
           />
-          <span className="absolute bottom-5 left-5 rounded-full bg-green-900/80 px-3.5 py-2 text-[13px] font-semibold">
-            {r.photoCaption}
-          </span>
         </div>
-        <div className="flex flex-col justify-center gap-[22px] px-6 py-10 sm:px-12 sm:pb-11 sm:pt-12">
-          <span className="self-start rounded-full bg-lime-500 px-3.5 py-[7px] text-[13px] font-semibold tracking-[0.04em] text-green-900">
+        <div className="flex flex-col justify-center gap-3 px-6 pt-7 sm:px-9 lg:py-8 lg:pl-9 lg:pr-8">
+          <span className="self-start rounded-full bg-lime-500 px-3 py-1.5 text-xs font-semibold tracking-[0.04em] text-green-900">
             {r.nowSourcing}
           </span>
-          <h3 className="font-display text-[40px] font-semibold leading-[1.05] sm:text-5xl">
+          <h3 className="font-display text-[34px] font-semibold leading-[1.05] sm:text-[38px]">
             {r.town} <span className="font-normal italic">{r.department}</span>
           </h3>
-          <p className="text-lg leading-relaxed text-mist">{r.description}</p>
-          <dl className="grid grid-cols-1 gap-4 border-y border-mist/25 py-5 sm:grid-cols-3">
+          <p className="text-base leading-[1.55] text-mist">{r.description}</p>
+        </div>
+        <div className="flex flex-col justify-center gap-[18px] px-6 pb-7 pt-5 sm:px-9 lg:border-l lg:border-mist/20 lg:py-8 lg:pl-7 lg:pr-9">
+          <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-[15px]">
             {r.facts.map((fact) => (
-              <div key={fact.label}>
-                <dt className="text-[13px] text-[#9FC4AE]">{fact.label}</dt>
-                <dd className="mt-1.5 font-display text-[22px] font-semibold">{fact.value}</dd>
+              <div key={fact.label} className="contents">
+                <dt className="text-[#9FC4AE]">{fact.label}</dt>
+                <dd className="font-semibold">{fact.value}</dd>
               </div>
             ))}
           </dl>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2.5">
             <Link
               href={href(lang, "urrao")}
-              className="inline-flex min-h-14 items-center gap-3 rounded-full bg-lime-500 px-7 py-4 text-[17px] font-semibold text-green-900 hover:brightness-95"
+              className="inline-flex min-h-[50px] items-center gap-2.5 rounded-full bg-lime-500 px-[22px] py-3.5 text-base font-semibold text-green-900 hover:brightness-95"
             >
               {r.seeLots} <span aria-hidden="true">→</span>
             </Link>
             <Link
               href={href(lang, "producers")}
-              className="inline-flex min-h-14 items-center rounded-full border-[1.5px] border-[#9FC4AE] px-[26px] py-[15px] text-[17px] font-semibold hover:bg-white/10"
+              className="inline-flex min-h-[50px] items-center rounded-full border-[1.5px] border-[#9FC4AE] px-5 py-[13px] text-base font-semibold hover:bg-white/10"
             >
               {r.meetProducers}
             </Link>
           </div>
         </div>
       </article>
-
-      <div className="mt-10 flex flex-wrap items-center justify-between gap-4">
-        <h3 className="font-display text-[26px] font-semibold text-green-900">{r.comingNext}</h3>
-        <Link href={href(lang, "contact")} className="py-3 text-base font-semibold text-green-700 hover:underline">
-          {r.notify} →
-        </Link>
-      </div>
-      <div className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-4">
-        {r.upcoming.map((region) => (
-          <div key={region.name} className="flex min-h-[150px] flex-col gap-2.5 rounded-3xl bg-cream-100 p-6">
-            <span className="self-start rounded-full bg-stone px-3 py-1.5 text-xs font-semibold text-[#3B3B33]">
-              {r.comingSoon}
-            </span>
-            <span className="mt-auto font-display text-[26px] font-semibold text-green-900">{region.name}</span>
-            <span className="text-[15px] text-sage">{region.note}</span>
-          </div>
-        ))}
-      </div>
     </section>
   );
 }
@@ -325,7 +369,7 @@ export function Regions({ lang, dict }: { lang: Locale; dict: Dictionary }) {
 export function ClosingCta({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const c = dict.closing;
   return (
-    <section className="mt-16 rounded-[32px] bg-green-900 px-6 py-12 text-white sm:px-10 sm:py-14">
+    <section className="mt-10 rounded-[32px] bg-green-900 px-6 py-12 text-white sm:px-10 sm:py-14">
       <p className="text-[13px] font-semibold uppercase tracking-[0.08em] text-lime-500">{c.eyebrow}</p>
       <h2 className="mt-2 font-display text-[34px] font-semibold leading-[1.1] sm:text-[44px]">
         <span className="font-normal italic">{c.titleEm}</span> {c.titleRest}
@@ -355,7 +399,7 @@ export function ClosingCta({ lang, dict }: { lang: Locale; dict: Dictionary }) {
 const FOOTER_ROUTES: RouteKey[][] = [
   ["coffees", "producers", "regions", "coffees"],
   ["forBuyers", "samples", "samples", "forBuyers"],
-  ["forFarmers", "forFarmers", "forFarmers"],
+  ["producers", "producers", "producers"],
   ["ourStory", "contact", "journal"],
 ];
 
@@ -364,7 +408,7 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const other: Locale = lang === "en" ? "es" : "en";
 
   return (
-    <footer className="mt-16 overflow-hidden rounded-[32px] bg-green-900 px-6 pb-7 pt-14 text-white sm:px-12 sm:pt-16">
+    <footer className="mt-6 overflow-hidden rounded-[32px] bg-green-900 px-6 pb-7 pt-14 text-white sm:px-12 sm:pt-16">
       <div className="border-b border-mist/20 pb-12">
         <div className="max-w-[560px]">
           <Link

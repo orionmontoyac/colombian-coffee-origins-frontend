@@ -6,7 +6,6 @@ const slugs = {
   coffees: { en: "coffees", es: "cafes" },
   producers: { en: "producers", es: "productores" },
   forBuyers: { en: "for-buyers", es: "para-compradores" },
-  forFarmers: { en: "for-farmers", es: "para-productores" },
   ourStory: { en: "our-story", es: "nuestra-historia" },
   samples: { en: "samples", es: "muestras" },
   contact: { en: "contact", es: "contacto" },
@@ -15,6 +14,8 @@ const slugs = {
   journal: { en: "journal", es: "blog" },
   privacy: { en: "privacy", es: "privacidad" },
   terms: { en: "terms", es: "terminos" },
+  shop: { en: "shop", es: "tienda" },
+  sellWithUs: { en: "shop/sell", es: "tienda/vender" },
 } as const;
 
 export type RouteKey = keyof typeof slugs;

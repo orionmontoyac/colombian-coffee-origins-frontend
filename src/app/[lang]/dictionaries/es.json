@@ -8,7 +8,6 @@
     "coffees": "Cafés",
     "producers": "Productores",
     "forBuyers": "Para compradores",
-    "forFarmers": "Para productores",
     "ourStory": "Nosotros",
     "contact": "Contacto",
     "cta": "Solicitar muestras",
@@ -45,6 +44,28 @@
     "accent": "especial",
     "end": "de todo el mundo"
   },
+  "farmers": {
+    "eyebrow": "Nuestros productores",
+    "titleStart": "El corazón de",
+    "titleEm": "nuestro café",
+    "text": "Todo el café que ofrecemos viene de familias caficultoras y productores locales: personas que cultivan un gran café y se sienten orgullosas de compartirlo con el mundo. Trabajamos directamente con ellas, así que su nombre, su finca y su historia viajan con cada lote.",
+    "points": [
+      {
+        "title": "Fincas familiares",
+        "text": "Pequeñas parcelas cuidadas por las familias que viven en ellas."
+      },
+      {
+        "title": "Saber local",
+        "text": "Caficultores que conocen su tierra, sus variedades y su cosecha."
+      },
+      {
+        "title": "Un nombre detrás de cada lote",
+        "text": "Siempre sabes quién cultivó tu café, y dónde."
+      }
+    ],
+    "cta": "Conoce a nuestros productores",
+    "imageAlt": "Recolectora de café sonriente con su canasto entre matas de café en una ladera colombiana"
+  },
   "lots": {
     "eyebrow": "Disponible ahora · cosecha 2026",
     "titleEm": "Lotes",
@@ -67,6 +88,41 @@
       "registered": "Registrado"
     },
     "processes": { "washed": "Lavado", "honey": "Honey", "natural": "Natural" }
+  },
+  "shop": {
+    "badge": "Nuevo",
+    "eyebrow": "Tienda de café tostado",
+    "titleStart": "Tostado en origen,",
+    "titleEm": "directo de la finca",
+    "text": "Una tienda multimarca para productores colombianos que tuestan su propio café. Compra bolsas directamente a las fincas, para tu cafetería o tu casa.",
+    "cta": "Comprar café tostado",
+    "sellCta": "¿Tuestas tu propio café? Véndelo aquí",
+    "filtersLabel": "Filtros de la tienda",
+    "filters": [
+      "Todo",
+      "Tueste claro",
+      "Tueste medio",
+      "En grano",
+      "Molido",
+      "Menos de USD 20"
+    ],
+    "addToCart": "Agregar",
+    "note": "Productos y marcas de ejemplo para esta vista previa del diseño.",
+    "tags": {
+      "producerBrand": "Marca del productor",
+      "bestValue": "Mejor precio",
+      "limited": "Lote limitado",
+      "ground": "Molido"
+    },
+    "roast": {
+      "light": "Tueste claro",
+      "medium": "Tueste medio",
+      "mediumDark": "Medio-oscuro"
+    },
+    "grind": {
+      "wholeBean": "En grano",
+      "ground": "Molido"
+    }
   },
   "story": {
     "em1": "Conectamos fincas colombianas",
@@ -94,29 +150,19 @@
     "eyebrow": "Dónde crece nuestro café",
     "titleEm": "Explora",
     "titleRest": "por región",
-    "text": "Empezamos donde conocemos cada camino y cada finca. Urrao es nuestro primer origen y vienen más regiones de Colombia.",
+    "text": "Empezamos donde conocemos cada camino y cada finca. Urrao es nuestro primer origen; vienen más regiones de Colombia.",
     "photoAlt": "La iglesia del parque principal de Urrao, con su torre naranja contra el cielo azul",
-    "photoCaption": "Parque principal de Urrao",
     "nowSourcing": "Comprando ahora",
     "town": "Urrao,",
     "department": "Antioquia",
-    "description": "Un pueblo de montaña en el occidente de Antioquia, al borde del Páramo del Sol. La altitud, las noches frías y las fincas familiares dan cerezas de maduración lenta, y es la casa de la rara variedad Chiroso.",
+    "description": "Un pueblo de montaña al borde del Páramo del Sol: altitud, noches frías, fincas familiares y la casa de la rara variedad Chiroso.",
     "facts": [
       { "label": "Altitud", "value": "1.800–2.300 m" },
       { "label": "Variedades", "value": "Chiroso, Castillo, Caturra" },
       { "label": "Productores", "value": "Fincas familiares" }
     ],
     "seeLots": "Ver lotes de Urrao",
-    "meetProducers": "Conoce a los productores",
-    "comingNext": "Próximamente",
-    "notify": "Avísame cuando abran nuevas regiones",
-    "comingSoon": "Próximamente",
-    "upcoming": [
-      { "name": "Antioquia", "note": "Más municipios del departamento" },
-      { "name": "Huila", "note": "Sur de los Andes" },
-      { "name": "Nariño", "note": "El sur de alta montaña" },
-      { "name": "Cauca", "note": "Suroccidente andino" }
-    ]
+    "meetProducers": "Productores"
   },
   "closing": {
     "eyebrow": "Compra a la medida",

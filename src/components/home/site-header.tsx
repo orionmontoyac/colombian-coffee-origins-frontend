@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import type { MouseEvent } from "react";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { href } from "@/lib/routes";
 
@@ -7,7 +10,6 @@ const NAV_ITEMS = [
   "coffees",
   "producers",
   "forBuyers",
-  "forFarmers",
   "ourStory",
 ] as const;
 
@@ -51,6 +53,10 @@ const dropdownPanel =
 const dropdownLink =
   "block rounded-xl px-4 py-3 text-sm font-medium text-green-900 hover:bg-cream-100";
 
+function closeMenu(event: MouseEvent<HTMLAnchorElement>) {
+  event.currentTarget.closest("details")?.removeAttribute("open");
+}
+
 /**
  * Header built into the top of the hero banner: two equal-width white notches
  * (logo left, language + CTA right) with the pill menu centered between them.
@@ -62,7 +68,7 @@ export function SiteHeader({ lang, nav }: { lang: Locale; nav: Dictionary["nav"]
   return (
     <header>
       {/* Left notch: logo */}
-      <div className="absolute left-0 top-0 z-20 flex h-[76px] items-center rounded-br-[28px] bg-white pl-1 pr-6 nav:w-[340px]">
+      <div className="absolute left-0 top-0 z-20 flex h-14 items-center rounded-br-[28px] bg-white pl-1 pr-6 nav:w-[340px]">
         <Link
           href={href(lang, "home")}
           className="flex items-center gap-2.5 whitespace-nowrap font-display text-xl font-semibold text-green-900"
@@ -77,7 +83,7 @@ export function SiteHeader({ lang, nav }: { lang: Locale; nav: Dictionary["nav"]
       {/* Centered pill menu (wide screens) */}
       <nav
         aria-label={nav.mainLabel}
-        className="absolute left-1/2 top-0 z-20 hidden h-[76px] -translate-x-1/2 items-center gap-1.5 nav:flex"
+        className="absolute left-1/2 top-0 z-20 hidden h-16 -translate-x-1/2 items-center gap-1.5 nav:flex"
       >
         {NAV_ITEMS.map((key) => {
           const active = key === "home";
@@ -99,7 +105,7 @@ export function SiteHeader({ lang, nav }: { lang: Locale; nav: Dictionary["nav"]
       </nav>
 
       {/* Right notch: language, call to action, and the menu on smaller screens */}
-      <div className="absolute right-0 top-0 z-20 flex h-[76px] items-center justify-end gap-3.5 rounded-bl-[28px] bg-white pl-6 pr-1 nav:w-[340px]">
+      <div className="absolute right-0 top-0 z-20 flex h-14 items-center justify-end gap-3.5 rounded-bl-[28px] bg-white pl-6 pr-1 nav:w-[340px]">
         <details className="relative max-[720px]:hidden">
           <summary
             aria-label={nav.languageLabel}
@@ -118,6 +124,7 @@ export function SiteHeader({ lang, nav }: { lang: Locale; nav: Dictionary["nav"]
                   lang={code}
                   aria-current={code === lang ? "true" : undefined}
                   className={`${dropdownLink} ${code === lang ? "bg-cream-100" : ""}`}
+                  onClick={closeMenu}
                 >
                   {label}
                 </Link>

@@ -105,7 +105,7 @@ export function AudienceCards({ lang, dict }: { lang: Locale; dict: Dictionary }
         title={a.farmersTitle}
         text={a.farmersText}
         cta={a.farmersCta}
-        ctaHref={href(lang, "forFarmers")}
+        ctaHref={href(lang, "producers")}
         image={coffeeBranch}
       />
     </section>
