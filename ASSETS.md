@@ -51,3 +51,12 @@ Photo rules for all real photos: real people and places from Urrao (no stock pho
 | P2 | product-reviews | Product page (no slot rendered yet) | Real customer reviews only; add a reviews block when real ones exist, no fake ratings | — | — | — | not built |
 | Shipping times by city, returns window (5 business days), coffee club price COP 59,000 | Shop, product page, JSON-LD (OfferShippingDetails, MerchantReturnPolicy) | example values, labelled; derecho de retracto and PQRS text pending legal review |
 | Real WhatsApp number for shop orders | `src/lib/site.ts`, cart checkout, club and quiz links | `+573000000000` |
+
+## T2.7 placeholders (regions, story)
+
+| Priority | assetId | Where it is used | What should be there | Orientation / ratio | Min size | File name | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| P2 | urrao-region-map | /regions/urrao "Find Urrao" | Map of Urrao and the Páramo del Sol in brand greens, municipality outline, pins for partner farms (no farm GPS without consent) | 4:1 landscape | 2400×600 | `regions/urrao-map.png` | placeholder |
+| P2 | team-portraits | /our-story team (3 slots) | Portrait of each team member, natural light, shoulders up, looking at camera, with consent | 4:5 portrait | 1600×2000 | `story/team-<name>.jpg` | placeholder |
+| P3 | journal-article-photos | /journal and 3 articles (currently reuse home photos) | One original photo per article: Chiroso cherries up close, a green-coffee sample table, Urrao landscape at dawn | 16:9 landscape | 2400×1350 | `journal/<slug>.jpg` | stock reuse |
+| P2 | publication-dates | Article JSON-LD and banner | Real publication dates (drafted 2026-11-13) | n/a | n/a | `src/components/journal/articles.ts` | placeholder |

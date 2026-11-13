@@ -1,1 +1,148 @@
-{}
+{
+  "common": {
+    "draftChip": "Borrador para revisión legal",
+    "draftNote": "Borrador para revisión legal. Este texto es un marcador estructurado y no constituye asesoría jurídica. Un abogado colombiano debe revisar y completar cada elemento entre corchetes antes del lanzamiento.",
+    "stats": {
+      "status": "Estado",
+      "updated": "Última actualización",
+      "law": "Ley aplicable"
+    },
+    "statusValue": "Borrador",
+    "lawValue": "Colombia",
+    "updatedValue": "13 nov 2026",
+    "tocLabel": "En esta página",
+    "pqrsTitle": "Contacto para PQRS",
+    "pqrsText": "Las peticiones, quejas, reclamos y sugerencias (PQRS) sobre la tienda de café tostado, la privacidad o estos documentos se envían a {pqrs}. Respondemos en [X días hábiles: el abogado debe confirmar].",
+    "pqrsLink": "Escribir a PQRS",
+    "entityLine": "{entity} · NIT {nit}",
+    "related": {
+      "privacy": "Política de privacidad",
+      "terms": "Términos de venta"
+    },
+    "relatedLabel": "Otras páginas legales"
+  },
+  "privacy": {
+    "meta": {
+      "title": "Política de privacidad: cómo cuidamos tus datos (borrador)",
+      "description": "Cómo Colombian Coffee Origins recoge y usa los datos personales de compradores y clientes, y cómo ejercer tus derechos. Borrador para revisión legal."
+    },
+    "breadcrumb": "Privacidad",
+    "banner": {
+      "title": "Política de",
+      "accent": "privacidad",
+      "description": "Qué recogemos, para qué, y cómo puedes controlarlo."
+    },
+    "sections": [
+      {
+        "title": "Quién es el responsable",
+        "paragraphs": [
+          "{entity}, NIT {nit}, opera Colombian Coffee Origins desde Urrao y Medellín, Antioquia, Colombia, y es el responsable del tratamiento de los datos. [Dirección registrada por agregar.]"
+        ]
+      },
+      {
+        "title": "Qué datos recogemos",
+        "paragraphs": [
+          "Cuando usas nuestros formularios recogemos los datos que escribes: nombre, correo, teléfono o número de WhatsApp, empresa, país y tu mensaje. Cuando compras en la tienda de café tostado también recogemos la dirección de entrega y los datos del pedido. Nuestros servidores registran datos técnicos básicos, como las páginas que visitas."
+        ]
+      },
+      {
+        "title": "Para qué los usamos",
+        "paragraphs": [
+          "Usamos tus datos para responder tus solicitudes, enviar muestras, preparar cotizaciones, procesar y entregar pedidos de la tienda, cumplir obligaciones legales y tributarias, y mantener seguro el sitio. [La base legal de cada finalidad la debe confirmar el abogado.]"
+        ]
+      },
+      {
+        "title": "Tus derechos",
+        "paragraphs": [
+          "Según la ley colombiana de protección de datos (Ley 1581 de 2012 y sus decretos, por confirmar) puedes conocer, actualizar y rectificar tus datos, pedirnos que los eliminemos, revocar tu autorización y presentar una queja ante la Superintendencia de Industria y Comercio (SIC). Para ejercer un derecho escribe a {pqrs} y cuéntanos qué necesitas."
+        ]
+      },
+      {
+        "title": "Con quién los compartimos",
+        "paragraphs": [
+          "Compartimos datos solo con proveedores que nos ayudan a operar el servicio, como alojamiento, correo, pagos y transportadoras, y con los productores cuando es necesario para cumplir tu muestra o tu pedido. [Lista de proveedores y transferencias internacionales por agregar.]"
+        ]
+      },
+      {
+        "title": "Cuánto tiempo los conservamos",
+        "paragraphs": [
+          "[Plazos de conservación por definir según el tipo de dato.]"
+        ]
+      },
+      {
+        "title": "Cookies y analítica",
+        "paragraphs": [
+          "[Por completar cuando se elijan las cookies y las herramientas de analítica. Describe cada cookie, su finalidad y cómo rechazarla.]"
+        ]
+      },
+      {
+        "title": "Cambios",
+        "paragraphs": [
+          "Publicaremos los cambios en esta página y actualizaremos la fecha de arriba. [Proceso de notificación por definir.]"
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "meta": {
+      "title": "Términos y condiciones de venta (borrador)",
+      "description": "Términos para pedidos de café verde y para la tienda de café tostado en Colombia, con derecho de retracto y PQRS. Borrador para revisión legal."
+    },
+    "breadcrumb": "Términos",
+    "banner": {
+      "title": "Términos",
+      "accent": "de venta",
+      "description": "Cómo funcionan los pedidos, los envíos, el retracto y los reclamos."
+    },
+    "sections": [
+      {
+        "title": "Sobre estos términos",
+        "paragraphs": [
+          "Estos términos regulan el uso del sitio de Colombian Coffee Origins y las compras que se hagan en él. {entity}, NIT {nit}, vende a través de la plataforma junto con los productores listados en ella."
+        ]
+      },
+      {
+        "title": "Dos líneas de negocio",
+        "paragraphs": [
+          "Los lotes de café verde se venden a tostadores, importadores y cafeterías de todo el mundo, con precios en USD por kilogramo. La tienda de café tostado vende bolsas tostadas por los productores solo a compradores en Colombia, con precios en pesos colombianos (COP)."
+        ]
+      },
+      {
+        "title": "Pedidos de café verde",
+        "paragraphs": [
+          "Las muestras y los pedidos se acuerdan por escrito. Cada cotización indica precio, condiciones FOB, cantidad, empaque, condiciones de pago, documentos de exportación y fechas esperadas. [Condiciones de pago, pedido mínimo y tiempos de entrega por definir.]"
+        ]
+      },
+      {
+        "title": "Tienda de café tostado (Colombia)",
+        "paragraphs": [
+          "La tienda entrega dentro de Colombia. Los precios incluyen [impuestos por confirmar]. El costo de envío y el monto para envío gratis se muestran antes de pagar. El café se tuesta por pedido y sale en [plazo por confirmar]."
+        ]
+      },
+      {
+        "title": "Derecho de retracto",
+        "paragraphs": [
+          "Si compras en la tienda en línea, la ley de consumo colombiana (Estatuto del Consumidor, Ley 1480 de 2011) te da derecho a retractarte en las ventas a distancia. [Plazo de retracto: 5 días hábiles desde la entrega, el abogado debe confirmar.] Para retractarte escribe a {pqrs} con tu número de pedido. [Costo de devolución, estado del producto y plazo de reembolso, dentro de [X días], por definir.] [Excepciones para productos que se deterioran rápido o que fueron abiertos, por confirmar con el abogado.] El café verde vendido a empresas no está cubierto por este derecho [el abogado debe confirmar]."
+        ]
+      },
+      {
+        "title": "Garantía, reclamos y PQRS",
+        "paragraphs": [
+          "Si un producto llega dañado o no es el que pediste, avísanos dentro de [X días] en {pqrs}. A la misma dirección puedes enviar peticiones, quejas, reclamos y sugerencias (PQRS). Si no logramos resolver un reclamo de consumo, puedes acudir a la Superintendencia de Industria y Comercio (SIC)."
+        ]
+      },
+      {
+        "title": "Propiedad intelectual",
+        "paragraphs": [
+          "Los textos, las fotografías y la marca son de {entity} o de los productores que dieron su permiso. [Reglas de reutilización por definir.]"
+        ]
+      },
+      {
+        "title": "Responsabilidad y ley aplicable",
+        "paragraphs": [
+          "[Límites de responsabilidad por definir.] Estos términos se rigen por la ley colombiana y las disputas van a los jueces de [ciudad por definir]. [El abogado debe confirmar.]"
+        ]
+      }
+    ]
+  }
+}

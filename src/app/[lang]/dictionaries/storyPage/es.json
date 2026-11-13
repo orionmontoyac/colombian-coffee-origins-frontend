@@ -1,1 +1,75 @@
-{}
+{
+  "meta": {
+    "title": "Nuestra historia: por qué existe Colombian Coffee Origins",
+    "description": "Conectamos fincas cafeteras familiares de Colombia, desde Urrao, Antioquia, con tostadores e importadores. Conoce por qué existimos y cómo trabajamos."
+  },
+  "breadcrumb": "Nuestra historia",
+  "banner": {
+    "chips": [
+      "Urrao y Medellín",
+      "Colombia"
+    ],
+    "title": "Nuestra",
+    "accent": "historia",
+    "description": "Productores con nombre, lotes trazables y una línea directa con la finca.",
+    "stats": {
+      "origin": "Primer origen",
+      "lines": "Líneas de negocio",
+      "producers": "Productores listados"
+    },
+    "originValue": "Urrao",
+    "linesValue": "2"
+  },
+  "why": {
+    "title": "Por qué",
+    "accent": "existimos",
+    "paragraphs": [
+      "Colombia produce algunos de los cafés más admirados del mundo, pero las familias que lo cultivan suelen volverse invisibles cuando el café sale de la finca. Un lote se vende por región y calidad, y desaparecen las personas, la finca y la historia.",
+      "Empezamos en Urrao, Antioquia, porque conocemos los caminos y las fincas. Nuestro objetivo es sencillo: conectar fincas familiares con los tostadores, importadores y cafeterías que se preguntan de dónde viene su café, y mantener el nombre de cada productor en cada lote.",
+      "Esta página es un borrador escrito para la vista previa. La historia de origen se contará con las palabras del dueño."
+    ],
+    "photoAlt": "Recolectores con canastos de cosecha en una ladera colombiana"
+  },
+  "how": {
+    "title": "Cómo trabajamos",
+    "accent": "con los productores",
+    "text": "Cuatro principios guían cada lote que listamos.",
+    "items": [
+      {
+        "title": "Siempre con nombre",
+        "text": "Cada lote muestra el productor, la finca y el pueblo. Los productores conservan su nombre y su historia."
+      },
+      {
+        "title": "Verificado por pasos",
+        "text": "Un lote puede ser Registrado, Finca verificada o Café verificado, y siempre decimos cuál."
+      },
+      {
+        "title": "Prueba antes de comprar",
+        "text": "Los compradores pueden pedir una muestra de cualquier lote antes de hacer un pedido."
+      },
+      {
+        "title": "Dos líneas, nunca mezcladas",
+        "text": "Café verde para tostadores de todo el mundo y bolsas tostadas por los productores para hogares en Colombia."
+      }
+    ],
+    "linesLink": "Mira cómo funciona comprar"
+  },
+  "team": {
+    "title": "El",
+    "accent": "equipo",
+    "text": "Aquí presentaremos a las personas detrás de la plataforma. Los nombres, cargos y fotos son marcadores hasta que el dueño los entregue.",
+    "roleLabel": "[Cargo]",
+    "nameLabel": "[Nombre]",
+    "bioLabel": "[Biografía de una línea, escrita por cada persona]",
+    "photoLabel": "Retrato de integrante del equipo",
+    "count": 3
+  },
+  "cta": {
+    "eyebrow": "Trabaja con nosotros",
+    "title": "Conoce a las personas",
+    "accent": "detrás del café.",
+    "text": "Lee los perfiles de los productores o haznos una pregunta. Respondemos todos los mensajes.",
+    "primary": "Conocer a los productores",
+    "secondary": "Escríbenos"
+  }
+}

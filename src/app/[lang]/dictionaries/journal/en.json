@@ -1,1 +1,94 @@
-{}
+{
+  "meta": {
+    "title": "Journal: Colombian coffee guides and origin stories",
+    "description": "Guides for buyers and coffee lovers: what Chiroso coffee is, how to buy green coffee from Colombia, and a guide to the Urrao, Antioquia coffee region."
+  },
+  "breadcrumb": {
+    "journal": "Journal"
+  },
+  "banner": {
+    "chips": [
+      "Guides",
+      "Origin stories"
+    ],
+    "title": "The",
+    "accent": "journal",
+    "description": "Plain-language guides to Colombian coffee, written with the farms in mind.",
+    "stats": {
+      "articles": "Articles",
+      "languages": "Languages",
+      "topics": "Topics"
+    },
+    "languagesValue": "EN · ES",
+    "topicsValue": "3"
+  },
+  "list": {
+    "title": "Start with",
+    "accent": "the basics",
+    "text": "Three guides to read before your first sample.",
+    "read": "Read the guide",
+    "minutes": "{n} min read"
+  },
+  "articles": {
+    "chiroso": {
+      "title": "What is Chiroso",
+      "accent": "coffee?",
+      "name": "What is Chiroso coffee?",
+      "description": "Chiroso is a variety grown around Urrao, Antioquia, known for a delicate, floral cup. Learn where it comes from, how it tastes and how to buy it.",
+      "topic": "Variety",
+      "excerpt": "A variety grown around Urrao with a delicate, floral cup: where it comes from, how it tastes and how to buy it.",
+      "metaTitle": "What is Chiroso coffee? Origin, flavor and how to buy"
+    },
+    "buying": {
+      "title": "How to buy green coffee",
+      "accent": "from Colombia",
+      "name": "How to buy green coffee from Colombia",
+      "description": "A step-by-step guide to buying green coffee from Colombia: define your needs, check the producer, taste a sample, understand FOB pricing and plan the shipment.",
+      "topic": "Buying",
+      "excerpt": "Define what you need, check who grew it, taste a sample, understand FOB pricing and plan the shipment.",
+      "metaTitle": "How to buy green coffee from Colombia: a step-by-step guide"
+    },
+    "urrao": {
+      "title": "Urrao, Antioquia:",
+      "accent": "a coffee region guide",
+      "name": "Urrao, Antioquia: a coffee region guide",
+      "description": "A guide to Urrao, Antioquia: where it is, altitude and climate, the varieties grown, the harvest and how to buy specialty coffee from its family farms.",
+      "topic": "Origin",
+      "excerpt": "Where Urrao is, what altitude and climate do to the cup, which varieties grow there and how to buy.",
+      "metaTitle": "Urrao, Antioquia: a coffee region guide to altitude and farms"
+    }
+  },
+  "article": {
+    "published": "Published",
+    "reading": "Reading time",
+    "topic": "Topic",
+    "minutes": "{n} min",
+    "tocLabel": "In this guide",
+    "back": "All articles",
+    "draft": "Draft for owner review: factual statements in this guide are kept general and are being checked with our producers. Prices, scores and lots mentioned are examples for this preview.",
+    "related": {
+      "title": "Keep",
+      "accent": "exploring",
+      "links": {
+        "lots": "Green coffee lots",
+        "producers": "Producers",
+        "urrao": "Urrao region",
+        "buyers": "For buyers",
+        "samples": "Request samples"
+      }
+    },
+    "cta": {
+      "eyebrow": "Ready to taste",
+      "title": "Start with",
+      "accent": "a sample.",
+      "text": "Choose a lot from Urrao and we will tell you what to expect before you order.",
+      "primary": "Request samples",
+      "secondary": "See green coffee lots"
+    },
+    "more": {
+      "title": "More from",
+      "accent": "the journal"
+    }
+  },
+  "author": "Colombian Coffee Origins"
+}

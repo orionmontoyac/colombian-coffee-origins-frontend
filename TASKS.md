@@ -70,6 +70,7 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [ ] PlaceholderImage caption passes axe contrast (currently `text-muted` on `placeholder`); then remove the local override in src/components/producer/.
   - [ ] SectionHeader takes an optional `id` (so sections can use aria-labelledby); SiteHeader/SubpageBanner `NavKey` gains the nav items used by sub-pages (e.g. forBuyers) so the active pill shows.
   - [ ] StatBox gets a roasted variant (translucent white on dark roast with a kraft border, per the Shop board), driven by SubpageBanner `line="roasted"`; ProductCard gets an optional `vtName` (renders `data-vt-name`) and an optional bordered style, so the shop can drop its wrapper `<li>` hacks.
+  - [ ] Routing: the proxy also returns a first-hit 404 for unknown journal article slugs (EN and ES slugs differ); `src/app/[lang]/[...rest]/page.tsx` calls `notFound()` so unmatched URLs show the branded 404; `articleHref`/`articleAlternates` move from src/components/journal/articles.ts into src/lib/routes.ts (journal keeps a re-export).
   - Verify: `npm run lint && npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts tests/e2e/lots.spec.ts tests/e2e/lot.spec.ts`
 
 ## Phase 2 — Pages (page-builder × up to 4 in parallel; each owns its route folder + dictionary key)
@@ -107,11 +108,11 @@ Each page task has these **standard checkpoints** in addition to its own:
   - [x] Accessible errors (`aria-describedby`, focus first error); WhatsApp + email on contact (placeholders).
   - [x] Standard checkpoints (JSON-LD: BreadcrumbList only).
   - Verify: `npm run build && npx playwright test tests/e2e/forms.spec.ts`
-- [ ] **T2.7 Regions + Urrao, Our story, Journal (3 articles), Legal, 404** · Owns: src/app/[lang]/regions/**, src/app/[lang]/our-story/**, src/app/[lang]/journal/**, src/app/[lang]/privacy/**, src/app/[lang]/terms/**, src/app/[lang]/not-found.tsx, dict keys `regionsPage`, `storyPage`, `journal`, `legal`, `notFound`
-  - [ ] Urrao page with facts table, harvest calendar, producers and lots from Urrao, map placeholder; Place JSON-LD.
-  - [ ] Journal: "What is Chiroso coffee?", "How to buy green coffee from Colombia", "Urrao, Antioquia: a coffee region guide" (EN + ES, 600–900 words each, Article JSON-LD, internal links to lots and producers; factual claims kept general or marked for owner review).
-  - [ ] Legal pages structured, marked "draft for legal review"; includes derecho de retracto and PQRS contact for the shop.
-  - [ ] Branded 404 with links to lots, shop and home; standard checkpoints.
+- [x] **T2.7 Regions + Urrao, Our story, Journal (3 articles), Legal, 404** · Owns: src/app/[lang]/regions/**, src/app/[lang]/our-story/**, src/app/[lang]/journal/**, src/app/[lang]/privacy/**, src/app/[lang]/terms/**, src/app/[lang]/not-found.tsx, dict keys `regionsPage`, `storyPage`, `journal`, `legal`, `notFound`
+  - [x] Urrao page with facts table, harvest calendar, producers and lots from Urrao, map placeholder; Place JSON-LD.
+  - [x] Journal: "What is Chiroso coffee?", "How to buy green coffee from Colombia", "Urrao, Antioquia: a coffee region guide" (EN + ES, 600–900 words each, Article JSON-LD, internal links to lots and producers; factual claims kept general or marked for owner review).
+  - [x] Legal pages structured, marked "draft for legal review"; includes derecho de retracto and PQRS contact for the shop.
+  - [x] Branded 404 with links to lots, shop and home; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en/regions/urrao,/en/journal,/en/our-story`
 - [ ] **T2.8 Home polish** · Owns: src/app/[lang]/page.tsx, src/components/home/** (except site-header), dict keys `hero`, `lines`, `farmers`, `lots`, `shop`, `producersBand`, `closing`
   - [ ] Links from home cards go to the real lot, producer and product pages.

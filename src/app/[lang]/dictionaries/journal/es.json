@@ -1,1 +1,94 @@
-{}
+{
+  "meta": {
+    "title": "Blog: guías de café colombiano e historias de origen",
+    "description": "Guías para compradores y amantes del café: qué es el café Chiroso, cómo comprar café verde de Colombia y una guía de la región cafetera de Urrao, Antioquia."
+  },
+  "breadcrumb": {
+    "journal": "Blog"
+  },
+  "banner": {
+    "chips": [
+      "Guías",
+      "Historias de origen"
+    ],
+    "title": "El",
+    "accent": "blog",
+    "description": "Guías en lenguaje sencillo sobre el café colombiano, escritas pensando en las fincas.",
+    "stats": {
+      "articles": "Artículos",
+      "languages": "Idiomas",
+      "topics": "Temas"
+    },
+    "languagesValue": "ES · EN",
+    "topicsValue": "3"
+  },
+  "list": {
+    "title": "Empieza por",
+    "accent": "lo básico",
+    "text": "Tres guías para leer antes de tu primera muestra.",
+    "read": "Leer la guía",
+    "minutes": "{n} min de lectura"
+  },
+  "articles": {
+    "chiroso": {
+      "title": "¿Qué es el café",
+      "accent": "Chiroso?",
+      "name": "¿Qué es el café Chiroso?",
+      "description": "El Chiroso es una variedad cultivada en Urrao, Antioquia, conocida por una taza delicada y floral. Descubre de dónde viene, a qué sabe y cómo comprarlo.",
+      "topic": "Variedad",
+      "excerpt": "Una variedad de Urrao con taza delicada y floral: de dónde viene, a qué sabe y cómo comprarla.",
+      "metaTitle": "¿Qué es el café Chiroso? Origen, sabor y cómo comprar"
+    },
+    "buying": {
+      "title": "Cómo comprar café verde",
+      "accent": "de Colombia",
+      "name": "Cómo comprar café verde de Colombia",
+      "description": "Guía para comprar café verde de Colombia: define lo que necesitas, revisa al productor, prueba una muestra, entiende el precio FOB y planea el envío.",
+      "topic": "Compra",
+      "excerpt": "Define lo que necesitas, revisa quién lo cultivó, prueba una muestra, entiende el precio FOB y planea el envío.",
+      "metaTitle": "Cómo comprar café verde de Colombia: guía paso a paso"
+    },
+    "urrao": {
+      "title": "Urrao, Antioquia:",
+      "accent": "guía de una región cafetera",
+      "name": "Urrao, Antioquia: guía de una región cafetera",
+      "description": "Guía de Urrao, Antioquia: dónde queda, altitud y clima, variedades que se cultivan, la cosecha y cómo comprar café especial de sus fincas familiares.",
+      "topic": "Origen",
+      "excerpt": "Dónde queda Urrao, qué hacen la altitud y el clima en la taza, qué variedades se cultivan y cómo comprar.",
+      "metaTitle": "Urrao, Antioquia: guía de la región cafetera, altitud y fincas"
+    }
+  },
+  "article": {
+    "published": "Publicado",
+    "reading": "Tiempo de lectura",
+    "topic": "Tema",
+    "minutes": "{n} min",
+    "tocLabel": "En esta guía",
+    "back": "Todos los artículos",
+    "draft": "Borrador para revisión del dueño: los datos de esta guía se mantienen generales y se están verificando con nuestros productores. Los precios, puntajes y lotes mencionados son ejemplos para esta vista previa.",
+    "related": {
+      "title": "Sigue",
+      "accent": "explorando",
+      "links": {
+        "lots": "Lotes de café verde",
+        "producers": "Productores",
+        "urrao": "Región de Urrao",
+        "buyers": "Para compradores",
+        "samples": "Pedir muestras"
+      }
+    },
+    "cta": {
+      "eyebrow": "Listo para probar",
+      "title": "Empieza con",
+      "accent": "una muestra.",
+      "text": "Elige un lote de Urrao y te contamos qué esperar antes de que pidas.",
+      "primary": "Pedir muestras",
+      "secondary": "Ver lotes de café verde"
+    },
+    "more": {
+      "title": "Más del",
+      "accent": "blog"
+    }
+  },
+  "author": "Colombian Coffee Origins"
+}

@@ -1,1 +1,27 @@
-{}
+{
+  "code": "404",
+  "title": "Esta página no está",
+  "accent": "en el mapa",
+  "description": "La página que buscabas se movió o nunca existió. Estos tres lugares te devuelven al café.",
+  "links": [
+    {
+      "key": "lots",
+      "title": "Lotes de café verde",
+      "text": "Lotes trazables de Urrao, con muestras antes de comprar."
+    },
+    {
+      "key": "shop",
+      "title": "Tienda de café tostado",
+      "text": "Bolsas tostadas por los productores, con envío en Colombia."
+    },
+    {
+      "key": "home",
+      "title": "Inicio",
+      "text": "Empieza de nuevo desde la portada."
+    }
+  ],
+  "open": "Ir",
+  "meta": {
+    "title": "Página no encontrada"
+  }
+}

@@ -1,1 +1,27 @@
-{}
+{
+  "code": "404",
+  "title": "This page isn't",
+  "accent": "on the map",
+  "description": "The page you were looking for has moved or never existed. These three places will get you back to the coffee.",
+  "links": [
+    {
+      "key": "lots",
+      "title": "Green coffee lots",
+      "text": "Traceable lots from Urrao, with samples before you buy."
+    },
+    {
+      "key": "shop",
+      "title": "Roasted coffee shop",
+      "text": "Bags roasted by the producers, delivered in Colombia."
+    },
+    {
+      "key": "home",
+      "title": "Home",
+      "text": "Start again from the front page."
+    }
+  ],
+  "open": "Go",
+  "meta": {
+    "title": "Page not found"
+  }
+}
