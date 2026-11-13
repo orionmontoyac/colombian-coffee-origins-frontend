@@ -15,11 +15,11 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
 
 ## Phase 0 — Kick-off (planner, alone)
 
-- [ ] **T0.1 Read and confirm the plan** · Owner: planner · Owns: TASKS.md, DECISIONS.md
-  - [ ] Read FACTORY.md, SPEC.md, DESIGN.md, ASSETS.md, AGENTS.md, current code under `src/`.
-  - [ ] Confirm `design/boards/*.dc.html` exist (Main, Lots, Lot, Producer, Shop); note any page without a board.
-  - [ ] Check whether `.claude/skills/impeccable/` exists; record the answer in DECISIONS.md (agents use it if present).
-  - [ ] Work on branch `factory/website` (created from `main` during setup; if missing, `git switch -c factory/website main`).
+- [x] **T0.1 Read and confirm the plan** · Owner: planner · Owns: TASKS.md, DECISIONS.md
+  - [x] Read FACTORY.md, SPEC.md, DESIGN.md, ASSETS.md, AGENTS.md, current code under `src/`.
+  - [x] Confirm `design/boards/*.dc.html` exist (Main, Lots, Lot, Producer, Shop); note any page without a board.
+  - [x] Check whether `.claude/skills/impeccable/` exists; record the answer in DECISIONS.md (agents use it if present).
+  - [x] Work on branch `factory/website` (created from `main` during setup; if missing, `git switch -c factory/website main`).
   - Verify: `test -f SPEC.md && test -f DESIGN.md && git rev-parse --abbrev-ref HEAD | grep -q factory/website`
 
 ## Phase 1 — Foundation (foundation-builder, alone, in order)
