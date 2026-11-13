@@ -29,6 +29,7 @@ colors:
   on-roast-body: "#EAD9C6"
   roast-surface: "#F5ECE2"
   roast-line: "#E5D3C1"
+  roast-card: "#F3E6D8"
   roast-body: "#5A4636"
 typography:
   display-hero:
@@ -293,6 +294,10 @@ components:
     backgroundColor: "{colors.roast-surface}"
     textColor: "{colors.roast-body}"
     typography: "{typography.body-md}"
+  shop-card:
+    backgroundColor: "{colors.roast-card}"
+    textColor: "{colors.roast-dark}"
+    rounded: "{rounded.lg}"
   shop-card-divider:
     backgroundColor: "{colors.roast-line}"
     height: 1px
@@ -363,6 +368,7 @@ Every color names something from the coffee itself.
 - **Dark roast (`roast-dark`, #3B2416):** shop banner and headings on light shop surfaces.
 - **Panela (`caramel`, #E9B57D):** the shop's accent, doing for brown what lime does for green: one italic word per heading and the key stat on dark brown, plus the CTA on dark brown panels.
 - **Crema (`roast-surface`, #F5ECE2)**, **Kraft line (`roast-line`, #E5D3C1)**, **Roast body (`roast-body`, #5A4636)**, **Roast mist (`on-roast-body`, #EAD9C6):** shop panels, borders and text.
+- **Kraft card (`roast-card`, #F3E6D8):** card surfaces inside crema shop sections (perk tiles, quiz card, delivery steps), one step warmer than crema.
 
 Product-card "stage" colors behind each bag (soft tints of the bag color) are **content, not tokens**: each producer brand chooses its bag color.
 
