@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { sampleRoastedProducts, type SampleRoastedProduct } from "@/data/sample-roasted";
+import { ProductCard } from "@/components/ui/product-card";
 import { href } from "@/lib/routes";
 
 const tagTone: Record<SampleRoastedProduct["tag"], string> = {
@@ -14,25 +15,6 @@ const tagTone: Record<SampleRoastedProduct["tag"], string> = {
 function formatCop(value: number, lang: Locale) {
   if (lang === "es") return `$${new Intl.NumberFormat("es-CO", { maximumFractionDigits: 0 }).format(value)}`;
   return `COP ${new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 }).format(value)}`;
-}
-
-/** Simple drawn coffee bag in the brand's color (until real product photos exist). */
-function BagMockup({ product, roastLabel, size }: { product: SampleRoastedProduct; roastLabel: string; size: string }) {
-  return (
-    <div
-      aria-hidden="true"
-      className="relative flex h-[200px] w-[140px] flex-col items-center overflow-hidden rounded-b-[10px] rounded-t-[14px] shadow-[0_18px_30px_rgb(14_42_31/0.18)]"
-      style={{ background: product.bag }}
-    >
-      <div className="h-6 w-full bg-black/20" />
-      <div className="mt-2.5 size-2.5 rounded-full bg-white/35" />
-      <div className="mt-4 w-[104px] rounded-[10px] bg-white px-2 py-3 text-center">
-        <p className="font-display text-[13px] font-bold leading-[1.1] text-green-900">{product.labelBrand}</p>
-        <p className="mt-1.5 font-label text-[10px] font-medium uppercase tracking-[0.06em] text-brown">{roastLabel}</p>
-        <p className="mt-1 text-[10px] text-muted">{size}</p>
-      </div>
-    </div>
-  );
 }
 
 /**
@@ -91,31 +73,19 @@ export function RoastedShop({ lang, dict }: { lang: Locale; dict: Dictionary }) 
         {sampleRoastedProducts.map((p) => {
           const size = grams(p.grams);
           return (
-            <article key={p.id} className="flex flex-col overflow-hidden rounded-3xl bg-white">
-              <div className="relative flex h-[280px] items-center justify-center" style={{ background: p.stage }}>
-                <span className={`absolute left-3.5 top-3.5 rounded-full px-[11px] py-1.5 font-label text-xs font-medium ${tagTone[p.tag]}`}>
-                  {s.tags[p.tag]}
-                </span>
-                <BagMockup product={p} roastLabel={s.roast[p.roast]} size={size} />
-              </div>
-              <div className="flex flex-1 flex-col gap-2.5 px-5 pb-[22px] pt-5">
-                <p className="font-label text-xs font-medium uppercase tracking-[0.08em] text-brown">{p.brand}</p>
-                <h3 className="font-display text-[22px] font-semibold leading-[1.2] text-roast-dark">{p.name[lang]}</h3>
-                <p className="text-sm text-sage">
-                  Urrao · {s.grind[p.grind]} · {size}
-                </p>
-                <p className="text-sm italic text-muted">{p.notes[lang]}</p>
-                <div className="mt-auto flex items-center justify-between gap-2.5 pt-2.5">
-                  <p className="font-display text-[20px] font-semibold text-roast-dark">{formatCop(p.priceCop, lang)}</p>
-                  <Link
-                    href={href(lang, "shop")}
-                    className="inline-flex min-h-[46px] items-center whitespace-nowrap rounded-full bg-brown px-[18px] py-3 font-label text-[15px] font-medium text-white hover:bg-roast-hover"
-                  >
-                    {s.addToCart}
-                  </Link>
-                </div>
-              </div>
-            </article>
+            <ProductCard
+              key={p.id}
+              brand={p.brand}
+              name={p.name[lang]}
+              meta={`Urrao · ${s.grind[p.grind]} · ${size}`}
+              notes={p.notes[lang]}
+              tag={{ label: s.tags[p.tag], className: tagTone[p.tag] }}
+              // Bean icon on the bag label is off here to keep the home page unchanged; shop pages turn it on.
+              bag={{ color: p.bag, stage: p.stage, label: p.labelBrand, roastLabel: s.roast[p.roast], size, beanIcon: false }}
+              price={formatCop(p.priceCop, lang)}
+              addLabel={s.addToCart}
+              addHref={href(lang, "shop")}
+            />
           );
         })}
       </div>

@@ -41,11 +41,11 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [x] Total font bytes < 250 KB (`du -cb src/fonts/**/*.woff2`).
   - [x] No visual change on home at 1440 and 390 (screenshots before/after in `artifacts/screenshots/t1-3-*`).
   - Verify: `test $(find src/fonts -name '*.woff2' -exec cat {} + | wc -c) -lt 256000 && npm run build`
-- [ ] **T1.4 Shared components** · Owns: src/components/ui/**, src/components/home/site-header.tsx
-  - [ ] SubpageBanner, StatBox, Chip, TrustBadge, Button (5 variants), SectionHeader, LotCard, ProductCard (+BagMockup, RoastMeter with the bean icon), ProducerCard, CtaPanel, FilterBar shell, Breadcrumbs, PlaceholderImage, WhatsAppButton, SkipLink.
-  - [ ] Home page refactored to use LotCard, ProductCard, SectionHeader, CtaPanel with no visual change.
-  - [ ] Header: Cart button variant for shop pages; skip link to `#main`; mobile menu keyboard-accessible.
-  - [ ] Bean icon and pattern assets added from `design/assets/` (bean-brown.png, bean-white.png, beans-caramel.png).
+- [x] **T1.4 Shared components** · Owns: src/components/ui/**, src/components/home/site-header.tsx
+  - [x] SubpageBanner, StatBox, Chip, TrustBadge, Button (5 variants), SectionHeader, LotCard, ProductCard (+BagMockup, RoastMeter with the bean icon), ProducerCard, CtaPanel, FilterBar shell, Breadcrumbs, PlaceholderImage, WhatsAppButton, SkipLink.
+  - [x] Home page refactored to use LotCard, ProductCard, SectionHeader, CtaPanel with no visual change.
+  - [x] Header: Cart button variant for shop pages; skip link to `#main`; mobile menu keyboard-accessible.
+  - [x] Bean icon and pattern assets added from `design/assets/` (bean-brown.png, bean-white.png, beans-caramel.png).
   - Verify: `npm run lint && npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts`
 - [ ] **T1.5 Site constants, routes, data** · Owns: src/lib/site.ts, src/lib/routes.ts, src/data/**
   - [ ] `site.ts` with name, base URL, locales, placeholder contacts (each listed in ASSETS.md).
@@ -56,7 +56,7 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
 ## Phase 2 — Pages (page-builder × up to 4 in parallel; each owns its route folder + dictionary key)
 
 Each page task has these **standard checkpoints** in addition to its own:
-`[ ] matches its board (or DESIGN.md sub-page pattern) at 1440 and 390, EN and ES` · `[ ] one H1, sub-page banner with exactly 3 stats` · `[ ] all copy in en.json and es.json under its own key` · `[ ] generateMetadata with title/description from SPEC §5 keywords` · `[ ] JSON-LD per SPEC §6` · `[ ] missing photos use PlaceholderImage + ASSETS.md row` · `[ ] check-seo-ai passes for the route` · `[ ] qa report PASS`
+`[ ] matches its board (or DESIGN.md sub-page pattern) at 1440 and 390, EN and ES` · `[ ] one H1, sub-page banner with exactly 3 stats` · `[ ] all copy in en.json and es.json under its own key` · `[ ] generateMetadata with title/description from SPEC §5 keywords` · `[ ] JSON-LD per SPEC §6` · `[ ] missing photos use PlaceholderImage + ASSETS.md row` · `[ ] check-seo-ai passes for the route` · `[ ] qa report PASS` · `[ ] renders `<main id="main">` (skip-link target)`
 
 - [ ] **T2.1 Green coffee lots catalog** `/coffees` · Owns: src/app/[lang]/coffees/page.tsx, src/components/lots/**, dict key `lotsPage`
   - [ ] Filters (variety, process, altitude, score, availability, price) and sort work client-side and sync to the URL; filtered URLs canonical to `/coffees`.
@@ -96,7 +96,8 @@ Each page task has these **standard checkpoints** in addition to its own:
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en/regions/urrao,/en/journal,/en/our-story`
 - [ ] **T2.8 Home polish** · Owns: src/app/[lang]/page.tsx, src/components/home/** (except site-header), dict keys `hero`, `lines`, `farmers`, `lots`, `shop`, `producersBand`, `closing`
   - [ ] Links from home cards go to the real lot, producer and product pages.
-  - [ ] Replace the interim `ink-soft` and `line-soft` tokens in `sections.tsx` with DESIGN.md palette tokens (e.g. `body`/`ink`, `line`/`surface-sunken`), then remove both from `globals.css` (request to foundation-builder).
+  - [ ] Replace the interim `ink-soft` and `line-soft` tokens in `sections.tsx`, `TrustBadge` and `LotCard` with DESIGN.md palette tokens (e.g. `body`/`ink`, `line`/`surface-sunken`), then remove both from `globals.css` (request to foundation-builder).
+  - [ ] Reconcile home-parity sizes with the Main board and DESIGN.md (LotCard radius 28px vs card 24px; SectionHeader xl 56px); change DESIGN.md through the planner if the board wins.
   - [ ] FAQ teaser (3 questions → For buyers) before the closing CTA; answer-first sentence in the hero subtitle.
   - [ ] Matches the Main board at 1440 and 390; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en,/es`

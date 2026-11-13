@@ -22,7 +22,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   return (
     <div className="min-h-screen p-2">
       <Hero lang={lang} dict={dict} />
-      <main>
+      <main id="main">
         <BusinessLines lang={lang} dict={dict} />
         <Farmers lang={lang} dict={dict} />
         <FeaturedLots lang={lang} dict={dict} />

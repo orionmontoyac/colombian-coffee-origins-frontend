@@ -7,6 +7,7 @@ Photo rules for all real photos: real people and places from Urrao (no stock pho
 | Priority | assetId | Where it is used | What should be there | Orientation / ratio | Min size | File name | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | P1 | lot-urr-024-gallery-1..4 | Lot detail gallery | Chiroso cherries on the branch, drying beds with this lot, the producer picking, green beans close-up on a white tray | 4:3 landscape | 2400×1800 | `lots/urr-024-1.jpg`…`-4.jpg` | placeholder |
+| P1 | lot-card-photo-* | Lot cards (catalog, home) when a lot has no photo yet | Real photo of that lot's cherries or green beans, shown 4:3 in the card header | 4:3 landscape (card crops to about 2:1) | 2400×1800 | `lots/<code>-card.jpg` | placeholder |
 | P1 | producer-luz-mery-portrait | Producer profile story, producers directory | Luz Mery Higuita at Finca El Mirador, waist-up, coffee plants behind, looking at camera, smiling | 4:5 portrait | 1600×2000 | `producers/luz-mery-higuita.jpg` | placeholder |
 | P1 | farm-el-mirador-drying-beds | Producer profile farm gallery | Raised drying beds (camas africanas) with parchment coffee, mountains behind | 4:3 | 2400×1800 | `farms/el-mirador-drying.jpg` | placeholder |
 | P1 | farm-el-mirador-map | Producer profile, Urrao page | Static map of the farm area (no exact address), or an illustrated map of Urrao | 1:1 | 1200×1200 | `maps/urrao.png` | placeholder |

@@ -196,6 +196,11 @@ components:
   button-on-dark-hover:
     backgroundColor: "{colors.primary-hover}"
     textColor: "{colors.on-primary}"
+  button-outline-on-dark:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
   eyebrow:
     backgroundColor: "{colors.neutral}"
     textColor: "{colors.success}"
@@ -441,7 +446,7 @@ Nothing is square-cornered. Nothing uses a radius outside this list.
 ## Components
 
 - **Notched header.** Menu order on every page: Home · Green Coffee · Shop (CO pill) · Producers · Our Story. The active item is a white pill (`nav-pill-active`); others use `nav-pill`. The right notch holds the language button (globe + EN + chevron) and **Request Samples** (`button-primary`). On the shop it holds **Cart** (`button-shop`) instead.
-- **Buttons.** `button-primary` is lime and means "do the main thing" (request samples, view lot); one per view where possible. `button-secondary` is the outline in canopy green. `button-on-dark` is used on banners. Shop actions use `button-shop` (Add, Add to cart) and `button-shop-on-dark` (caramel, on dark brown).
+- **Buttons.** `button-primary` is lime and means "do the main thing" (request samples, view lot); one per view where possible. `button-secondary` is the outline in canopy green. `button-on-dark` is used on banners. `button-outline-on-dark` is the quiet second action on canopy-green panels: transparent fill, 1.5px inset ring in `on-primary-muted`, white text. Shop actions use `button-shop` (Add, Add to cart) and `button-shop-on-dark` (caramel, on dark brown).
 - **Stat box.** Label in `on-primary-muted`, value in `stat-value`. Only one value per row uses `stat-box-accent`.
 - **Chips.** Trust levels progress from **Registered** (`chip`) to **Farm verified** to **Coffee verified** (`chip-verified`, brown). `chip-score` shows the SCA score: lime number on canopy green. The **CO** pill (brown) marks anything Colombia-only.
 - **Lot card** (`card`). Photo with the lot code and score chips; trust badge; "Variety · *Process*" title; tasting notes; Altitude and Available table divided by `card-divider`; price in USD per kg; **View lot**.
