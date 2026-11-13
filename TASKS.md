@@ -68,10 +68,10 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
 Each page task has these **standard checkpoints** in addition to its own:
 `[ ] matches its board (or DESIGN.md sub-page pattern) at 1440 and 390, EN and ES` · `[ ] one H1, sub-page banner with exactly 3 stats` · `[ ] all copy in en.json and es.json under its own key` · `[ ] generateMetadata with title/description from SPEC §5 keywords` · `[ ] JSON-LD per SPEC §6` · `[ ] missing photos use PlaceholderImage + ASSETS.md row` · `[ ] check-seo-ai passes for the route` · `[ ] qa report PASS` · `[ ] renders `<main id="main">` (skip-link target)`
 
-- [ ] **T2.1 Green coffee lots catalog** `/coffees` · Owns: src/app/[lang]/coffees/page.tsx, src/components/lots/**, dict key `lotsPage`
-  - [ ] Filters (variety, process, altitude, score, availability, price) and sort work client-side and sync to the URL; filtered URLs canonical to `/coffees`.
-  - [ ] Empty state with reset; Load more; "Can't find what you need?" CTA → samples/contact.
-  - [ ] ItemList JSON-LD; standard checkpoints.
+- [x] **T2.1 Green coffee lots catalog** `/coffees` · Owns: src/app/[lang]/coffees/page.tsx, src/components/lots/**, dict key `lotsPage`
+  - [x] Filters (variety, process, altitude, score, availability, price) and sort work client-side and sync to the URL; filtered URLs canonical to `/coffees`.
+  - [x] Empty state with reset; Load more; "Can't find what you need?" CTA → samples/contact.
+  - [x] ItemList JSON-LD; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en/coffees,/es/cafes && npx playwright test tests/e2e/lots.spec.ts`
 - [ ] **T2.2 Lot detail** `/coffees/[code]` · Owns: src/app/[lang]/coffees/[code]/**, src/components/lot/**, dict key `lotPage`
   - [ ] `generateStaticParams` for every lot × locale; unknown code → 404.

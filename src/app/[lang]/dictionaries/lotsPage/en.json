@@ -1,1 +1,104 @@
-{}
+{
+  "meta": {
+    "title": "Buy Colombian green coffee | Colombian Coffee Origins",
+    "description": "Buy Colombian green coffee: traceable specialty microlots from family farms in Urrao, Antioquia. Compare scores and specs, then request a free sample."
+  },
+  "breadcrumb": { "home": "Home", "current": "Green coffee" },
+  "banner": {
+    "chips": ["Traceable lots", "Free samples", "Export support"],
+    "title": "Green coffee",
+    "accent": "lots",
+    "description": "Buy Colombian green coffee from family farms in Urrao. Compare specs and cup scores, then request a sample.",
+    "lotsLabel": "Lots available",
+    "harvestLabel": "Harvest",
+    "harvestValue": "2026",
+    "regionLabel": "Region",
+    "regionValue": "Urrao"
+  },
+  "gridHeading": "All green coffee lots",
+  "filters": {
+    "label": "Filter and sort lots",
+    "toggle": "Filters",
+    "variety": "Variety",
+    "process": "Process",
+    "altitude": "Altitude",
+    "altitudeOptions": {
+      "under-2000": "Under 2,000 m",
+      "2000-2100": "2,000 to 2,100 m",
+      "over-2100": "Over 2,100 m"
+    },
+    "score": "Score",
+    "scoreOption": "{n}+ SCA",
+    "availability": "Availability",
+    "availabilityOptions": {
+      "under-100": "Under 100 kg",
+      "100-300": "100 to 300 kg",
+      "over-300": "Over 300 kg"
+    },
+    "price": "Price",
+    "priceOptions": {
+      "under-10": "Under USD 10 / kg",
+      "10-15": "USD 10 to 15 / kg",
+      "over-15": "Over USD 15 / kg",
+      "on-request": "Price on request"
+    },
+    "sort": "Sort",
+    "sortOptions": {
+      "score": "Highest score",
+      "newest": "Newest",
+      "price": "Price, low to high"
+    },
+    "countOne": "{n} lot",
+    "countOther": "{n} lots",
+    "active": "Active:",
+    "remove": "Remove filter: {name}",
+    "clearAll": "Clear all"
+  },
+  "legend": {
+    "coffeeVerified": "lot cupped and documented",
+    "farmVerified": "farm reviewed by our team",
+    "registered": "details from the producer",
+    "note": "Example listings for this design preview."
+  },
+  "card": {
+    "notesLabel": "Flavor notes",
+    "altitude": "Altitude",
+    "available": "Available",
+    "harvest": "Harvest",
+    "harvestValue": "2026",
+    "notCupped": "Not yet cupped",
+    "viewLot": "View lot",
+    "priceOnRequest": "Price on request",
+    "greenFob": "Green coffee, FOB",
+    "sampleAvailable": "Sample available",
+    "save": "Save lot {code}",
+    "saved": "Remove lot {code} from saved",
+    "badges": {
+      "coffeeVerified": "Coffee verified",
+      "farmVerified": "Farm verified",
+      "registered": "Registered"
+    },
+    "processes": {
+      "washed": "Washed",
+      "honey": "Honey",
+      "natural": "Natural"
+    }
+  },
+  "empty": {
+    "title": "No lots match these filters",
+    "text": "Try removing a filter or widening the range. New lots are added as producers finish cupping.",
+    "reset": "Reset filters"
+  },
+  "loadMore": {
+    "button": "Load more lots",
+    "showing": "Showing {shown} of {total} lots"
+  },
+  "cta": {
+    "eyebrow": "Custom sourcing",
+    "title": "Can't find",
+    "accent": "what you need?",
+    "text": "Tell us the variety, process, profile and volume you need, and we'll match you with producers.",
+    "primary": "Send a sourcing request",
+    "secondary": "Request samples"
+  }
+}
