@@ -62,6 +62,12 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [x] `next.config.ts` reads `distDir` from `NEXT_DIST_DIR` (default `.next`); `.gitignore` ignores `/.next-*/`.
   - [x] `playwright.config.ts` reads the port from `E2E_PORT` (default 3100) for baseURL, the webServer command and url, and writes output to `artifacts/playwright-<port>`, so four builders can each build and test at once.
   - Verify: `npm run build && npx playwright test tests/e2e/smoke.spec.ts && NEXT_DIST_DIR=.next-slot1 E2E_PORT=3101 npx playwright test tests/e2e/smoke.spec.ts`
+- [ ] **T1.8 Shared fixes from Phase 2 reports** · Owner: foundation-builder · Owns: src/proxy.ts, src/components/ui/**, src/components/home/site-header.tsx
+  - [ ] Unknown `/coffees/<code>`, `/producers/<slug>`, `/shop/<slug>` (and their ES paths) return HTTP 404 on the FIRST request. The proxy checks the data helpers, because `partialPrefetching` otherwise serves 200 + noindex on first hit.
+  - [ ] PlaceholderImage: move the `node:fs` ASSETS.md check out of the client import graph (dev-only server module) so client components can import `@/components/ui`.
+  - [ ] Header language switcher: accessible name starts with its visible text (axe `label-content-name-mismatch`). Then remove the per-spec axe exclusions in lots.spec.ts and lot.spec.ts.
+  - [ ] SubpageBanner: stat values don't wrap at 390 (e.g. "2.150 m").
+  - Verify: `npm run lint && npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts tests/e2e/lots.spec.ts tests/e2e/lot.spec.ts`
 
 ## Phase 2 — Pages (page-builder × up to 4 in parallel; each owns its route folder + dictionary key)
 
