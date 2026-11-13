@@ -1,1 +1,80 @@
-{}
+{
+  "meta": {
+    "title": "{name}: café de finca en Urrao, Antioquia",
+    "description": "{name} cultiva café en {farm}, en Urrao, Antioquia, a {altitude} m. Lee su historia, mira los lotes de café verde y pide una muestra."
+  },
+  "banner": {
+    "allProducers": "Todos los productores",
+    "greenCoffee": "Café verde",
+    "roastedCoffee": "Café tostado · CO",
+    "stats": {
+      "altitude": "Altura",
+      "greenLots": "Lotes verdes",
+      "roasted": "Tostado"
+    },
+    "bagOne": "{count} bolsa",
+    "bagOther": "{count} bolsas",
+    "descriptionPrefix": "{farm} · {town}."
+  },
+  "nav": {
+    "label": "En esta página",
+    "story": "Historia",
+    "lots": "Lotes de café verde",
+    "roasted": "Café tostado",
+    "farm": "La finca"
+  },
+  "story": {
+    "eyebrow": "La historia",
+    "title": "La historia detrás",
+    "accent": "del café",
+    "imageAlt": "Cosecha de café en una finca familiar de Urrao",
+    "quote": "[Una frase corta del productor, con sus propias palabras.]",
+    "facts": {
+      "varieties": "Variedades",
+      "processes": "Procesos",
+      "since": "Cultiva café desde",
+      "yearPlaceholder": "[año]",
+      "none": "Por completar"
+    }
+  },
+  "lots": {
+    "eyebrow": "Para tostadores e importadores",
+    "title": "Lotes de café",
+    "accent": "verde",
+    "all": "Todos los lotes de café verde",
+    "viewLot": "Ver lote",
+    "empty": "Esta finca no tiene lotes publicados por ahora. Pregúntanos por la próxima cosecha.",
+    "note": "Lotes de ejemplo para esta vista previa del diseño."
+  },
+  "roasted": {
+    "eyebrow": "La marca propia del productor",
+    "ships": "Envíos dentro de Colombia",
+    "title": "{brand},",
+    "accent": "tostado por el productor",
+    "visitShop": "Visitar la tienda",
+    "viewCoffee": "Ver café",
+    "brandTag": "Marca del productor",
+    "grind": "En grano"
+  },
+  "farm": {
+    "eyebrow": "La finca",
+    "mapLabel": "Mapa de la zona de la finca en Urrao, Antioquia",
+    "dryingLabel": "Camas elevadas de secado con café pergamino",
+    "altHills": "Montañas cafeteras alrededor de Urrao, Antioquia",
+    "altCherries": "Cerezas de café rojas y maduras en la rama",
+    "altSquare": "Parque principal de Urrao, Antioquia",
+    "location": "Urrao, Antioquia, Colombia",
+    "note": "Fotos de ejemplo para esta vista previa del diseño."
+  },
+  "cta": {
+    "eyebrow": "Trabaja con esta finca",
+    "title": "¿Te interesa",
+    "accent": "el café de {farm}?",
+    "text": "Pide una muestra de sus lotes o pregúntanos por las próximas cosechas y los volúmenes.",
+    "primary": "Pedir muestras",
+    "secondary": "Hacer una pregunta"
+  },
+  "jsonLd": {
+    "jobTitle": "Productor(a) de café"
+  }
+}

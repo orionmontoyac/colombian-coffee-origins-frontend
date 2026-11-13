@@ -1,1 +1,80 @@
-{}
+{
+  "meta": {
+    "title": "{name}, coffee producer in Urrao",
+    "description": "{name} grows coffee at {farm} in Urrao, Antioquia, at {altitude} m. Read the story, see the green coffee lots and ask for a sample."
+  },
+  "banner": {
+    "allProducers": "All producers",
+    "greenCoffee": "Green coffee",
+    "roastedCoffee": "Roasted coffee · CO",
+    "stats": {
+      "altitude": "Altitude",
+      "greenLots": "Green lots",
+      "roasted": "Roasted"
+    },
+    "bagOne": "{count} bag",
+    "bagOther": "{count} bags",
+    "descriptionPrefix": "{farm} · {town}."
+  },
+  "nav": {
+    "label": "On this page",
+    "story": "Story",
+    "lots": "Green coffee lots",
+    "roasted": "Roasted coffee",
+    "farm": "The farm"
+  },
+  "story": {
+    "eyebrow": "The story",
+    "title": "The story behind",
+    "accent": "the coffee",
+    "imageAlt": "Coffee harvest on a family farm in Urrao",
+    "quote": "[A short quote from the producer, in their own words.]",
+    "facts": {
+      "varieties": "Varieties",
+      "processes": "Processes",
+      "since": "Coffee since",
+      "yearPlaceholder": "[year]",
+      "none": "To be added"
+    }
+  },
+  "lots": {
+    "eyebrow": "For roasters and importers",
+    "title": "Green coffee",
+    "accent": "lots",
+    "all": "All green coffee lots",
+    "viewLot": "View lot",
+    "empty": "No lots are listed for this farm right now. Ask us about the next harvest.",
+    "note": "Example lots for this design preview."
+  },
+  "roasted": {
+    "eyebrow": "The producer's own brand",
+    "ships": "Ships within Colombia",
+    "title": "{brand},",
+    "accent": "roasted by the producer",
+    "visitShop": "Visit the shop",
+    "viewCoffee": "View coffee",
+    "brandTag": "Producer brand",
+    "grind": "Whole bean"
+  },
+  "farm": {
+    "eyebrow": "The farm",
+    "mapLabel": "Map of the farm area in Urrao, Antioquia",
+    "dryingLabel": "Raised drying beds with parchment coffee",
+    "altHills": "Coffee hills around Urrao, Antioquia",
+    "altCherries": "Ripe red coffee cherries on the branch",
+    "altSquare": "Main square of Urrao, Antioquia",
+    "location": "Urrao, Antioquia, Colombia",
+    "note": "Example photos for this design preview."
+  },
+  "cta": {
+    "eyebrow": "Work with this farm",
+    "title": "Interested in",
+    "accent": "{farm}'s coffee?",
+    "text": "Request a sample of their lots, or ask us about future harvests and volumes.",
+    "primary": "Request samples",
+    "secondary": "Ask a question"
+  },
+  "jsonLd": {
+    "jobTitle": "Coffee producer"
+  }
+}

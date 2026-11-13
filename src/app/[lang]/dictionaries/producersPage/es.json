@@ -1,1 +1,32 @@
-{}
+{
+  "meta": {
+    "title": "Productores de café colombianos en Urrao, Antioquia",
+    "description": "Conoce las fincas cafeteras familiares de Urrao, Antioquia. Lee sus historias, mira sus lotes de café verde y sus marcas tostadas, y compra directo a quienes lo cultivan."
+  },
+  "banner": {
+    "chips": ["Productores con nombre", "Fincas verificadas", "Directo de la finca"],
+    "title": "Productores de café",
+    "accent": "colombianos",
+    "description": "Fincas cafeteras familiares de Urrao, Antioquia, con sus nombres, su altura y sus lotes.",
+    "stats": {
+      "producers": "Productores",
+      "region": "Región",
+      "altitude": "Altura"
+    },
+    "regionValue": "Urrao"
+  },
+  "list": {
+    "eyebrow": "Fincas cafeteras familiares",
+    "title": "Las personas detrás de",
+    "accent": "cada lote",
+    "text": "Cada lote de la plataforma tiene un productor con nombre y una finca que puedes conocer. Abre un perfil para ver su historia, sus lotes de café verde y, si tuesta, las bolsas que puedes pedir dentro de Colombia.",
+    "note": "Productores y textos de ejemplo para esta vista previa del diseño.",
+    "viewProfile": "Ver perfil",
+    "greenCoffee": "Café verde",
+    "roastedCoffee": "Café tostado · CO",
+    "lotCountOne": "{count} lote",
+    "lotCountOther": "{count} lotes",
+    "altitudeLine": "{altitude} m · {varieties}"
+  },
+  "breadcrumbList": "Productores"
+}

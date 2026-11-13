@@ -67,6 +67,7 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [ ] PlaceholderImage: move the `node:fs` ASSETS.md check out of the client import graph (dev-only server module) so client components can import `@/components/ui`.
   - [ ] Header language switcher: accessible name starts with its visible text (axe `label-content-name-mismatch`). Then remove the per-spec axe exclusions in lots.spec.ts and lot.spec.ts.
   - [ ] SubpageBanner: stat values don't wrap at 390 (e.g. "2.150 m").
+  - [ ] PlaceholderImage caption passes axe contrast (currently `text-muted` on `placeholder`); then remove the local override in src/components/producer/.
   - Verify: `npm run lint && npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts tests/e2e/lots.spec.ts tests/e2e/lot.spec.ts`
 
 ## Phase 2 — Pages (page-builder × up to 4 in parallel; each owns its route folder + dictionary key)
@@ -79,14 +80,14 @@ Each page task has these **standard checkpoints** in addition to its own:
   - [x] Empty state with reset; Load more; "Can't find what you need?" CTA → samples/contact.
   - [x] ItemList JSON-LD; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en/coffees,/es/cafes && npx playwright test tests/e2e/lots.spec.ts`
-- [ ] **T2.2 Lot detail** `/coffees/[code]` · Owns: src/app/[lang]/coffees/[code]/**, src/components/lot/**, dict key `lotPage`
-  - [ ] `generateStaticParams` for every lot × locale; unknown code → 404.
-  - [ ] Gallery, sticky decision panel (price USD/kg FOB or "price on request", min order, free sample, Request sample → `/samples?lot=CODE`), specs table, cup profile, producer block, "What we checked", "How buying works", "More from Urrao", CTA.
-  - [ ] Product + Offer JSON-LD (no Offer when price on request); BreadcrumbList; standard checkpoints.
+- [x] **T2.2 Lot detail** `/coffees/[code]` · Owns: src/app/[lang]/coffees/[code]/**, src/components/lot/**, dict key `lotPage`
+  - [x] `generateStaticParams` for every lot × locale; unknown code → 404.
+  - [x] Gallery, sticky decision panel (price USD/kg FOB or "price on request", min order, free sample, Request sample → `/samples?lot=CODE`), specs table, cup profile, producer block, "What we checked", "How buying works", "More from Urrao", CTA.
+  - [x] Product + Offer JSON-LD (no Offer when price on request); BreadcrumbList; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en/coffees/urr-024,/es/cafes/urr-024 && npx playwright test tests/e2e/lot.spec.ts`
-- [ ] **T2.3 Producers directory + producer profile** · Owns: src/app/[lang]/producers/**, src/components/producer/**, dict keys `producersPage`, `producerPage`
-  - [ ] Directory grid; profile per Producer board (no avatar; in-page nav; story; green lots; roasted panel CO-only; farm gallery with map placeholder; CTA).
-  - [ ] Person + Place JSON-LD; standard checkpoints.
+- [x] **T2.3 Producers directory + producer profile** · Owns: src/app/[lang]/producers/**, src/components/producer/**, dict keys `producersPage`, `producerPage`
+  - [x] Directory grid; profile per Producer board (no avatar; in-page nav; story; green lots; roasted panel CO-only; farm gallery with map placeholder; CTA).
+  - [x] Person + Place JSON-LD; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en/producers,/en/producers/luz-mery-higuita,/es/productores/luz-mery-higuita && npx playwright test tests/e2e/producers.spec.ts`
 - [ ] **T2.4 Roasted coffee shop + product detail + cart** · Owns: src/app/[lang]/shop/**, src/components/shop/**, dict keys `shopPage`, `productPage`, `cart`
   - [ ] Shop page per Shop board (brown identity, bean pattern banner, perks, brands, filters, product grid with roast meter, coffee club, quiz card, delivery steps, sell band).

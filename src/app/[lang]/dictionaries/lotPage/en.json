@@ -1,1 +1,141 @@
-{}
+{
+  "meta": {
+    "title": "{variety} {process} green coffee from Urrao · {code}",
+    "description": "{variety} {process} green coffee from Urrao: {scoreBit}{altitude} m, {farm}, Antioquia. {priceBit}, {minKg} kg minimum, free 200 g sample.",
+    "scoreBit": "SCA {score}, ",
+    "priceFob": "USD {price}/kg FOB",
+    "priceRequest": "price on request",
+    "ogAlt": "{variety} coffee lot {code} from {farm}, Urrao"
+  },
+  "banner": {
+    "lotLabel": "Lot {code}",
+    "available": "Available now",
+    "allLots": "All lots",
+    "breadcrumbLots": "Green coffee",
+    "region": "Urrao",
+    "description": "Grown by {producer} at {farm}, {region}. {notes}.",
+    "scoreLabel": "SCA score",
+    "scorePending": "Pending",
+    "altitudeLabel": "Altitude",
+    "harvestLabel": "Harvest"
+  },
+  "gallery": {
+    "label": "Lot photos",
+    "counter": "{current} / {total}",
+    "thumb": "Show photo {n}: {caption}",
+    "captions": ["Lot photo", "Green beans", "Harvest", "The farm"],
+    "placeholderLabels": [
+      "Green beans of this lot on a white tray",
+      "Harvest at the farm",
+      "The farm in Urrao"
+    ]
+  },
+  "panel": {
+    "label": "Lot summary",
+    "scoreCaption": "SCA score",
+    "notCupped": "Not yet cupped",
+    "pricePerKg": "/ kg",
+    "priceNote": "Green coffee, FOB Colombia",
+    "priceOnRequest": "Price on request",
+    "priceOnRequestNote": "We send a FOB quote with your sample request.",
+    "available": "Available",
+    "availableValue": "{kg} kg",
+    "minOrder": "Minimum order",
+    "minOrderValue": "{kg} kg · 1 bag",
+    "sample": "Sample",
+    "sampleFree": "Free, 200 g",
+    "sampleOnRequest": "On request",
+    "requestSample": "Request sample",
+    "ask": "Ask about this lot",
+    "save": "Save lot",
+    "saved": "Lot saved",
+    "note": "We confirm sample shipping by email. Example lot, prices and terms for this design preview."
+  },
+  "specs": {
+    "eyebrow": "Specifications",
+    "title": "About",
+    "accent": "this lot",
+    "variety": "Variety",
+    "process": "Process",
+    "altitude": "Altitude",
+    "harvest": "Harvest",
+    "available": "Available",
+    "availableNote": "{kg} kg ({bags} bags of 35 kg)",
+    "moisture": "Moisture",
+    "waterActivity": "Water activity",
+    "packaging": "Packaging",
+    "storedIn": "Stored in",
+    "onRequest": "Shared with the sample",
+    "waterActivityUnit": "{value} aw"
+  },
+  "cup": {
+    "eyebrow": "Cup profile",
+    "title": "How it",
+    "accent": "tastes",
+    "points": "SCA points",
+    "cuppedBy": "Cupped Oct 2026 by [Q Grader name]",
+    "notCupped": "This lot has not been cupped yet. Request a sample and we send the cupping report with it.",
+    "notesLabel": "Flavor notes",
+    "attributesPending": "Acidity, sweetness, body and aftertaste scores arrive with the cupping report.",
+    "attributes": {
+      "acidity": "Acidity",
+      "sweetness": "Sweetness",
+      "body": "Body",
+      "aftertaste": "Aftertaste"
+    },
+    "outOf": "{value} / 10"
+  },
+  "producer": {
+    "eyebrow": "The producer",
+    "photoAlt": "Coffee growing on a hillside farm in Urrao, Antioquia",
+    "photoAltPickers": "Coffee pickers with harvest baskets on a Colombian hillside",
+    "storyStub": "[Producer story placeholder: how the family came to grow coffee, why they planted this variety, and how they pick and process each lot. Written with the producer.]",
+    "farmSize": "Farm size",
+    "farmSizeValue": "[ha]",
+    "altitude": "Altitude",
+    "lotsListed": "Lots listed",
+    "viewProfile": "View producer profile",
+    "noProfile": "Producer profile coming soon",
+    "mapPlaceholder": "Map placeholder · Urrao, Antioquia"
+  },
+  "checked": {
+    "eyebrow": "Coffee verified",
+    "title": "What we",
+    "accent": "checked",
+    "done": "Done",
+    "pending": "Not yet",
+    "items": {
+      "farmVisited": { "title": "Farm visited", "note": "Location and production reviewed by our team" },
+      "cupped": { "title": "Lot cupped and scored", "note": "Cupping report on file" },
+      "kilosConfirmed": { "title": "Kilos confirmed", "note": "Weighed in the warehouse" },
+      "moisture": { "title": "Moisture measured", "note": "Moisture and water activity in range" }
+    },
+    "pendingNote": "Planned before the lot is offered as verified"
+  },
+  "buying": {
+    "eyebrow": "Buying this lot",
+    "title": "From sample to",
+    "accent": "shipment",
+    "steps": [
+      { "title": "Request a sample", "text": "A free 200 g sample of this exact lot, green or roasted." },
+      { "title": "Cup and decide", "text": "Taste it, ask the producer questions, agree on volume and price." },
+      { "title": "Agreement and export", "text": "We coordinate the contract, paperwork and shipping with our export partner." }
+    ],
+    "stepLabel": "Step {n}"
+  },
+  "more": {
+    "title": "More from",
+    "accent": "Urrao",
+    "text": "Other lots from the same valley, each with a named producer and a free sample.",
+    "all": "See all lots",
+    "note": "Example listings for this design preview."
+  },
+  "cta": {
+    "eyebrow": "Custom sourcing",
+    "title": "Looking for a",
+    "accent": "specific coffee?",
+    "text": "Tell us the variety, process, profile and volume you need, and we match you with producers.",
+    "primary": "Send a sourcing request",
+    "secondary": "How buying works"
+  }
+}

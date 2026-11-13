@@ -1,1 +1,141 @@
-{}
+{
+  "meta": {
+    "title": "Café verde {variety} {process} de Urrao · {code}",
+    "description": "Café verde {variety} {process} de Urrao: {scoreBit}{altitude} m, {farm}, Antioquia. {priceBit}, mínimo {minKg} kg, muestra gratis de 200 g.",
+    "scoreBit": "puntaje SCA {score}, ",
+    "priceFob": "USD {price}/kg FOB",
+    "priceRequest": "precio a consultar",
+    "ogAlt": "Lote de café {variety} {code} de {farm}, Urrao"
+  },
+  "banner": {
+    "lotLabel": "Lote {code}",
+    "available": "Disponible ahora",
+    "allLots": "Todos los lotes",
+    "breadcrumbLots": "Café verde",
+    "region": "Urrao",
+    "description": "Cultivado por {producer} en {farm}, {region}. {notes}.",
+    "scoreLabel": "Puntaje SCA",
+    "scorePending": "Pendiente",
+    "altitudeLabel": "Altitud",
+    "harvestLabel": "Cosecha"
+  },
+  "gallery": {
+    "label": "Fotos del lote",
+    "counter": "{current} / {total}",
+    "thumb": "Ver foto {n}: {caption}",
+    "captions": ["Foto del lote", "Café verde", "Cosecha", "La finca"],
+    "placeholderLabels": [
+      "Granos verdes de este lote sobre una bandeja blanca",
+      "Cosecha en la finca",
+      "La finca en Urrao"
+    ]
+  },
+  "panel": {
+    "label": "Resumen del lote",
+    "scoreCaption": "Puntaje SCA",
+    "notCupped": "Aún sin catar",
+    "pricePerKg": "/ kg",
+    "priceNote": "Café verde, FOB Colombia",
+    "priceOnRequest": "Precio a consultar",
+    "priceOnRequestNote": "Te enviamos una cotización FOB junto con tu solicitud de muestra.",
+    "available": "Disponible",
+    "availableValue": "{kg} kg",
+    "minOrder": "Pedido mínimo",
+    "minOrderValue": "{kg} kg · 1 saco",
+    "sample": "Muestra",
+    "sampleFree": "Gratis, 200 g",
+    "sampleOnRequest": "A consultar",
+    "requestSample": "Solicitar muestra",
+    "ask": "Preguntar por este lote",
+    "save": "Guardar lote",
+    "saved": "Lote guardado",
+    "note": "Confirmamos el envío de la muestra por correo. Lote, precios y condiciones de ejemplo para esta vista previa del diseño."
+  },
+  "specs": {
+    "eyebrow": "Especificaciones",
+    "title": "Sobre",
+    "accent": "este lote",
+    "variety": "Variedad",
+    "process": "Proceso",
+    "altitude": "Altitud",
+    "harvest": "Cosecha",
+    "available": "Disponible",
+    "availableNote": "{kg} kg ({bags} sacos de 35 kg)",
+    "moisture": "Humedad",
+    "waterActivity": "Actividad de agua",
+    "packaging": "Empaque",
+    "storedIn": "Almacenado en",
+    "onRequest": "Se comparte con la muestra",
+    "waterActivityUnit": "{value} aw"
+  },
+  "cup": {
+    "eyebrow": "Perfil de taza",
+    "title": "Así",
+    "accent": "sabe",
+    "points": "Puntos SCA",
+    "cuppedBy": "Catado en oct. 2026 por [nombre del Q Grader]",
+    "notCupped": "Este lote aún no se ha catado. Solicita una muestra y te enviamos el informe de cata con ella.",
+    "notesLabel": "Notas de sabor",
+    "attributesPending": "Los puntajes de acidez, dulzor, cuerpo y postgusto llegan con el informe de cata.",
+    "attributes": {
+      "acidity": "Acidez",
+      "sweetness": "Dulzor",
+      "body": "Cuerpo",
+      "aftertaste": "Postgusto"
+    },
+    "outOf": "{value} / 10"
+  },
+  "producer": {
+    "eyebrow": "El productor",
+    "photoAlt": "Café creciendo en una finca de ladera en Urrao, Antioquia",
+    "photoAltPickers": "Recolectores con canastos de cosecha en una ladera colombiana",
+    "storyStub": "[Texto de ejemplo: cómo la familia llegó a cultivar café, por qué sembraron esta variedad y cómo cosechan y procesan cada lote. Se escribe junto con el productor.]",
+    "farmSize": "Tamaño de la finca",
+    "farmSizeValue": "[ha]",
+    "altitude": "Altitud",
+    "lotsListed": "Lotes publicados",
+    "viewProfile": "Ver perfil del productor",
+    "noProfile": "Perfil del productor próximamente",
+    "mapPlaceholder": "Mapa de ejemplo · Urrao, Antioquia"
+  },
+  "checked": {
+    "eyebrow": "Café verificado",
+    "title": "Lo que",
+    "accent": "revisamos",
+    "done": "Hecho",
+    "pending": "Pendiente",
+    "items": {
+      "farmVisited": { "title": "Finca visitada", "note": "Ubicación y producción revisadas por nuestro equipo" },
+      "cupped": { "title": "Lote catado y calificado", "note": "Informe de cata en archivo" },
+      "kilosConfirmed": { "title": "Kilos confirmados", "note": "Pesados en la bodega" },
+      "moisture": { "title": "Humedad medida", "note": "Humedad y actividad de agua dentro del rango" }
+    },
+    "pendingNote": "Se hace antes de ofrecer el lote como verificado"
+  },
+  "buying": {
+    "eyebrow": "Comprar este lote",
+    "title": "De la muestra al",
+    "accent": "embarque",
+    "steps": [
+      { "title": "Solicita una muestra", "text": "Una muestra gratis de 200 g de este lote exacto, verde o tostada." },
+      { "title": "Cata y decide", "text": "Pruébalo, hazle preguntas al productor y acuerden volumen y precio." },
+      { "title": "Acuerdo y exportación", "text": "Coordinamos el contrato, los trámites y el envío con nuestro socio exportador." }
+    ],
+    "stepLabel": "Paso {n}"
+  },
+  "more": {
+    "title": "Más de",
+    "accent": "Urrao",
+    "text": "Otros lotes del mismo valle, cada uno con productor con nombre y muestra gratis.",
+    "all": "Ver todos los lotes",
+    "note": "Lotes de ejemplo para esta vista previa del diseño."
+  },
+  "cta": {
+    "eyebrow": "Abastecimiento a medida",
+    "title": "¿Buscas un",
+    "accent": "café específico?",
+    "text": "Cuéntanos la variedad, el proceso, el perfil y el volumen que necesitas, y te conectamos con productores.",
+    "primary": "Enviar solicitud de abastecimiento",
+    "secondary": "Cómo comprar"
+  }
+}

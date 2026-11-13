@@ -1,1 +1,32 @@
-{}
+{
+  "meta": {
+    "title": "Colombian Coffee Producers: Family Farms in Urrao",
+    "description": "Meet the family coffee farms of Urrao, Antioquia. Read their stories, see their green coffee lots and roast brands, and buy direct from the people who grow it."
+  },
+  "banner": {
+    "chips": ["Named producers", "Verified farms", "Direct from the farm"],
+    "title": "Colombian coffee",
+    "accent": "producers",
+    "description": "Family coffee farms in Urrao, Antioquia, with their names, their altitude and their lots.",
+    "stats": {
+      "producers": "Producers",
+      "region": "Region",
+      "altitude": "Altitude"
+    },
+    "regionValue": "Urrao"
+  },
+  "list": {
+    "eyebrow": "Family coffee farms",
+    "title": "The people behind",
+    "accent": "every lot",
+    "text": "Every lot on the platform has a producer with a name and a farm you can read about. Open a profile to see the story, the green coffee lots and, where the producer roasts, the bags you can order inside Colombia.",
+    "note": "Example producers and story texts for this design preview.",
+    "viewProfile": "View profile",
+    "greenCoffee": "Green coffee",
+    "roastedCoffee": "Roasted coffee · CO",
+    "lotCountOne": "{count} lot",
+    "lotCountOther": "{count} lots",
+    "altitudeLine": "{altitude} m · {varieties}"
+  },
+  "breadcrumbList": "Producers"
+}
