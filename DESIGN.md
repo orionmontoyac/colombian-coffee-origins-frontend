@@ -414,7 +414,7 @@ Depth is **tonal and cut-out**, never shadow.
 
 - Three tonal layers: white page → parchment or crema panels → canopy green or dark roast banners.
 - On dark banners, raised elements (stat boxes, inactive nav pills) use `primary-raised`, a slightly lighter green, not a shadow.
-- **The notch is the signature:** white notches cut into the top of the banner (logo on the left, actions on the right). Their concave corners are drawn with "ears", 28px squares with a radial gradient (`.ear-br`, `.ear-bl`, `.ear-tr`, `.ear-tl`). The home hero repeats the cut-out at the bottom, where the audience cards tuck in.
+- **The notch is the signature:** white notches cut into the top of the banner (logo on the left, actions on the right). Their concave corners are drawn with "ears", 28px squares with a radial gradient (`.ear-br`, `.ear-bl`, `.ear-tr`, `.ear-tl`). The home hero repeats the cut-out at the bottom, where the business-line cards tuck in. Those pieces fit like a puzzle: an even 16px white gap all around each card; the cut's inner corner is the card's radius plus the gap (28px + 16px = 44px) so the two curves run parallel; and the cut is 72px tall, the 44px corner plus the 28px rounded corner of the banner tab below it, so the curves join in one smooth S with no spike.
 - The only shadow allowed is under the product bag mockup, so the bag stands on its stage: `0 18px 30px` in canopy green at 18%. Never neutral black.
 
 ## Shapes

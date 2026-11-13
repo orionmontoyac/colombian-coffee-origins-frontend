@@ -89,7 +89,7 @@ export function BusinessLines({ lang, dict }: { lang: Locale; dict: Dictionary }
   const { lines: l, statement: s } = dict;
 
   return (
-    <section className="relative z-30 mt-4 grid gap-6 md:grid-cols-2 wide:-mt-9 wide:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)_minmax(0,1fr)]">
+    <section className="relative z-30 mt-4 grid gap-6 md:grid-cols-2 wide:-mt-14 wide:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)_minmax(0,1fr)]">
       <LineCard
         line="green"
         title={

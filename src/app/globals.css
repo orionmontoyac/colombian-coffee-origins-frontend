@@ -106,9 +106,9 @@ summary:focus-visible {
 .ear-tr { background: radial-gradient(circle at 100% 0, transparent 27.5px, var(--white) 28px); }
 .ear-tl { background: radial-gradient(circle at 0 0, transparent 27.5px, var(--white) 28px); }
 
-/* Width of one side card column: grid is 1fr 1.1fr 1fr with a 24px gap */
+/* Hero bottom cut-out: one side card column (grid is 1fr 1.1fr 1fr with a 24px gap) plus a 16px gap */
 .side-column-cut {
-  width: calc((100% - 48px) / 3.1 + 24px);
+  width: calc((100% - 48px) / 3.1 + 16px);
 }
 
 /* Hide the default disclosure triangle on <details> menus */
