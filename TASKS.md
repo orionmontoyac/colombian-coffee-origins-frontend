@@ -58,9 +58,9 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [x] A new page key is added by creating its own folder only. No shared file needs editing, so parallel page builders never touch the same file.
   - [x] Home renders identically (same keys, same text).
   - Verify: `npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts`
-- [ ] **T1.7 Isolated build and test slots for parallel builders** · Owner: foundation-builder · Owns: next.config.ts, playwright.config.ts, .gitignore
-  - [ ] `next.config.ts` reads `distDir` from `NEXT_DIST_DIR` (default `.next`); `.gitignore` ignores `/.next-*/`.
-  - [ ] `playwright.config.ts` reads the port from `E2E_PORT` (default 3100) for baseURL, the webServer command and url, and writes output to `artifacts/playwright-<port>`, so four builders can each build and test at once.
+- [x] **T1.7 Isolated build and test slots for parallel builders** · Owner: foundation-builder · Owns: next.config.ts, playwright.config.ts, .gitignore
+  - [x] `next.config.ts` reads `distDir` from `NEXT_DIST_DIR` (default `.next`); `.gitignore` ignores `/.next-*/`.
+  - [x] `playwright.config.ts` reads the port from `E2E_PORT` (default 3100) for baseURL, the webServer command and url, and writes output to `artifacts/playwright-<port>`, so four builders can each build and test at once.
   - Verify: `npm run build && npx playwright test tests/e2e/smoke.spec.ts && NEXT_DIST_DIR=.next-slot1 E2E_PORT=3101 npx playwright test tests/e2e/smoke.spec.ts`
 
 ## Phase 2 — Pages (page-builder × up to 4 in parallel; each owns its route folder + dictionary key)

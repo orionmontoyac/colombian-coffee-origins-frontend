@@ -1,10 +1,11 @@
 import { defineConfig, devices } from "@playwright/test";
 
-const baseURL = process.env.PLAYWRIGHT_BASE_URL ?? "http://localhost:3100";
+const port = Number(process.env.E2E_PORT ?? 3100);
+const baseURL = process.env.PLAYWRIGHT_BASE_URL ?? `http://localhost:${port}`;
 
 export default defineConfig({
   testDir: "./tests/e2e",
-  outputDir: "artifacts/playwright",
+  outputDir: `artifacts/playwright-${port}`,
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
@@ -34,8 +35,8 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npm run build && npm run start -- -p 3100",
-    url: "http://localhost:3100/en",
+    command: `npm run build && npm run start -- -p ${port}`,
+    url: `http://localhost:${port}/en`,
     reuseExistingServer: !process.env.CI,
     timeout: 300_000,
   },
