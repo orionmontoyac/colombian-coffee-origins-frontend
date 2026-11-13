@@ -1,21 +1,34 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Sans, Raleway } from "next/font/google";
+import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import "../globals.css";
 import { getDictionary, hasLocale, locales } from "./dictionaries";
 
-const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
-const instrumentSans = Instrument_Sans({
-  variable: "--font-instrument-sans",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
+// Origin Ledger type: Vollkorn for headings and numbers, Fira Sans for body,
+// Ubuntu for labels (buttons, chips, nav, eyebrows). Files live in src/fonts.
+const vollkorn = localFont({
+  variable: "--font-vollkorn",
+  src: [
+    { path: "../../fonts/vollkorn/Vollkorn-VariableFont_wght.ttf", weight: "400 900", style: "normal" },
+    { path: "../../fonts/vollkorn/Vollkorn-Italic-VariableFont_wght.ttf", weight: "400 900", style: "italic" },
+  ],
 });
-// Only used for the giant hero word
-const raleway = Raleway({
-  variable: "--font-raleway",
-  subsets: ["latin"],
-  weight: "800",
-  style: "italic",
+const firaSans = localFont({
+  variable: "--font-fira-sans",
+  src: [
+    { path: "../../fonts/fira-sans/FiraSans-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../../fonts/fira-sans/FiraSans-Italic.ttf", weight: "400", style: "italic" },
+    { path: "../../fonts/fira-sans/FiraSans-Medium.ttf", weight: "500", style: "normal" },
+    { path: "../../fonts/fira-sans/FiraSans-SemiBold.ttf", weight: "600", style: "normal" },
+  ],
+});
+const ubuntu = localFont({
+  variable: "--font-ubuntu",
+  src: [
+    { path: "../../fonts/ubuntu/Ubuntu-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../../fonts/ubuntu/Ubuntu-Medium.ttf", weight: "500", style: "normal" },
+    { path: "../../fonts/ubuntu/Ubuntu-Bold.ttf", weight: "700", style: "normal" },
+  ],
 });
 
 export async function generateStaticParams() {
@@ -41,7 +54,7 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${inter.variable} ${instrumentSans.variable} ${raleway.variable} h-full antialiased`}
+      className={`${vollkorn.variable} ${firaSans.variable} ${ubuntu.variable} h-full antialiased`}
     >
       <body className="min-h-full">{children}</body>
     </html>
