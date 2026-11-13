@@ -1,1 +1,130 @@
-{}
+{
+  "metaTitle": "Buy specialty coffee online in Colombia",
+  "metaDescription": "Roasted specialty coffee from Colombian family farms, roasted to order and delivered across Colombia. Free shipping over COP 150,000.",
+  "breadcrumbHome": "Home",
+  "breadcrumbShop": "Roasted coffee shop",
+  "chips": {
+    "roastedBy": "Roasted by the producers",
+    "ships": "Ships within Colombia",
+    "prices": "Prices in COP"
+  },
+  "title": "Roasted coffee,",
+  "accent": "straight from the farm",
+  "description": "Bags roasted by the families who grow the coffee. Buy directly from their brands, for your home or your café.",
+  "stats": {
+    "coffees": "Coffees",
+    "brands": "Producer brands",
+    "from": "From"
+  },
+  "perksLabel": "Why buy here",
+  "perks": [
+    { "title": "Roasted to order", "text": "Bags leave the farm within days of roasting" },
+    { "title": "Free shipping", "text": "On orders over COP 150,000" },
+    { "title": "Pay your way", "text": "PSE, Nequi and cards are coming soon" },
+    { "title": "Direct to families", "text": "Each sale goes to the producer brand" }
+  ],
+  "brands": {
+    "title": "Shop by",
+    "accent": "producer",
+    "text": "Every brand here belongs to a coffee family. They grow it, roast it and sell it under their own name.",
+    "coffeeOne": "1 coffee",
+    "coffeeMany": "{count} coffees",
+    "filterAria": "Show coffees from {brand}"
+  },
+  "catalog": {
+    "title": "Find",
+    "accent": "your bag",
+    "filtersLabel": "Filter and sort coffees",
+    "filters": {
+      "all": "All",
+      "light": "Light roast",
+      "medium": "Medium roast",
+      "dark": "Dark roast",
+      "wholeBean": "Whole bean",
+      "ground": "Ground",
+      "under50": "Under COP 50,000"
+    },
+    "brandChip": "Brand: {brand}",
+    "brandClear": "Remove brand filter",
+    "sortLabel": "Sort",
+    "sort": {
+      "featured": "Featured",
+      "priceAsc": "Price: low to high",
+      "priceDesc": "Price: high to low",
+      "roastAsc": "Roast: light to dark"
+    },
+    "showing": "Showing {shown} of {total} coffees",
+    "emptyTitle": "No coffees match these filters",
+    "emptyText": "Try removing a filter to see the whole shop.",
+    "reset": "Show all coffees",
+    "add": "Add",
+    "addAria": "Add {name} to cart",
+    "gridLabel": "Coffees",
+    "note": "Example products and brands for this design preview. Prices are not real offers."
+  },
+  "club": {
+    "badge": "Subscription",
+    "name": "Coffee club",
+    "title": "A new farm",
+    "accent": "every month",
+    "text": "One freshly roasted bag from a different producer each month, with the story of the family behind it. Pause or cancel anytime.",
+    "cta": "Start my subscription",
+    "from": "From",
+    "price": "COP 59,000",
+    "perMonth": "/ month",
+    "note": "Example price. We confirm your first box on WhatsApp.",
+    "message": "Hi! I'd like to join the coffee club (one bag from a different producer each month). Can you tell me how to start?"
+  },
+  "quiz": {
+    "title": "Not sure which to pick?",
+    "text": "Tell us how you brew, moka pot, filter or espresso, and we'll suggest a coffee.",
+    "cta": "Find my coffee",
+    "message": "Hi! Help me choose a coffee. I brew with: (moka pot / filter / espresso). I like: (fruity / chocolatey / sweet).",
+    "imageAlt": "Hand-drawn moka pot"
+  },
+  "delivery": {
+    "title": "From the farm",
+    "accent": "to your door",
+    "steps": [
+      { "title": "Order your bags", "text": "Mix coffees from different producers in one cart and finish your order on WhatsApp. Online payment with PSE, Nequi and cards is coming soon." },
+      { "title": "Roasted and packed", "text": "Each producer roasts and packs your bags at the farm, then hands them to the courier." },
+      { "title": "At your door in 1 to 5 days", "text": "Flat shipping of COP 12,000 anywhere in Colombia, free on orders over COP 150,000." }
+    ],
+    "citiesTitle": "Delivery times",
+    "cities": [
+      { "city": "Medellín and Urrao", "time": "1 to 2 business days" },
+      { "city": "Bogotá", "time": "2 to 3 business days" },
+      { "city": "Rest of Colombia", "time": "3 to 5 business days" }
+    ],
+    "citiesNote": "Example times for this preview, to be confirmed with the courier.",
+    "legal": "Right of withdrawal and PQRS: terms to be confirmed after legal review."
+  },
+  "sell": {
+    "eyebrow": "For producers",
+    "title": "Do you roast",
+    "accent": "your own coffee?",
+    "text": "Open your shop here and sell your bags to homes and cafés across Colombia. We handle orders, you keep your brand.",
+    "cta": "Open my shop"
+  },
+  "notice": {
+    "breadcrumbShop": "Roasted coffee shop",
+    "chips": {
+      "only": "Colombia only",
+      "green": "Green coffee ships worldwide"
+    },
+    "title": "The shop ships inside",
+    "accent": "Colombia only",
+    "description": "Our roasted coffee is sent to addresses in Colombia. Outside Colombia, you can still buy the green coffee itself.",
+    "stats": {
+      "roasted": { "label": "Roasted coffee", "value": "Colombia" },
+      "green": { "label": "Green coffee", "value": "Worldwide" },
+      "sample": { "label": "Free sample", "value": "200 g" }
+    },
+    "panelTitle": "Buying from outside Colombia?",
+    "panelAccent": "Start with green coffee",
+    "panelText": "Traceable lots from named family farms in Urrao, with a free 200 g sample for verified buyers before you commit to a box.",
+    "cta": "Explore green coffee",
+    "secondary": "Request samples"
+  },
+  "loading": "Loading the shop"
+}

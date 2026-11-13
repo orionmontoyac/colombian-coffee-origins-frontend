@@ -1,1 +1,86 @@
-{}
+{
+  "metaTitle": "{brand} {name}, café tostado",
+  "metaDescription": "{brand} {name}, {roast}, {grams} g. Tostado por encargo en {town}, Colombia, ${price}. Envíos en Colombia.",
+  "jsonLdDescription": "{name} de {brand}, café especial de {roast} tostado por encargo en {town}, Colombia. Notas de {notes}. Bolsa de {grams} g.",
+  "allCoffees": "Todos los cafés",
+  "breadcrumbHome": "Inicio",
+  "breadcrumbShop": "Tienda de café tostado",
+  "chipCo": "Solo Colombia",
+  "description": "Tostado por {brand} en {town}, Colombia. Notas de {notes}.",
+  "descriptionProducer": "Tostado por {producer} en {farm}, {town}. Notas de {notes}.",
+  "stats": {
+    "roast": "Tueste",
+    "size": "Tamaño de la bolsa",
+    "perKg": "Precio por kg"
+  },
+  "galleryLabel": "Fotos del producto",
+  "photoLabel": "Foto de la bolsa de {name}, {view}",
+  "photoViews": [
+    "frente",
+    "etiqueta trasera",
+    "granos enteros"
+  ],
+  "purchase": {
+    "heading": "Compra este café",
+    "priceLabel": "Precio",
+    "size": "Tamaño",
+    "grind": "Molienda",
+    "grinds": {
+      "wholeBean": "Grano entero",
+      "espresso": "Molido para espresso",
+      "moka": "Molido para moka",
+      "filter": "Molido para filtro",
+      "frenchPress": "Molido para prensa francesa"
+    },
+    "preGroundNote": "Este café se vende ya molido.",
+    "add": "Agregar al carrito",
+    "roastedTitle": "Tostado por encargo",
+    "roastedText": "Tostamos tu bolsa después de tu pedido y la enviamos en máximo 3 días, para que te llegue fresca.",
+    "storage": "Consejo de almacenamiento: mantén la bolsa cerrada, lejos de la luz y el calor, y consúmela en las 4 semanas siguientes a abrirla."
+  },
+  "about": {
+    "title": "Sobre este",
+    "accent": "café",
+    "notesTitle": "Notas de cata",
+    "roastTitle": "Nivel de tueste",
+    "roastMeter": "{label}, nivel {level} de 5",
+    "factsTitle": "Datos",
+    "facts": {
+      "brand": "Marca",
+      "producer": "Productor",
+      "farm": "Finca",
+      "town": "Municipio",
+      "roast": "Nivel de tueste",
+      "grind": "Moliendas",
+      "size": "Tamaño",
+      "perKg": "Precio por kg",
+      "roasted": "Fecha de tueste"
+    },
+    "roastedValue": "Tostado por encargo",
+    "producerLink": "Ver el perfil del productor",
+    "producerPending": "Perfil del productor próximamente",
+    "brewingTitle": "Cómo prepararlo",
+    "brewing": {
+      "light": "Filtro o V60 a 93 o 95 °C, molienda media y proporción 1 a 16 para resaltar lo frutal y lo floral.",
+      "medium": "Va bien en filtro, moka o prensa francesa. Prueba una proporción 1 a 15 a 92 °C para sentir el caramelo y el cacao.",
+      "dark": "Ideal para espresso o moka. Usa el agua justo después de hervir y detén la extracción a tiempo para conservar el dulce del chocolate."
+    }
+  },
+  "shipping": {
+    "title": "Envíos y",
+    "accent": "devoluciones",
+    "shippingTitle": "Envíos",
+    "shipping": "Envío de $12.000 a cualquier lugar de Colombia, gratis en pedidos desde $150.000. Medellín y Urrao en 1 a 2 días hábiles, Bogotá en 2 a 3, el resto de Colombia en 3 a 5 (tiempos de ejemplo).",
+    "returnsTitle": "Devoluciones",
+    "returns": "Si tu bolsa llega dañada, escríbenos en los siguientes 5 días hábiles y te la reponemos. Las condiciones del derecho de retracto y de las PQRS son un texto provisional a la espera de la revisión legal.",
+    "paymentTitle": "Pago",
+    "payment": "Termina tu pedido por WhatsApp. El pago en línea con PSE, Nequi y tarjetas llega pronto."
+  },
+  "related": {
+    "title": "Más de",
+    "accent": "la tienda",
+    "brandTitle": "Más de {brand}"
+  },
+  "note": "Producto de ejemplo para esta vista previa del diseño. Los precios y datos no son una oferta real.",
+  "notFoundHome": "Volver a la tienda"
+}

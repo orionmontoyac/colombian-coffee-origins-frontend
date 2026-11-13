@@ -69,6 +69,7 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [ ] SubpageBanner: stat values don't wrap at 390 (e.g. "2.150 m").
   - [ ] PlaceholderImage caption passes axe contrast (currently `text-muted` on `placeholder`); then remove the local override in src/components/producer/.
   - [ ] SectionHeader takes an optional `id` (so sections can use aria-labelledby); SiteHeader/SubpageBanner `NavKey` gains the nav items used by sub-pages (e.g. forBuyers) so the active pill shows.
+  - [ ] StatBox gets a roasted variant (translucent white on dark roast with a kraft border, per the Shop board), driven by SubpageBanner `line="roasted"`; ProductCard gets an optional `vtName` (renders `data-vt-name`) and an optional bordered style, so the shop can drop its wrapper `<li>` hacks.
   - Verify: `npm run lint && npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts tests/e2e/lots.spec.ts tests/e2e/lot.spec.ts`
 
 ## Phase 2 — Pages (page-builder × up to 4 in parallel; each owns its route folder + dictionary key)
@@ -90,12 +91,12 @@ Each page task has these **standard checkpoints** in addition to its own:
   - [x] Directory grid; profile per Producer board (no avatar; in-page nav; story; green lots; roasted panel CO-only; farm gallery with map placeholder; CTA).
   - [x] Person + Place JSON-LD; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en/producers,/en/producers/luz-mery-higuita,/es/productores/luz-mery-higuita && npx playwright test tests/e2e/producers.spec.ts`
-- [ ] **T2.4 Roasted coffee shop + product detail + cart** · Owns: src/app/[lang]/shop/**, src/components/shop/**, dict keys `shopPage`, `productPage`, `cart`
-  - [ ] Shop page per Shop board (brown identity, bean pattern banner, perks, brands, filters, product grid with roast meter, coffee club, quiz card, delivery steps, sell band).
-  - [ ] Product page per SPEC §4.6 (roast date promise, grind selector, size, price/kg, shipping & returns).
-  - [ ] Cart drawer: add/remove/quantity, COP subtotal, free-shipping progress (threshold COP 150,000), persisted in localStorage, focus-trapped, WhatsApp checkout with prefilled order text; "online payment coming soon (PSE, Nequi, cards)".
-  - [ ] Non-CO visitors get the "ships inside Colombia only" page, HTTP 200, noindex.
-  - [ ] Product + Offer (COP, shipping details, return policy) JSON-LD; prices `COP 68,000` EN / `$68.000` ES; standard checkpoints.
+- [x] **T2.4 Roasted coffee shop + product detail + cart** · Owns: src/app/[lang]/shop/**, src/components/shop/**, dict keys `shopPage`, `productPage`, `cart`
+  - [x] Shop page per Shop board (brown identity, bean pattern banner, perks, brands, filters, product grid with roast meter, coffee club, quiz card, delivery steps, sell band).
+  - [x] Product page per SPEC §4.6 (roast date promise, grind selector, size, price/kg, shipping & returns).
+  - [x] Cart drawer: add/remove/quantity, COP subtotal, free-shipping progress (threshold COP 150,000), persisted in localStorage, focus-trapped, WhatsApp checkout with prefilled order text; "online payment coming soon (PSE, Nequi, cards)".
+  - [x] Non-CO visitors get the "ships inside Colombia only" page, HTTP 200, noindex.
+  - [x] Product + Offer (COP, shipping details, return policy) JSON-LD; prices `COP 68,000` EN / `$68.000` ES; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /es/tienda --country CO && npx playwright test tests/e2e/shop.spec.ts`
 - [x] **T2.5 For buyers + FAQ** `/for-buyers` · Owns: src/app/[lang]/for-buyers/**, src/components/buyers/**, dict key `buyersPage`
   - [x] 5 sourcing steps, trust levels, pricing (FOB, minimums, samples), export & logistics, FAQ (from ai-discoverability `faq` key), CTA.
@@ -163,6 +164,7 @@ Each page task has these **standard checkpoints** in addition to its own:
 - [ ] **T5.1 Full QA pass** · Owner: qa · Owns: tests/e2e/**, artifacts/**
   - [ ] Screenshots of every page in `pages.json` at 1440/390, EN/ES (and CO / non-CO for shop pages).
   - [ ] axe: zero serious/critical; keyboard walk of header, filters, forms, cart.
+  - [ ] Cover what page specs skipped: shop cart flow on mobile (floating cart pill), axe on mobile and country-co projects for shop pages, first-hit 404 for unknown product slugs.
   - [ ] All e2e specs green; report `artifacts/reports/qa-final.md` all PASS.
   - Verify: `npm run test:e2e`
 - [ ] **T5.2 Full review** · Owner: reviewer

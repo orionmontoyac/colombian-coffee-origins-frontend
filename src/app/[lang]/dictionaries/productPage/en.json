@@ -1,1 +1,86 @@
-{}
+{
+  "metaTitle": "{brand} {name} roasted coffee",
+  "metaDescription": "{brand} {name}, {roast}, {grams} g. Roasted to order in {town}, Colombia, COP {price}. Ships within Colombia.",
+  "jsonLdDescription": "{name} by {brand}, a {roast} specialty coffee roasted to order in {town}, Colombia. Notes of {notes}. {grams} g bag.",
+  "allCoffees": "All coffees",
+  "breadcrumbHome": "Home",
+  "breadcrumbShop": "Roasted coffee shop",
+  "chipCo": "Colombia only",
+  "description": "Roasted by {brand} in {town}, Colombia. Notes of {notes}.",
+  "descriptionProducer": "Roasted by {producer} at {farm}, {town}. Notes of {notes}.",
+  "stats": {
+    "roast": "Roast",
+    "size": "Bag size",
+    "perKg": "Price per kg"
+  },
+  "galleryLabel": "Product photos",
+  "photoLabel": "Photo of the {name} bag, {view}",
+  "photoViews": [
+    "front",
+    "back label",
+    "whole beans"
+  ],
+  "purchase": {
+    "heading": "Buy this coffee",
+    "priceLabel": "Price",
+    "size": "Size",
+    "grind": "Grind",
+    "grinds": {
+      "wholeBean": "Whole bean",
+      "espresso": "Ground for espresso",
+      "moka": "Ground for moka pot",
+      "filter": "Ground for filter",
+      "frenchPress": "Ground for French press"
+    },
+    "preGroundNote": "This coffee is sold pre-ground.",
+    "add": "Add to cart",
+    "roastedTitle": "Roasted to order",
+    "roastedText": "We roast your bag after you order and ship within 3 days, so it reaches you fresh.",
+    "storage": "Storage tip: keep the bag closed, away from light and heat, and enjoy it within 4 weeks of opening."
+  },
+  "about": {
+    "title": "About this",
+    "accent": "coffee",
+    "notesTitle": "Tasting notes",
+    "roastTitle": "Roast level",
+    "roastMeter": "{label}, level {level} of 5",
+    "factsTitle": "Facts",
+    "facts": {
+      "brand": "Brand",
+      "producer": "Producer",
+      "farm": "Farm",
+      "town": "Town",
+      "roast": "Roast level",
+      "grind": "Grinds",
+      "size": "Size",
+      "perKg": "Price per kg",
+      "roasted": "Roast date"
+    },
+    "roastedValue": "Roasted to order",
+    "producerLink": "See the producer profile",
+    "producerPending": "Producer profile coming soon",
+    "brewingTitle": "How to brew it",
+    "brewing": {
+      "light": "Filter or pour-over at 93 to 95 °C, a medium grind and a 1 to 16 ratio brings out the fruit and florals.",
+      "medium": "Works in a filter, moka pot or French press. Try a 1 to 15 ratio at 92 °C for caramel and cacao.",
+      "dark": "Best as espresso or in a moka pot. Use water just off the boil and stop early to keep the chocolate sweet."
+    }
+  },
+  "shipping": {
+    "title": "Shipping and",
+    "accent": "returns",
+    "shippingTitle": "Shipping",
+    "shipping": "Flat shipping of COP 12,000 anywhere in Colombia, free on orders over COP 150,000. Medellín and Urrao 1 to 2 business days, Bogotá 2 to 3, the rest of Colombia 3 to 5 (example times).",
+    "returnsTitle": "Returns",
+    "returns": "If your bag arrives damaged, write to us within 5 business days and we will replace it. Right of withdrawal (derecho de retracto) and PQRS terms are a placeholder pending legal review.",
+    "paymentTitle": "Payment",
+    "payment": "Finish your order on WhatsApp. Online payment with PSE, Nequi and cards is coming soon."
+  },
+  "related": {
+    "title": "More from",
+    "accent": "the shop",
+    "brandTitle": "More from {brand}"
+  },
+  "note": "Example product for this design preview. Prices and details are not a real offer.",
+  "notFoundHome": "Back to the shop"
+}
