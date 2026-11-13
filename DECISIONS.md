@@ -108,3 +108,9 @@ Append only. Format: `YYYY-MM-DD · who · decision · why · how to undo`. Mark
   - **T3.1 (content-seo)** owns all page metadata through `src/lib/seo` and the per-page `seo.*` helpers, including the `text/markdown` alternate link for `markdownPages`. It moves Organization/WebSite JSON-LD into the layout, and also owns sitemap, robots, OG images, and the `meta`/`nav`/`footer` keys, plus the one-line `forBuyers` item in NAV_ITEMS.
   - **T3.2 (ai-discoverability)** owns `/llms.txt`, `/llms-full.txt`, the `/md/{lang}/<path after /{lang}>` routes (ES paths keep ES segments), `src/lib/ai`, `src/components/ai` and the `faq` key. It may add one import line and one JSX line (the facts block) to the six named page.tsx files.
   - Both run in parallel on slots 2 and 1. · There's no file overlap, and both agree on one URL scheme. · Re-split if a file conflict appears.
+- 2026-11-13 · planner · **Owner edits found after the usage-limit pause (17:45):**
+  - Files: DESIGN.md (`page-margin` 16px → 8px), src/app/globals.css, src/components/ui/{lot-card,product-card,roast-meter,bean,labels,subpage-banner}, src/components/shop/*, src/components/producer/profile.tsx, and the new public/images/coffe-beans-pattern.png.
+  - The factory treats them as deliberate. They aren't reverted and aren't included in factory commits. Agents were told not to touch them.
+  - **OWNER:** commit them yourself when ready. The DESIGN.md change bypasses the planner, so it's noted here; lint DESIGN.md before committing.
+  - Phase 3 agents T3.1 and T3.2 hit the 5-hour limit at about 13:40 and resumed at 17:45.
+  - · Respect owner changes on disk. · None needed.
