@@ -303,13 +303,13 @@ function Farm({ dict, producer }: { dict: Dictionary; producer: Producer }) {
           assetId={`farm-drying-beds-${producer.slug}`}
           label={t.dryingLabel}
           ratio="auto"
-          className="h-full rounded-notch [&_.text-muted]:text-ink"
+          className="h-full rounded-notch"
         />
         <PlaceholderImage
           assetId={`farm-map-${producer.slug}`}
           label={t.mapLabel}
           ratio="auto"
-          className="h-full rounded-notch [&_.text-muted]:text-ink"
+          className="h-full rounded-notch"
         />
       </div>
       <p className="mt-[18px] text-[13px] text-muted">{t.note}</p>

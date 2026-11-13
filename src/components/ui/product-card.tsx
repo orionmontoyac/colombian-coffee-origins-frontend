@@ -24,9 +24,14 @@ export function ProductCard({
   addHref,
   addSlot,
   headingAs: Heading = "h3",
+  vtName,
+  bordered = false,
 }: ProductCardProps) {
   return (
-    <article className="flex flex-col overflow-hidden rounded-lg bg-neutral">
+    <article
+      data-vt-name={vtName}
+      className={`flex flex-col overflow-hidden rounded-lg bg-neutral${bordered ? " border border-line-soft" : ""}`}
+    >
       <div className="relative flex h-[280px] items-center justify-center" style={{ background: bag.stage }}>
         {tag ? (
           <span className={`absolute left-3.5 top-3.5 rounded-full px-[11px] py-1.5 font-label text-xs font-medium ${tag.className}`}>
@@ -87,4 +92,8 @@ export type ProductCardProps = {
   addHref?: string;
   addSlot?: ReactNode;
   headingAs?: "h2" | "h3";
+  /** Renders `data-vt-name` so a view transition can name this card */
+  vtName?: string;
+  /** Adds a 1px soft border (for cards on a neutral background) */
+  bordered?: boolean;
 };

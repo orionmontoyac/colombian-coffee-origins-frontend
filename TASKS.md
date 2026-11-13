@@ -62,16 +62,22 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [x] `next.config.ts` reads `distDir` from `NEXT_DIST_DIR` (default `.next`); `.gitignore` ignores `/.next-*/`.
   - [x] `playwright.config.ts` reads the port from `E2E_PORT` (default 3100) for baseURL, the webServer command and url, and writes output to `artifacts/playwright-<port>`, so four builders can each build and test at once.
   - Verify: `npm run build && npx playwright test tests/e2e/smoke.spec.ts && NEXT_DIST_DIR=.next-slot1 E2E_PORT=3101 npx playwright test tests/e2e/smoke.spec.ts`
-- [ ] **T1.8 Shared fixes from Phase 2 reports** · Owner: foundation-builder · Owns: src/proxy.ts, src/components/ui/**, src/components/home/site-header.tsx
-  - [ ] Unknown `/coffees/<code>`, `/producers/<slug>`, `/shop/<slug>` (and their ES paths) return HTTP 404 on the FIRST request. The proxy checks the data helpers, because `partialPrefetching` otherwise serves 200 + noindex on first hit.
-  - [ ] PlaceholderImage: move the `node:fs` ASSETS.md check out of the client import graph (dev-only server module) so client components can import `@/components/ui`.
-  - [ ] Header language switcher: accessible name starts with its visible text (axe `label-content-name-mismatch`). Then remove the per-spec axe exclusions in lots.spec.ts and lot.spec.ts.
-  - [ ] SubpageBanner: stat values don't wrap at 390 (e.g. "2.150 m").
-  - [ ] PlaceholderImage caption passes axe contrast (currently `text-muted` on `placeholder`); then remove the local override in src/components/producer/.
-  - [ ] SectionHeader takes an optional `id` (so sections can use aria-labelledby); SiteHeader/SubpageBanner `NavKey` gains the nav items used by sub-pages (e.g. forBuyers) so the active pill shows.
-  - [ ] StatBox gets a roasted variant (translucent white on dark roast with a kraft border, per the Shop board), driven by SubpageBanner `line="roasted"`; ProductCard gets an optional `vtName` (renders `data-vt-name`) and an optional bordered style, so the shop can drop its wrapper `<li>` hacks.
-  - [ ] Routing: the proxy also returns a first-hit 404 for unknown journal article slugs (EN and ES slugs differ); `src/app/[lang]/[...rest]/page.tsx` calls `notFound()` so unmatched URLs show the branded 404; `articleHref`/`articleAlternates` move from src/components/journal/articles.ts into src/lib/routes.ts (journal keeps a re-export).
+- [x] **T1.8 Shared fixes from Phase 2 reports** · Owner: foundation-builder · Owns: src/proxy.ts, src/components/ui/**, src/components/home/site-header.tsx
+  - [x] Unknown `/coffees/<code>`, `/producers/<slug>`, `/shop/<slug>` (and their ES paths) return HTTP 404 on the FIRST request. The proxy checks the data helpers, because `partialPrefetching` otherwise serves 200 + noindex on first hit.
+  - [x] PlaceholderImage: move the `node:fs` ASSETS.md check out of the client import graph (dev-only server module) so client components can import `@/components/ui`.
+  - [x] Header language switcher: accessible name starts with its visible text (axe `label-content-name-mismatch`). Then remove the per-spec axe exclusions in lots.spec.ts and lot.spec.ts.
+  - [x] SubpageBanner: stat values don't wrap at 390 (e.g. "2.150 m").
+  - [x] PlaceholderImage caption passes axe contrast (currently `text-muted` on `placeholder`); then remove the local override in src/components/producer/.
+  - [x] SectionHeader takes an optional `id` (so sections can use aria-labelledby); SiteHeader/SubpageBanner `NavKey` gains the nav items used by sub-pages (e.g. forBuyers) so the active pill shows.
+  - [x] StatBox gets a roasted variant (translucent white on dark roast with a kraft border, per the Shop board), driven by SubpageBanner `line="roasted"`; ProductCard gets an optional `vtName` (renders `data-vt-name`) and an optional bordered style, so the shop can drop its wrapper `<li>` hacks.
+  - [x] Routing: the proxy also returns a first-hit 404 for unknown journal article slugs (EN and ES slugs differ); `src/app/[lang]/[...rest]/page.tsx` calls `notFound()` so unmatched URLs show the branded 404; `articleHref`/`articleAlternates` move from src/components/journal/articles.ts into src/lib/routes.ts (journal keeps a re-export).
   - Verify: `npm run lint && npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts tests/e2e/lots.spec.ts tests/e2e/lot.spec.ts`
+
+- [ ] **T1.9 Token cleanup and small shared follow-ups** · Owner: foundation-builder · Owns: src/components/ui/**, src/components/lots/**, src/components/lot/**, src/app/globals.css, tests/e2e/smoke.spec.ts
+  - [ ] Replace every `ink-soft` / `line-soft` use (ui/trust-badge, ui/lot-card, ui/placeholder-image, ui/product-card, lots/catalog, lot/decision-panel, lot/lot-sections) with DESIGN.md palette tokens; remove both from globals.css; `grep -r "ink-soft\|line-soft" src` is empty.
+  - [ ] LotCard gets an optional `producerHref` so home and catalog cards can link to the producer page.
+  - [ ] Confirm whether the `_rsc` 404 allowance in smoke.spec.ts is still needed; remove it if not.
+  - Verify: `npm run lint && npm run typecheck && npm run check:tokens && npm run build && npx playwright test tests/e2e/smoke.spec.ts tests/e2e/home.spec.ts tests/e2e/lots.spec.ts tests/e2e/lot.spec.ts`
 
 ## Phase 2 — Pages (page-builder × up to 4 in parallel; each owns its route folder + dictionary key)
 
@@ -114,12 +120,12 @@ Each page task has these **standard checkpoints** in addition to its own:
   - [x] Legal pages structured, marked "draft for legal review"; includes derecho de retracto and PQRS contact for the shop.
   - [x] Branded 404 with links to lots, shop and home; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en/regions/urrao,/en/journal,/en/our-story`
-- [ ] **T2.8 Home polish** · Owns: src/app/[lang]/page.tsx, src/components/home/** (except site-header), dict keys `hero`, `lines`, `farmers`, `lots`, `shop`, `producersBand`, `closing`
-  - [ ] Links from home cards go to the real lot, producer and product pages.
-  - [ ] Replace the interim `ink-soft` and `line-soft` tokens in `sections.tsx`, `TrustBadge` and `LotCard` with DESIGN.md palette tokens (e.g. `body`/`ink`, `line`/`surface-sunken`), then remove both from `globals.css` (request to foundation-builder).
-  - [ ] Reconcile home-parity sizes with the Main board and DESIGN.md (LotCard radius 28px vs card 24px; SectionHeader xl 56px); change DESIGN.md through the planner if the board wins.
-  - [ ] FAQ teaser (3 questions → For buyers) before the closing CTA; answer-first sentence in the hero subtitle.
-  - [ ] Matches the Main board at 1440 and 390; standard checkpoints.
+- [x] **T2.8 Home polish** · Owns: src/app/[lang]/page.tsx, src/components/home/** (except site-header), dict keys `hero`, `lines`, `farmers`, `lots`, `shop`, `producersBand`, `closing`
+  - [x] Links from home cards go to the real lot, producer and product pages.
+  - [x] Replace the interim `ink-soft` and `line-soft` tokens in home `sections.tsx` (none left there); the remaining uses in ui/, lots/ and lot/ moved to T1.9.
+  - [x] Reconcile home-parity sizes with the Main board and DESIGN.md (LotCard radius 28px vs card 24px; SectionHeader xl 56px); the board wins, so DESIGN.md's `notch` row was updated by the planner.
+  - [x] FAQ teaser (3 questions → For buyers) before the closing CTA; answer-first sentence in the hero subtitle.
+  - [x] Matches the Main board at 1440 and 390; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en,/es`
 
 ## Phase 3 — Findability (content-seo and ai-discoverability in parallel)
@@ -133,6 +139,7 @@ Each page task has these **standard checkpoints** in addition to its own:
   - [ ] OG images 1200×630 (default + lot + product variants) with alt text.
   - [ ] Internal links: lot ↔ producer ↔ region; descriptive anchor text; breadcrumbs on every sub-page.
   - [ ] Organization + WebSite JSON-LD in the layout; sameAs placeholders listed in ASSETS.md.
+  - [ ] `nav` key gains a `forBuyers` item (EN/ES) and the header NAV_ITEMS shows it, so the For-buyers active pill works (NavKey already accepts it).
   - Verify: `npm run build && npm run check:seo && npm run lhci -- --collect.settings.onlyCategories=seo`
 - [ ] **T3.2 AI discoverability** · Owner: ai-discoverability · Owns: src/app/llms.txt/**, src/app/llms-full.txt/**, src/app/md/**, src/lib/ai/**, dict key `faq`, tests/e2e/facts.spec.ts
   - [ ] `/llms.txt` in llmstxt.org format, generated from data, absolute links to Markdown pages.
@@ -176,6 +183,7 @@ Each page task has these **standard checkpoints** in addition to its own:
   - Verify: `npm run verify`
 - [ ] **T5.3 Fix round** · Owner: planner (assigns fixes to owners)
   - [ ] Every P0/P1 from T5.1 and T5.2 fixed and re-verified.
+  - [ ] Shop product card: fix the `label-content-name-mismatch` (Add button accessible name must start with its visible text), then remove the axe exclusion in shop.spec.ts (page-builder, shop files).
   - [ ] Forms show their result after a submit without JavaScript (with cacheComponents/PPR the POST to a static page returns no HTML): redirect-based fallback (e.g. `?sent=1` / `?error=` with a dynamic segment) in src/lib/actions + src/components/forms, owned by page-builder (T2.6 files).
   - Verify: `bash scripts/factory/is-done.sh`
 

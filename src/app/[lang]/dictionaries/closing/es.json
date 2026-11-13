@@ -4,5 +4,12 @@
   "titleEm": "café específico?",
   "text": "Cuéntanos la variedad, el proceso, el perfil y el volumen que necesitas, y en pocos días te conectamos con productores.",
   "primary": "Enviar solicitud",
-  "secondary": "Contáctanos"
+  "secondary": "Contáctanos",
+  "faq": {
+    "eyebrow": "Antes de tu primer pedido",
+    "title": "Preguntas que los compradores",
+    "accent": "nos hacen primero",
+    "text": "Respuestas cortas sobre muestras, mínimos y cómo comprar. La lista completa está en la página Para compradores.",
+    "cta": "Todas las preguntas"
+  }
 }

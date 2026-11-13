@@ -40,7 +40,7 @@ for (const path of pages) {
       await page.goto(path);
       const results = await new AxeBuilder({ page })
         // Shared header language switcher (foundation, fixed in T1.8).
-        .disableRules(["label-content-name-mismatch"])
+        
         .analyze();
       const bad = results.violations.filter((v) => v.impact === "serious" || v.impact === "critical");
       expect(bad.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(" ")).join(" | ")}`)).toEqual([]);

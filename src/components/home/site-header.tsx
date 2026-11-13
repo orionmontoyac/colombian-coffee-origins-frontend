@@ -10,7 +10,11 @@ import { href } from "@/lib/routes";
 
 // Menu order from DESIGN.md: Home · Green Coffee · Shop (CO) · Producers · Our Story
 const NAV_ITEMS = ["home", "coffees", "shop", "producers", "ourStory"] as const;
-export type NavKey = (typeof NAV_ITEMS)[number];
+/**
+ * Menu items plus sub-pages that have no menu item yet (no pill is highlighted for those).
+ * Add a page to NAV_ITEMS (and the `nav` dictionary) to give it an active pill.
+ */
+export type NavKey = (typeof NAV_ITEMS)[number] | "forBuyers" | "contact" | "samples" | "regions" | "journal";
 
 /** Small "CO" pill: the roasted coffee shop sells inside Colombia only. */
 function CoBadge({ label }: { label: string }) {
@@ -177,7 +181,7 @@ export function SiteHeader({
       <div className="absolute right-0 top-0 z-20 flex h-14 items-center justify-end gap-3.5 rounded-bl-[28px] bg-white pl-6 pr-1 nav:w-[340px]">
         <details className="relative max-[720px]:hidden">
           <summary
-            aria-label={nav.languageLabel}
+            aria-label={`${nav.currentLanguage}, ${nav.languageLabel}`}
             className="inline-flex min-h-[46px] cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-full border-[1.5px] border-line px-3.5 py-2.5 text-sm font-label font-medium text-green-900"
           >
             <GlobeIcon />

@@ -83,11 +83,11 @@ for (const form of forms) {
 
       test("has no serious or critical axe violations", async ({ page }) => {
         await page.goto(path);
-        const clean = await new AxeBuilder({ page }).disableRules(["label-content-name-mismatch"]).analyze();
+        const clean = await new AxeBuilder({ page }).analyze();
         const errorsState = async () => {
           await page.locator(`form#${form.name} button[type=submit]`).click();
           await expect(page.getByTestId("error-summary")).toBeVisible();
-          return new AxeBuilder({ page }).disableRules(["label-content-name-mismatch"]).analyze();
+          return new AxeBuilder({ page }).analyze();
         };
         const withErrors = await errorsState();
         for (const results of [clean, withErrors]) {

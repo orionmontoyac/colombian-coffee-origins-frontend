@@ -79,7 +79,7 @@ for (const path of pages) {
     await page.goto(path);
     // "label-content-name-mismatch" flags the shared header's language button (aria-label
     // does not start with the visible "EN"); that component belongs to foundation-builder.
-    const results = await new AxeBuilder({ page }).disableRules(["label-content-name-mismatch"]).analyze();
+    const results = await new AxeBuilder({ page }).analyze();
     const bad = results.violations.filter((v) => v.impact === "serious" || v.impact === "critical");
     expect(bad.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(" ")).join(", ")}`)).toEqual([]);
   });

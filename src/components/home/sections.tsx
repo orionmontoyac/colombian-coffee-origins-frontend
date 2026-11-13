@@ -6,7 +6,7 @@ import { CtaPanel } from "@/components/ui/cta-panel";
 import { LotCard } from "@/components/ui/lot-card";
 import { SectionHeader } from "@/components/ui/section-header";
 import { TrustBadge } from "@/components/ui/trust-badge";
-import { href, type RouteKey } from "@/lib/routes";
+import { href, lotHref, type RouteKey } from "@/lib/routes";
 import beansPattern from "@/assets/home/coffee-beans-pattern.png";
 import urraoSquare from "@/assets/home/urrao-main-square.jpg";
 import farmersHarvest from "@/assets/home/farmers-harvest.jpg";
@@ -140,7 +140,8 @@ export function FeaturedLots({ lang, dict }: { lang: Locale; dict: Dictionary })
             price={lot.priceUsdPerKg !== null ? `USD ${n(lot.priceUsdPerKg, 2)} / kg` : l.priceOnRequest}
             priceNote={lot.priceUsdPerKg !== null ? l.greenFob : l.sampleAvailable}
             ctaLabel={l.requestSample}
-            ctaHref={href(lang, "samples")}
+            ctaHref={`${href(lang, "samples")}?lot=${lot.code}`}
+            detailHref={lotHref(lang, lot.code)}
           />
         ))}
       </div>

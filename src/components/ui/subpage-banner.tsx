@@ -103,7 +103,7 @@ export function SubpageBanner({
           </div>
           <div className="grid grid-cols-3 gap-3 lg:flex-none">
             {stats.map((stat) => (
-              <StatBox key={stat.label} label={stat.label} value={stat.value} accent={stat.accent} className="min-w-0 lg:min-w-[132px]" />
+              <StatBox key={stat.label} label={stat.label} value={stat.value} accent={stat.accent} line={line} className="min-w-0 lg:min-w-[132px]" />
             ))}
           </div>
         </div>

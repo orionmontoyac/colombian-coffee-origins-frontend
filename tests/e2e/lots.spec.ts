@@ -62,8 +62,6 @@ for (const p of pages) {
       await page.goto(p.path);
       await page.waitForLoadState("networkidle");
       const results = await new AxeBuilder({ page })
-        // Known foundation issue (header language switcher: aria-label does not start with the visible "EN"/"ES"); reported to the planner.
-        .exclude("header summary")
         .analyze();
       const bad = results.violations.filter((v) => v.impact === "serious" || v.impact === "critical");
       expect(bad.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(" ")).join(" | ")}`)).toEqual([]);

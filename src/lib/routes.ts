@@ -1,4 +1,5 @@
 import type { Locale } from "@/app/[lang]/dictionaries";
+import { journalSlugs, type JournalArticleId } from "./journal-slugs";
 
 /**
  * Localized path segments for every route in SPEC.md section 3.
@@ -52,6 +53,14 @@ export function producerHref(lang: Locale, slug: string): string {
 export function productHref(lang: Locale, slug: string): string {
   return `${href(lang, "shop")}/${slug}`;
 }
+
+export function articleHref(lang: Locale, id: JournalArticleId): string {
+  return `${href(lang, "journal")}/${journalSlugs[id][lang]}`;
+}
+export const articleAlternates = (id: JournalArticleId): Record<Locale, string> => ({
+  en: articleHref("en", id),
+  es: articleHref("es", id),
+});
 
 export const lotAlternates = (code: string) => ({ en: lotHref("en", code), es: lotHref("es", code) });
 export const producerAlternates = (slug: string) => ({ en: producerHref("en", slug), es: producerHref("es", slug) });

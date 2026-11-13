@@ -435,7 +435,7 @@ Radius is hierarchical: the bigger the container, the rounder it is.
 | Token | Value | Use |
 | --- | --- | --- |
 | `xl` | 32px | Page-level panels: banners, sections, CTA, footer |
-| `notch` | 28px | Header notches and ear corners only |
+| `notch` | 28px | Header notches, ear corners, and the large cards that sit in the notch rhythm: lot cards and business-line cards (Main board). Home section H2s use `headline-xl` (56px). |
 | `lg` | 24px | Cards, filter bars, image frames |
 | `md` | 16px | Stat boxes, inner tiles |
 | `sm` | 10px | Bag labels, score chip, tooltips |

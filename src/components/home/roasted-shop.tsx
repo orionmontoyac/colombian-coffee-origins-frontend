@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { sampleRoastedProducts, type SampleRoastedProduct } from "@/data/sample-roasted";
 import { ProductCard } from "@/components/ui/product-card";
-import { href } from "@/lib/routes";
+import { href, productHref } from "@/lib/routes";
 
 const tagTone: Record<SampleRoastedProduct["tag"], string> = {
   producerBrand: "bg-brown text-white",
@@ -84,7 +84,8 @@ export function RoastedShop({ lang, dict }: { lang: Locale; dict: Dictionary }) 
               bag={{ color: p.bag, stage: p.stage, label: p.labelBrand, roastLabel: s.roast[p.roast], size, beanIcon: false }}
               price={formatCop(p.priceCop, lang)}
               addLabel={s.addToCart}
-              addHref={href(lang, "shop")}
+              href={productHref(lang, p.id)}
+              addHref={productHref(lang, p.id)}
             />
           );
         })}

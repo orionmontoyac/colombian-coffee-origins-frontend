@@ -16,6 +16,7 @@ export function SectionHeader({
   line = "green",
   size = "lg",
   as: Heading = "h2",
+  id,
   className,
 }: {
   eyebrow?: ReactNode;
@@ -27,6 +28,8 @@ export function SectionHeader({
   line?: "green" | "roasted";
   size?: "lg" | "xl";
   as?: "h1" | "h2";
+  /** Id on the heading, for `aria-labelledby` on the section */
+  id?: string;
   className?: string;
 }) {
   const roasted = line === "roasted";
@@ -44,6 +47,7 @@ export function SectionHeader({
         </p>
       ) : null}
       <Heading
+        id={id}
         className={cx(
           "font-display font-semibold",
           eyebrow ? (roasted ? "mt-3" : "mt-2.5") : "",

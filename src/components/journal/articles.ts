@@ -3,7 +3,8 @@ import type { Locale } from "@/app/[lang]/dictionaries";
 import cherries from "@/assets/home/lot-chiroso-cherries.jpg";
 import farmers from "@/assets/home/farmers-harvest.jpg";
 import hills from "@/assets/home/hero-coffee-hills.jpg";
-import { href } from "@/lib/routes";
+import { journalSlugs } from "@/lib/journal-slugs";
+export { articleHref, articleAlternates } from "@/lib/routes";
 import type { ArticleId } from "./types";
 
 export type ArticleMeta = {
@@ -22,7 +23,7 @@ const DRAFT_DATE = "2026-11-13";
 export const articles: ArticleMeta[] = [
   {
     id: "chiroso",
-    slug: { en: "what-is-chiroso-coffee", es: "que-es-el-cafe-chiroso" },
+    slug: journalSlugs.chiroso,
     datePublished: DRAFT_DATE, dateModified: DRAFT_DATE, image: cherries,
     imageAlt: {
       en: "Ripe red coffee cherries on the branch, as grown around Urrao",
@@ -31,7 +32,7 @@ export const articles: ArticleMeta[] = [
   },
   {
     id: "buying",
-    slug: { en: "how-to-buy-green-coffee-from-colombia", es: "como-comprar-cafe-verde-de-colombia" },
+    slug: journalSlugs.buying,
     datePublished: DRAFT_DATE, dateModified: DRAFT_DATE, image: farmers,
     imageAlt: {
       en: "Coffee pickers with harvest baskets on a Colombian hillside",
@@ -40,7 +41,7 @@ export const articles: ArticleMeta[] = [
   },
   {
     id: "urrao",
-    slug: { en: "urrao-antioquia-coffee-region-guide", es: "urrao-antioquia-guia-region-cafetera" },
+    slug: journalSlugs.urrao,
     datePublished: DRAFT_DATE, dateModified: DRAFT_DATE, image: hills,
     imageAlt: {
       en: "Green coffee hills around Urrao, Antioquia",
@@ -51,10 +52,5 @@ export const articles: ArticleMeta[] = [
 
 export const getArticle = (id: ArticleId) => articles.find((a) => a.id === id)!;
 export const articleBySlug = (lang: Locale, slug: string) => articles.find((a) => a.slug[lang] === slug);
-export const articleHref = (lang: Locale, id: ArticleId) => `${href(lang, "journal")}/${getArticle(id).slug[lang]}`;
-export const articleAlternates = (id: ArticleId): Record<Locale, string> => ({
-  en: articleHref("en", id),
-  es: articleHref("es", id),
-});
 export const articleParams = () =>
   (["en", "es"] as const).flatMap((lang) => articles.map((a) => ({ lang, slug: a.slug[lang] })));
