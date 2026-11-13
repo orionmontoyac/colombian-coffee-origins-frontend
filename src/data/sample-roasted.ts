@@ -18,7 +18,8 @@ export type SampleRoastedProduct = {
   roast: RoastLevel;
   grind: Grind;
   grams: number;
-  priceUsd: number;
+  /** Price in Colombian pesos (the shop sells inside Colombia only) */
+  priceCop: number;
   tag: ProductTag;
   /** Bag color and the soft background behind it */
   bag: string;
@@ -35,7 +36,7 @@ export const sampleRoastedProducts: SampleRoastedProduct[] = [
     roast: "light",
     grind: "wholeBean",
     grams: 340,
-    priceUsd: 24,
+    priceCop: 68000,
     tag: "producerBrand",
     bag: "#7A4A2B",
     stage: "#EFE6D6",
@@ -49,7 +50,7 @@ export const sampleRoastedProducts: SampleRoastedProduct[] = [
     roast: "medium",
     grind: "wholeBean",
     grams: 340,
-    priceUsd: 18.5,
+    priceCop: 48000,
     tag: "bestValue",
     bag: "#0B3D2A",
     stage: "#E3EDD2",
@@ -63,7 +64,7 @@ export const sampleRoastedProducts: SampleRoastedProduct[] = [
     roast: "light",
     grind: "wholeBean",
     grams: 250,
-    priceUsd: 22,
+    priceCop: 62000,
     tag: "limited",
     bag: "#C9877A",
     stage: "#F1DFCF",
@@ -77,7 +78,7 @@ export const sampleRoastedProducts: SampleRoastedProduct[] = [
     roast: "mediumDark",
     grind: "ground",
     grams: 500,
-    priceUsd: 16.9,
+    priceCop: 42000,
     tag: "ground",
     bag: "#3E5448",
     stage: "#E7E3D3",

@@ -5,9 +5,8 @@
   },
   "nav": {
     "home": "Inicio",
-    "coffees": "Cafés",
+    "coffees": "Café verde",
     "producers": "Productores",
-    "forBuyers": "Para compradores",
     "ourStory": "Nosotros",
     "contact": "Contacto",
     "cta": "Solicitar muestras",
@@ -16,33 +15,34 @@
     "footerLabel": "Pie de página",
     "languageLabel": "Idioma: español. Elegir idioma",
     "currentLanguage": "ES",
-    "languages": { "en": "English", "es": "Español" }
+    "languages": {
+      "en": "English",
+      "es": "Español"
+    },
+    "shop": "Tienda",
+    "shopBadge": "CO",
+    "shopOnlyCo": "Solo Colombia"
   },
   "hero": {
-    "lead": "Descubre",
-    "emphasis": "café especial",
-    "tail": "colombiano",
-    "subtitle": "Compra café excepcional directamente a quienes lo cultivan. Compara lotes, solicita muestras y compra con apoyo en la exportación.",
-    "primaryCta": "Encuentra tu café",
-    "secondaryCta": "Solicitar muestras",
-    "giantWord": "CAFÉ"
-  },
-  "audience": {
-    "buyersTitleStart": "Para tostadores",
-    "buyersTitleJoin": "y",
-    "buyersTitleEnd": "compradores",
-    "buyersText": "Explora lotes con especificaciones técnicas y solicita muestras.",
-    "buyersCta": "Comprar café",
-    "farmersTitle": "Para productores",
-    "farmersText": "Muestra tu finca y tus cafés a compradores de todo el mundo.",
-    "farmersCta": "Únete a la plataforma"
+    "titleEm1": "Café colombiano,",
+    "titleMid": "directo",
+    "titleStart2": "de las",
+    "titleEm2": "familias",
+    "titleEnd": "que lo cultivan",
+    "subtitle": "Lotes de café verde para tostadores de todo el mundo, y café tostado de las fincas para cafeterías y hogares en Colombia.",
+    "greenCta": "Café verde para tostadores",
+    "shopCta": "Comprar café tostado",
+    "shopBadge": "Colombia",
+    "giantWord": "Café",
+    "photoAlt": "Cafetos con cerezas rojas maduras en montañas colombianas con neblina"
   },
   "statement": {
-    "start": "Conectamos a",
-    "em": "productores colombianos",
-    "mid": "con compradores de café",
-    "accent": "especial",
-    "end": "de todo el mundo"
+    "start": "Un origen,",
+    "em": "dos formas",
+    "mid": "de comprar:",
+    "green": "verde",
+    "or": "o",
+    "roasted": "tostado"
   },
   "farmers": {
     "eyebrow": "Nuestros productores",
@@ -68,8 +68,8 @@
   },
   "lots": {
     "eyebrow": "Disponible ahora · cosecha 2026",
-    "titleEm": "Lotes",
-    "titleRest": "destacados de Urrao",
+    "titleStart": "Lotes destacados",
+    "titleEm": "de Urrao",
     "text": "Microlotes trazables de fincas familiares en lo alto de las montañas de Antioquia. Cada lote muestra su productor, variedad, proceso y perfil en taza, y puedes pedir una muestra antes de comprar.",
     "exploreAll": "Ver todos los lotes",
     "note": "Lotes de ejemplo para esta vista previa del diseño.",
@@ -87,16 +87,25 @@
       "farmVerified": "Finca verificada",
       "registered": "Registrado"
     },
-    "processes": { "washed": "Lavado", "honey": "Honey", "natural": "Natural" }
+    "processes": {
+      "washed": "Lavado",
+      "honey": "Honey",
+      "natural": "Natural"
+    },
+    "legend": {
+      "coffeeVerified": "lote catado y documentado",
+      "farmVerified": "finca revisada por nuestro equipo",
+      "registered": "datos del productor"
+    }
   },
   "shop": {
     "badge": "Nuevo",
     "eyebrow": "Tienda de café tostado",
+    "ships": "Envíos dentro de Colombia",
     "titleStart": "Tostado en origen,",
     "titleEm": "directo de la finca",
     "text": "Una tienda multimarca para productores colombianos que tuestan su propio café. Compra bolsas directamente a las fincas, para tu cafetería o tu casa.",
     "cta": "Comprar café tostado",
-    "sellCta": "¿Tuestas tu propio café? Véndelo aquí",
     "filtersLabel": "Filtros de la tienda",
     "filters": [
       "Todo",
@@ -104,7 +113,7 @@
       "Tueste medio",
       "En grano",
       "Molido",
-      "Menos de USD 20"
+      "Menos de $50.000"
     ],
     "addToCart": "Agregar",
     "note": "Productos y marcas de ejemplo para esta vista previa del diseño.",
@@ -137,12 +146,36 @@
     "titleEnd": "",
     "text": "Montañas, altitud y cientos de miles de fincas familiares hacen de Colombia uno de los grandes orígenes de café del mundo.",
     "items": [
-      { "value": "557 mil+", "label": "familias cafeteras", "text": "El café es un negocio familiar: la mayoría de los caficultores del país son pequeños productores." },
-      { "value": "14,8 M", "label": "sacos en la cosecha 2024", "text": "La mayor cosecha de Colombia desde 1992, según la Federación de Cafeteros." },
-      { "value": "100%", "label": "arábica", "text": "Colombia cultiva café arábica, la especie detrás de casi todo el café especial." },
-      { "value": "2", "label": "cosechas al año", "text": "Cerca de la línea del ecuador, muchas regiones tienen una cosecha principal y una mitaca." },
-      { "value": "1.200–2.300 m", "label": "sobre el nivel del mar", "text": "La altitud trae noches más frías y una maduración más lenta, que aporta dulzor y acidez." },
-      { "value": "80+", "label": "puntos = especial", "text": "En la escala de catación de 100 puntos de la SCA, los cafés con 80 o más se califican como especiales." }
+      {
+        "value": "557 mil+",
+        "label": "familias cafeteras",
+        "text": "El café es un negocio familiar: la mayoría de los caficultores del país son pequeños productores."
+      },
+      {
+        "value": "14,8 M",
+        "label": "sacos en la cosecha 2024",
+        "text": "La mayor cosecha de Colombia desde 1992, según la Federación de Cafeteros."
+      },
+      {
+        "value": "100%",
+        "label": "arábica",
+        "text": "Colombia cultiva café arábica, la especie detrás de casi todo el café especial."
+      },
+      {
+        "value": "2",
+        "label": "cosechas al año",
+        "text": "Cerca de la línea del ecuador, muchas regiones tienen una cosecha principal y una mitaca."
+      },
+      {
+        "value": "1.200–2.300 m",
+        "label": "sobre el nivel del mar",
+        "text": "La altitud trae noches más frías y una maduración más lenta, que aporta dulzor y acidez."
+      },
+      {
+        "value": "80+",
+        "label": "puntos = especial",
+        "text": "En la escala de catación de 100 puntos de la SCA, los cafés con 80 o más se califican como especiales."
+      }
     ],
     "sources": "Fuentes: Federación Nacional de Cafeteros (cifras de la cosecha 2024 y de familias cafeteras, según Radio Nacional y Valora Analitik); escala de calificación de la Specialty Coffee Association."
   },
@@ -157,17 +190,44 @@
     "department": "Antioquia",
     "description": "Un pueblo de montaña al borde del Páramo del Sol: altitud, noches frías, fincas familiares y la casa de la rara variedad Chiroso.",
     "facts": [
-      { "label": "Altitud", "value": "1.800–2.300 m" },
-      { "label": "Variedades", "value": "Chiroso, Castillo, Caturra" },
-      { "label": "Productores", "value": "Fincas familiares" }
+      {
+        "label": "Altitud",
+        "value": "1.800–2.300 m"
+      },
+      {
+        "label": "Variedades",
+        "value": "Chiroso, Castillo, Caturra"
+      },
+      {
+        "label": "Productores",
+        "value": "Fincas familiares"
+      }
     ],
     "seeLots": "Ver lotes de Urrao",
     "meetProducers": "Productores"
   },
+  "producersBand": {
+    "eyebrow": "Para productores",
+    "titleStart": "¿Cultivas o tuestas café?",
+    "titleEm": "Vende con nosotros",
+    "text": "Perfil básico gratis. Verificamos tu finca, fotografiamos tu café y te conectamos con compradores.",
+    "green": {
+      "badge": "Café verde",
+      "title": "Publica tus lotes de café verde",
+      "text": "Llega a tostadores e importadores en el exterior. Nos encargamos de las muestras y te ayudamos con la exportación.",
+      "cta": "Registrar mi finca"
+    },
+    "roasted": {
+      "badge": "Café tostado",
+      "title": "Vende tu café tostado",
+      "text": "¿Tienes tu propia marca? Vende tus bolsas en nuestra tienda a cafeterías y hogares de toda Colombia.",
+      "cta": "Abrir mi tienda"
+    }
+  },
   "closing": {
     "eyebrow": "Compra a la medida",
-    "titleEm": "¿Buscas",
-    "titleRest": "un café específico?",
+    "titleStart": "¿Buscas un",
+    "titleEm": "café específico?",
     "text": "Cuéntanos la variedad, el proceso, el perfil y el volumen que necesitas, y en pocos días te conectamos con productores.",
     "primary": "Enviar solicitud",
     "secondary": "Contáctanos"
@@ -175,10 +235,40 @@
   "footer": {
     "tagline": "Café especial comprado directamente a fincas familiares colombianas, empezando por Urrao, Antioquia. Lotes trazables, muestras antes de comprar y apoyo en la exportación.",
     "columns": [
-      { "title": "Explora", "links": ["Cafés", "Productores", "Regiones", "Lotes destacados"] },
-      { "title": "Para compradores", "links": ["Cómo funciona la compra", "Solicitar muestras", "Solicitud de compra", "Envíos y exportación"] },
-      { "title": "Para productores", "links": ["Únete a la plataforma", "Cómo funciona la verificación", "Preguntas de productores"] },
-      { "title": "Empresa", "links": ["Nosotros", "Contacto", "Blog"] }
+      {
+        "title": "Explora",
+        "links": [
+          "Lotes de café verde",
+          "Productores",
+          "Regiones",
+          "Tienda de café tostado"
+        ]
+      },
+      {
+        "title": "Para compradores",
+        "links": [
+          "Cómo funciona la compra",
+          "Solicitar muestras",
+          "Solicitud de compra",
+          "Envíos y exportación"
+        ]
+      },
+      {
+        "title": "Para productores",
+        "links": [
+          "Únete a la plataforma",
+          "Vende café verde",
+          "Vende café tostado"
+        ]
+      },
+      {
+        "title": "Empresa",
+        "links": [
+          "Nosotros",
+          "Contacto",
+          "Blog"
+        ]
+      }
     ],
     "contactTitle": "Escríbenos",
     "location": "Urrao y Medellín, Antioquia",
@@ -189,5 +279,15 @@
     "legalLabel": "Legal",
     "privacy": "Privacidad",
     "terms": "Términos"
+  },
+  "lines": {
+    "greenTitle": "Café",
+    "greenTitleEm": "verde",
+    "greenText": "Microlotes trazables con fichas técnicas, puntajes y muestras. Para tostadores e importadores.",
+    "greenCta": "Ver lotes",
+    "roastedTitle": "Café",
+    "roastedTitleEm": "tostado",
+    "roastedText": "Bolsas tostadas por los mismos productores, con envío a toda Colombia.",
+    "roastedCta": "Comprar tostado"
   }
 }

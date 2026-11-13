@@ -5,13 +5,17 @@ import type { MouseEvent } from "react";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { href } from "@/lib/routes";
 
-const NAV_ITEMS = [
-  "home",
-  "coffees",
-  "producers",
-  "forBuyers",
-  "ourStory",
-] as const;
+// Menu order from DESIGN.md: Home · Green Coffee · Shop (CO) · Producers · Our Story
+const NAV_ITEMS = ["home", "coffees", "shop", "producers", "ourStory"] as const;
+
+/** Small "CO" pill: the roasted coffee shop sells inside Colombia only. */
+function CoBadge({ label }: { label: string }) {
+  return (
+    <span className="rounded-full bg-brown px-1.5 py-0.5 text-[9px] font-bold tracking-[0.04em] text-white">
+      {label}
+    </span>
+  );
+}
 
 function LogoMark() {
   return (
@@ -92,13 +96,15 @@ export function SiteHeader({ lang, nav }: { lang: Locale; nav: Dictionary["nav"]
               key={key}
               href={href(lang, key)}
               aria-current={active ? "page" : undefined}
-              className={`whitespace-nowrap rounded-full px-3.5 py-2.5 text-xs uppercase tracking-[0.05em] ${
+              title={key === "shop" ? nav.shopOnlyCo : undefined}
+              className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-2.5 font-label text-xs uppercase tracking-[0.05em] ${
                 active
-                  ? "bg-white font-semibold text-green-900"
+                  ? "bg-white font-bold text-green-900"
                   : "bg-white/12 font-medium text-white hover:bg-white/20"
               }`}
             >
               {nav[key]}
+              {key === "shop" && <CoBadge label={nav.shopBadge} />}
             </Link>
           );
         })}
@@ -109,7 +115,7 @@ export function SiteHeader({ lang, nav }: { lang: Locale; nav: Dictionary["nav"]
         <details className="relative max-[720px]:hidden">
           <summary
             aria-label={nav.languageLabel}
-            className="inline-flex min-h-[46px] cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-full border-[1.5px] border-line px-3.5 py-2.5 text-sm font-semibold text-green-900"
+            className="inline-flex min-h-[46px] cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-full border-[1.5px] border-line px-3.5 py-2.5 text-sm font-label font-medium text-green-900"
           >
             <GlobeIcon />
             {nav.currentLanguage}
@@ -135,7 +141,7 @@ export function SiteHeader({ lang, nav }: { lang: Locale; nav: Dictionary["nav"]
 
         <Link
           href={href(lang, "samples")}
-          className="whitespace-nowrap rounded-full bg-lime-500 px-6 py-[15px] max-[720px]:hidden text-sm font-semibold text-green-900 hover:brightness-95"
+          className="whitespace-nowrap rounded-full bg-lime-500 px-6 py-[15px] max-[720px]:hidden text-sm font-label font-medium text-green-900 hover:brightness-95"
         >
           {nav.cta}
         </Link>
@@ -151,8 +157,9 @@ export function SiteHeader({ lang, nav }: { lang: Locale; nav: Dictionary["nav"]
             <ul>
               {NAV_ITEMS.map((key) => (
                 <li key={key}>
-                  <Link href={href(lang, key)} className={dropdownLink}>
+                  <Link href={href(lang, key)} className={`${dropdownLink} flex items-center gap-2`}>
                     {nav[key]}
+                    {key === "shop" && <CoBadge label={nav.shopBadge} />}
                   </Link>
                 </li>
               ))}

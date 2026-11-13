@@ -7,6 +7,7 @@ import { href, type RouteKey } from "@/lib/routes";
 import beansPattern from "@/assets/home/coffee-beans-pattern.png";
 import urraoSquare from "@/assets/home/urrao-main-square.jpg";
 import farmersHarvest from "@/assets/home/farmers-harvest.jpg";
+import cherries from "@/assets/home/lot-chiroso-cherries.jpg";
 
 /* ---------- Shared pieces ---------- */
 
@@ -21,7 +22,7 @@ function SectionHeader({
 }) {
   return (
     <div className="max-w-[760px]">
-      <p className="text-sm font-semibold uppercase tracking-[0.08em] text-green-600">{eyebrow}</p>
+      <p className="text-sm font-label font-medium uppercase tracking-[0.08em] text-green-600">{eyebrow}</p>
       <h2 className="mt-2.5 font-display text-[40px] font-semibold leading-[1.05] tracking-[-0.015em] text-green-900 sm:text-[56px]">
         {title}
       </h2>
@@ -79,7 +80,7 @@ export function Farmers({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           </ul>
           <Link
             href={href(lang, "producers")}
-            className="mt-8 inline-flex min-h-14 items-center gap-3 rounded-full bg-green-900 px-7 py-4 text-[17px] font-semibold text-white hover:bg-green-700"
+            className="mt-8 inline-flex min-h-14 items-center gap-3 rounded-full bg-green-900 px-7 py-4 text-[17px] font-label font-medium text-white hover:bg-green-700"
           >
             {f.cta}
             <span aria-hidden="true" className="flex size-7 items-center justify-center rounded-full bg-lime-500 text-[15px] text-green-900">
@@ -123,10 +124,10 @@ function LotCard({ lot, lang, l }: { lot: SampleLot; lang: Locale; l: Dictionary
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover"
         />
-        <span className="absolute left-4 top-4 rounded-full bg-white px-3 py-[7px] text-xs font-semibold tracking-[0.08em] text-green-900">
+        <span className="absolute left-4 top-4 rounded-full bg-white px-3 py-[7px] text-xs font-label font-medium tracking-[0.08em] text-green-900">
           {lot.code}
         </span>
-        <span className={`absolute right-4 top-4 rounded-full px-3 py-[7px] text-xs font-semibold ${badgeTone[lot.verification]}`}>
+        <span className={`absolute right-4 top-4 rounded-full px-3 py-[7px] text-xs font-label font-medium ${badgeTone[lot.verification]}`}>
           {l.badges[lot.verification]}
         </span>
         {lot.score !== null ? (
@@ -149,7 +150,7 @@ function LotCard({ lot, lang, l }: { lot: SampleLot; lang: Locale; l: Dictionary
           <div className="mt-3.5 flex items-center gap-3">
             <span
               aria-hidden="true"
-              className="flex size-10 flex-none items-center justify-center rounded-full bg-green-700 text-sm font-semibold text-white"
+              className="flex size-10 flex-none items-center justify-center rounded-full bg-green-700 text-sm font-label font-medium text-white"
             >
               {lot.initials}
             </span>
@@ -162,7 +163,7 @@ function LotCard({ lot, lang, l }: { lot: SampleLot; lang: Locale; l: Dictionary
 
         <ul aria-label={l.notesLabel} className="flex flex-wrap gap-2">
           {lot.notes[lang].map((note) => (
-            <li key={note} className="rounded-full border border-line bg-white px-3 py-1.5 text-sm font-medium text-green-900">
+            <li key={note} className="rounded-full border border-line bg-white px-3 py-1.5 font-label text-sm font-medium text-green-900">
               {note}
             </li>
           ))}
@@ -192,7 +193,7 @@ function LotCard({ lot, lang, l }: { lot: SampleLot; lang: Locale; l: Dictionary
           </div>
           <Link
             href={href(lang, "samples")}
-            className="inline-flex min-h-[50px] items-center whitespace-nowrap rounded-full bg-lime-500 px-[22px] py-3.5 text-base font-semibold text-green-900 hover:brightness-95"
+            className="inline-flex min-h-[50px] items-center whitespace-nowrap rounded-full bg-lime-500 px-[22px] py-3.5 text-base font-label font-medium text-green-900 hover:brightness-95"
           >
             {l.requestSample}
           </Link>
@@ -212,7 +213,7 @@ export function FeaturedLots({ lang, dict }: { lang: Locale; dict: Dictionary })
             eyebrow={l.eyebrow}
             title={
               <>
-                <span className="font-normal italic">{l.titleEm}</span> {l.titleRest}
+                {l.titleStart} <span className="font-normal italic">{l.titleEm}</span>
               </>
             }
             text={l.text}
@@ -220,7 +221,7 @@ export function FeaturedLots({ lang, dict }: { lang: Locale; dict: Dictionary })
         </div>
         <Link
           href={href(lang, "coffees")}
-          className="inline-flex min-h-[60px] items-center gap-3 whitespace-nowrap rounded-full bg-green-900 px-8 py-[18px] text-lg font-semibold text-white hover:bg-green-700"
+          className="inline-flex min-h-[60px] items-center gap-3 whitespace-nowrap rounded-full bg-green-900 px-8 py-[18px] text-lg font-label font-medium text-white hover:bg-green-700"
         >
           {l.exploreAll}
           <span aria-hidden="true" className="flex size-[30px] items-center justify-center rounded-full bg-lime-500 text-base text-green-900">
@@ -228,13 +229,24 @@ export function FeaturedLots({ lang, dict }: { lang: Locale; dict: Dictionary })
           </span>
         </Link>
       </div>
-      <p className="mt-3.5 text-[13px] text-muted">{l.note}</p>
+      {/* What each trust badge means */}
+      <ul className="mt-[18px] flex flex-wrap items-center gap-x-[18px] gap-y-2.5 text-sm text-sage">
+        {(Object.keys(badgeTone) as SampleLot["verification"][]).map((level) => (
+          <li key={level} className="inline-flex items-center gap-2">
+            <span className={`rounded-full px-2.5 py-1 font-label text-xs font-medium ${badgeTone[level]}`}>
+              {l.badges[level]}
+            </span>
+            {l.legend[level]}
+          </li>
+        ))}
+      </ul>
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {sampleLots.map((lot) => (
           <LotCard key={lot.code} lot={lot} lang={lang} l={l} />
         ))}
       </div>
+      <p className="mt-[18px] text-[13px] text-muted">{l.note}</p>
     </section>
   );
 }
@@ -308,7 +320,7 @@ export function Regions({ lang, dict }: { lang: Locale; dict: Dictionary }) {
     <section className="px-4 pb-2 pt-12">
       <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-4">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-green-600">{r.eyebrow}</p>
+          <p className="text-sm font-label font-medium uppercase tracking-[0.08em] text-green-600">{r.eyebrow}</p>
           <h2 className="mt-2 font-display text-[34px] font-semibold leading-[1.05] tracking-[-0.015em] text-green-900 sm:text-[44px]">
             <span className="font-normal italic">{r.titleEm}</span> {r.titleRest}
           </h2>
@@ -327,7 +339,7 @@ export function Regions({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           />
         </div>
         <div className="flex flex-col justify-center gap-3 px-6 pt-7 sm:px-9 lg:py-8 lg:pl-9 lg:pr-8">
-          <span className="self-start rounded-full bg-lime-500 px-3 py-1.5 text-xs font-semibold tracking-[0.04em] text-green-900">
+          <span className="self-start rounded-full bg-lime-500 px-3 py-1.5 text-xs font-label font-medium tracking-[0.04em] text-green-900">
             {r.nowSourcing}
           </span>
           <h3 className="font-display text-[34px] font-semibold leading-[1.05] sm:text-[38px]">
@@ -339,7 +351,7 @@ export function Regions({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-[15px]">
             {r.facts.map((fact) => (
               <div key={fact.label} className="contents">
-                <dt className="text-[#9FC4AE]">{fact.label}</dt>
+                <dt className="text-sage-mist">{fact.label}</dt>
                 <dd className="font-semibold">{fact.value}</dd>
               </div>
             ))}
@@ -347,13 +359,13 @@ export function Regions({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           <div className="flex flex-wrap gap-2.5">
             <Link
               href={href(lang, "urrao")}
-              className="inline-flex min-h-[50px] items-center gap-2.5 rounded-full bg-lime-500 px-[22px] py-3.5 text-base font-semibold text-green-900 hover:brightness-95"
+              className="inline-flex min-h-[50px] items-center gap-2.5 rounded-full bg-lime-500 px-[22px] py-3.5 text-base font-label font-medium text-green-900 hover:brightness-95"
             >
               {r.seeLots} <span aria-hidden="true">→</span>
             </Link>
             <Link
               href={href(lang, "producers")}
-              className="inline-flex min-h-[50px] items-center rounded-full border-[1.5px] border-[#9FC4AE] px-5 py-[13px] text-base font-semibold hover:bg-white/10"
+              className="inline-flex min-h-[50px] items-center rounded-full border-[1.5px] border-sage-mist px-5 py-[13px] text-base font-label font-medium hover:bg-white/10"
             >
               {r.meetProducers}
             </Link>
@@ -364,30 +376,81 @@ export function Regions({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   );
 }
 
+/* ---------- For producers: two ways to sell ---------- */
+
+export function ProducersBand({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+  const p = dict.producersBand;
+  return (
+    <section className="px-4 pb-2 pt-12">
+      <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-4">
+        <div>
+          <p className="font-label text-sm font-medium uppercase tracking-[0.08em] text-green-600">{p.eyebrow}</p>
+          <h2 className="mt-2 font-display text-[34px] font-semibold leading-[1.05] tracking-[-0.015em] text-green-900 sm:text-[44px]">
+            {p.titleStart} <span className="font-normal italic">{p.titleEm}</span>
+          </h2>
+        </div>
+        <p className="max-w-[480px] text-[17px] leading-normal text-sage">{p.text}</p>
+      </div>
+      <div className="mt-7 grid gap-5 md:grid-cols-2">
+        <article className="flex flex-col gap-3.5 rounded-[28px] bg-green-900 p-8 text-white">
+          <span className="self-start rounded-full bg-lime-500 px-3 py-1.5 font-label text-xs font-medium text-green-900">
+            {p.green.badge}
+          </span>
+          <h3 className="font-display text-[30px] font-semibold leading-[1.15]">{p.green.title}</h3>
+          <p className="text-base leading-[1.55] text-mist">{p.green.text}</p>
+          <Link
+            href={href(lang, "producers")}
+            className="mt-1.5 inline-flex min-h-[52px] items-center gap-2.5 self-start rounded-full bg-lime-500 px-6 py-[15px] font-label text-base font-medium text-green-900 hover:brightness-95"
+          >
+            {p.green.cta} <span aria-hidden="true">→</span>
+          </Link>
+        </article>
+        <article className="flex flex-col gap-3.5 rounded-[28px] bg-roast-card p-8 text-roast-dark">
+          <span className="self-start rounded-full bg-brown px-3 py-1.5 font-label text-xs font-medium text-white">
+            {p.roasted.badge}
+          </span>
+          <h3 className="font-display text-[30px] font-semibold leading-[1.15]">{p.roasted.title}</h3>
+          <p className="text-base leading-[1.55] text-roast-body">{p.roasted.text}</p>
+          <Link
+            href={href(lang, "sellWithUs")}
+            className="mt-1.5 inline-flex min-h-[52px] items-center gap-2.5 self-start rounded-full bg-brown px-6 py-[15px] font-label text-base font-medium text-white hover:bg-[#5e3820]"
+          >
+            {p.roasted.cta} <span aria-hidden="true">→</span>
+          </Link>
+        </article>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Closing call to action ---------- */
 
 export function ClosingCta({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const c = dict.closing;
   return (
-    <section className="mt-10 rounded-[32px] bg-green-900 px-6 py-12 text-white sm:px-10 sm:py-14">
-      <p className="text-[13px] font-semibold uppercase tracking-[0.08em] text-lime-500">{c.eyebrow}</p>
-      <h2 className="mt-2 font-display text-[34px] font-semibold leading-[1.1] sm:text-[44px]">
-        <span className="font-normal italic">{c.titleEm}</span> {c.titleRest}
-      </h2>
-      <p className="mt-3.5 max-w-[520px] text-lg leading-normal text-mist">{c.text}</p>
-      <div className="mt-6 flex flex-wrap gap-3">
-        <Link
-          href={href(lang, "samples")}
-          className="inline-flex min-h-[54px] items-center rounded-full bg-lime-500 px-7 py-4 text-base font-semibold text-green-900 hover:brightness-95"
-        >
-          {c.primary}
-        </Link>
-        <Link
-          href={href(lang, "contact")}
-          className="inline-flex min-h-[54px] items-center rounded-full border-[1.5px] border-[#9FC4AE] px-7 py-[15px] text-base font-semibold hover:bg-white/10"
-        >
-          {c.secondary}
-        </Link>
+    <section className="relative mt-10 overflow-hidden rounded-[32px] bg-green-900 px-6 py-12 text-white sm:px-12 sm:py-14">
+      <Image src={cherries} alt="" fill sizes="100vw" className="object-cover object-right" />
+      <div aria-hidden="true" className="cta-fade absolute inset-0" />
+      <div className="relative">
+        <p className="font-label text-[13px] font-medium uppercase tracking-[0.08em] text-lime-500">{c.eyebrow}</p>
+        <h2 className="mt-2 font-display text-[34px] font-semibold leading-[1.1] sm:text-[44px]">
+          {c.titleStart} <span className="font-normal italic">{c.titleEm}</span>
+        </h2>
+        <p className="mt-3.5 max-w-[520px] text-lg leading-normal text-mist">{c.text}</p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href={href(lang, "samples")}
+            className="inline-flex min-h-[54px] items-center rounded-full bg-lime-500 px-7 py-4 font-label text-base font-medium text-green-900 hover:brightness-95"
+          >
+            {c.primary}
+          </Link>
+          <Link
+            href={href(lang, "contact")}
+            className="inline-flex min-h-[54px] items-center rounded-full border-[1.5px] border-sage-mist px-7 py-[15px] font-label text-base font-medium hover:bg-white/10"
+          >
+            {c.secondary}
+          </Link>
+        </div>
       </div>
     </section>
   );
@@ -397,9 +460,9 @@ export function ClosingCta({ lang, dict }: { lang: Locale; dict: Dictionary }) {
 
 // Route for each footer link, in the same order as dict.footer.columns[].links
 const FOOTER_ROUTES: RouteKey[][] = [
-  ["coffees", "producers", "regions", "coffees"],
+  ["coffees", "producers", "regions", "shop"],
   ["forBuyers", "samples", "samples", "forBuyers"],
-  ["producers", "producers", "producers"],
+  ["producers", "producers", "sellWithUs"],
   ["ourStory", "contact", "journal"],
 ];
 
@@ -425,7 +488,7 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       <div className="grid grid-cols-2 gap-8 py-12 md:grid-cols-3 lg:grid-cols-[repeat(4,minmax(0,1fr))_minmax(0,1.2fr)]">
         {f.columns.map((column, ci) => (
           <nav key={column.title} aria-label={column.title} className="min-w-0">
-            <h3 className="mb-3 text-[13px] font-semibold uppercase tracking-[0.08em] text-lime-500">{column.title}</h3>
+            <h3 className="mb-3 text-[13px] font-label font-medium uppercase tracking-[0.08em] text-lime-500">{column.title}</h3>
             <ul className="flex flex-col gap-1">
               {column.links.map((label, li) => (
                 <li key={label}>
@@ -441,7 +504,7 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           </nav>
         ))}
         <div>
-          <h3 className="mb-3 text-[13px] font-semibold uppercase tracking-[0.08em] text-lime-500">{f.contactTitle}</h3>
+          <h3 className="mb-3 text-[13px] font-label font-medium uppercase tracking-[0.08em] text-lime-500">{f.contactTitle}</h3>
           <p className="text-base leading-[1.7] text-mist">
             {f.location}
             <br />
@@ -454,14 +517,14 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           <br />
           <Link
             href={href(lang, "samples")}
-            className="mt-3.5 inline-flex min-h-12 items-center rounded-full border-[1.5px] border-[#9FC4AE] px-5 py-3 text-[15px] font-semibold hover:bg-white/10"
+            className="mt-3.5 inline-flex min-h-12 items-center rounded-full border-[1.5px] border-sage-mist px-5 py-3 text-[15px] font-label font-medium hover:bg-white/10"
           >
             {f.contactCta}
           </Link>
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-4 border-t border-mist/20 pt-6 text-sm text-[#9FC4AE]">
+      <div className="flex flex-wrap items-center justify-between gap-4 border-t border-mist/20 pt-6 text-sm text-sage-mist">
         <span>{f.rights}</span>
         <nav aria-label={f.legalLabel} className="flex flex-wrap items-center gap-6">
           <Link href={href(lang, "privacy")} className="py-2 hover:text-white">
@@ -480,7 +543,7 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           <Link
             href={href(other, "home")}
             hrefLang={other}
-            className="rounded-full border border-mist/35 px-3 py-1.5 font-semibold text-white"
+            className="rounded-full border border-mist/35 px-3 py-1.5 font-label font-medium text-white"
           >
             EN · ES
           </Link>
