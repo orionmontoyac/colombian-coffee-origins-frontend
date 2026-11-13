@@ -31,3 +31,11 @@ Photo rules for all real photos: real people and places from Urrao (no stock pho
 | Sample policy and minimum order | Lot pages, For buyers | free 200 g sample, one 35 kg box (example) |
 
 <!-- agents append rows below -->
+| Legal entity name and NIT | `src/lib/site.ts` (`legal`), footer, privacy/terms, shop | `[Legal entity name]`, `[NIT 000.000.000-0]` |
+| PQRS email | `src/lib/site.ts` (`contact.pqrsEmail`), shop, privacy | `pqrs@yourdomain.com` |
+| Facebook URL | `src/lib/site.ts` (`social.facebook`), footer, Organization `sameAs` | empty |
+| WhatsApp number (raw, international) | `src/lib/site.ts` (`whatsappNumber`), wa.me links | `+573000000000` |
+| Real lot photos for URR-035, URR-028, URR-019 | `src/data/lots.ts` | existing stock photos reused |
+| Producer stories, "coffee since" year, farm facts | `src/data/producers.ts` | story stubs marked for owner review |
+| Cupping reports, moisture, packaging for each lot | `src/data/lots.ts` (`detail`) | only URR-024 has example values |
+| Real shop products, brands, COP prices, sizes | `src/data/products.ts` | example data, labelled |

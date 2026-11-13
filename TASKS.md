@@ -47,10 +47,10 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [x] Header: Cart button variant for shop pages; skip link to `#main`; mobile menu keyboard-accessible.
   - [x] Bean icon and pattern assets added from `design/assets/` (bean-brown.png, bean-white.png, beans-caramel.png).
   - Verify: `npm run lint && npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts`
-- [ ] **T1.5 Site constants, routes, data** · Owns: src/lib/site.ts, src/lib/routes.ts, src/data/**
-  - [ ] `site.ts` with name, base URL, locales, placeholder contacts (each listed in ASSETS.md).
-  - [ ] All SPEC.md §3 route keys plus `lotHref`, `producerHref`, `productHref`.
-  - [ ] Data: 6 example lots (the 3 existing + 3 from the Lots board), 3 producers (Luz Mery Higuita, Hernán Darío Restrepo, Jhon Jairo Úsuga) with slugs, 8 roasted products and 6 brands from the Shop board, prices in COP; every file headed "EXAMPLE DATA".
+- [x] **T1.5 Site constants, routes, data** · Owns: src/lib/site.ts, src/lib/routes.ts, src/data/**
+  - [x] `site.ts` with name, base URL, locales, placeholder contacts (each listed in ASSETS.md).
+  - [x] All SPEC.md §3 route keys plus `lotHref`, `producerHref`, `productHref`.
+  - [x] Data: 6 example lots (the 3 existing + 3 from the Lots board), 3 producers (Luz Mery Higuita, Hernán Darío Restrepo, Jhon Jairo Úsuga) with slugs, 8 roasted products and 6 brands from the Shop board, prices in COP; every file headed "EXAMPLE DATA".
   - Verify: `npm run typecheck && npm run build`
 
 - [ ] **T1.6 Per-key dictionary files (enables parallel page work)** · Owner: foundation-builder · Owns: src/app/[lang]/dictionaries.ts, src/app/[lang]/dictionaries/**
