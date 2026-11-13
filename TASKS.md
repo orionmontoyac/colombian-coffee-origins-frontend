@@ -36,10 +36,10 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [x] Motion block placeholder at the end of `globals.css` (`/* motion */`), handed to the motion agent.
   - [x] `npm run check:tokens` fails on raw hex colors in `src/components/**` and `src/app/**/*.tsx` (data files allowed) and passes now (fix the existing `#5e3820` hovers with a `roast-hover` token).
   - Verify: `npm run check:tokens && npm run build`
-- [ ] **T1.3 Fonts to WOFF2** · Owns: src/fonts/**, src/app/[lang]/layout.tsx
-  - [ ] TTF → WOFF2, subset Latin + Latin-1, only the weights DESIGN.md uses; unused files removed.
-  - [ ] Total font bytes < 250 KB (`du -cb src/fonts/**/*.woff2`).
-  - [ ] No visual change on home at 1440 and 390 (screenshots before/after in `artifacts/screenshots/t1-3-*`).
+- [x] **T1.3 Fonts to WOFF2** · Owns: src/fonts/**, src/app/[lang]/layout.tsx
+  - [x] TTF → WOFF2, subset Latin + Latin-1, only the weights DESIGN.md uses; unused files removed.
+  - [x] Total font bytes < 250 KB (`du -cb src/fonts/**/*.woff2`).
+  - [x] No visual change on home at 1440 and 390 (screenshots before/after in `artifacts/screenshots/t1-3-*`).
   - Verify: `test $(find src/fonts -name '*.woff2' -exec cat {} + | wc -c) -lt 256000 && npm run build`
 - [ ] **T1.4 Shared components** · Owns: src/components/ui/**, src/components/home/site-header.tsx
   - [ ] SubpageBanner, StatBox, Chip, TrustBadge, Button (5 variants), SectionHeader, LotCard, ProductCard (+BagMockup, RoastMeter with the bean icon), ProducerCard, CtaPanel, FilterBar shell, Breadcrumbs, PlaceholderImage, WhatsAppButton, SkipLink.

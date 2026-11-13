@@ -9,25 +9,24 @@ import { getDictionary, hasLocale, locales } from "./dictionaries";
 const vollkorn = localFont({
   variable: "--font-vollkorn",
   src: [
-    { path: "../../fonts/vollkorn/Vollkorn-VariableFont_wght.ttf", weight: "400 900", style: "normal" },
-    { path: "../../fonts/vollkorn/Vollkorn-Italic-VariableFont_wght.ttf", weight: "400 900", style: "italic" },
+    { path: "../../fonts/vollkorn/Vollkorn-Variable.woff2", weight: "400 900", style: "normal" },
+    { path: "../../fonts/vollkorn/Vollkorn-Italic-Variable.woff2", weight: "400 900", style: "italic" },
   ],
 });
 const firaSans = localFont({
   variable: "--font-fira-sans",
   src: [
-    { path: "../../fonts/fira-sans/FiraSans-Regular.ttf", weight: "400", style: "normal" },
-    { path: "../../fonts/fira-sans/FiraSans-Italic.ttf", weight: "400", style: "italic" },
-    { path: "../../fonts/fira-sans/FiraSans-Medium.ttf", weight: "500", style: "normal" },
-    { path: "../../fonts/fira-sans/FiraSans-SemiBold.ttf", weight: "600", style: "normal" },
+    { path: "../../fonts/fira-sans/FiraSans-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../../fonts/fira-sans/FiraSans-Italic.woff2", weight: "400", style: "italic" },
+    { path: "../../fonts/fira-sans/FiraSans-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../../fonts/fira-sans/FiraSans-SemiBold.woff2", weight: "600", style: "normal" },
   ],
 });
 const ubuntu = localFont({
   variable: "--font-ubuntu",
   src: [
-    { path: "../../fonts/ubuntu/Ubuntu-Regular.ttf", weight: "400", style: "normal" },
-    { path: "../../fonts/ubuntu/Ubuntu-Medium.ttf", weight: "500", style: "normal" },
-    { path: "../../fonts/ubuntu/Ubuntu-Bold.ttf", weight: "700", style: "normal" },
+    { path: "../../fonts/ubuntu/Ubuntu-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../../fonts/ubuntu/Ubuntu-Bold.woff2", weight: "700", style: "normal" },
   ],
 });
 
