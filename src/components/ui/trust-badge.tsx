@@ -5,7 +5,7 @@ export type TrustLevel = "registered" | "farmVerified" | "coffeeVerified";
 const tones: Record<TrustLevel, string> = {
   coffeeVerified: "bg-roast text-on-primary",
   farmVerified: "bg-primary text-on-primary",
-  registered: "bg-surface-sunken text-ink-soft",
+  registered: "bg-surface-sunken text-body",
 };
 
 /** Trust level chip: Registered, Farm verified, Coffee verified (brown). Label comes from the dictionary. */

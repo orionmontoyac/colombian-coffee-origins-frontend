@@ -30,6 +30,8 @@ export type LotCardProps = {
   ctaHref: string;
   /** Optional link on the lot title (lot detail page) */
   detailHref?: string;
+  /** Optional link on the producer name (producer profile page) */
+  producerHref?: string;
 };
 
 /** Green-line lot card: photo with code, trust and score chips, notes, specs table, USD price, CTA. */
@@ -63,7 +65,7 @@ export function LotCard(p: LotCardProps) {
             <span className="text-xs font-semibold tracking-[0.06em]">SCA</span>
           </span>
         ) : (
-          <span className="absolute bottom-4 left-4 rounded-[14px] bg-neutral px-3.5 py-2 text-[13px] font-semibold text-ink-soft">
+          <span className="absolute bottom-4 left-4 rounded-[14px] bg-neutral px-3.5 py-2 text-[13px] font-semibold text-body">
             {p.notCuppedLabel}
           </span>
         )}
@@ -83,7 +85,9 @@ export function LotCard(p: LotCardProps) {
               {p.producerInitials}
             </span>
             <div>
-              <p className="text-base font-semibold text-ink">{p.producer}</p>
+              <p className="text-base font-semibold text-ink">
+                {p.producerHref ? <Link href={p.producerHref} className="underline-offset-4 hover:underline">{p.producer}</Link> : p.producer}
+              </p>
               <p className="mt-0.5 text-sm text-body">{p.farmLine}</p>
             </div>
           </div>
@@ -97,7 +101,7 @@ export function LotCard(p: LotCardProps) {
           ))}
         </ul>
 
-        <dl className="grid grid-cols-3 gap-3 border-y border-line-soft py-4">
+        <dl className="grid grid-cols-3 gap-3 border-y border-surface-sunken py-4">
           {p.specs.map(({ label, value }) => (
             <div key={label}>
               <dt className="text-[13px] text-muted">{label}</dt>

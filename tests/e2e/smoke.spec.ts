@@ -12,8 +12,7 @@ for (const path of ["/en", "/es"]) {
       }
     });
     page.on("response", (res) => {
-      // Link prefetches (?_rsc=) of pages not built yet are not page failures.
-      if (res.status() >= 400 && !res.url().includes("_rsc=")) errors.push(`${res.status()} ${res.url()}`);
+      if (res.status() >= 400) errors.push(`${res.status()} ${res.url()}`);
     });
     page.on("pageerror", (err) => errors.push(err.message));
 

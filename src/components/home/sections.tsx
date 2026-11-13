@@ -6,7 +6,8 @@ import { CtaPanel } from "@/components/ui/cta-panel";
 import { LotCard } from "@/components/ui/lot-card";
 import { SectionHeader } from "@/components/ui/section-header";
 import { TrustBadge } from "@/components/ui/trust-badge";
-import { href, lotHref, type RouteKey } from "@/lib/routes";
+import { getLot } from "@/data/lots";
+import { href, lotHref, producerHref, type RouteKey } from "@/lib/routes";
 import beansPattern from "@/assets/home/coffee-beans-pattern.png";
 import urraoSquare from "@/assets/home/urrao-main-square.jpg";
 import farmersHarvest from "@/assets/home/farmers-harvest.jpg";
@@ -116,7 +117,9 @@ export function FeaturedLots({ lang, dict }: { lang: Locale; dict: Dictionary })
       </ul>
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {sampleLots.map((lot) => (
+        {sampleLots.map((lot) => {
+          const fullLot = getLot(lot.code);
+          return (
           <LotCard
             key={lot.code}
             code={lot.code}
@@ -142,8 +145,10 @@ export function FeaturedLots({ lang, dict }: { lang: Locale; dict: Dictionary })
             ctaLabel={l.requestSample}
             ctaHref={`${href(lang, "samples")}?lot=${lot.code}`}
             detailHref={lotHref(lang, lot.code)}
+            producerHref={fullLot?.producerSlug ? producerHref(lang, fullLot.producerSlug) : undefined}
           />
-        ))}
+          );
+        })}
       </div>
       <p className="mt-[18px] text-[13px] text-muted">{l.note}</p>
     </section>

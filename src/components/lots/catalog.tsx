@@ -202,7 +202,7 @@ function CatalogView({ items, t, filters, onChange }: ViewProps) {
             ))}
           </div>
           {activeFilters.length ? (
-            <div className="flex flex-wrap items-center gap-2 border-t border-line-soft pt-3">
+            <div className="flex flex-wrap items-center gap-2 border-t border-surface-sunken pt-3">
               <span className="text-body-sm text-muted">{f.active}</span>
               {activeFilters.map((key) => {
                 const name = options[key].options.find(([v]) => v === filters[key])?.[1] ?? filters[key];

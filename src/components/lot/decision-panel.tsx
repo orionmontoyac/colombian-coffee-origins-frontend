@@ -69,7 +69,7 @@ export function DecisionPanel({ lang, dict, lot, processLabel }: { lang: Locale;
         </div>
       </div>
 
-      <dl className="grid grid-cols-3 gap-3 border-y border-line-soft py-[18px]">
+      <dl className="grid grid-cols-3 gap-3 border-y border-surface-sunken py-[18px]">
         <div>
           <dt className="text-[13px] text-muted">{p.available}</dt>
           <dd className="mt-1 text-lg font-semibold">{fmt(p.availableValue, { kg: num(lang, lot.availableKg) })}</dd>

@@ -57,7 +57,7 @@ export function SpecsAndCup({ lang, dict, lot }: Props) {
         </h2>
         <dl>
           {rows.map(([label, value]) => (
-            <div key={label} className="flex justify-between gap-4 border-t border-line-soft py-[13px]">
+            <div key={label} className="flex justify-between gap-4 border-t border-surface-sunken py-[13px]">
               <dt className="text-muted">{label}</dt>
               <dd className="text-right font-semibold">{value}</dd>
             </div>

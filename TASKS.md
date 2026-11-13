@@ -73,10 +73,10 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [x] Routing: the proxy also returns a first-hit 404 for unknown journal article slugs (EN and ES slugs differ); `src/app/[lang]/[...rest]/page.tsx` calls `notFound()` so unmatched URLs show the branded 404; `articleHref`/`articleAlternates` move from src/components/journal/articles.ts into src/lib/routes.ts (journal keeps a re-export).
   - Verify: `npm run lint && npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts tests/e2e/lots.spec.ts tests/e2e/lot.spec.ts`
 
-- [ ] **T1.9 Token cleanup and small shared follow-ups** · Owner: foundation-builder · Owns: src/components/ui/**, src/components/lots/**, src/components/lot/**, src/app/globals.css, tests/e2e/smoke.spec.ts
-  - [ ] Replace every `ink-soft` / `line-soft` use (ui/trust-badge, ui/lot-card, ui/placeholder-image, ui/product-card, lots/catalog, lot/decision-panel, lot/lot-sections) with DESIGN.md palette tokens; remove both from globals.css; `grep -r "ink-soft\|line-soft" src` is empty.
-  - [ ] LotCard gets an optional `producerHref` so home and catalog cards can link to the producer page.
-  - [ ] Confirm whether the `_rsc` 404 allowance in smoke.spec.ts is still needed; remove it if not.
+- [x] **T1.9 Token cleanup and small shared follow-ups** · Owner: foundation-builder · Owns: src/components/ui/**, src/components/lots/**, src/components/lot/**, src/app/globals.css, tests/e2e/smoke.spec.ts
+  - [x] Replace every `ink-soft` / `line-soft` use (ui/trust-badge, ui/lot-card, ui/placeholder-image, ui/product-card, lots/catalog, lot/decision-panel, lot/lot-sections) with DESIGN.md palette tokens; remove both from globals.css; `grep -r "ink-soft\|line-soft" src` is empty.
+  - [x] LotCard gets an optional `producerHref` so home cards link to the producer page (catalog wiring in `src/app/[lang]/coffees/page.tsx` moved to T5.3).
+  - [x] Confirm whether the `_rsc` 404 allowance in smoke.spec.ts is still needed; remove it if not.
   - Verify: `npm run lint && npm run typecheck && npm run check:tokens && npm run build && npx playwright test tests/e2e/smoke.spec.ts tests/e2e/home.spec.ts tests/e2e/lots.spec.ts tests/e2e/lot.spec.ts`
 
 ## Phase 2 — Pages (page-builder × up to 4 in parallel; each owns its route folder + dictionary key)
@@ -183,6 +183,7 @@ Each page task has these **standard checkpoints** in addition to its own:
   - Verify: `npm run verify`
 - [ ] **T5.3 Fix round** · Owner: planner (assigns fixes to owners)
   - [ ] Every P0/P1 from T5.1 and T5.2 fixed and re-verified.
+  - [ ] Lots catalog cards link the producer: in `src/app/[lang]/coffees/page.tsx` `toItem`, pass `producerHref={lot.producerSlug ? producerHref(lang, lot.producerSlug) : undefined}` (page-builder, T2.1 files).
   - [ ] Shop product card: fix the `label-content-name-mismatch` (Add button accessible name must start with its visible text), then remove the axe exclusion in shop.spec.ts (page-builder, shop files).
   - [ ] Forms show their result after a submit without JavaScript (with cacheComponents/PPR the POST to a static page returns no HTML): redirect-based fallback (e.g. `?sent=1` / `?error=` with a dynamic segment) in src/lib/actions + src/components/forms, owned by page-builder (T2.6 files).
   - Verify: `bash scripts/factory/is-done.sh`

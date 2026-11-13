@@ -27,7 +27,7 @@ export function PlaceholderImage({
       className={cx("flex w-full items-end rounded-lg bg-placeholder p-4 text-ink", className)}
     >
       <p className="font-label text-label-md">
-        <span className="block text-label-caps uppercase text-ink-soft">Photo to add</span>
+        <span className="block text-label-caps uppercase text-ink">Photo to add</span>
         {label}
       </p>
     </div>

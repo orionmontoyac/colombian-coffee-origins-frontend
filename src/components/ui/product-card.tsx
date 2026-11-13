@@ -30,7 +30,7 @@ export function ProductCard({
   return (
     <article
       data-vt-name={vtName}
-      className={`flex flex-col overflow-hidden rounded-lg bg-neutral${bordered ? " border border-line-soft" : ""}`}
+      className={`flex flex-col overflow-hidden rounded-lg bg-neutral${bordered ? " border border-surface-sunken" : ""}`}
     >
       <div className="relative flex h-[280px] items-center justify-center" style={{ background: bag.stage }}>
         {tag ? (

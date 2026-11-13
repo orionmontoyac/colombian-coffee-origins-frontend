@@ -50,8 +50,6 @@
   --roast-hover: #5e3820;
   --on-roast-body: #ead9c6;
   /* Legacy home-page greys, not in DESIGN.md yet */
-  --ink-soft: #3b3b33;
-  --line-soft: #e2e0d2;
 }
 
 @theme inline {
@@ -95,8 +93,6 @@
   --color-roast: var(--roast);
   --color-roast-hover: var(--roast-hover);
   --color-on-roast-body: var(--on-roast-body);
-  --color-ink-soft: var(--ink-soft);
-  --color-line-soft: var(--line-soft);
 
   /* Radii (DESIGN.md rounded.*) */
   --radius-sm: 10px;
