@@ -53,11 +53,15 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [x] Data: 6 example lots (the 3 existing + 3 from the Lots board), 3 producers (Luz Mery Higuita, Hernán Darío Restrepo, Jhon Jairo Úsuga) with slugs, 8 roasted products and 6 brands from the Shop board, prices in COP; every file headed "EXAMPLE DATA".
   - Verify: `npm run typecheck && npm run build`
 
-- [ ] **T1.6 Per-key dictionary files (enables parallel page work)** · Owner: foundation-builder · Owns: src/app/[lang]/dictionaries.ts, src/app/[lang]/dictionaries/**
-  - [ ] Each top-level dictionary key lives in its own pair of files `dictionaries/<key>/en.json` + `es.json` (or an equivalent layout); `getDictionary()` merges them and the `Dictionary` type is still inferred, with EN as the source of truth and ES checked to have the same shape.
-  - [ ] A new page key is added by creating its own folder only. No shared file needs editing, so parallel page builders never touch the same file.
-  - [ ] Home renders identically (same keys, same text).
+- [x] **T1.6 Per-key dictionary files (enables parallel page work)** · Owner: foundation-builder · Owns: src/app/[lang]/dictionaries.ts, src/app/[lang]/dictionaries/**
+  - [x] Each top-level dictionary key lives in its own pair of files `dictionaries/<key>/en.json` + `es.json` (or an equivalent layout); `getDictionary()` merges them and the `Dictionary` type is still inferred, with EN as the source of truth and ES checked to have the same shape.
+  - [x] A new page key is added by creating its own folder only. No shared file needs editing, so parallel page builders never touch the same file.
+  - [x] Home renders identically (same keys, same text).
   - Verify: `npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts`
+- [ ] **T1.7 Isolated build and test slots for parallel builders** · Owner: foundation-builder · Owns: next.config.ts, playwright.config.ts, .gitignore
+  - [ ] `next.config.ts` reads `distDir` from `NEXT_DIST_DIR` (default `.next`); `.gitignore` ignores `/.next-*/`.
+  - [ ] `playwright.config.ts` reads the port from `E2E_PORT` (default 3100) for baseURL, the webServer command and url, and writes output to `artifacts/playwright-<port>`, so four builders can each build and test at once.
+  - Verify: `npm run build && npx playwright test tests/e2e/smoke.spec.ts && NEXT_DIST_DIR=.next-slot1 E2E_PORT=3101 npx playwright test tests/e2e/smoke.spec.ts`
 
 ## Phase 2 — Pages (page-builder × up to 4 in parallel; each owns its route folder + dictionary key)
 

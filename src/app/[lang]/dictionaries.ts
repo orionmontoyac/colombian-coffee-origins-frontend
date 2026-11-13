@@ -1,12 +1,13 @@
 /**
  * How to add a page dictionary key (parallel-safe)
- * 1. Create src/app/[lang]/dictionaries/<key>/en.json and es.json (EN is the source of truth).
- * 2. Copy any existing dictionaries/<key>/index.ts into your folder unchanged. It re-exports
- *    { en, es } and fails typecheck/build if es.json differs in shape from en.json.
- * 3. Add ONE line to `sections` below: `<key>: () => import("./dictionaries/<key>"),`
- *    Each key is a distinct line, so parallel builders do not conflict. A one-line registry is
- *    needed because TypeScript infers `Dictionary` from static import paths; Next 16 / Turbopack
- *    has no import.meta.glob or require.context to discover folders automatically.
+ * 1. Fill src/app/[lang]/dictionaries/<key>/en.json and es.json (EN is the source of truth).
+ * 2. <key>/index.ts re-exports { en, es } and fails typecheck/build if es.json differs in shape
+ *    from en.json. Leave it unchanged.
+ * 3. Your key is already registered in `sections` below; only fill in its en.json and es.json
+ *    (the empty `{}` files widen by just editing the JSON). A brand-new key outside the
+ *    pre-registered list is a planner request. Registration is a one-line-per-key list because
+ *    TypeScript infers `Dictionary` from static import paths; Next 16 / Turbopack has no
+ *    import.meta.glob or require.context to discover folders automatically.
  * 4. Use it: `const t = await getDictionary(); t.<key>.…` (no other file changes).
  */
 import { lang } from "next/root-params";
@@ -27,6 +28,21 @@ const sections = {
   closing: () => import("./dictionaries/closing"),
   footer: () => import("./dictionaries/footer"),
   lines: () => import("./dictionaries/lines"),
+  lotsPage: () => import("./dictionaries/lotsPage"),
+  lotPage: () => import("./dictionaries/lotPage"),
+  producersPage: () => import("./dictionaries/producersPage"),
+  producerPage: () => import("./dictionaries/producerPage"),
+  shopPage: () => import("./dictionaries/shopPage"),
+  productPage: () => import("./dictionaries/productPage"),
+  cart: () => import("./dictionaries/cart"),
+  buyersPage: () => import("./dictionaries/buyersPage"),
+  forms: () => import("./dictionaries/forms"),
+  regionsPage: () => import("./dictionaries/regionsPage"),
+  storyPage: () => import("./dictionaries/storyPage"),
+  journal: () => import("./dictionaries/journal"),
+  legal: () => import("./dictionaries/legal"),
+  notFound: () => import("./dictionaries/notFound"),
+  faq: () => import("./dictionaries/faq"),
 };
 
 export const locales = ["en", "es"] as const;
