@@ -1,0 +1,18 @@
+{
+  "eyebrow": "Para productores",
+  "titleStart": "¿Cultivas o tuestas café?",
+  "titleEm": "Vende con nosotros",
+  "text": "Perfil básico gratis. Verificamos tu finca, fotografiamos tu café y te conectamos con compradores.",
+  "green": {
+    "badge": "Café verde",
+    "title": "Publica tus lotes de café verde",
+    "text": "Llega a tostadores e importadores en el exterior. Nos encargamos de las muestras y te ayudamos con la exportación.",
+    "cta": "Registrar mi finca"
+  },
+  "roasted": {
+    "badge": "Café tostado",
+    "title": "Vende tu café tostado",
+    "text": "¿Tienes tu propia marca? Vende tus bolsas en nuestra tienda a cafeterías y hogares de toda Colombia.",
+    "cta": "Abrir mi tienda"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "eyebrow": "Nuestros productores",
+  "titleStart": "El corazón de",
+  "titleEm": "nuestro café",
+  "text": "Todo el café que ofrecemos viene de familias caficultoras y productores locales: personas que cultivan un gran café y se sienten orgullosas de compartirlo con el mundo. Trabajamos directamente con ellas, así que su nombre, su finca y su historia viajan con cada lote.",
+  "points": [
+    {
+      "title": "Fincas familiares",
+      "text": "Pequeñas parcelas cuidadas por las familias que viven en ellas."
+    },
+    {
+      "title": "Saber local",
+      "text": "Caficultores que conocen su tierra, sus variedades y su cosecha."
+    },
+    {
+      "title": "Un nombre detrás de cada lote",
+      "text": "Siempre sabes quién cultivó tu café, y dónde."
+    }
+  ],
+  "cta": "Conoce a nuestros productores",
+  "imageAlt": "Recolectora de café sonriente con su canasto entre matas de café en una ladera colombiana"
+}

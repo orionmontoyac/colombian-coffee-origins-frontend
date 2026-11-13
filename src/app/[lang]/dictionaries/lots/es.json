@@ -1,0 +1,32 @@
+{
+  "eyebrow": "Disponible ahora · cosecha 2026",
+  "titleStart": "Lotes destacados",
+  "titleEm": "de Urrao",
+  "text": "Microlotes trazables de fincas familiares en lo alto de las montañas de Antioquia. Cada lote muestra su productor, variedad, proceso y perfil en taza, y puedes pedir una muestra antes de comprar.",
+  "exploreAll": "Ver todos los lotes",
+  "note": "Lotes de ejemplo para esta vista previa del diseño.",
+  "notesLabel": "Notas de sabor",
+  "altitude": "Altitud",
+  "available": "Disponible",
+  "harvest": "Cosecha",
+  "notCupped": "Aún sin catar",
+  "requestSample": "Pedir muestra",
+  "priceOnRequest": "Precio a consultar",
+  "greenFob": "Café verde, FOB",
+  "sampleAvailable": "Muestra disponible",
+  "badges": {
+    "coffeeVerified": "Café verificado",
+    "farmVerified": "Finca verificada",
+    "registered": "Registrado"
+  },
+  "processes": {
+    "washed": "Lavado",
+    "honey": "Honey",
+    "natural": "Natural"
+  },
+  "legend": {
+    "coffeeVerified": "lote catado y documentado",
+    "farmVerified": "finca revisada por nuestro equipo",
+    "registered": "datos del productor"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "home": "Inicio",
+  "coffees": "Café verde",
+  "producers": "Productores",
+  "ourStory": "Nosotros",
+  "contact": "Contacto",
+  "cta": "Solicitar muestras",
+  "menu": "Menú",
+  "mainLabel": "Principal",
+  "footerLabel": "Pie de página",
+  "languageLabel": "Idioma: español. Elegir idioma",
+  "currentLanguage": "ES",
+  "languages": {
+    "en": "English",
+    "es": "Español"
+  },
+  "shop": "Tienda",
+  "shopBadge": "CO",
+  "shopOnlyCo": "Solo Colombia"
+}

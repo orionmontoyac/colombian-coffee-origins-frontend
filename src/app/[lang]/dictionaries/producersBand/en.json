@@ -1,0 +1,18 @@
+{
+  "eyebrow": "For producers",
+  "titleStart": "Grow or roast coffee?",
+  "titleEm": "Sell with us",
+  "text": "Free basic profile. We verify your farm, photograph your coffee and connect you with buyers.",
+  "green": {
+    "badge": "Green coffee",
+    "title": "List your green coffee lots",
+    "text": "Reach roasters and importers abroad. We handle samples and help with export.",
+    "cta": "Register my farm"
+  },
+  "roasted": {
+    "badge": "Roasted coffee",
+    "title": "Sell your roasted coffee",
+    "text": "Have your own brand? Sell your bags in our shop to cafés and homes across Colombia.",
+    "cta": "Open my shop"
+  }
+}

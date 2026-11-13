@@ -1,0 +1,48 @@
+{
+  "tagline": "Café especial comprado directamente a fincas familiares colombianas, empezando por Urrao, Antioquia. Lotes trazables, muestras antes de comprar y apoyo en la exportación.",
+  "columns": [
+    {
+      "title": "Explora",
+      "links": [
+        "Lotes de café verde",
+        "Productores",
+        "Regiones",
+        "Tienda de café tostado"
+      ]
+    },
+    {
+      "title": "Para compradores",
+      "links": [
+        "Cómo funciona la compra",
+        "Solicitar muestras",
+        "Solicitud de compra",
+        "Envíos y exportación"
+      ]
+    },
+    {
+      "title": "Para productores",
+      "links": [
+        "Únete a la plataforma",
+        "Vende café verde",
+        "Vende café tostado"
+      ]
+    },
+    {
+      "title": "Empresa",
+      "links": [
+        "Nosotros",
+        "Contacto",
+        "Blog"
+      ]
+    }
+  ],
+  "contactTitle": "Escríbenos",
+  "location": "CO",
+  "country": "Colombia",
+  "email": "[hola@tudominio.com]",
+  "contactCta": "Solicitar muestras",
+  "rights": "© 2026 Colombian Coffee Origins. Todos los derechos reservados.",
+  "legalLabel": "Legal",
+  "privacy": "Privacidad",
+  "terms": "Términos"
+}

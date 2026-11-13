@@ -1,0 +1,40 @@
+{
+  "eyebrow": "El café colombiano en cifras",
+  "titleStart": "Por qué el café especial",
+  "titleEm": "colombiano",
+  "titleEnd": "",
+  "text": "Montañas, altitud y cientos de miles de fincas familiares hacen de Colombia uno de los grandes orígenes de café del mundo.",
+  "items": [
+    {
+      "value": "557 mil+",
+      "label": "familias cafeteras",
+      "text": "El café es un negocio familiar: la mayoría de los caficultores del país son pequeños productores."
+    },
+    {
+      "value": "14,8 M",
+      "label": "sacos en la cosecha 2024",
+      "text": "La mayor cosecha de Colombia desde 1992, según la Federación de Cafeteros."
+    },
+    {
+      "value": "100%",
+      "label": "arábica",
+      "text": "Colombia cultiva café arábica, la especie detrás de casi todo el café especial."
+    },
+    {
+      "value": "2",
+      "label": "cosechas al año",
+      "text": "Cerca de la línea del ecuador, muchas regiones tienen una cosecha principal y una mitaca."
+    },
+    {
+      "value": "1.200–2.300 m",
+      "label": "sobre el nivel del mar",
+      "text": "La altitud trae noches más frías y una maduración más lenta, que aporta dulzor y acidez."
+    },
+    {
+      "value": "80+",
+      "label": "puntos = especial",
+      "text": "En la escala de catación de 100 puntos de la SCA, los cafés con 80 o más se califican como especiales."
+    }
+  ],
+  "sources": "Fuentes: Federación Nacional de Cafeteros (cifras de la cosecha 2024 y de familias cafeteras, según Radio Nacional y Valora Analitik); escala de calificación de la Specialty Coffee Association."
+}

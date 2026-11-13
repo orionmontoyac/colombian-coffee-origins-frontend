@@ -1,0 +1,35 @@
+{
+  "badge": "Nuevo",
+  "eyebrow": "Tienda de café tostado",
+  "ships": "Envíos dentro de Colombia",
+  "titleStart": "Tostado en origen,",
+  "titleEm": "directo de la finca",
+  "text": "Una tienda multimarca para productores colombianos que tuestan su propio café. Compra bolsas directamente a las fincas, para tu cafetería o tu casa.",
+  "cta": "Comprar café tostado",
+  "filtersLabel": "Filtros de la tienda",
+  "filters": [
+    "Todo",
+    "Tueste claro",
+    "Tueste medio",
+    "En grano",
+    "Molido",
+    "Menos de $50.000"
+  ],
+  "addToCart": "Agregar",
+  "note": "Productos y marcas de ejemplo para esta vista previa del diseño.",
+  "tags": {
+    "producerBrand": "Marca del productor",
+    "bestValue": "Mejor precio",
+    "limited": "Lote limitado",
+    "ground": "Molido"
+  },
+  "roast": {
+    "light": "Tueste claro",
+    "medium": "Tueste medio",
+    "mediumDark": "Medio-oscuro"
+  },
+  "grind": {
+    "wholeBean": "En grano",
+    "ground": "Molido"
+  }
+}

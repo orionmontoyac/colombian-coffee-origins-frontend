@@ -1,0 +1,22 @@
+{
+  "eyebrow": "Our producers",
+  "titleStart": "The heart of",
+  "titleEm": "our coffee",
+  "text": "Every coffee we offer comes from family farmers and local producers: people who grow great coffee and are proud to share it with the world. We work with them directly, so their name, their farm and their story travel with every lot.",
+  "points": [
+    {
+      "title": "Family farms",
+      "text": "Small plots, cared for by the families who live on them."
+    },
+    {
+      "title": "Local know-how",
+      "text": "Growers who know their land, their varieties and their harvest."
+    },
+    {
+      "title": "A name behind every lot",
+      "text": "You always know who grew your coffee, and where."
+    }
+  ],
+  "cta": "Meet our producers",
+  "imageAlt": "Smiling coffee picker with a harvest basket among coffee plants on a Colombian hillside"
+}
