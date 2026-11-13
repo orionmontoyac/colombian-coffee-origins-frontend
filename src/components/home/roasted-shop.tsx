@@ -62,7 +62,7 @@ export function RoastedShop({ lang, dict }: { lang: Locale; dict: Dictionary }) 
         </div>
         <Link
           href={href(lang, "shop")}
-          className="inline-flex min-h-[60px] items-center gap-3 whitespace-nowrap rounded-full bg-brown px-8 py-[18px] font-label text-lg font-medium text-white hover:bg-[#5e3820]"
+          className="inline-flex min-h-[60px] items-center gap-3 whitespace-nowrap rounded-full bg-brown px-8 py-[18px] font-label text-lg font-medium text-white hover:bg-roast-hover"
         >
           {s.cta}
           <span aria-hidden="true" className="flex size-[30px] items-center justify-center rounded-full bg-roast-surface text-base text-brown">
@@ -109,7 +109,7 @@ export function RoastedShop({ lang, dict }: { lang: Locale; dict: Dictionary }) 
                   <p className="font-display text-[20px] font-semibold text-roast-dark">{formatCop(p.priceCop, lang)}</p>
                   <Link
                     href={href(lang, "shop")}
-                    className="inline-flex min-h-[46px] items-center whitespace-nowrap rounded-full bg-brown px-[18px] py-3 font-label text-[15px] font-medium text-white hover:bg-[#5e3820]"
+                    className="inline-flex min-h-[46px] items-center whitespace-nowrap rounded-full bg-brown px-[18px] py-3 font-label text-[15px] font-medium text-white hover:bg-roast-hover"
                   >
                     {s.addToCart}
                   </Link>

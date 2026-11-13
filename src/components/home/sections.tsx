@@ -34,8 +34,8 @@ function SectionHeader({
 function LogoMark({ size = 48 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true">
-      <ellipse cx="16" cy="16" rx="9" ry="13" transform="rotate(35 16 16)" fill="#6FD13B" />
-      <path d="M10 24 C 14 18, 18 14, 22 8" stroke="#0B3D2A" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+      <ellipse cx="16" cy="16" rx="9" ry="13" transform="rotate(35 16 16)" fill="var(--accent)" />
+      <path d="M10 24 C 14 18, 18 14, 22 8" stroke="var(--primary)" strokeWidth="2.4" fill="none" strokeLinecap="round" />
     </svg>
   );
 }
@@ -107,7 +107,7 @@ export function Farmers({ lang, dict }: { lang: Locale; dict: Dictionary }) {
 const badgeTone: Record<SampleLot["verification"], string> = {
   coffeeVerified: "bg-brown text-white",
   farmVerified: "bg-green-900 text-white",
-  registered: "bg-stone text-[#3B3B33]",
+  registered: "bg-stone text-ink-soft",
 };
 
 function LotCard({ lot, lang, l }: { lot: SampleLot; lang: Locale; l: Dictionary["lots"] }) {
@@ -136,7 +136,7 @@ function LotCard({ lot, lang, l }: { lot: SampleLot; lang: Locale; l: Dictionary
             <span className="text-xs font-semibold tracking-[0.06em]">SCA</span>
           </span>
         ) : (
-          <span className="absolute bottom-4 left-4 rounded-[14px] bg-white px-3.5 py-2 text-[13px] font-semibold text-[#3B3B33]">
+          <span className="absolute bottom-4 left-4 rounded-[14px] bg-white px-3.5 py-2 text-[13px] font-semibold text-ink-soft">
             {l.notCupped}
           </span>
         )}
@@ -169,7 +169,7 @@ function LotCard({ lot, lang, l }: { lot: SampleLot; lang: Locale; l: Dictionary
           ))}
         </ul>
 
-        <dl className="grid grid-cols-3 gap-3 border-y border-[#E2E0D2] py-4">
+        <dl className="grid grid-cols-3 gap-3 border-y border-line-soft py-4">
           {[
             [l.altitude, `${n(lot.altitudeM)} m`],
             [l.available, `${n(lot.kg)} kg`],
@@ -413,7 +413,7 @@ export function ProducersBand({ lang, dict }: { lang: Locale; dict: Dictionary }
           <p className="text-base leading-[1.55] text-roast-body">{p.roasted.text}</p>
           <Link
             href={href(lang, "sellWithUs")}
-            className="mt-1.5 inline-flex min-h-[52px] items-center gap-2.5 self-start rounded-full bg-brown px-6 py-[15px] font-label text-base font-medium text-white hover:bg-[#5e3820]"
+            className="mt-1.5 inline-flex min-h-[52px] items-center gap-2.5 self-start rounded-full bg-brown px-6 py-[15px] font-label text-base font-medium text-white hover:bg-roast-hover"
           >
             {p.roasted.cta} <span aria-hidden="true">→</span>
           </Link>

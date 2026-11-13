@@ -49,7 +49,7 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           <OnlyInCountry country="CO">
             <Link
               href={href(lang, "shop")}
-              className="inline-flex min-h-14 items-center gap-2.5 rounded-full bg-brown px-7 py-4 font-label text-[17px] font-medium text-white hover:bg-[#5e3820]"
+              className="inline-flex min-h-14 items-center gap-2.5 rounded-full bg-brown px-7 py-4 font-label text-[17px] font-medium text-white hover:bg-roast-hover"
             >
               {hero.shopCta}
               <span className="rounded-full bg-white/20 px-2 py-[3px] text-[11px] font-bold">{hero.shopBadge}</span>

@@ -17,7 +17,7 @@ const tone: Record<Line, { card: string; title: string; button: string }> = {
   roasted: {
     card: "bg-roast-card",
     title: "text-roast-dark",
-    button: "bg-brown hover:bg-[#5e3820]",
+    button: "bg-brown hover:bg-roast-hover",
   },
 };
 

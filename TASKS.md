@@ -30,11 +30,11 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [x] Playwright projects: desktop 1440×900, Pixel 7, `x-country: CO` variant, `reducedMotion: 'reduce'` variant; `webServer` builds and starts on port 3100.
   - [x] `tests/e2e/smoke.spec.ts`: `/en` and `/es` return 200, one H1, no console errors.
   - Verify: `npm run lint && npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts`
-- [ ] **T1.2 Tokens from DESIGN.md** · Owns: src/app/globals.css, scripts/factory/check-tokens.mjs
-  - [ ] Every DESIGN.md color, radius, spacing and type token exists in `globals.css` under the same name (colors include the roasted line: roast, roast-dark, caramel, roast-surface, roast-line, roast-body, on-roast-body; add `roast-card #F3E6D8` to DESIGN.md through the planner).
-  - [ ] Type utilities: `font-display` Vollkorn, `font-sans` Fira Sans, `font-label` Ubuntu; text styles headline-xl/lg/md/sm, body-lg/md/sm, label-md, label-caps, nav-caps.
-  - [ ] Motion block placeholder at the end of `globals.css` (`/* motion */`), handed to the motion agent.
-  - [ ] `npm run check:tokens` fails on raw hex colors in `src/components/**` and `src/app/**/*.tsx` (data files allowed) and passes now (fix the existing `#5e3820` hovers with a `roast-hover` token).
+- [x] **T1.2 Tokens from DESIGN.md** · Owns: src/app/globals.css, scripts/factory/check-tokens.mjs
+  - [x] Every DESIGN.md color, radius, spacing and type token exists in `globals.css` under the same name (colors include the roasted line: roast, roast-dark, caramel, roast-surface, roast-line, roast-body, on-roast-body; add `roast-card #F3E6D8` to DESIGN.md through the planner).
+  - [x] Type utilities: `font-display` Vollkorn, `font-sans` Fira Sans, `font-label` Ubuntu; text styles headline-xl/lg/md/sm, body-lg/md/sm, label-md, label-caps, nav-caps.
+  - [x] Motion block placeholder at the end of `globals.css` (`/* motion */`), handed to the motion agent.
+  - [x] `npm run check:tokens` fails on raw hex colors in `src/components/**` and `src/app/**/*.tsx` (data files allowed) and passes now (fix the existing `#5e3820` hovers with a `roast-hover` token).
   - Verify: `npm run check:tokens && npm run build`
 - [ ] **T1.3 Fonts to WOFF2** · Owns: src/fonts/**, src/app/[lang]/layout.tsx
   - [ ] TTF → WOFF2, subset Latin + Latin-1, only the weights DESIGN.md uses; unused files removed.
@@ -96,6 +96,7 @@ Each page task has these **standard checkpoints** in addition to its own:
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en/regions/urrao,/en/journal,/en/our-story`
 - [ ] **T2.8 Home polish** · Owns: src/app/[lang]/page.tsx, src/components/home/** (except site-header), dict keys `hero`, `lines`, `farmers`, `lots`, `shop`, `producersBand`, `closing`
   - [ ] Links from home cards go to the real lot, producer and product pages.
+  - [ ] Replace the interim `ink-soft` and `line-soft` tokens in `sections.tsx` with DESIGN.md palette tokens (e.g. `body`/`ink`, `line`/`surface-sunken`), then remove both from `globals.css` (request to foundation-builder).
   - [ ] FAQ teaser (3 questions → For buyers) before the closing CTA; answer-first sentence in the hero subtitle.
   - [ ] Matches the Main board at 1440 and 390; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en,/es`

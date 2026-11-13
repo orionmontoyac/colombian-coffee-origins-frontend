@@ -20,8 +20,8 @@ function CoBadge({ label }: { label: string }) {
 function LogoMark() {
   return (
     <svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true">
-      <ellipse cx="16" cy="16" rx="9" ry="13" transform="rotate(35 16 16)" fill="#0B3D2A" />
-      <path d="M10 24 C 14 18, 18 14, 22 8" stroke="#6FD13B" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+      <ellipse cx="16" cy="16" rx="9" ry="13" transform="rotate(35 16 16)" fill="var(--primary)" />
+      <path d="M10 24 C 14 18, 18 14, 22 8" stroke="var(--accent)" strokeWidth="2.4" fill="none" strokeLinecap="round" />
     </svg>
   );
 }
@@ -55,7 +55,7 @@ function MenuIcon() {
 const dropdownPanel =
   "absolute right-0 top-full z-40 mt-2 min-w-48 rounded-2xl bg-white p-2 text-left shadow-[0_16px_40px_rgb(11_61_42/0.18)]";
 const dropdownLink =
-  "block rounded-xl px-4 py-3 text-sm font-medium text-green-900 hover:bg-cream-100";
+  "block rounded-[12px] px-4 py-3 text-sm font-medium text-green-900 hover:bg-cream-100";
 
 function closeMenu(event: MouseEvent<HTMLAnchorElement>) {
   event.currentTarget.closest("details")?.removeAttribute("open");
