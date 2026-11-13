@@ -24,11 +24,11 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
 
 ## Phase 1 — Foundation (foundation-builder, alone, in order)
 
-- [ ] **T1.1 Tooling and scripts** · Owns: package.json, playwright.config.ts, lighthouserc.json, tests/e2e/smoke.spec.ts
-  - [ ] Install pinned dev deps: `@playwright/test`, `@axe-core/playwright`, `@lhci/cli`; run `npx playwright install chromium`.
-  - [ ] npm scripts exist: `typecheck`, `lint`, `test:e2e`, `lhci`, `check:tokens`, `check:seo`, `verify`.
-  - [ ] Playwright projects: desktop 1440×900, Pixel 7, `x-country: CO` variant, `reducedMotion: 'reduce'` variant; `webServer` builds and starts on port 3100.
-  - [ ] `tests/e2e/smoke.spec.ts`: `/en` and `/es` return 200, one H1, no console errors.
+- [x] **T1.1 Tooling and scripts** · Owns: package.json, playwright.config.ts, lighthouserc.json, tests/e2e/smoke.spec.ts
+  - [x] Install pinned dev deps: `@playwright/test`, `@axe-core/playwright`, `@lhci/cli`; run `npx playwright install chromium`.
+  - [x] npm scripts exist: `typecheck`, `lint`, `test:e2e`, `lhci`, `check:tokens`, `check:seo`, `verify`.
+  - [x] Playwright projects: desktop 1440×900, Pixel 7, `x-country: CO` variant, `reducedMotion: 'reduce'` variant; `webServer` builds and starts on port 3100.
+  - [x] `tests/e2e/smoke.spec.ts`: `/en` and `/es` return 200, one H1, no console errors.
   - Verify: `npm run lint && npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts`
 - [ ] **T1.2 Tokens from DESIGN.md** · Owns: src/app/globals.css, scripts/factory/check-tokens.mjs
   - [ ] Every DESIGN.md color, radius, spacing and type token exists in `globals.css` under the same name (colors include the roasted line: roast, roast-dark, caramel, roast-surface, roast-line, roast-body, on-roast-body; add `roast-card #F3E6D8` to DESIGN.md through the planner).
