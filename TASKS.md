@@ -53,6 +53,12 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [ ] Data: 6 example lots (the 3 existing + 3 from the Lots board), 3 producers (Luz Mery Higuita, Hernán Darío Restrepo, Jhon Jairo Úsuga) with slugs, 8 roasted products and 6 brands from the Shop board, prices in COP; every file headed "EXAMPLE DATA".
   - Verify: `npm run typecheck && npm run build`
 
+- [ ] **T1.6 Per-key dictionary files (enables parallel page work)** · Owner: foundation-builder · Owns: src/app/[lang]/dictionaries.ts, src/app/[lang]/dictionaries/**
+  - [ ] Each top-level dictionary key lives in its own pair of files `dictionaries/<key>/en.json` + `es.json` (or an equivalent layout); `getDictionary()` merges them and the `Dictionary` type is still inferred, with EN as the source of truth and ES checked to have the same shape.
+  - [ ] A new page key is added by creating its own folder only. No shared file needs editing, so parallel page builders never touch the same file.
+  - [ ] Home renders identically (same keys, same text).
+  - Verify: `npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts`
+
 ## Phase 2 — Pages (page-builder × up to 4 in parallel; each owns its route folder + dictionary key)
 
 Each page task has these **standard checkpoints** in addition to its own:
