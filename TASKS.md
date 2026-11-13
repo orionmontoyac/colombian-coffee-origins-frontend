@@ -68,6 +68,7 @@ Legend: `Owner` = agent · `Owns` = files only that agent may edit · `Verify` =
   - [ ] Header language switcher: accessible name starts with its visible text (axe `label-content-name-mismatch`). Then remove the per-spec axe exclusions in lots.spec.ts and lot.spec.ts.
   - [ ] SubpageBanner: stat values don't wrap at 390 (e.g. "2.150 m").
   - [ ] PlaceholderImage caption passes axe contrast (currently `text-muted` on `placeholder`); then remove the local override in src/components/producer/.
+  - [ ] SectionHeader takes an optional `id` (so sections can use aria-labelledby); SiteHeader/SubpageBanner `NavKey` gains the nav items used by sub-pages (e.g. forBuyers) so the active pill shows.
   - Verify: `npm run lint && npm run typecheck && npm run build && npx playwright test tests/e2e/smoke.spec.ts tests/e2e/lots.spec.ts tests/e2e/lot.spec.ts`
 
 ## Phase 2 — Pages (page-builder × up to 4 in parallel; each owns its route folder + dictionary key)
@@ -96,9 +97,9 @@ Each page task has these **standard checkpoints** in addition to its own:
   - [ ] Non-CO visitors get the "ships inside Colombia only" page, HTTP 200, noindex.
   - [ ] Product + Offer (COP, shipping details, return policy) JSON-LD; prices `COP 68,000` EN / `$68.000` ES; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /es/tienda --country CO && npx playwright test tests/e2e/shop.spec.ts`
-- [ ] **T2.5 For buyers + FAQ** `/for-buyers` · Owns: src/app/[lang]/for-buyers/**, src/components/buyers/**, dict key `buyersPage`
-  - [ ] 5 sourcing steps, trust levels, pricing (FOB, minimums, samples), export & logistics, FAQ (from ai-discoverability `faq` key), CTA.
-  - [ ] FAQPage JSON-LD; standard checkpoints.
+- [x] **T2.5 For buyers + FAQ** `/for-buyers` · Owns: src/app/[lang]/for-buyers/**, src/components/buyers/**, dict key `buyersPage`
+  - [x] 5 sourcing steps, trust levels, pricing (FOB, minimums, samples), export & logistics, FAQ (from ai-discoverability `faq` key), CTA.
+  - [x] FAQPage JSON-LD; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en/for-buyers,/es/para-compradores`
 - [ ] **T2.6 Forms: samples, contact, sell with us** · Owns: src/app/[lang]/samples/**, src/app/[lang]/contact/**, src/app/[lang]/shop/sell/**, src/components/forms/**, src/lib/actions/**, dict key `forms`
   - [ ] Server Actions with validation, honeypot, consent checkbox, success state, `// TODO(backend)` hand-off; `?lot=` prefill on samples.

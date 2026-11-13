@@ -1,1 +1,44 @@
-{}
+{
+  "buyers": [
+    {
+      "q": "¿Cómo importo café verde de Colombia?",
+      "a": "Lo importas en cinco pasos: eliges un lote, pides una muestra gratis, la catas, confirmas tu pedido y acuerdas el envío. Nosotros preparamos el café y los documentos de exportación en Colombia y lo entregamos FOB a tu transitario."
+    },
+    {
+      "q": "¿Cuál es el pedido mínimo?",
+      "a": "El pedido mínimo es una caja de 35 kg de un solo lote. Si quieres comprar más, dinos la cantidad y la comparamos con los kilos que aún están disponibles."
+    },
+    {
+      "q": "¿Qué significa FOB?",
+      "a": "FOB (libre a bordo) significa que el precio incluye el café, el empaque y la entrega a bordo del buque o avión en Colombia. El flete, el seguro, los aranceles y la nacionalización en tu destino los paga el comprador."
+    },
+    {
+      "q": "¿Las muestras son realmente gratis?",
+      "a": "Sí, la primera muestra de 200 g de un lote es gratis para compradores verificados. Las muestras salen desde Colombia y te avisamos cuando salga la tuya."
+    },
+    {
+      "q": "¿Qué significan Registrado, Finca verificada y Café verificado?",
+      "a": "Te dicen qué verificamos nosotros. Registrado significa que el productor está en nuestra plataforma, Finca verificada que visitamos la finca, y Café verificado que además catamos este lote y confirmamos sus kilos."
+    },
+    {
+      "q": "¿Cómo califican el café?",
+      "a": "Los lotes que hemos catado muestran un puntaje de catación SCA con notas de sabor. Los que aún no catamos aparecen marcados así y no muestran puntaje."
+    },
+    {
+      "q": "¿Cómo se empaca el café?",
+      "a": "Los lotes se empacan en unidades de 35 kg y la página de cada lote indica su empaque. Los detalles de tu envío se confirman en tu oferta."
+    },
+    {
+      "q": "¿A dónde envían?",
+      "a": "Vendemos café verde a tostadores, importadores y cafeterías de todo el mundo. Tú eliges el destino y, antes de que pagues, confirmamos los documentos de exportación que necesita."
+    },
+    {
+      "q": "¿También puedo comprar café tostado?",
+      "a": "El café tostado de las fincas se vende en nuestra tienda en línea solo para clientes en Colombia. Los compradores fuera de Colombia compran café verde."
+    },
+    {
+      "q": "¿Cómo pago y cuánto tarda?",
+      "a": "Las condiciones de pago y los tiempos de entrega se acuerdan en cada pedido y quedan escritos en tu oferta. Los tiempos dependen del lote y del calendario de cosecha."
+    }
+  ]
+}

@@ -1,1 +1,44 @@
-{}
+{
+  "buyers": [
+    {
+      "q": "How do I import green coffee from Colombia?",
+      "a": "You import it in five steps: pick a lot, request a free sample, cup it, confirm your order and agree the shipping. We prepare the coffee and export documents in Colombia and hand it over FOB to your forwarder."
+    },
+    {
+      "q": "What is the minimum order?",
+      "a": "The minimum order is one 35 kg box of a single lot. If you want to buy more, tell us the quantity and we check it against the kilos still available."
+    },
+    {
+      "q": "What does FOB mean?",
+      "a": "FOB (free on board) means the price covers the coffee, packing and delivery onto the vessel or aircraft in Colombia. Freight, insurance, import duties and clearance at your destination are paid by the buyer."
+    },
+    {
+      "q": "Are samples really free?",
+      "a": "Yes, the first 200 g sample of a lot is free for verified buyers. Samples are sent from Colombia and we tell you when yours ships."
+    },
+    {
+      "q": "What do Registered, Farm verified and Coffee verified mean?",
+      "a": "They tell you what we checked ourselves. Registered means the producer is on our platform, Farm verified means we visited the farm, and Coffee verified means we also cupped this exact lot and confirmed its kilos."
+    },
+    {
+      "q": "How do you grade the coffee?",
+      "a": "Lots we have cupped show an SCA cupping score with tasting notes. Lots we have not cupped yet are labelled as such, and we do not show a score for them."
+    },
+    {
+      "q": "How is the coffee packed?",
+      "a": "Lots are packed in 35 kg units, and each lot page lists its packaging. Details for your shipment are confirmed in your offer."
+    },
+    {
+      "q": "Where do you ship?",
+      "a": "We sell green coffee to roasters, importers and coffee shops worldwide. You choose the destination, and we confirm the export documents it needs before you pay."
+    },
+    {
+      "q": "Can I buy roasted coffee as well?",
+      "a": "Roasted coffee from the farms is sold in our online shop for customers in Colombia only. Buyers outside Colombia purchase green coffee."
+    },
+    {
+      "q": "How do I pay and how long does it take?",
+      "a": "Payment terms and lead times are agreed for each order and written in your offer. Lead times depend on the lot and the harvest calendar."
+    }
+  ]
+}

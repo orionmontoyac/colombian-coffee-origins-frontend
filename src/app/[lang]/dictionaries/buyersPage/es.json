@@ -1,1 +1,145 @@
-{}
+{
+  "meta": {
+    "title": "Cómo importar café verde de Colombia | Colombian Coffee Origins",
+    "description": "Cómo importar café verde de Colombia: pide una muestra gratis, catala y compra por caja de 35 kg a precio FOB. Apoyo en exportación desde fincas de Urrao."
+  },
+  "breadcrumb": {
+    "home": "Inicio",
+    "current": "Para compradores"
+  },
+  "banner": {
+    "chips": [
+      "Precio FOB",
+      "Muestras gratis",
+      "Apoyo en exportación"
+    ],
+    "title": "Cómo importar café verde",
+    "accent": "de Colombia",
+    "description": "Cinco pasos desde el primer lote que te gusta hasta una caja que sale de Colombia, con la finca y el puntaje de taza a la vista.",
+    "lotsLabel": "Lotes disponibles",
+    "minLabel": "Pedido mínimo",
+    "minValue": "{kg}\u00a0kg",
+    "sampleLabel": "Muestra gratis",
+    "sampleValue": "{g}\u00a0g"
+  },
+  "steps": {
+    "title": "Cinco pasos",
+    "accent": "de la finca a tu tostadora",
+    "text": "Puedes importar café verde de Colombia en cinco pasos: descubrir un lote, pedir una muestra, evaluarla, comprar y enviar. Cada paso es un mensaje o un clic.",
+    "items": [
+      {
+        "title": "Descubre",
+        "text": "Explora lotes con productor, finca, altitud, variedad, proceso y puntaje SCA en cada tarjeta. Filtra según lo que necesite tu carta."
+      },
+      {
+        "title": "Muestra",
+        "text": "Pide una muestra gratis de 200 g de cualquier lote con muestra disponible. La enviamos desde Colombia y te avisamos cuando salga."
+      },
+      {
+        "title": "Evalúa",
+        "text": "Cata la muestra en tu laboratorio y cuéntanos qué piensas. Si el lote no es el indicado, te proponemos uno más cercano."
+      },
+      {
+        "title": "Compra",
+        "text": "Confirma el lote y la cantidad, desde una caja de 35 kg. Acordamos por escrito el precio, el pago y las fechas."
+      },
+      {
+        "title": "Envía",
+        "text": "Empacamos, documentamos y entregamos el café FOB. Tu transitario o el nuestro lo lleva a tu puerto."
+      }
+    ]
+  },
+  "trust": {
+    "title": "Tres niveles de confianza,",
+    "accent": "una regla clara",
+    "text": "Cada lote lleva una insignia que dice qué hemos verificado nosotros. Nunca dice más que eso.",
+    "items": [
+      {
+        "level": "registered",
+        "label": "Registrado",
+        "text": "El productor y la finca están registrados con nosotros. Aún no hemos visitado ni catado este lote, así que los datos son los declarados por el productor."
+      },
+      {
+        "level": "farmVerified",
+        "label": "Finca verificada",
+        "text": "Visitamos la finca y conocimos al productor. La altitud, la variedad y el proceso están confirmados en sitio."
+      },
+      {
+        "level": "coffeeVerified",
+        "label": "Café verificado",
+        "text": "La finca está verificada y este lote exacto fue catado y sus kilos confirmados. El puntaje que ves es de este lote."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Precios, mínimos",
+    "accent": "y muestras",
+    "text": "El café verde se cotiza en dólares por kilo, FOB Colombia. El pedido mínimo es una caja de 35 kg y la primera muestra de 200 g es gratis para compradores verificados.",
+    "rows": [
+      {
+        "label": "Unidad de precio",
+        "value": "USD por kg, FOB Colombia"
+      },
+      {
+        "label": "Pedido mínimo",
+        "value": "{kg} kg (una caja)"
+      },
+      {
+        "label": "Muestra",
+        "value": "Gratis, {g} g, para compradores verificados"
+      },
+      {
+        "label": "Precios de ejemplo",
+        "value": "USD {min} a {max} por kg"
+      },
+      {
+        "label": "Lotes con precio a consultar",
+        "value": "{n} de {total}"
+      },
+      {
+        "label": "Pago y tiempos de entrega",
+        "value": "Se acuerdan por pedido"
+      }
+    ],
+    "exampleNote": "Precios de ejemplo para esta vista previa. Las ofertas reales se confirman lote por lote.",
+    "fobTitle": "Qué significa FOB",
+    "fobText": "FOB (libre a bordo) significa que nuestro precio incluye el café, el empaque y la entrega a bordo del buque o avión en Colombia. El flete marítimo o aéreo, el seguro, los aranceles y la nacionalización van por cuenta del comprador."
+  },
+  "logistics": {
+    "title": "Exportación y logística,",
+    "accent": "sin complicaciones",
+    "text": "Preparamos cada envío en Colombia y trabajamos con tu transitario, para que el café pase en ambos extremos sin sorpresas.",
+    "items": [
+      {
+        "title": "Empaque",
+        "text": "Los lotes salen en cajas o sacos de 35 kg. El empaque de cada lote aparece en su página."
+      },
+      {
+        "title": "Documentos",
+        "text": "Preparamos los papeles de exportación y confirmamos la lista completa de documentos para tu destino antes de que pagues."
+      },
+      {
+        "title": "Flete",
+        "text": "Trae a tu transitario o pídenos una presentación. Eliges marítimo o aéreo según volumen y tiempo."
+      },
+      {
+        "title": "Seguimiento",
+        "text": "Recibes un mensaje en cada entrega: empacado, con el transportista y a la llegada."
+      }
+    ],
+    "note": "Los tiempos dependen del lote y del calendario de cosecha. Confirmamos las fechas en tu oferta."
+  },
+  "faq": {
+    "title": "Lo que los compradores",
+    "accent": "nos preguntan primero",
+    "text": "Respuestas cortas a las dudas que surgen antes de un primer pedido."
+  },
+  "cta": {
+    "eyebrow": "Cuando quieras",
+    "title": "Empieza con una muestra gratis",
+    "accent": "de 200 g",
+    "text": "Dinos el lote y a dónde debe llegar. Te respondemos con los siguientes pasos.",
+    "primary": "Solicitar muestra",
+    "secondary": "Hablemos"
+  }
+}
