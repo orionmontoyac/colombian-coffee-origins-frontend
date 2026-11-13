@@ -1,1 +1,231 @@
-{}
+{
+  "shared": {
+    "errors": {
+      "required": "This field is required.",
+      "email": "Enter an email address like name@company.com.",
+      "tooLong": "This is too long. Please shorten it.",
+      "invalid": "Choose one of the options in the list.",
+      "consent": "Please accept the privacy policy to send the form."
+    },
+    "summaryTitle": "Please fix these before sending",
+    "optional": "optional",
+    "consent": {
+      "before": "I have read the ",
+      "link": "privacy policy",
+      "after": " and agree that you use these details to answer me.",
+      "label": "Privacy consent"
+    },
+    "sending": "Sending…",
+    "honeypotLabel": "Leave this field empty",
+    "labels": {
+      "name": "Your name",
+      "email": "Email",
+      "company": "Roastery or company",
+      "country": "Country",
+      "lot": "Lot",
+      "volume": "Volume",
+      "address": "Shipping address",
+      "message": "Message",
+      "topic": "Topic",
+      "farm": "Farm or cooperative",
+      "phone": "Phone or WhatsApp",
+      "region": "Town and region",
+      "way": "How you want to sell",
+      "consent": "Privacy consent"
+    },
+    "backHome": "Back to home",
+    "seeLots": "See green coffee lots"
+  },
+  "samples": {
+    "meta": {
+      "title": "Request free green coffee samples | Origins",
+      "description": "Request a free 200 g sample of Colombian green coffee from family farms in Urrao. Cup it in your own lab, then buy by the 35 kg box. No obligation."
+    },
+    "breadcrumb": { "home": "Home", "current": "Request samples" },
+    "banner": {
+      "chips": ["Free samples", "From Urrao, Antioquia"],
+      "title": "Request free green coffee",
+      "accent": "samples",
+      "description": "Tell us where to send it and which lot you want. We ship from Colombia.",
+      "sizeLabel": "Sample size",
+      "sizeValue": "200 g",
+      "lotsLabel": "Lots with samples",
+      "costLabel": "Cost to you",
+      "costValue": "Free"
+    },
+    "aside": {
+      "title": "Cup it before",
+      "accent": "you commit",
+      "text": "A sample is how you decide. Pick a lot, or tell us what your menu needs and we will suggest a closer match.",
+      "steps": [
+        { "title": "Send the form", "text": "Your name, roastery and where the sample should arrive." },
+        { "title": "We ship from Colombia", "text": "We confirm the lot and tell you when the parcel leaves." },
+        { "title": "You cup and decide", "text": "Tell us what you think. If the lot is right, we quote the 35 kg box." }
+      ],
+      "orWhatsApp": "Prefer to talk? Message us on WhatsApp.",
+      "whatsappLabel": "Chat on WhatsApp",
+      "whatsappMessage": "Hello, I would like to request a sample of green coffee."
+    },
+    "form": {
+      "title": "Where should we send it?",
+      "name": "Your name",
+      "email": "Email",
+      "company": "Roastery or company",
+      "country": "Country",
+      "lot": "Lot you want to taste",
+      "lotPlaceholder": "Help me choose",
+      "lotOption": "{code} · {name}",
+      "lotHint": "You can ask for a different lot in the message.",
+      "volume": "How much green coffee do you buy per month?",
+      "volumePlaceholder": "Select a range",
+      "volumes": {
+        "lt100": "Less than 100 kg",
+        "100to500": "100 to 500 kg",
+        "gt500": "More than 500 kg",
+        "unsure": "Not sure yet"
+      },
+      "address": "Shipping address",
+      "addressHint": "Street, city, postal code and country. A phone number helps the courier.",
+      "message": "Anything else we should know?",
+      "messageHint": "For example the flavors you look for or the machine you roast on.",
+      "submit": "Request my sample",
+      "success": {
+        "title": "Thank you, your request is in.",
+        "text": "We will confirm the lot and the shipping details by email. If a lot is no longer available, we will suggest a close match."
+      }
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact us about Colombian coffee | Origins",
+      "description": "Contact Colombian Coffee Origins by WhatsApp, email or the form. Questions about green coffee lots, the roasted shop or selling your coffee from Urrao."
+    },
+    "breadcrumb": { "home": "Home", "current": "Contact" },
+    "banner": {
+      "chips": ["Green coffee", "Roasted shop"],
+      "title": "Talk to the people",
+      "accent": "behind the coffee",
+      "description": "Write in English or Spanish. We read every message.",
+      "langLabel": "Languages",
+      "langValue": "EN · ES",
+      "baseLabel": "Based in",
+      "baseValue": "Urrao",
+      "channelLabel": "Reach us by",
+      "channelValue": "WhatsApp"
+    },
+    "channels": {
+      "title": "Reach us",
+      "accent": "your way",
+      "text": "Placeholder contact details for this preview. The owner replaces them before launch.",
+      "whatsappTitle": "WhatsApp",
+      "whatsappLabel": "Chat on WhatsApp",
+      "whatsappMessage": "Hello, I have a question about Colombian Coffee Origins.",
+      "emailTitle": "Email",
+      "addressTitle": "Where we are",
+      "address": "Urrao and Medellín, Antioquia, Colombia",
+      "pqrsTitle": "Complaints and requests for the shop (PQRS)",
+      "pqrsText": "Petitions, complaints, claims and suggestions about a shop order go to this address."
+    },
+    "form": {
+      "title": "Or send a message",
+      "name": "Your name",
+      "email": "Email",
+      "topic": "What is it about?",
+      "topicPlaceholder": "Select a topic",
+      "topics": {
+        "buying": "Buying green coffee",
+        "shop": "A roasted coffee order",
+        "press": "Press or partnerships",
+        "other": "Something else"
+      },
+      "message": "Message",
+      "messageHint": "Include a lot code such as URR-024 if you have one in mind.",
+      "submit": "Send message",
+      "success": {
+        "title": "Message sent, thank you.",
+        "text": "We will answer by email. For anything urgent, write to us on WhatsApp."
+      }
+    }
+  },
+  "sell": {
+    "meta": {
+      "title": "Sell your coffee with us | Colombian Coffee Origins",
+      "description": "Sell your coffee with Colombian Coffee Origins: list green lots for roasters worldwide, or roasted bags in our Colombia shop. See the requirements and apply."
+    },
+    "breadcrumb": { "home": "Home", "shop": "Shop", "current": "Sell with us" },
+    "banner": {
+      "chips": ["For producers", "Open to all countries"],
+      "title": "Sell your coffee",
+      "accent": "with us",
+      "description": "List your lot under your own name, farm and town. Two ways to sell, one application.",
+      "waysLabel": "Ways to sell",
+      "waysValue": "2",
+      "lotsLabel": "Example lots listed",
+      "levelsLabel": "Trust levels",
+      "levelsValue": "3"
+    },
+    "ways": {
+      "title": "Two ways",
+      "accent": "to sell",
+      "text": "Choose one or both. Each line has its own buyers, currency and rules.",
+      "green": {
+        "title": "Green coffee lots",
+        "tag": "Worldwide",
+        "text": "Roasters and importers buy your lot by the box, priced in USD per kg (FOB). Your name, farm, altitude, variety, process and cupping score sit on every card.",
+        "points": [
+          "Samples sent to buyers from Colombia",
+          "Lots by the 35 kg box",
+          "Export support for the paperwork"
+        ]
+      },
+      "roasted": {
+        "title": "Roasted bags",
+        "tag": "Colombia only",
+        "text": "Bags roasted and packed by you, sold in our Colombian shop in COP and delivered inside the country. Your brand stays on the bag.",
+        "points": [
+          "Whole bean bags with your brand and roast level",
+          "Priced in COP, with price per kg shown",
+          "Orders arrive by WhatsApp for now"
+        ]
+      }
+    },
+    "requirements": {
+      "title": "What we",
+      "accent": "ask for",
+      "text": "Short and practical. We check each one before a lot goes live, and say so on the page.",
+      "items": [
+        { "title": "A real coffee farm", "text": "A farm or cooperative in Colombia, with a named producer and town." },
+        { "title": "A traceable lot", "text": "Harvest, variety and process you can state, and enough coffee for at least one box." },
+        { "title": "A sample we can cup", "text": "We cup it ourselves and publish the score. No score, no invented numbers." },
+        { "title": "Your name on the page", "text": "Producer, farm and town are public, and so are the photos you share." },
+        { "title": "For roasted bags", "text": "The sanitary registration Colombian law asks for roasted coffee. We explain it on the first call." }
+      ]
+    },
+    "form": {
+      "title": "Tell us about your coffee",
+      "text": "This is a first conversation, not a contract.",
+      "name": "Your name",
+      "farm": "Farm or cooperative",
+      "email": "Email",
+      "phone": "Phone or WhatsApp",
+      "region": "Town and region",
+      "regionHint": "For example: Urrao, Antioquia.",
+      "way": "How do you want to sell?",
+      "wayPlaceholder": "Select an option",
+      "ways": {
+        "green": "Green coffee lots",
+        "roasted": "Roasted bags (Colombia shop)",
+        "both": "Both"
+      },
+      "volume": "Coffee you could offer per harvest",
+      "volumeHint": "A rough number in kg is enough.",
+      "message": "About your coffee",
+      "messageHint": "Varieties, altitude, process, certifications and anything you are proud of.",
+      "submit": "Send my application",
+      "success": {
+        "title": "Thank you, we received your application.",
+        "text": "We will write to you to arrange a sample and a call. Nothing is published until you agree."
+      }
+    }
+  }
+}

@@ -102,10 +102,10 @@ Each page task has these **standard checkpoints** in addition to its own:
   - [x] 5 sourcing steps, trust levels, pricing (FOB, minimums, samples), export & logistics, FAQ (from ai-discoverability `faq` key), CTA.
   - [x] FAQPage JSON-LD; standard checkpoints.
   - Verify: `npm run build && node scripts/factory/check-seo-ai.mjs --only /en/for-buyers,/es/para-compradores`
-- [ ] **T2.6 Forms: samples, contact, sell with us** · Owns: src/app/[lang]/samples/**, src/app/[lang]/contact/**, src/app/[lang]/shop/sell/**, src/components/forms/**, src/lib/actions/**, dict key `forms`
-  - [ ] Server Actions with validation, honeypot, consent checkbox, success state, `// TODO(backend)` hand-off; `?lot=` prefill on samples.
-  - [ ] Accessible errors (`aria-describedby`, focus first error); WhatsApp + email on contact (placeholders).
-  - [ ] Standard checkpoints (JSON-LD: BreadcrumbList only).
+- [x] **T2.6 Forms: samples, contact, sell with us** · Owns: src/app/[lang]/samples/**, src/app/[lang]/contact/**, src/app/[lang]/shop/sell/**, src/components/forms/**, src/lib/actions/**, dict key `forms`
+  - [x] Server Actions with validation, honeypot, consent checkbox, success state, `// TODO(backend)` hand-off; `?lot=` prefill on samples.
+  - [x] Accessible errors (`aria-describedby`, focus first error); WhatsApp + email on contact (placeholders).
+  - [x] Standard checkpoints (JSON-LD: BreadcrumbList only).
   - Verify: `npm run build && npx playwright test tests/e2e/forms.spec.ts`
 - [ ] **T2.7 Regions + Urrao, Our story, Journal (3 articles), Legal, 404** · Owns: src/app/[lang]/regions/**, src/app/[lang]/our-story/**, src/app/[lang]/journal/**, src/app/[lang]/privacy/**, src/app/[lang]/terms/**, src/app/[lang]/not-found.tsx, dict keys `regionsPage`, `storyPage`, `journal`, `legal`, `notFound`
   - [ ] Urrao page with facts table, harvest calendar, producers and lots from Urrao, map placeholder; Place JSON-LD.
@@ -175,6 +175,7 @@ Each page task has these **standard checkpoints** in addition to its own:
   - Verify: `npm run verify`
 - [ ] **T5.3 Fix round** · Owner: planner (assigns fixes to owners)
   - [ ] Every P0/P1 from T5.1 and T5.2 fixed and re-verified.
+  - [ ] Forms show their result after a submit without JavaScript (with cacheComponents/PPR the POST to a static page returns no HTML): redirect-based fallback (e.g. `?sent=1` / `?error=` with a dynamic segment) in src/lib/actions + src/components/forms, owned by page-builder (T2.6 files).
   - Verify: `bash scripts/factory/is-done.sh`
 
 ## Phase 6 — Hand-off (planner)
