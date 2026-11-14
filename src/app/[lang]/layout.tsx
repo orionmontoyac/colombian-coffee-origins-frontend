@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import "../globals.css";
+import { JsonLd, graph, organization, website } from "@/lib/seo/jsonld";
+import { site } from "@/lib/site";
 import { getDictionary, hasLocale, locales } from "./dictionaries";
 
 // Origin Ledger type: Vollkorn for headings and numbers, Fira Sans for body,
@@ -40,7 +42,7 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary();
-  return { title: dict.meta.title, description: dict.meta.description };
+  return { metadataBase: new URL(site.baseUrl), title: dict.meta.title, description: dict.meta.description };
 }
 
 export default async function RootLayout({
@@ -55,7 +57,10 @@ export default async function RootLayout({
       lang={lang}
       className={`${vollkorn.variable} ${firaSans.variable} ${ubuntu.variable} h-full antialiased`}
     >
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        <JsonLd data={graph(organization(), website())} />
+        {children}
+      </body>
     </html>
   );
 }

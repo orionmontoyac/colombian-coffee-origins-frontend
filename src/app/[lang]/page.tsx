@@ -1,3 +1,4 @@
+import { AnswerFirst } from "@/components/ai/answer-first";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import coffeeHills from "@/assets/home/hero-coffee-hills.jpg";
@@ -39,6 +40,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       />
       <Hero lang={lang} dict={dict} />
       <main id="main">
+        <AnswerFirst lang={lang} kind="home" />
         <BusinessLines lang={lang} dict={dict} />
         <Farmers lang={lang} dict={dict} />
         <FeaturedLots lang={lang} dict={dict} />

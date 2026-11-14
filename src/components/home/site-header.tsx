@@ -9,12 +9,12 @@ import { uiLabels } from "@/components/ui/labels";
 import { href } from "@/lib/routes";
 
 // Menu order from DESIGN.md: Home · Green Coffee · Shop (CO) · Producers · Our Story
-const NAV_ITEMS = ["home", "coffees", "shop", "producers", "ourStory"] as const;
+const NAV_ITEMS = ["home", "coffees", "forBuyers", "shop", "producers", "ourStory"] as const;
 /**
  * Menu items plus sub-pages that have no menu item yet (no pill is highlighted for those).
  * Add a page to NAV_ITEMS (and the `nav` dictionary) to give it an active pill.
  */
-export type NavKey = (typeof NAV_ITEMS)[number] | "forBuyers" | "contact" | "samples" | "regions" | "journal";
+export type NavKey = (typeof NAV_ITEMS)[number] | "contact" | "samples" | "regions" | "journal";
 
 /** Small "CO" pill: the roasted coffee shop sells inside Colombia only. */
 function CoBadge({ label }: { label: string }) {

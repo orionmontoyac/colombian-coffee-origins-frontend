@@ -130,25 +130,25 @@ Each page task has these **standard checkpoints** in addition to its own:
 
 ## Phase 3 — Findability (content-seo and ai-discoverability in parallel)
 
-- [ ] **T3.1 SEO system** · Owner: content-seo · Owns: src/lib/seo/**, src/app/sitemap.ts, src/app/robots.ts, src/app/[lang]/opengraph-image.tsx, dict keys `meta`, `nav`, `footer`
-  - [ ] `buildMetadata` and JSON-LD builders used by every page (pages switched over via small tasks for their owners if needed).
-  - [ ] Titles 30–60 chars, descriptions 70–155 chars, unique per page and language; primary keyword placement per SPEC §5.
-  - [ ] Canonical + hreflang (`en`, `es`, `x-default`) on every page; `<html lang>` per locale.
-  - [ ] `sitemap.xml` lists every indexable URL in both languages with alternates; excludes filtered, success and `/md/` URLs.
-  - [ ] `robots.txt` allows search + AI crawlers (SPEC §7) and points to the sitemap.
-  - [ ] OG images 1200×630 (default + lot + product variants) with alt text.
-  - [ ] Internal links: lot ↔ producer ↔ region; descriptive anchor text; breadcrumbs on every sub-page.
-  - [ ] Organization + WebSite JSON-LD in the layout; sameAs placeholders listed in ASSETS.md.
-  - [ ] `nav` key gains a `forBuyers` item (EN/ES) and the header NAV_ITEMS shows it, so the For-buyers active pill works (NavKey already accepts it).
+- [x] **T3.1 SEO system** · Owner: content-seo · Owns: src/lib/seo/**, src/app/sitemap.ts, src/app/robots.ts, src/app/[lang]/opengraph-image.tsx, dict keys `meta`, `nav`, `footer`
+  - [x] `buildMetadata` and JSON-LD builders used by every page (pages switched over via small tasks for their owners if needed).
+  - [x] Titles 30–60 chars, descriptions 70–155 chars, unique per page and language; primary keyword placement per SPEC §5.
+  - [x] Canonical + hreflang (`en`, `es`, `x-default`) on every page; `<html lang>` per locale.
+  - [x] `sitemap.xml` lists every indexable URL in both languages with alternates; excludes filtered, success and `/md/` URLs.
+  - [x] `robots.txt` allows search + AI crawlers (SPEC §7) and points to the sitemap.
+  - [x] OG images 1200×630 (default + lot + product variants) with alt text.
+  - [x] Internal links: lot ↔ producer ↔ region; descriptive anchor text; breadcrumbs on every sub-page.
+  - [x] Organization + WebSite JSON-LD in the layout; sameAs placeholders listed in ASSETS.md.
+  - [x] `nav` key gains a `forBuyers` item (EN/ES) and the header NAV_ITEMS shows it, so the For-buyers active pill works (NavKey already accepts it).
   - Verify: `npm run build && npm run check:seo && npm run lhci -- --collect.settings.onlyCategories=seo`
-- [ ] **T3.2 AI discoverability** · Owner: ai-discoverability · Owns: src/app/llms.txt/**, src/app/llms-full.txt/**, src/app/md/**, src/lib/ai/**, dict key `faq`, tests/e2e/facts.spec.ts
-  - [ ] `/llms.txt` in llmstxt.org format, generated from data, absolute links to Markdown pages.
-  - [ ] `/llms-full.txt` (< 200 KB) with source URL and updated date per section.
-  - [ ] `/md/{lang}/...` for home, for buyers, every lot, every producer, shop, Urrao; `rel="alternate" type="text/markdown"` + `rel="describedby"` links in those pages.
-  - [ ] Answer-first sentence + facts table on home, catalog, lots, producers, shop, Urrao.
-  - [ ] FAQ: 8–10 Q&A per language (+3 for home) feeding FAQPage JSON-LD.
-  - [ ] `src/lib/ai/facts.ts` canonical facts; `facts.spec.ts` asserts they match across `/llms.txt`, `/en`, `/es`.
-  - [ ] View-source contains lot names, prices and producer names (no client-only content for key facts).
+- [x] **T3.2 AI discoverability** · Owner: ai-discoverability · Owns: src/app/llms.txt/**, src/app/llms-full.txt/**, src/app/md/**, src/lib/ai/**, dict key `faq`, tests/e2e/facts.spec.ts
+  - [x] `/llms.txt` in llmstxt.org format, generated from data, absolute links to Markdown pages.
+  - [x] `/llms-full.txt` (< 200 KB) with source URL and updated date per section.
+  - [x] `/md/{lang}/...` for home, for buyers, every lot, every producer, shop, Urrao; `rel="alternate" type="text/markdown"` + `rel="describedby"` links in those pages.
+  - [x] Answer-first sentence + facts table on home, catalog, lots, producers, shop, Urrao.
+  - [x] FAQ: 8–10 Q&A per language (+3 for home) feeding FAQPage JSON-LD.
+  - [x] `src/lib/ai/facts.ts` canonical facts; `facts.spec.ts` asserts they match across `/llms.txt`, `/en`, `/es`.
+  - [x] View-source contains lot names, prices and producer names (no client-only content for key facts).
   - Verify: `npm run build && npm run check:seo -- --ai && npx playwright test tests/e2e/facts.spec.ts`
 
 ## Phase 4 — Motion (motion agent)
@@ -183,6 +183,9 @@ Each page task has these **standard checkpoints** in addition to its own:
   - Verify: `npm run verify`
 - [ ] **T5.3 Fix round** · Owner: planner (assigns fixes to owners)
   - [ ] Every P0/P1 from T5.1 and T5.2 fixed and re-verified.
+  - [ ] shop.spec.ts: the non-CO tests assert the `X-Robots-Tag: noindex, follow` header (the proxy sets it now) instead of a noindex meta tag (page-builder, shop files).
+  - [ ] Shop banner breadcrumbs pass axe color-contrast on the new CSS bean pattern (`.shop-banner-pattern`, from the owner's edit): raise the text contrast or add a scrim (foundation-builder, ui/subpage-banner + breadcrumbs).
+  - [ ] T3.1 audit items: the EN product title shows the Spanish name ("Café …") (data, foundation); producer profiles link to /regions/urrao (page-builder); the home hero alt text names the place (page-builder, home); footer links have real hrefs (content-seo audit).
   - [ ] Lots catalog cards link the producer: in `src/app/[lang]/coffees/page.tsx` `toItem`, pass `producerHref={lot.producerSlug ? producerHref(lang, lot.producerSlug) : undefined}` (page-builder, T2.1 files).
   - [ ] Shop product card: fix the `label-content-name-mismatch` (Add button accessible name must start with its visible text), then remove the axe exclusion in shop.spec.ts (page-builder, shop files).
   - [ ] Forms show their result after a submit without JavaScript (with cacheComponents/PPR the POST to a static page returns no HTML): redirect-based fallback (e.g. `?sent=1` / `?error=` with a dynamic segment) in src/lib/actions + src/components/forms, owned by page-builder (T2.6 files).

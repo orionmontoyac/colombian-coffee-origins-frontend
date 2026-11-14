@@ -17,28 +17,42 @@
       "a": "Sí, la primera muestra de 200 g de un lote es gratis para compradores verificados. Las muestras salen desde Colombia y te avisamos cuando salga la tuya."
     },
     {
-      "q": "¿Qué significan Registrado, Finca verificada y Café verificado?",
-      "a": "Te dicen qué verificamos nosotros. Registrado significa que el productor está en nuestra plataforma, Finca verificada que visitamos la finca, y Café verificado que además catamos este lote y confirmamos sus kilos."
+      "q": "¿Cómo funciona la verificación?",
+      "a": "Cada lote muestra lo que verificamos nosotros. Registrado significa que el productor está en nuestra plataforma, Finca verificada que visitamos la finca, y Café verificado que además catamos este lote y confirmamos sus kilos. Los lotes catados muestran un puntaje SCA; los que aún no catamos lo dicen y no muestran puntaje."
     },
     {
-      "q": "¿Cómo califican el café?",
-      "a": "Los lotes que hemos catado muestran un puntaje de catación SCA con notas de sabor. Los que aún no catamos aparecen marcados así y no muestran puntaje."
+      "q": "¿Qué es el café Chiroso?",
+      "a": "Chiroso es una variedad de café que se cultiva en Urrao, Antioquia, conocida por una taza delicada y floral. Es una de las variedades de nuestras fincas familiares, junto con Castillo y Caturra."
     },
     {
-      "q": "¿Cómo se empaca el café?",
-      "a": "Los lotes se empacan en unidades de 35 kg y la página de cada lote indica su empaque. Los detalles de tu envío se confirman en tu oferta."
-    },
-    {
-      "q": "¿A dónde envían?",
-      "a": "Vendemos café verde a tostadores, importadores y cafeterías de todo el mundo. Tú eliges el destino y, antes de que pagues, confirmamos los documentos de exportación que necesita."
-    },
-    {
-      "q": "¿También puedo comprar café tostado?",
-      "a": "El café tostado de las fincas se vende en nuestra tienda en línea solo para clientes en Colombia. Los compradores fuera de Colombia compran café verde."
+      "q": "¿Envían café verde a Estados Unidos, la Unión Europea o Japón?",
+      "a": "Sí. Vendemos café verde a tostadores, importadores y cafeterías de todo el mundo, incluidos Estados Unidos, la Unión Europea y Japón. Los precios son FOB Colombia: tú o tu transitario organizan el flete y la nacionalización, y antes de que pagues confirmamos los documentos de exportación de tu destino."
     },
     {
       "q": "¿Cómo pago y cuánto tarda?",
       "a": "Las condiciones de pago y los tiempos de entrega se acuerdan en cada pedido y quedan escritos en tu oferta. Los tiempos dependen del lote y del calendario de cosecha."
+    },
+    {
+      "q": "¿Puedo comprar café tostado y a dónde se entrega?",
+      "a": "El café tostado de las marcas propias de las fincas se vende en nuestra tienda en línea en pesos colombianos (COP) y se entrega solo dentro de Colombia. Los compradores fuera de Colombia compran café verde."
+    },
+    {
+      "q": "¿Cuál es la política de devoluciones?",
+      "a": "Para el café tostado de la tienda aplica el Estatuto del Consumidor de Colombia, incluido el derecho de retracto en ventas a distancia; los términos exactos se están definiendo y se publicarán en nuestros términos. Para el café verde, los reclamos y condiciones quedan escritos en tu oferta."
+    }
+  ],
+  "home": [
+    {
+      "q": "¿Cómo importo café verde de Colombia?",
+      "a": "Lo importas en cinco pasos: eliges un lote, pides una muestra gratis, la catas, confirmas tu pedido y acuerdas el envío. Nosotros preparamos el café y los documentos de exportación en Colombia y lo entregamos FOB a tu transitario."
+    },
+    {
+      "q": "¿Cuál es el pedido mínimo?",
+      "a": "El pedido mínimo es una caja de 35 kg de un solo lote. Si quieres comprar más, dinos la cantidad y la comparamos con los kilos que aún están disponibles."
+    },
+    {
+      "q": "¿Las muestras son realmente gratis?",
+      "a": "Sí, la primera muestra de 200 g de un lote es gratis para compradores verificados. Las muestras salen desde Colombia y te avisamos cuando salga la tuya."
     }
   ]
 }

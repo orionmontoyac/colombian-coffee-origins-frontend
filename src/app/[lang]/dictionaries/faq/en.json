@@ -17,28 +17,42 @@
       "a": "Yes, the first 200 g sample of a lot is free for verified buyers. Samples are sent from Colombia and we tell you when yours ships."
     },
     {
-      "q": "What do Registered, Farm verified and Coffee verified mean?",
-      "a": "They tell you what we checked ourselves. Registered means the producer is on our platform, Farm verified means we visited the farm, and Coffee verified means we also cupped this exact lot and confirmed its kilos."
+      "q": "How does verification work?",
+      "a": "Every lot shows what we checked ourselves. Registered means the producer is on our platform, Farm verified means we visited the farm, and Coffee verified means we also cupped this exact lot and confirmed its kilos. Cupped lots show an SCA score; lots not cupped yet say so and show no score."
     },
     {
-      "q": "How do you grade the coffee?",
-      "a": "Lots we have cupped show an SCA cupping score with tasting notes. Lots we have not cupped yet are labelled as such, and we do not show a score for them."
+      "q": "What is Chiroso coffee?",
+      "a": "Chiroso is a coffee variety grown around Urrao, Antioquia, known for a delicate, floral cup. It is one of the varieties on our family farms, next to Castillo and Caturra."
     },
     {
-      "q": "How is the coffee packed?",
-      "a": "Lots are packed in 35 kg units, and each lot page lists its packaging. Details for your shipment are confirmed in your offer."
-    },
-    {
-      "q": "Where do you ship?",
-      "a": "We sell green coffee to roasters, importers and coffee shops worldwide. You choose the destination, and we confirm the export documents it needs before you pay."
-    },
-    {
-      "q": "Can I buy roasted coffee as well?",
-      "a": "Roasted coffee from the farms is sold in our online shop for customers in Colombia only. Buyers outside Colombia purchase green coffee."
+      "q": "Can you ship green coffee to the US, the EU or Japan?",
+      "a": "Yes. We sell green coffee to roasters, importers and coffee shops worldwide, including the US, the EU and Japan. Prices are FOB Colombia, so you or your forwarder arrange freight and import clearance, and we confirm the export documents for your destination before you pay."
     },
     {
       "q": "How do I pay and how long does it take?",
       "a": "Payment terms and lead times are agreed for each order and written in your offer. Lead times depend on the lot and the harvest calendar."
+    },
+    {
+      "q": "Can I buy roasted coffee, and where is it delivered?",
+      "a": "Roasted coffee from the farms' own brands is sold in our online shop in Colombian pesos (COP) and delivered inside Colombia only. Buyers outside Colombia purchase green coffee."
+    },
+    {
+      "q": "What is the return policy?",
+      "a": "For roasted coffee bought in the shop, Colombian consumer law applies, including the right of withdrawal for distance sales; the exact terms are being finalised and will be published in our terms. For green coffee, claims and conditions are written in your offer."
+    }
+  ],
+  "home": [
+    {
+      "q": "How do I import green coffee from Colombia?",
+      "a": "You import it in five steps: pick a lot, request a free sample, cup it, confirm your order and agree the shipping. We prepare the coffee and export documents in Colombia and hand it over FOB to your forwarder."
+    },
+    {
+      "q": "What is the minimum order?",
+      "a": "The minimum order is one 35 kg box of a single lot. If you want to buy more, tell us the quantity and we check it against the kilos still available."
+    },
+    {
+      "q": "Are samples really free?",
+      "a": "Yes, the first 200 g sample of a lot is free for verified buyers. Samples are sent from Colombia and we tell you when yours ships."
     }
   ]
 }

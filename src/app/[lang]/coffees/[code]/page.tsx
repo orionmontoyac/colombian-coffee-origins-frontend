@@ -1,3 +1,4 @@
+import { AnswerFirst } from "@/components/ai/answer-first";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -6,7 +7,7 @@ import { SiteFooter } from "@/components/home/sections";
 import { DecisionPanel } from "@/components/lot/decision-panel";
 import { fmt, harvestYear, list, num, score } from "@/components/lot/format";
 import { LotGallery, type GallerySlide } from "@/components/lot/gallery";
-import { LotJsonLd } from "@/components/lot/json-ld";
+import { lotJsonLd, lotMetadata } from "@/components/lot/seo";
 import { CheckedAndBuying, MoreLots, ProducerBlock, SpecsAndCup } from "@/components/lot/lot-sections";
 import { Chip } from "@/components/ui/chip";
 import { CtaPanel } from "@/components/ui/cta-panel";
@@ -14,8 +15,8 @@ import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { SubpageBanner } from "@/components/ui/subpage-banner";
 import { TrustBadge } from "@/components/ui/trust-badge";
 import { getLot, lotParams, type Lot } from "@/data/lots";
-import { href, lotAlternates, lotHref } from "@/lib/routes";
-import { absoluteUrl } from "@/lib/site";
+import { href } from "@/lib/routes";
+import { JsonLd } from "@/lib/seo/jsonld";
 import cherries from "@/assets/home/lot-chiroso-cherries.jpg";
 
 export function generateStaticParams() {
@@ -48,25 +49,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/coffees/[c
   if (!hasLocale(lang) || !lot) notFound();
   const dict = await getDictionary();
   const { title, description } = describe(lang, dict, lot);
-  const url = absoluteUrl(lotHref(lang, lot.code));
-  const alt = lotAlternates(lot.code);
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: url,
-      languages: { en: absoluteUrl(alt.en), es: absoluteUrl(alt.es), "x-default": absoluteUrl(alt.en) },
-    },
-    openGraph: {
-      type: "website",
-      title,
-      description,
-      url,
-      locale: lang === "es" ? "es_CO" : "en_US",
-      images: [{ url: absoluteUrl(lot.image.src), width: lot.image.width, height: lot.image.height, alt: lot.imageAlt[lang] }],
-    },
-    twitter: { card: "summary_large_image", title, description },
-  };
+  return lotMetadata(lang, lot, { title, description });
 }
 
 export default async function LotPage({ params }: PageProps<"/[lang]/coffees/[code]">) {
@@ -114,13 +97,13 @@ export default async function LotPage({ params }: PageProps<"/[lang]/coffees/[co
 
   return (
     <div className="min-h-screen p-2">
-      <LotJsonLd
-        lang={lang}
-        lot={lot}
-        name={`${variety} ${process}`}
-        description={metaDescription}
-        processLabel={process}
-        breadcrumb={{ homeLabel: dict.nav.home, lotsLabel: t.banner.breadcrumbLots, regionLabel: t.banner.region }}
+      <JsonLd
+        data={lotJsonLd(lang, lot, {
+          name: `${variety} ${process}`,
+          description: metaDescription,
+          processLabel: process,
+          breadcrumb: { homeLabel: dict.nav.home, lotsLabel: t.banner.breadcrumbLots, regionLabel: t.banner.region },
+        })}
       />
       <SubpageBanner
         lang={lang}
@@ -161,6 +144,7 @@ export default async function LotPage({ params }: PageProps<"/[lang]/coffees/[co
       />
 
       <main id="main">
+        <AnswerFirst lang={lang} kind="lot" id={lot.code} />
         <section className="mt-6 grid items-start gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
           <LotGallery
             slides={slides}

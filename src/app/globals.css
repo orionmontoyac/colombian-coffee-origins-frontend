@@ -111,7 +111,7 @@
   --spacing-2xl: 32px;
   --spacing-3xl: 48px;
   --spacing-4xl: 56px;
-  --spacing-page-margin: 16px;
+  --spacing-page-margin: 8px;
   --spacing-panel-padding: 48px;
   --spacing-section-gap: 56px;
   --spacing-tap-target: 44px;
@@ -178,6 +178,36 @@ a:focus-visible,
 summary:focus-visible {
   outline: 3px solid var(--green-900);
   outline-offset: 3px;
+}
+
+/*
+  Roast panels (shop banner, coffee club). The bean tile is black on transparent,
+  so it is used as a mask and painted caramel. Soft blur covers the left half
+  and clears toward the right; overall opacity stays low.
+*/
+.shop-banner-pattern,
+.shop-banner-pattern::before {
+  background-color: var(--caramel);
+  -webkit-mask-size: 100% 100%, 340px 340px;
+  mask-size: 100% 100%, 340px 340px;
+  -webkit-mask-repeat: no-repeat, repeat;
+  mask-repeat: no-repeat, repeat;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+.shop-banner-pattern {
+  opacity: 0.38;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 42%, rgb(0 0 0 / 0.35) 58%, #000 100%), url("/images/coffe-beans-pattern.png");
+  mask-image: linear-gradient(to right, transparent 0%, transparent 42%, rgb(0 0 0 / 0.35) 58%, #000 100%), url("/images/coffe-beans-pattern.png");
+}
+.shop-banner-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.28;
+  filter: blur(10px);
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 50%, transparent 78%), url("/images/coffe-beans-pattern.png");
+  mask-image: linear-gradient(to right, #000 0%, #000 50%, transparent 78%), url("/images/coffe-beans-pattern.png");
 }
 
 /* Hero banner: deep green with soft lime light streaks */

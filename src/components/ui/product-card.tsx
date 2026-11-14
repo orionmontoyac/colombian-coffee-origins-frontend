@@ -27,27 +27,45 @@ export function ProductCard({
   vtName,
   bordered = false,
 }: ProductCardProps) {
+  const stageClass = "relative flex h-[280px] items-center justify-center";
+  const stage = (
+    <>
+      {tag ? (
+        <span className={`absolute left-3.5 top-3.5 rounded-full px-[11px] py-1.5 font-label text-xs font-medium ${tag.className}`}>
+          {tag.label}
+        </span>
+      ) : null}
+      <BagMockup color={bag.color} brand={bag.label} roastLabel={bag.roastLabel} size={bag.size} beanIcon={bag.beanIcon} />
+    </>
+  );
+
   return (
     <article
       data-vt-name={vtName}
       className={`flex flex-col overflow-hidden rounded-lg bg-neutral${bordered ? " border border-surface-sunken" : ""}`}
     >
-      <div className="relative flex h-[280px] items-center justify-center" style={{ background: bag.stage }}>
-        {tag ? (
-          <span className={`absolute left-3.5 top-3.5 rounded-full px-[11px] py-1.5 font-label text-xs font-medium ${tag.className}`}>
-            {tag.label}
-          </span>
-        ) : null}
-        <BagMockup color={bag.color} brand={bag.label} roastLabel={bag.roastLabel} size={bag.size} beanIcon={bag.beanIcon} />
-      </div>
+      {href ? (
+        <Link
+          href={href}
+          aria-label={name}
+          className={`${stageClass} focus-visible:outline-3 focus-visible:outline-offset-[-3px] focus-visible:outline-roast`}
+          style={{ background: bag.stage }}
+        >
+          {stage}
+        </Link>
+      ) : (
+        <div className={stageClass} style={{ background: bag.stage }}>
+          {stage}
+        </div>
+      )}
       <div className="flex flex-1 flex-col gap-2.5 px-5 pb-[22px] pt-5">
-        <p className="font-label text-xs font-medium uppercase tracking-[0.08em] text-roast">{brand}</p>
-        <Heading className="font-display text-headline-sm text-roast-dark">
+        <p className="font-display text-headline-sm text-roast-dark">{brand}</p>
+        <Heading className="text-body-md font-medium text-roast">
           {href ? <Link href={href}>{name}</Link> : name}
         </Heading>
         <p className="text-sm text-body">{meta}</p>
         <p className="text-sm italic text-muted">{notes}</p>
-        {roast ? <RoastMeter level={roast.level} label={roast.label} /> : null}
+        {roast ? <RoastMeter level={roast.level} label={roast.label} hint={roast.hint} /> : null}
         <div className="mt-auto flex items-center justify-between gap-2.5 pt-2.5">
           <div>
             <p className="font-display text-[20px] font-semibold text-roast-dark">{price}</p>
@@ -83,7 +101,7 @@ export type ProductCardProps = {
     size: string;
     beanIcon?: boolean;
   };
-  roast?: { level: 1 | 2 | 3 | 4 | 5; label: string };
+  roast?: { level: 1 | 2 | 3 | 4 | 5; label: string; /** Hover text explaining the bean rank */ hint?: string };
   price: string;
   /** Shop rule: always show the price per kg where space allows */
   pricePerKg?: string;

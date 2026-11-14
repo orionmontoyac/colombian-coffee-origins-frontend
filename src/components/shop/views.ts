@@ -9,8 +9,9 @@ import {
   type Product,
   type ProductTag,
 } from "@/data/products";
+import { uiLabels } from "@/components/ui/labels";
 import { productHref } from "@/lib/routes";
-import { formatCop, formatPerKg } from "./format";
+import { fill, formatCop, formatPerKg } from "./format";
 
 /** Tag pill colors on the product card, from the Shop board (all brown-line tokens). */
 const tagTone: Record<ProductTag, string> = {
@@ -38,7 +39,7 @@ export type ProductView = {
   notes: string;
   tag: { label: string; className: string };
   bag: { color: string; stage: string; label: string; roastLabel: string; size: string };
-  roast: { level: 1 | 2 | 3 | 4 | 5; label: string };
+  roast: { level: 1 | 2 | 3 | 4 | 5; label: string; hint: string };
   price: string;
   pricePerKg: string;
   href: string;
@@ -66,7 +67,11 @@ export function toProductView(p: Product, lang: Locale, dict: Dictionary): Produ
     notes: p.notes[lang],
     tag: { label: tagLabels[p.tag][lang], className: tagTone[p.tag] },
     bag: { color: p.bag, stage: p.stage, label: p.labelBrand, roastLabel, size: grams },
-    roast: { level: p.roastLevel, label: roastLabel },
+    roast: {
+      level: p.roastLevel,
+      label: roastLabel,
+      hint: fill(uiLabels[lang].roastHint, { label: roastLabel, level: p.roastLevel }),
+    },
     price: formatCop(size.priceCop, lang),
     pricePerKg: formatPerKg(pricePerKgCop(size), lang),
     href: productHref(lang, p.slug),

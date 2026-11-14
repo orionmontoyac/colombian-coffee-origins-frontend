@@ -60,3 +60,9 @@ Photo rules for all real photos: real people and places from Urrao (no stock pho
 | P2 | team-portraits | /our-story team (3 slots) | Portrait of each team member, natural light, shoulders up, looking at camera, with consent | 4:5 portrait | 1600×2000 | `story/team-<name>.jpg` | placeholder |
 | P3 | journal-article-photos | /journal and 3 articles (currently reuse home photos) | One original photo per article: Chiroso cherries up close, a green-coffee sample table, Urrao landscape at dawn | 16:9 landscape | 2400×1350 | `journal/<slug>.jpg` | stock reuse |
 | P2 | publication-dates | Article JSON-LD and banner | Real publication dates (drafted 2026-11-13) | n/a | n/a | `src/components/journal/articles.ts` | placeholder |
+
+## T3.1 SEO additions
+- `sameAs` links: owner to fill `site.social.instagram`, `linkedin`, `facebook` in `src/lib/site.ts`; Organization JSON-LD in the layout picks them up (empty today). Also the real `NEXT_PUBLIC_SITE_URL` for production canonicals, sitemap and robots.
+- Organization `logo` uses `/images/bean-brown.png` as a stand-in; owner to provide the final logo file (square PNG or SVG, at least 112x112 px).
+- OG images are generated (no photo needed). Optional upgrade: a real farm photo (1200x630, under 300 KB) as the background of `src/lib/seo/og.tsx`; real bag photos for roasted `Product.image`.
+- Dictionary `meta` default description and `nav.forBuyers` label are copy for owner review.

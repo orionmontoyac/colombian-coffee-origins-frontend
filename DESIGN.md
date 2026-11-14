@@ -114,7 +114,7 @@ spacing:
   2xl: 32px
   3xl: 48px
   4xl: 56px
-  page-margin: 16px
+  page-margin: 8px
   panel-padding: 48px
   section-gap: 56px
   tap-target: 44px

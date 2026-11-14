@@ -16,6 +16,7 @@ import { ProductCard } from "@/components/ui/product-card";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SubpageBanner } from "@/components/ui/subpage-banner";
 import { TrustBadge } from "@/components/ui/trust-badge";
+import { uiLabels } from "@/components/ui/labels";
 import { lotsByProducer, type Lot } from "@/data/lots";
 import type { Producer } from "@/data/producers";
 import { pricePerKgCop, productsByProducer, roastLabels, tagLabels, defaultSize } from "@/data/products";
@@ -36,7 +37,7 @@ function NavCount({ tone, children }: { tone: "lime" | "roast"; children: ReactN
 }
 
 /** Producer profile (Producer board): banner, in-page nav, story, green lots, roasted panel (CO), farm, CTA. */
-export function Profile({ lang, dict, producer }: { lang: Locale; dict: Dictionary; producer: Producer }) {
+export function Profile({ lang, dict, producer, answer }: { lang: Locale; dict: Dictionary; producer: Producer; answer?: ReactNode }) {
   const t = dict.producerPage;
   const l = dict.lots;
   const lots = lotsByProducer(producer.slug);
@@ -75,6 +76,7 @@ export function Profile({ lang, dict, producer }: { lang: Locale; dict: Dictiona
       />
 
       <main id="main">
+        {answer}
         {/* Jump links. The roasted link only exists where the roasted panel does (Colombia). */}
         <nav
           aria-label={t.nav.label}
@@ -265,7 +267,14 @@ function Roasted({ lang, dict, producer }: { lang: Locale; dict: Dictionary; pro
               notes={p.notes[lang]}
               tag={{ label: tagLabels[p.tag][lang], className: "bg-roast text-on-primary" }}
               bag={{ color: p.bag, stage: p.stage, label: p.labelBrand, roastLabel: roastLabels[p.roastLevel][lang], size: grams }}
-              roast={{ level: p.roastLevel, label: roastLabels[p.roastLevel][lang] }}
+              roast={{
+                level: p.roastLevel,
+                label: roastLabels[p.roastLevel][lang],
+                hint: fill(uiLabels[lang].roastHint, {
+                  label: roastLabels[p.roastLevel][lang],
+                  level: p.roastLevel,
+                }),
+              }}
               price={formatCop(size.priceCop, lang)}
               pricePerKg={`${formatCop(pricePerKgCop(size), lang)} / kg`}
               href={link}

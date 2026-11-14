@@ -6,10 +6,12 @@ import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { ProductCard } from "@/components/ui/product-card";
 import { RoastMeter } from "@/components/ui/roast-meter";
 import { SectionHeader } from "@/components/ui/section-header";
+import { uiLabels } from "@/components/ui/labels";
 import { getProducer } from "@/data/producers";
 import { defaultSize, pricePerKgCop, products, roastLabels, type Product } from "@/data/products";
 import { href, productHref, producerHref } from "@/lib/routes";
-import { absoluteUrl, site } from "@/lib/site";
+import { roastedProduct } from "@/lib/seo/jsonld";
+import { absoluteUrl } from "@/lib/site";
 import { AddButton } from "./add-button";
 import { CartDrawer } from "./cart-drawer";
 import { CartProvider } from "./cart-context";
@@ -22,7 +24,7 @@ import { BannerChip, cartGrindLabels } from "./shop-content";
 import { FREE_SHIPPING_COP, SHIPPING_COP } from "./constants";
 import { toProductView, roastGroup } from "./views";
 
-/** Product + Offer with Colombian shipping details and a return policy (SPEC section 6). */
+/** Roasted Product + Offer with Colombian shipping details and a return policy (SPEC section 6). */
 function productLd(lang: Locale, dict: Dictionary, p: Product) {
   const size = defaultSize(p);
   const roast = roastLabels[p.roastLevel][lang];
@@ -34,49 +36,22 @@ function productLd(lang: Locale, dict: Dictionary, p: Product) {
     notes: p.notes[lang],
     grams: size.grams,
   });
-  return {
-    "@type": "Product",
-    "@id": `${absoluteUrl(productHref(lang, p.slug))}#product`,
-    name: `${p.brand} ${p.name[lang]}`,
-    description,
+  return roastedProduct({
+    url: absoluteUrl(productHref(lang, p.slug)),
     sku: p.slug,
-    category: "Coffee",
+    name: `${p.brand} ${p.name[lang]}`,
+    brand: p.brand,
+    description,
     // TODO(owner): add `image` when real bag photos exist (ASSETS.md, product-photos-*)
-    brand: { "@type": "Brand", name: p.brand },
-    weight: { "@type": "QuantitativeValue", value: size.grams, unitCode: "GRM" },
-    additionalProperty: [
-      { "@type": "PropertyValue", name: "Roast level", value: roast },
-      { "@type": "PropertyValue", name: "Roast level (1-5)", value: p.roastLevel },
-      { "@type": "PropertyValue", name: "Origin", value: "Urrao, Antioquia, Colombia" },
-    ],
-    offers: {
-      "@type": "Offer",
-      url: absoluteUrl(productHref(lang, p.slug)),
-      priceCurrency: "COP",
-      price: String(size.priceCop),
-      availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
-      seller: { "@type": "Organization", name: site.name },
-      shippingDetails: {
-        "@type": "OfferShippingDetails",
-        shippingRate: { "@type": "MonetaryAmount", value: String(SHIPPING_COP), currency: "COP" },
-        shippingDestination: { "@type": "DefinedRegion", addressCountry: "CO" },
-        deliveryTime: {
-          "@type": "ShippingDeliveryTime",
-          handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 3, unitCode: "DAY" },
-          transitTime: { "@type": "QuantitativeValue", minValue: 1, maxValue: 5, unitCode: "DAY" },
-        },
-      },
-      hasMerchantReturnPolicy: {
-        "@type": "MerchantReturnPolicy",
-        applicableCountry: "CO",
-        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-        merchantReturnDays: 5,
-        returnMethod: "https://schema.org/ReturnByMail",
-        returnFees: "https://schema.org/ReturnShippingFees",
-      },
-    },
-  };
+    grams: size.grams,
+    priceCop: size.priceCop,
+    roast,
+    roastLevel: p.roastLevel,
+    shippingCop: SHIPPING_COP,
+    returnDays: 5,
+    handlingDays: { min: 0, max: 3 },
+    transitDays: { min: 1, max: 5 },
+  });
 }
 
 /** Roasted product page (Colombia only). */
@@ -214,14 +189,19 @@ export function ProductDetail({ lang, dict, product: p }: { lang: Locale; dict: 
           </div>
         </section>
 
-        <section className="grid gap-10 pb-2 pt-14 lg:grid-cols-2">
+        <section className="grid gap-10 px-6 pb-2 pt-14 sm:px-12 lg:grid-cols-2">
           <div>
             <SectionHeader line="roasted" title={t.about.title} accent={t.about.accent} />
             <h3 className="mt-6 font-display text-headline-sm text-roast-dark">{t.about.notesTitle}</h3>
             <p className="mt-1 font-display text-headline-md italic text-roast">{notes}</p>
             <h3 className="mt-6 font-display text-headline-sm text-roast-dark">{t.about.roastTitle}</h3>
             <p className="mt-2 inline-flex items-center gap-3 text-body-md text-roast-body">
-              <RoastMeter level={p.roastLevel} label={fill(t.about.roastMeter, { label: roast, level: p.roastLevel })} size={20} />
+              <RoastMeter
+                level={p.roastLevel}
+                label={fill(t.about.roastMeter, { label: roast, level: p.roastLevel })}
+                hint={fill(uiLabels[lang].roastHint, { label: roast, level: p.roastLevel })}
+                size={20}
+              />
               {roast}
             </p>
             <h3 className="mt-6 font-display text-headline-sm text-roast-dark">{t.about.brewingTitle}</h3>

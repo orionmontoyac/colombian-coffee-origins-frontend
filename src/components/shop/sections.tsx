@@ -37,15 +37,7 @@ export function ClubAndQuiz({ copy }: { copy: Dictionary["shopPage"] }) {
   return (
     <section className="mt-14 grid gap-4 lg:grid-cols-[1.3fr_1fr]">
       <div className="relative flex min-h-[360px] items-center overflow-hidden rounded-xl bg-roast px-6 py-12 text-on-primary sm:px-12">
-        <Image
-          src="/images/beans-caramel.png"
-          alt=""
-          aria-hidden="true"
-          width={1024}
-          height={1024}
-          sizes="520px"
-          className="pointer-events-none absolute -bottom-28 -right-28 w-[520px] max-w-none opacity-25"
-        />
+        <div aria-hidden="true" className="shop-banner-pattern pointer-events-none absolute inset-0" />
         <div className="relative max-w-[540px]">
           <p className="inline-flex flex-wrap items-center gap-2.5 font-label text-[13px] font-medium uppercase tracking-[0.08em] text-on-roast-body">
             <span className="rounded-full bg-caramel px-2.5 py-1 tracking-[0.04em] text-roast-dark">{club.badge}</span>

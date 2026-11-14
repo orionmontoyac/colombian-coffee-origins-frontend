@@ -21,7 +21,7 @@ const pill =
 const pillOff = "border border-roast-line bg-neutral text-roast-dark hover:bg-roast-card";
 const pillOn = "bg-roast text-on-primary";
 
-/** Brand strip, sticky filters and the product grid. Filters are plain client state. */
+/** Product grid first, then the brand strip. Filters are plain client state. */
 export function ShopCatalog({
   products,
   brands,
@@ -71,40 +71,6 @@ export function ShopCatalog({
 
   return (
     <>
-      <section className="pb-2 pt-14">
-        <SectionHeader line="roasted" title={brandsCopy.title} accent={brandsCopy.accent} text={brandsCopy.text} />
-        <ul className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-          {brands.map((b) => {
-            const on = brand === b.slug;
-            return (
-              <li key={b.slug}>
-                <button
-                  type="button"
-                  aria-pressed={on}
-                  aria-label={fill(brandsCopy.filterAria, { brand: b.name })}
-                  onClick={() => {
-                    setBrand(on ? null : b.slug);
-                    if (!on) document.getElementById("catalog")?.scrollIntoView();
-                  }}
-                  className={`flex h-full w-full flex-col items-center gap-2.5 rounded-lg border px-3.5 pb-[18px] pt-[22px] text-center transition-colors duration-200 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-roast ${
-                    on ? "border-roast bg-roast-surface" : "border-roast-line bg-neutral hover:bg-roast-card"
-                  }`}
-                >
-                  <span aria-hidden="true" className="flex size-[72px] items-center justify-center rounded-full" style={{ background: b.color }}>
-                    <Bean tone="white" size={36} />
-                  </span>
-                  <span className="font-display text-[17px] font-semibold leading-tight text-roast-dark">{b.name}</span>
-                  <span className="text-[13px] text-roast-body">{b.place}</span>
-                  <span className="rounded-full bg-roast-surface px-2.5 py-1 font-label text-xs font-medium text-roast">
-                    {b.count === 1 ? brandsCopy.coffeeOne : fill(brandsCopy.coffeeMany, { count: b.count })}
-                  </span>
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-
       <section id="catalog" className="scroll-mt-4 pb-2 pt-14">
         <SectionHeader line="roasted" title={copy.title} accent={copy.accent} />
 
@@ -194,6 +160,40 @@ export function ShopCatalog({
           </ul>
         )}
         <p className="mt-5 text-[13px] text-roast-body">{copy.note}</p>
+      </section>
+
+      <section className="pb-2 pt-14">
+        <SectionHeader line="roasted" title={brandsCopy.title} accent={brandsCopy.accent} text={brandsCopy.text} />
+        <ul className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          {brands.map((b) => {
+            const on = brand === b.slug;
+            return (
+              <li key={b.slug}>
+                <button
+                  type="button"
+                  aria-pressed={on}
+                  aria-label={fill(brandsCopy.filterAria, { brand: b.name })}
+                  onClick={() => {
+                    setBrand(on ? null : b.slug);
+                    if (!on) document.getElementById("catalog")?.scrollIntoView();
+                  }}
+                  className={`flex h-full w-full flex-col items-center gap-2.5 rounded-lg border px-3.5 pb-[18px] pt-[22px] text-center transition-colors duration-200 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-roast ${
+                    on ? "border-roast bg-roast-surface" : "border-roast-line bg-neutral hover:bg-roast-card"
+                  }`}
+                >
+                  <span aria-hidden="true" className="flex size-[72px] items-center justify-center rounded-full" style={{ background: b.color }}>
+                    <Bean tone="white" size={36} />
+                  </span>
+                  <span className="font-display text-[17px] font-semibold leading-tight text-roast-dark">{b.name}</span>
+                  <span className="text-[13px] text-roast-body">{b.place}</span>
+                  <span className="rounded-full bg-roast-surface px-2.5 py-1 font-label text-xs font-medium text-roast">
+                    {b.count === 1 ? brandsCopy.coffeeOne : fill(brandsCopy.coffeeMany, { count: b.count })}
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
       </section>
     </>
   );

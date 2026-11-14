@@ -1,3 +1,4 @@
+import { AnswerFirst } from "@/components/ai/answer-first";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
@@ -28,8 +29,8 @@ export default async function ShopPage({ params }: PageProps<"/[lang]/shop">) {
     <div className="min-h-screen p-2">
       <Suspense fallback={<div role="status" aria-label={dict.shopPage.loading} className="min-h-[70vh] rounded-xl bg-roast-dark" />}>
         <CountryGate
-          shop={<ShopContent lang={lang} dict={dict} />}
-          notice={<ShopUnavailable lang={lang} dict={dict} />}
+          shop={<ShopContent lang={lang} dict={dict} answer={<AnswerFirst lang={lang} kind="shop" />} />}
+          notice={<ShopUnavailable lang={lang} dict={dict} answer={<AnswerFirst lang={lang} kind="shop" />} />}
         />
       </Suspense>
     </div>

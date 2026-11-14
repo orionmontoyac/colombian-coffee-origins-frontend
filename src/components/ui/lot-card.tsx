@@ -36,40 +36,54 @@ export type LotCardProps = {
 
 /** Green-line lot card: photo with code, trust and score chips, notes, specs table, USD price, CTA. */
 export function LotCard(p: LotCardProps) {
+  const photo = (
+    <>
+      {p.image ? (
+        <Image
+          src={p.image}
+          alt={p.imageAlt ?? ""}
+          fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          className="object-cover"
+        />
+      ) : (
+        <PlaceholderImage
+          assetId={p.placeholderAssetId ?? `lot-card-photo-${p.code.toLowerCase()}`}
+          label={`${p.variety}, lot ${p.code}`}
+          ratio="auto"
+          className="h-full rounded-none"
+        />
+      )}
+      <span className="absolute left-4 top-4 rounded-full bg-neutral px-3 py-[7px] font-label text-xs font-medium tracking-[0.08em] text-primary">
+        {p.code}
+      </span>
+      <TrustBadge level={p.trust.level} label={p.trust.label} className="absolute right-4 top-4" />
+      {p.score !== null ? (
+        <span className="absolute bottom-4 left-4 inline-flex items-baseline gap-1.5 rounded-[14px] bg-primary px-3.5 py-2 text-on-primary">
+          <strong className="font-display text-2xl font-bold text-accent">{p.score}</strong>
+          <span className="text-xs font-semibold tracking-[0.06em]">SCA</span>
+        </span>
+      ) : (
+        <span className="absolute bottom-4 left-4 rounded-[14px] bg-neutral px-3.5 py-2 text-[13px] font-semibold text-body">
+          {p.notCuppedLabel}
+        </span>
+      )}
+    </>
+  );
+
   return (
     <article className="flex flex-col overflow-hidden rounded-notch bg-surface">
-      <div className="relative h-60">
-        {p.image ? (
-          <Image
-            src={p.image}
-            alt={p.imageAlt ?? ""}
-            fill
-            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="object-cover"
-          />
-        ) : (
-          <PlaceholderImage
-            assetId={p.placeholderAssetId ?? `lot-card-photo-${p.code.toLowerCase()}`}
-            label={`${p.variety}, lot ${p.code}`}
-            ratio="auto"
-            className="h-full rounded-none"
-          />
-        )}
-        <span className="absolute left-4 top-4 rounded-full bg-neutral px-3 py-[7px] font-label text-xs font-medium tracking-[0.08em] text-primary">
-          {p.code}
-        </span>
-        <TrustBadge level={p.trust.level} label={p.trust.label} className="absolute right-4 top-4" />
-        {p.score !== null ? (
-          <span className="absolute bottom-4 left-4 inline-flex items-baseline gap-1.5 rounded-[14px] bg-primary px-3.5 py-2 text-on-primary">
-            <strong className="font-display text-2xl font-bold text-accent">{p.score}</strong>
-            <span className="text-xs font-semibold tracking-[0.06em]">SCA</span>
-          </span>
-        ) : (
-          <span className="absolute bottom-4 left-4 rounded-[14px] bg-neutral px-3.5 py-2 text-[13px] font-semibold text-body">
-            {p.notCuppedLabel}
-          </span>
-        )}
-      </div>
+      {p.detailHref ? (
+        <Link
+          href={p.detailHref}
+          aria-label={`${p.variety}, ${p.code}`}
+          className="relative block h-60 focus-visible:outline-3 focus-visible:outline-offset-[-3px] focus-visible:outline-primary"
+        >
+          {photo}
+        </Link>
+      ) : (
+        <div className="relative h-60">{photo}</div>
+      )}
 
       <div className="flex flex-1 flex-col gap-[18px] px-6 pb-[26px] pt-6">
         <div>

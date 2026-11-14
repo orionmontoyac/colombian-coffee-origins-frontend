@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { SiteFooter } from "@/components/home/sections";
 import { Bean } from "@/components/ui/bean";
@@ -32,8 +33,8 @@ export function cartGrindLabels(dict: Dictionary) {
   return dict.productPage.purchase.grinds;
 }
 
-/** The Colombia-only shop page: banner, perks, brands, filtered grid, club, delivery, sell band. */
-export function ShopContent({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+/** The Colombia-only shop page: banner, perks, filtered grid, brands, club, delivery, sell band. */
+export function ShopContent({ lang, dict, answer }: { lang: Locale; dict: Dictionary; answer?: ReactNode }) {
   const t = dict.shopPage;
   const views = products.map((p) => toProductView(p, lang, dict));
   const brandViews = brands.map((b) => ({
@@ -91,6 +92,7 @@ export function ShopContent({ lang, dict }: { lang: Locale; dict: Dictionary }) 
         ]}
       />
       <main id="main">
+        {answer}
         <Perks copy={t} />
         <ShopCatalog products={views} brands={brandViews} copy={t.catalog} brandsCopy={t.brands} />
         <ClubAndQuiz copy={t} />

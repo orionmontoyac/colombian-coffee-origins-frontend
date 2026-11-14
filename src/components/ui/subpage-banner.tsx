@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
@@ -59,17 +58,7 @@ export function SubpageBanner({
         roasted ? "bg-roast-dark" : "hero-banner",
       )}
     >
-      {roasted ? (
-        <Image
-          src="/images/beans-caramel.png"
-          alt=""
-          aria-hidden="true"
-          width={1024}
-          height={1024}
-          sizes="640px"
-          className="pointer-events-none absolute -right-24 -top-20 w-[640px] max-w-none opacity-20"
-        />
-      ) : null}
+      {roasted ? <div aria-hidden="true" className="shop-banner-pattern pointer-events-none absolute inset-0" /> : null}
       <SiteHeader lang={lang} nav={nav} active={active} variant={roasted ? "shop" : "default"} cart={cart} />
 
       <div className="relative">
