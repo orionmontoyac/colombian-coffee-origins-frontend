@@ -24,7 +24,7 @@ You build **exactly one page** — the one in your brief — to production quali
 - Headings: exactly one H1 (the banner title), then H2 per section, H3 in cards. Bold first, one italic accent phrase at the end.
 - Images: `next/image` with real `alt`, explicit `sizes`, `priority` only for the banner image. Missing photo → `PlaceholderImage` with an `assetId`, and add a row to `ASSETS.md` (what to shoot, subject, orientation, minimum size, where it is used).
 - Interactions (filters, cart, galleries, forms) as small client components; everything else stays a server component. Forms: labels, `aria-describedby` errors, Server Action with validation, success state, honeypot.
-- Colombia-only content inside `<OnlyInCountry country="CO">`.
+- Shop content is shown to every visitor; there is no country rule (owner, 2026-11-14). Roasted coffee still ships inside Colombia only, and the cart says so (`cart.shipsColombiaOnly`). Do not add geolocation gating, `OnlyInCountry`/`CountryGate`, or a country-based noindex.
 - Example data stays labelled "Example … for this preview" until real data exists.
 - Leave motion to the motion agent: mark elements with `data-reveal` / `data-vt-name` hooks if the brief asks, but don't add animation CSS.
 
@@ -33,7 +33,7 @@ If `.claude/skills/impeccable` exists: run its context step once, read `referenc
 
 ## Prove it (before reporting)
 1. `npm run lint && npm run typecheck && npm run build` pass.
-2. Start the app (`npm run start -- -p 3100` after build) and screenshot your page with Playwright at 1440×900 and 390×844, EN and ES, with header `x-country: CO` when the page has CO content. Save to `artifacts/screenshots/<page>-<lang>-<width>.png`. Look at them and fix what is off against the board.
+2. Start the app (`npm run start -- -p 3100` after build) and screenshot your page with Playwright at 1440×900 and 390×844, EN and ES. No country header is needed: shop content shows to everyone. Save to `artifacts/screenshots/<page>-<lang>-<width>.png`. Look at them and fix what is off against the board.
 3. `node scripts/factory/check-seo-ai.mjs --only <your route>` passes (title, description, H1, canonical, hreflang, JSON-LD, alt text).
 4. No horizontal scroll at 390 wide, no text over 75 characters per line in body copy.
 

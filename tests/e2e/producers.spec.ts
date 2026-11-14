@@ -31,23 +31,10 @@ test("profile banner has exactly three stats", async ({ page }) => {
   await expect(page.locator("section.hero-banner .grid-cols-3 > div")).toHaveCount(3);
 });
 
-test.describe("roasted panel is Colombia only", () => {
-  test("hidden without a country header", async ({ page }) => {
-    // The default projects send no x-country header; skip when this project does.
-    test.skip(!!test.info().project.use.extraHTTPHeaders?.["x-country"], "country-co project");
-    await page.goto(profile);
-    await expect(page.locator("#roasted")).toHaveCount(0);
-    await expect(page.locator('nav[aria-label="On this page"] a[href="#roasted"]')).toHaveCount(0);
-  });
-
-  test("visible with x-country: CO", async ({ browser }) => {
-    const context = await browser.newContext({ extraHTTPHeaders: { "x-country": "CO" } });
-    const page = await context.newPage();
-    await page.goto(profile);
-    await expect(page.locator("#roasted")).toBeVisible();
-    await expect(page.locator('nav[aria-label="On this page"] a[href="#roasted"]')).toBeVisible();
-    await context.close();
-  });
+test("roasted panel is visible to every visitor (no country header)", async ({ page }) => {
+  await page.goto(profile);
+  await expect(page.locator("#roasted")).toBeVisible();
+  await expect(page.locator('nav[aria-label="On this page"] a[href="#roasted"]')).toBeVisible();
 });
 
 test("in-page nav anchors point at sections that exist and scroll to them", async ({ page }) => {

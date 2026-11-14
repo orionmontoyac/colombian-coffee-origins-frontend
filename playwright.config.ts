@@ -18,14 +18,6 @@ export default defineConfig({
     },
     { name: "mobile", use: { ...devices["Pixel 7"] } },
     {
-      name: "country-co",
-      use: {
-        ...devices["Desktop Chrome"],
-        viewport: { width: 1440, height: 900 },
-        extraHTTPHeaders: { "x-country": "CO" },
-      },
-    },
-    {
       name: "reduced-motion",
       use: {
         ...devices["Desktop Chrome"],

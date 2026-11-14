@@ -22,7 +22,7 @@ Every coffee shows the **producer, farm and town**. Trust levels: Registered →
 - Next.js 16 App Router under `src/app/[lang]` (EN default, ES), `cacheComponents` on, Tailwind v4, local fonts (Vollkorn, Fira Sans, Ubuntu). Read `node_modules/next/dist/docs/` before using any Next API (see AGENTS.md).
 - All copy in `src/app/[lang]/dictionaries/{en,es}.json`. Both files keep identical keys.
 - Routes only through `src/lib/routes.ts` (`href(lang, key)`); add new keys there with EN and ES slugs.
-- Colombia-only content is wrapped in `<OnlyInCountry country="CO">`.
+- Shop content is shown to every visitor; there is no country rule (owner, 2026-11-14). Roasted coffee still ships inside Colombia only, and the cart says so (`cart.shipsColombiaOnly`). Do not add geolocation gating, `OnlyInCountry`/`CountryGate`, or a country-based noindex.
 - Example data lives in `src/data/*` and is labelled as example on the page. No invented facts about real people or companies beyond the existing sample producers.
 - No backend yet (Supabase comes later). Forms use Server Actions that validate input and return a success state; they log to the server and have a clearly marked `// TODO(backend)` where Resend/Supabase will plug in. Record this in DECISIONS.md.
 
@@ -48,7 +48,7 @@ Every coffee shows the **producer, farm and town**. Trust levels: Registered →
 | privacy / terms | `/en/privacy`, `/en/terms` | `/es/privacidad`, `/es/terminos` | — | Legal (placeholder text marked for lawyer review) |
 | not-found | any | any | — | Branded 404 with links to lots and shop |
 
-Outside Colombia, `/shop/*` shows a friendly "The shop ships inside Colombia only" page with a link to green coffee, returns HTTP 200, and is `noindex` for that response.
+Every visitor sees the full shop (indexable, HTTP 200) whatever their country. The cart drawer shows "For now, we only ship roasted coffee within Colombia." (EN) / "Por ahora, solo enviamos café tostado dentro de Colombia." (ES).
 
 ## 4. Pages and sections
 

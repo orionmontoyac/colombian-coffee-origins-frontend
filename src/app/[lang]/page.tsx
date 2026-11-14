@@ -6,7 +6,6 @@ import { Hero } from "@/components/home/hero";
 import { RoastedShop } from "@/components/home/roasted-shop";
 import { FaqTeaser, faqTeaserItems } from "@/components/home/faq-teaser";
 import { homeJsonLd, homeMetadata } from "@/components/home/seo";
-import { OnlyInCountry } from "@/components/only-in-country";
 import {
   ClosingCta,
   Farmers,
@@ -42,10 +41,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <BusinessLines lang={lang} dict={dict} />
         <Farmers lang={lang} dict={dict} />
         <FeaturedLots lang={lang} dict={dict} />
-        {/* Roasted coffee is sold inside Colombia only for now */}
-        <OnlyInCountry country="CO">
-          <RoastedShop lang={lang} dict={dict} />
-        </OnlyInCountry>
+        <RoastedShop lang={lang} dict={dict} />
         <ProducersBand lang={lang} dict={dict} />
         <FaqTeaser lang={lang} dict={dict} />
         <ClosingCta lang={lang} dict={dict} />

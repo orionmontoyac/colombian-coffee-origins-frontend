@@ -59,6 +59,7 @@ test.describe("shop in Colombia", () => {
     await expect(drawer).toBeVisible();
     await expect(page.getByTestId("cart-subtotal")).toHaveText("COP 68,000");
     await expect(page.getByTestId("free-shipping-text")).toHaveText("COP 82,000 more for free shipping");
+    await expect(page.getByTestId("cart-ships-note")).toHaveText("For now, we only ship roasted coffee within Colombia.");
     await expect(page.getByRole("progressbar")).toHaveAttribute("aria-valuenow", "45");
 
     await page.getByRole("button", { name: /Increase quantity/ }).click();
@@ -105,20 +106,16 @@ test.describe("shop in Colombia", () => {
   });
 });
 
-test.describe("shop outside Colombia", () => {
+test.describe("shop outside Colombia (owner 2026-11-14: no country rule, everyone sees the shop)", () => {
   test.use({ extraHTTPHeaders: { "x-country": "US" } });
 
   for (const path of ["/en/shop", "/es/tienda", "/en/shop/el-mirador-chiroso"]) {
-    test(`${path} says the shop ships inside Colombia only (200, noindex)`, async ({ page }) => {
-      // noindex comes from the proxy's X-Robots-Tag header (DECISIONS.md "T3.x-proxy"), not a meta tag.
+    test(`${path} shows the shop to a US visitor (200, indexable)`, async ({ page }) => {
       const response = await page.goto(path);
       expect(response?.status()).toBe(200);
-      expect(response?.headers()["x-robots-tag"]).toBe("noindex, follow");
-      await page.waitForLoadState("networkidle");
+      expect(response?.headers()["x-robots-tag"] ?? "").not.toMatch(/noindex/);
       await expect(page.locator("h1")).toHaveCount(1);
-      await expect(page.locator("h1")).toContainText("Colombia");
-      await expect(page.locator('main a[href$="/coffees"], main a[href$="/cafes"]')).toHaveCount(1);
-      await expect(page.getByTestId("add-to-cart")).toHaveCount(0);
+      await expect(page.getByTestId("add-to-cart").first()).toBeVisible();
     });
   }
 });

@@ -491,7 +491,7 @@ Motion is restrained and purposeful: it shows arrival and continuity, never deco
 - **Don't** add icons in tinted rounded squares. The only icons are line icons (globe, chevron, cart, heart) and the user's coffee-bean icon.
 - **Do** name the producer, farm and town wherever a coffee appears.
 - **Do** format prices as `USD 18.50 / kg` (green) and `COP 68,000` in English or `$68.000` in Spanish (shop), always with price per kg in the shop.
-- **Do** mark Colombia-only content with the CO pill and wrap it in `<OnlyInCountry country="CO">`.
+- **Do** mark roasted-coffee content with the CO pill (it ships inside Colombia only). **Don't** hide it by visitor country: since 2026-11-14 everyone sees the shop, and the cart states the Colombia-only shipping.
 - **Do** label example data as example ("Example products for this design preview").
 - **Do** set every button, chip, nav item and eyebrow in `font-label` (Ubuntu). **Don't** set body text or headings in Ubuntu.
 - **Don't** animate on scroll beyond the one-time section reveals in Motion; no parallax, no scroll-jacking, no looping animation. Every motion has a reduced-motion fallback.

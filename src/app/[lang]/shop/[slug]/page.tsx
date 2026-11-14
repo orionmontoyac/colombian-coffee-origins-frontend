@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
-import { CountryGate } from "@/components/shop/country-gate";
 import { fill, formatCop } from "@/components/shop/format";
 import { ProductDetail } from "@/components/shop/product-detail";
 import { shopMetadata } from "@/components/shop/seo";
-import { ShopUnavailable } from "@/components/shop/unavailable";
 import { brandName, defaultSize, getProduct, productParams, roastLabels } from "@/data/products";
 import { productAlternates } from "@/lib/routes";
 import { getDictionary, hasLocale } from "../../dictionaries";
@@ -41,12 +38,7 @@ export default async function ProductPage({ params }: PageProps<"/[lang]/shop/[s
   const dict = await getDictionary();
   return (
     <div className="min-h-screen p-2">
-      <Suspense fallback={<div role="status" aria-label={dict.shopPage.loading} className="min-h-[70vh] rounded-xl bg-roast-dark" />}>
-        <CountryGate
-          shop={<ProductDetail lang={lang} dict={dict} product={product} />}
-          notice={<ShopUnavailable lang={lang} dict={dict} />}
-        />
-      </Suspense>
+      <ProductDetail lang={lang} dict={dict} product={product} />
     </div>
   );
 }

@@ -4,7 +4,6 @@ import cherries from "@/assets/home/lot-chiroso-cherries.jpg";
 import { ContactForm } from "@/components/forms/contact-form";
 import { FormLayout, FormPageFrame } from "@/components/forms/page-frame";
 import { formJsonLd, formMetadata } from "@/components/forms/seo";
-import { OnlyInCountry } from "@/components/only-in-country";
 import { SectionHeader, WhatsAppButton } from "@/components/ui";
 import { stateFromSearch } from "@/lib/actions/query";
 import { href } from "@/lib/routes";
@@ -76,17 +75,15 @@ export default async function ContactPage({ params, searchParams }: PageProps<"/
                 <dt className="font-display text-headline-sm text-primary">{t.channels.addressTitle}</dt>
                 <dd className="mt-1.5 text-body-md text-body">{t.channels.address}</dd>
               </div>
-              <OnlyInCountry country="CO">
-                <div>
-                  <dt className="font-display text-headline-sm text-primary">{t.channels.pqrsTitle}</dt>
-                  <dd className="mt-1.5 max-w-[48ch] text-body-md text-body">
-                    {t.channels.pqrsText}{" "}
-                    <a className={link} href={`mailto:${c.pqrsEmail}`}>
-                      {c.pqrsEmail}
-                    </a>
-                  </dd>
-                </div>
-              </OnlyInCountry>
+              <div>
+                <dt className="font-display text-headline-sm text-primary">{t.channels.pqrsTitle}</dt>
+                <dd className="mt-1.5 max-w-[48ch] text-body-md text-body">
+                  {t.channels.pqrsText}{" "}
+                  <a className={link} href={`mailto:${c.pqrsEmail}`}>
+                    {c.pqrsEmail}
+                  </a>
+                </dd>
+              </div>
             </dl>
           </>
         }

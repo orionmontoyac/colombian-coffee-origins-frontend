@@ -73,7 +73,7 @@ test.describe("axe on shop pages for every project", () => {
   }
 });
 
-test.describe("axe on the non-Colombia notice", () => {
+test.describe("axe on shop pages for a US visitor", () => {
   test.use({ extraHTTPHeaders: { "x-country": "US" } });
   for (const path of ["/en/shop", "/es/tienda"]) {
     test(`${path} (US) has no serious or critical violations`, async ({ page }) => {

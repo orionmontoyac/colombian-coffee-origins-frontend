@@ -2,6 +2,7 @@
   "open": "Carrito",
   "openAria": "Abrir el carrito, {count} productos",
   "title": "Tu carrito",
+  "shipsColombiaOnly": "Por ahora, solo enviamos café tostado dentro de Colombia.",
   "close": "Cerrar el carrito",
   "itemsCount": "{count} productos",
   "itemsCountOne": "1 producto",

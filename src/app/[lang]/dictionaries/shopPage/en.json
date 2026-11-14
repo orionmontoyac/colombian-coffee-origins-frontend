@@ -105,26 +105,5 @@
     "accent": "your own coffee?",
     "text": "Open your shop here and sell your bags to homes and cafés across Colombia. We handle orders, you keep your brand.",
     "cta": "Open my shop"
-  },
-  "notice": {
-    "breadcrumbShop": "Roasted coffee shop",
-    "chips": {
-      "only": "Colombia only",
-      "green": "Green coffee ships worldwide"
-    },
-    "title": "The shop ships inside",
-    "accent": "Colombia only",
-    "description": "Our roasted coffee is sent to addresses in Colombia. Outside Colombia, you can still buy the green coffee itself.",
-    "stats": {
-      "roasted": { "label": "Roasted coffee", "value": "Colombia" },
-      "green": { "label": "Green coffee", "value": "Worldwide" },
-      "sample": { "label": "Free sample", "value": "200 g" }
-    },
-    "panelTitle": "Buying from outside Colombia?",
-    "panelAccent": "Start with green coffee",
-    "panelText": "Traceable lots from named family farms in Urrao, with a free 200 g sample for verified buyers before you commit to a box.",
-    "cta": "Explore green coffee",
-    "secondary": "Request samples"
-  },
-  "loading": "Loading the shop"
+  }
 }

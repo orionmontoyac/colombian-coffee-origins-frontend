@@ -105,26 +105,5 @@
     "accent": "tu propio café?",
     "text": "Abre tu tienda aquí y vende tus bolsas a hogares y cafés de toda Colombia. Nosotros llevamos los pedidos, tú conservas tu marca.",
     "cta": "Abrir mi tienda"
-  },
-  "notice": {
-    "breadcrumbShop": "Tienda de café tostado",
-    "chips": {
-      "only": "Solo Colombia",
-      "green": "El café verde se envía al mundo"
-    },
-    "title": "La tienda envía",
-    "accent": "solo dentro de Colombia",
-    "description": "Nuestro café tostado se envía a direcciones en Colombia. Fuera de Colombia, aún puedes comprar el café verde.",
-    "stats": {
-      "roasted": { "label": "Café tostado", "value": "Colombia" },
-      "green": { "label": "Café verde", "value": "Todo el mundo" },
-      "sample": { "label": "Muestra gratis", "value": "200 g" }
-    },
-    "panelTitle": "¿Compras desde fuera de Colombia?",
-    "panelAccent": "Empieza por el café verde",
-    "panelText": "Lotes trazables de fincas familiares de Urrao con nombre propio, y una muestra gratis de 200 g para compradores verificados antes de elegir una caja.",
-    "cta": "Explorar café verde",
-    "secondary": "Pedir muestras"
-  },
-  "loading": "Cargando la tienda"
+  }
 }

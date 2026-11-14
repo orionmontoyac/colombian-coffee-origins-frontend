@@ -2,6 +2,7 @@
   "open": "Cart",
   "openAria": "Open cart, {count} items",
   "title": "Your cart",
+  "shipsColombiaOnly": "For now, we only ship roasted coffee within Colombia.",
   "close": "Close cart",
   "itemsCount": "{count} items",
   "itemsCountOne": "1 item",

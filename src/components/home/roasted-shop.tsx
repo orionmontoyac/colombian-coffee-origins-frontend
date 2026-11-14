@@ -19,8 +19,8 @@ function formatCop(value: number, lang: Locale) {
 
 /**
  * Multi-brand shop of roasted coffee sold by producers who roast their own.
- * Brown identity (the roasted line), prices in COP. Shown to visitors in
- * Colombia only (see <OnlyInCountry> in the page).
+ * Brown identity (the roasted line), prices in COP. Shown to every
+ * visitor; it ships inside Colombia only (the cart says so).
  */
 export function RoastedShop({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const s = dict.shop;

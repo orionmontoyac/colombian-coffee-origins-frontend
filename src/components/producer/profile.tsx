@@ -7,7 +7,6 @@ import farmersHarvest from "@/assets/home/farmers-harvest.jpg";
 import heroHills from "@/assets/home/hero-coffee-hills.jpg";
 import urraoSquare from "@/assets/home/urrao-main-square.jpg";
 import { SiteFooter } from "@/components/home/sections";
-import { OnlyInCountry } from "@/components/only-in-country";
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/ui/chip";
 import { CtaPanel } from "@/components/ui/cta-panel";
@@ -89,11 +88,9 @@ export function Profile({ lang, dict, producer }: { lang: Locale; dict: Dictiona
             {t.nav.lots} <NavCount tone="lime">{lots.length}</NavCount>
           </a>
           {products.length > 0 ? (
-            <OnlyInCountry country="CO">
-              <a href="#roasted" className={`${navLink} border-roast-line bg-neutral text-roast-dark hover:bg-roast-surface`}>
-                {t.nav.roasted} <NavCount tone="roast">{products.length}</NavCount>
-              </a>
-            </OnlyInCountry>
+            <a href="#roasted" className={`${navLink} border-roast-line bg-neutral text-roast-dark hover:bg-roast-surface`}>
+              {t.nav.roasted} <NavCount tone="roast">{products.length}</NavCount>
+            </a>
           ) : null}
           <a href="#farm" className={`${navLink} border-line bg-neutral text-primary hover:bg-primary hover:text-on-primary`}>
             {t.nav.farm}
@@ -103,9 +100,7 @@ export function Profile({ lang, dict, producer }: { lang: Locale; dict: Dictiona
         <Story lang={lang} dict={dict} producer={producer} processes={processes} />
         <GreenLots lang={lang} dict={dict} lots={lots} />
         {products.length > 0 ? (
-          <OnlyInCountry country="CO">
-            <Roasted lang={lang} dict={dict} producer={producer} />
-          </OnlyInCountry>
+          <Roasted lang={lang} dict={dict} producer={producer} />
         ) : null}
         <Farm lang={lang} dict={dict} producer={producer} />
 

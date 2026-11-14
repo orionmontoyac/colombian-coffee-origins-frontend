@@ -87,6 +87,7 @@ export function CartDrawer() {
               {copy.title}
             </h2>
             {!empty ? <p className="text-body-sm text-roast-body">{count === 1 ? copy.itemsCountOne : fill(copy.itemsCount, { count })}</p> : null}
+            <p className="mt-1 text-body-sm text-roast-body" data-testid="cart-ships-note">{copy.shipsColombiaOnly}</p>
           </div>
           <button
             type="button"

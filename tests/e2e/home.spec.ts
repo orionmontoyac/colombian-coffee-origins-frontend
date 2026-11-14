@@ -70,9 +70,9 @@ for (const p of pages) {
   test.describe(`${p.path} (outside Colombia)`, () => {
     test.use({ extraHTTPHeaders: { "x-country": "US" } });
 
-    test("shop section and shop links are absent", async ({ page }) => {
+    test("shop section and shop links are shown (no country rule)", async ({ page }) => {
       await page.goto(p.path);
-      await expect(page.locator('main a[href$="/el-mirador-chiroso"]')).toHaveCount(0);
+      await expect(page.locator('main a[href$="/el-mirador-chiroso"]').first()).toBeVisible();
     });
   });
 }

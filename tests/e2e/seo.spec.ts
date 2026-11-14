@@ -55,13 +55,13 @@ test("lot page has a markdown alternate that follows /md/{lang}/<path after /{la
   }
 });
 
-test("non-CO shop response carries X-Robots-Tag noindex; CO does not; meta robots stays index", async ({ request }) => {
+test("shop responses are indexable for every country (no country rule since 2026-11-14)", async ({ request }) => {
   for (const path of ["/en/shop", "/es/tienda", "/en/shop/el-mirador-chiroso"]) {
-    const other = await get(request, path, "US");
-    expect(other.headers()["x-robots-tag"], path).toMatch(/noindex/);
-    expect(await other.text()).not.toMatch(/name="robots" content="noindex/);
-    const co = await get(request, path, "CO");
-    expect(co.headers()["x-robots-tag"] ?? "", path).not.toMatch(/noindex/);
+    for (const country of ["US", "CO"]) {
+      const res = await get(request, path, country);
+      expect(res.headers()["x-robots-tag"] ?? "", `${path} ${country}`).not.toMatch(/noindex/);
+      expect(await res.text()).not.toMatch(/name="robots" content="noindex/);
+    }
   }
   const html = await (await get(request, "/en/shop", "US")).text();
   expect(html.slice(0, html.indexOf("</head>"))).toContain('name="description"');

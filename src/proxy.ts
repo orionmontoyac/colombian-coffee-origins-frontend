@@ -41,28 +41,8 @@ function notFound(request: NextRequest, internal: string) {
   return NextResponse.rewrite(request.nextUrl, { status: 404 });
 }
 
-const SHOP_RE = /^\/(en|es)\/(shop|tienda)(\/|$)/;
-const SELL_RE = /^\/(en|es)\/(shop\/sell|tienda\/vender)(\/|$)/;
-
-/** Same sources as src/lib/geo.ts (the proxy cannot call next/headers). */
-function visitorCountry(request: NextRequest): string | null {
-  const h = request.headers;
-  const fromHost =
-    h.get("x-vercel-ip-country") ??
-    h.get("cf-ipcountry") ??
-    h.get("cloudfront-viewer-country") ??
-    h.get("x-country");
-  const country = fromHost ?? (process.env.NODE_ENV !== "production" ? process.env.DEV_COUNTRY : undefined);
-  return country ? country.toUpperCase() : null;
-}
-
 export function proxy(request: NextRequest) {
-  const original = request.nextUrl.pathname.replace(/\/$/, "");
-  const response = route(request) ?? NextResponse.next();
-  if (SHOP_RE.test(original) && !SELL_RE.test(original) && visitorCountry(request) !== "CO") {
-    response.headers.set("X-Robots-Tag", "noindex, follow");
-  }
-  return response;
+  return route(request) ?? NextResponse.next();
 }
 
 function route(request: NextRequest): NextResponse | undefined {
