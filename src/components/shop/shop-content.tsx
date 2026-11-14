@@ -34,7 +34,7 @@ export function cartGrindLabels(dict: Dictionary) {
 }
 
 /** The Colombia-only shop page: banner, perks, filtered grid, brands, club, delivery, sell band. */
-export function ShopContent({ lang, dict, answer }: { lang: Locale; dict: Dictionary; answer?: ReactNode }) {
+export function ShopContent({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const t = dict.shopPage;
   const views = products.map((p) => toProductView(p, lang, dict));
   const brandViews = brands.map((b) => ({
@@ -92,7 +92,6 @@ export function ShopContent({ lang, dict, answer }: { lang: Locale; dict: Dictio
         ]}
       />
       <main id="main">
-        {answer}
         <Perks copy={t} />
         <ShopCatalog products={views} brands={brandViews} copy={t.catalog} brandsCopy={t.brands} />
         <ClubAndQuiz copy={t} />

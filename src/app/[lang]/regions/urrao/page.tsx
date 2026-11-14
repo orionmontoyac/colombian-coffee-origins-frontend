@@ -1,4 +1,3 @@
-import { AnswerFirst } from "@/components/ai/answer-first";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import hills from "@/assets/home/hero-coffee-hills.jpg";
@@ -46,7 +45,7 @@ export default async function Page({ params }: PageProps<"/[lang]/regions/urrao"
   return (
     <>
       <JsonLd data={data} />
-      <UrraoPage lang={lang} dict={dict} answer={<AnswerFirst lang={lang} kind="urrao" />} />
+      <UrraoPage lang={lang} dict={dict} />
     </>
   );
 }

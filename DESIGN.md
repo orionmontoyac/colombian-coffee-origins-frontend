@@ -486,6 +486,7 @@ Motion is restrained and purposeful: it shows arrival and continuity, never deco
 - **Don't** add drop shadows to cards, panels or buttons. Use a tone step or a `line` border instead.
 - **Don't** introduce a radius outside the shape scale (no 12px, 14px or 20px "just this once").
 - **Don't** use neutral greys (#808080 family); use `muted`, `body` or `roast-body`.
+- **Don't** add a "Key facts" / answer-first box (summary sentence + facts table + "example data" note) to any page. The owner removed it on 2026-11-14; that content belongs only in `/md/*` and `llms.txt`.
 - **Don't** use stock photos from other countries or generic coffee imagery. Use real photos from Urrao or a labelled placeholder.
 - **Don't** add icons in tinted rounded squares. The only icons are line icons (globe, chevron, cart, heart) and the user's coffee-bean icon.
 - **Do** name the producer, farm and town wherever a coffee appears.

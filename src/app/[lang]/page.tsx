@@ -1,4 +1,3 @@
-import { AnswerFirst } from "@/components/ai/answer-first";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import coffeeHills from "@/assets/home/hero-coffee-hills.jpg";
@@ -40,9 +39,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       />
       <Hero lang={lang} dict={dict} />
       <main id="main">
-        {/* Business lines tuck under the hero (wide:-mt-14), so the answer block goes after them */}
         <BusinessLines lang={lang} dict={dict} />
-        <AnswerFirst lang={lang} kind="home" />
         <Farmers lang={lang} dict={dict} />
         <FeaturedLots lang={lang} dict={dict} />
         {/* Roasted coffee is sold inside Colombia only for now */}

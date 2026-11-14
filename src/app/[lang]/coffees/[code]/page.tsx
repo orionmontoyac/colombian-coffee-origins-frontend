@@ -1,4 +1,3 @@
-import { AnswerFirst } from "@/components/ai/answer-first";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -144,7 +143,6 @@ export default async function LotPage({ params }: PageProps<"/[lang]/coffees/[co
       />
 
       <main id="main">
-        <AnswerFirst lang={lang} kind="lot" id={lot.code} />
         <section className="mt-6 grid items-start gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
           <LotGallery
             slides={slides}

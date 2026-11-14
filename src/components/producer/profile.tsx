@@ -38,7 +38,7 @@ function NavCount({ tone, children }: { tone: "lime" | "roast"; children: ReactN
 }
 
 /** Producer profile (Producer board): banner, in-page nav, story, green lots, roasted panel (CO), farm, CTA. */
-export function Profile({ lang, dict, producer, answer }: { lang: Locale; dict: Dictionary; producer: Producer; answer?: ReactNode }) {
+export function Profile({ lang, dict, producer }: { lang: Locale; dict: Dictionary; producer: Producer }) {
   const t = dict.producerPage;
   const l = dict.lots;
   const lots = lotsByProducer(producer.slug);
@@ -77,7 +77,6 @@ export function Profile({ lang, dict, producer, answer }: { lang: Locale; dict: 
       />
 
       <main id="main">
-        {answer}
         {/* Jump links. The roasted link only exists where the roasted panel does (Colombia). */}
         <nav
           aria-label={t.nav.label}

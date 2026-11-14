@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { SiteFooter } from "@/components/home/sections";
 import { Button } from "@/components/ui/button";
@@ -12,7 +11,7 @@ import { breadcrumbLd, JsonLd, organizationLd, websiteLd } from "./seo";
  * What visitors outside Colombia see on every /shop URL: a friendly notice (HTTP 200, noindex)
  * that points to green coffee. It belongs to the green line, so it uses the green banner.
  */
-export function ShopUnavailable({ lang, dict, answer }: { lang: Locale; dict: Dictionary; answer?: ReactNode }) {
+export function ShopUnavailable({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const n = dict.shopPage.notice;
   const home = { label: dict.shopPage.breadcrumbHome, href: href(lang, "home") };
   return (
@@ -52,7 +51,6 @@ export function ShopUnavailable({ lang, dict, answer }: { lang: Locale; dict: Di
         ]}
       />
       <main id="main" data-shop-unavailable>
-        {answer}
         <section className="rounded-xl bg-surface px-6 py-12 sm:px-12 mt-2">
           <SectionHeader title={n.panelTitle} accent={n.panelAccent} text={n.panelText} />
           <div className="mt-6 flex flex-wrap gap-3">

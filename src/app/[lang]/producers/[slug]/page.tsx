@@ -1,4 +1,3 @@
-import { AnswerFirst } from "@/components/ai/answer-first";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { fill } from "@/components/producer/format";
@@ -37,7 +36,7 @@ export default async function ProducerPage({ params }: PageProps<"/[lang]/produc
   return (
     <>
       <JsonLd data={profileJsonLd(lang, dict, producer)} />
-      <Profile lang={lang} dict={dict} producer={producer} answer={<AnswerFirst lang={lang} kind="producer" id={producer.slug} />} />
+      <Profile lang={lang} dict={dict} producer={producer} />
     </>
   );
 }

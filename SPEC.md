@@ -128,7 +128,7 @@ Validate with the checker in `scripts/factory/check-seo-ai.mjs` (parses every JS
 - `/llms-full.txt`: the full plain-Markdown content of the key pages (home, for buyers + FAQ, every lot, every producer, shop catalog, Urrao), generated at build time from dictionaries and `src/data/*` so it never drifts.
 - Markdown version of each key page at `/md/{lang}/{path}` (route handler), linked from the HTML with `<link rel="alternate" type="text/markdown">`.
 - `robots.txt` allows search and AI crawlers (Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User, GPTBot, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended, Applebot-Extended) and lists the sitemap. Training opt-in or opt-out is the owner's decision: default **allow**, recorded in DECISIONS.md.
-- Answer-first writing: each key page opens with a one-sentence answer of what it is, includes a short facts table (altitude, varieties, harvest, price unit), and dates ("Updated November 2026").
+- Answer-first content lives **only** in the Markdown versions (`/md/*`), `/llms.txt` and `/llms-full.txt`: a one-sentence answer, a short facts table (altitude, varieties, harvest, price unit) and a date ("Updated November 2026"). **Owner decision 2026-11-14: no visible "Key facts" / answer-first block (sentence + facts table + "example data" note) on any HTML page.** Do not add one back; `tests/e2e/facts.spec.ts` fails if it reappears.
 - Facts that must be identical everywhere (site, llms.txt, JSON-LD): business name, location, the two lines, currencies, Colombia-only shop, sample policy.
 
 ## 8. Performance, accessibility and quality targets

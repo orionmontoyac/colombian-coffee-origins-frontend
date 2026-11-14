@@ -1,4 +1,3 @@
-import { AnswerFirst } from "@/components/ai/answer-first";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import cherries from "@/assets/home/lot-chiroso-cherries.jpg";
@@ -97,7 +96,6 @@ export default async function CoffeesPage({ params }: PageProps<"/[lang]/coffees
         ]}
       />
       <main id="main">
-        <AnswerFirst lang={lang} kind="lots" />
         <LotsCatalog items={items} t={t} />
         <CtaPanel
           eyebrow={t.cta.eyebrow}

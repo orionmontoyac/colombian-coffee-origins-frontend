@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { SiteFooter } from "@/components/home/sections";
@@ -12,7 +11,7 @@ import { href, lotHref, producerHref } from "@/lib/routes";
 import { harvestCalendar } from "./data";
 
 /** /regions/urrao: facts table, varieties, harvest calendar, producers, lots, map placeholder. */
-export function UrraoPage({ lang, dict, answer }: { lang: Locale; dict: Dictionary; answer?: ReactNode }) {
+export function UrraoPage({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const t = dict.regionsPage.urrao;
   const card = dict.lotsPage.card;
   const urraoLots = lots.filter((l) => l.region.startsWith("Urrao"));
@@ -46,7 +45,6 @@ export function UrraoPage({ lang, dict, answer }: { lang: Locale; dict: Dictiona
       />
 
       <main id="main">
-        {answer}
         <section className="grid gap-10 px-4 pb-2 pt-14 lg:grid-cols-2">
           <div>
             <SectionHeader title={t.facts.title} accent={t.facts.accent} text={t.facts.text} />

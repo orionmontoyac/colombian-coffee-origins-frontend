@@ -36,22 +36,18 @@ test.describe("canonical facts match across llms.txt, Markdown and HTML", () => 
       await page.goto(l.home);
       const html = (await page.locator("body").innerText()).replace(/\s+/g, " ");
       const mdText = md.replace(/\s+/g, " ");
-      for (const fact of [NAME, ORIGIN, l.min, l.sample, l.fob, l.colombiaOnly]) {
-        expect(html, `html ${fact}`).toContain(fact);
-        expect(mdText, `md ${fact}`).toContain(fact);
-      }
-      const usd = mdText.match(l.range)?.[0];
-      const cop = mdText.match(l.cop)?.[0];
-      expect(usd, "USD range in markdown").toBeTruthy();
-      expect(cop, "COP range in markdown").toBeTruthy();
-      expect(html).toContain(usd!);
-      expect(html).toContain(cop!);
+      for (const fact of [NAME, ORIGIN, l.min, l.sample, l.fob, l.colombiaOnly]) expect(mdText, `md ${fact}`).toContain(fact);
+      // The visible Key facts block was removed (owner, 2026-11-14), so HTML only carries the facts its normal copy states
+      for (const fact of [NAME, l.min, l.sample, l.fob]) expect(html, `html ${fact}`).toContain(fact);
+      expect(mdText, "USD range in markdown").toMatch(l.range);
+      expect(mdText, "COP range in markdown").toMatch(l.cop);
     });
 
-    test(`${l.lang}: answer-first block is in the server-rendered HTML`, async ({ request }) => {
+    // Owner decision 2026-11-14: no visible "Key facts" block on any page (facts live in /md and llms.txt only)
+    test(`${l.lang}: no visible answer-first / Key facts block`, async ({ request }) => {
       const html = await (await request.get(l.home)).text();
-      expect(html).toContain('data-testid="answer-first"');
-      expect(html).toContain("Urrao");
+      expect(html).not.toContain('data-testid="answer-first"');
+      expect(html).not.toMatch(/aria-label="(Key facts|Datos clave)"/);
     });
   }
 
