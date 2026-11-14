@@ -17,6 +17,8 @@ const vollkorn = localFont({
 const firaSans = localFont({
   variable: "--font-fira-sans",
   preload: false,
+  // Not preloaded (home LCP) and optional so the late swap never shifts layout (CLS); see DECISIONS.md 2026-11-14
+  display: "optional",
   src: [
     { path: "../../fonts/fira-sans/FiraSans-Regular.woff2", weight: "400", style: "normal" },
     { path: "../../fonts/fira-sans/FiraSans-Italic.woff2", weight: "400", style: "italic" },
@@ -27,6 +29,7 @@ const firaSans = localFont({
 const ubuntu = localFont({
   variable: "--font-ubuntu",
   preload: false,
+  display: "optional",
   src: [
     { path: "../../fonts/ubuntu/Ubuntu-Medium.woff2", weight: "500", style: "normal" },
     { path: "../../fonts/ubuntu/Ubuntu-Bold.woff2", weight: "700", style: "normal" },

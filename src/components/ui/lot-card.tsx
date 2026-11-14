@@ -60,12 +60,12 @@ export function LotCard(p: LotCardProps) {
       </span>
       <TrustBadge level={p.trust.level} label={p.trust.label} className="absolute right-4 top-4" />
       {p.score !== null ? (
-        <span className="absolute bottom-4 left-4 inline-flex items-baseline gap-1.5 rounded-[14px] bg-primary px-3.5 py-2 text-on-primary">
+        <span className="absolute bottom-4 left-4 inline-flex items-baseline gap-1.5 rounded-sm bg-primary px-3.5 py-2 text-on-primary">
           <strong className="font-display text-2xl font-bold text-accent">{p.score}</strong>
           <span className="text-xs font-semibold tracking-[0.06em]">SCA</span>
         </span>
       ) : (
-        <span className="absolute bottom-4 left-4 rounded-[14px] bg-neutral px-3.5 py-2 text-[13px] font-semibold text-body">
+        <span className="absolute bottom-4 left-4 rounded-sm bg-neutral px-3.5 py-2 text-[13px] font-semibold text-body">
           {p.notCuppedLabel}
         </span>
       )}

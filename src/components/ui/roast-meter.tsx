@@ -33,7 +33,7 @@ export function RoastMeter({
       </span>
       <span
         role="tooltip"
-        className="pointer-events-none absolute bottom-[calc(100%+8px)] left-0 z-20 w-max max-w-[240px] rounded-[10px] bg-ink px-2 py-1.5 text-left text-body-sm text-on-primary opacity-0 shadow-none transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100"
+        className="pointer-events-none absolute bottom-[calc(100%+8px)] left-0 z-20 w-max max-w-[240px] rounded-sm bg-ink px-2 py-1.5 text-left text-body-sm text-on-primary opacity-0 shadow-none transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100"
       >
         {tip}
       </span>

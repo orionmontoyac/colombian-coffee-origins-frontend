@@ -209,8 +209,8 @@ summary:focus-visible {
 }
 .shop-banner-pattern {
   opacity: 0.38;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 42%, rgb(0 0 0 / 0.35) 58%, #000 100%), url("/images/coffe-beans-pattern.png");
-  mask-image: linear-gradient(to right, transparent 0%, transparent 42%, rgb(0 0 0 / 0.35) 58%, #000 100%), url("/images/coffe-beans-pattern.png");
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 42%, rgb(0 0 0 / 0.35) 58%, #000 100%), url("/images/coffe-beans-pattern.webp");
+  mask-image: linear-gradient(to right, transparent 0%, transparent 42%, rgb(0 0 0 / 0.35) 58%, #000 100%), url("/images/coffe-beans-pattern.webp");
 }
 .shop-banner-pattern::before {
   content: "";
@@ -218,8 +218,8 @@ summary:focus-visible {
   inset: 0;
   opacity: 0.28;
   filter: blur(10px);
-  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 50%, transparent 78%), url("/images/coffe-beans-pattern.png");
-  mask-image: linear-gradient(to right, #000 0%, #000 50%, transparent 78%), url("/images/coffe-beans-pattern.png");
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 50%, transparent 78%), url("/images/coffe-beans-pattern.webp");
+  mask-image: linear-gradient(to right, #000 0%, #000 50%, transparent 78%), url("/images/coffe-beans-pattern.webp");
 }
 
 /* Hero banner: deep green with soft lime light streaks */

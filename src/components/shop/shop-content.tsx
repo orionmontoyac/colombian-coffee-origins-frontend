@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { SiteFooter } from "@/components/home/sections";
 import { Bean } from "@/components/ui/bean";

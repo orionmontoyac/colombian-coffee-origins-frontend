@@ -20,7 +20,7 @@ export function BagMockup({
 }) {
   return (
     <div
-      className="relative flex h-[200px] w-[140px] flex-col items-center overflow-hidden rounded-b-sm rounded-t-[14px] shadow-[0_18px_30px_rgb(14_42_31/0.18)]"
+      className="relative flex h-[200px] w-[140px] flex-col items-center overflow-hidden rounded-b-sm rounded-t-md shadow-[0_18px_30px_rgb(14_42_31/0.18)]"
       style={{ background: color }}
     >
       <div className="h-6 w-full bg-black/20" />

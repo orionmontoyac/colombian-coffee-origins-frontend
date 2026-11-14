@@ -62,9 +62,9 @@ function MenuIcon() {
 }
 
 const dropdownPanel =
-  "absolute right-0 top-full z-40 mt-2 min-w-48 rounded-2xl bg-white p-2 text-left shadow-[0_16px_40px_rgb(11_61_42/0.18)]";
+  "absolute right-0 top-full z-40 mt-2 min-w-48 rounded-md border border-line bg-white p-2 text-left";
 const dropdownLink =
-  "block rounded-[12px] px-4 py-3 text-sm font-medium text-green-900 hover:bg-cream-100";
+  "block rounded-sm px-4 py-3 text-sm font-medium text-green-900 hover:bg-cream-100";
 
 function closeMenu(event: MouseEvent<HTMLAnchorElement>) {
   event.currentTarget.closest("details")?.removeAttribute("open");

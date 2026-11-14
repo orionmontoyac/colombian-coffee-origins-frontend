@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { preload } from "react-dom";
 import type { CSSProperties, ReactNode } from "react";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { SiteHeader, type NavKey } from "@/components/home/site-header";
@@ -51,6 +52,8 @@ export function SubpageBanner({
   cart,
 }: SubpageBannerProps) {
   const roasted = line === "roasted";
+  // The bean pattern is a CSS mask, so the browser finds it late; it is the LCP element on shop pages
+  if (roasted) preload("/images/coffe-beans-pattern.webp", { as: "image", fetchPriority: "high" });
   return (
     <section
       className={cx(

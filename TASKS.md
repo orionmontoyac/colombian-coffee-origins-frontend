@@ -177,10 +177,10 @@ Each page task has these **standard checkpoints** in addition to its own:
   - Verify: `npm run test:e2e`
 - [ ] **T5.2 Full review** · Owner: reviewer
   - [ ] Lighthouse mobile ≥ 90/95/95/100 and desktop ≥ 95 on every page.
-  - [ ] Token and DESIGN.md compliance (check:tokens passes; 2026-11-14 off-scale radii and the header dropdown shadow swapped for tokens, pending rebuild + e2e).
+  - [x] Token and DESIGN.md compliance (2026-11-14: check:tokens passes; off-scale radii (14px, 12px, raw 10/32px) and the header dropdown shadow swapped for scale tokens / a `line` border; full e2e 814 passed).
   - [x] Next 16 API correctness (2026-11-14: `proxy.ts` not `middleware.ts`; params/searchParams are Promises via PageProps/LayoutProps; no removed APIs; tsc clean).
   - [x] No secrets (2026-11-14: no `.env`/keys tracked; no key patterns in the repo; only env read is `NEXT_PUBLIC_SITE_URL`).
-  - [ ] First-load JS ≤ 180 KB per route.
+  - [x] First-load JS ≤ 180 KB per route (2026-11-14: 144–155 KB gzip on all 24 pages in pages.json; the 39 KB `noModule` polyfill chunk is excluded because modern browsers skip it).
   - [ ] impeccable audit + critique (if installed) with no P0/P1 left.
   - [ ] Report `artifacts/reports/review-final.md` verdict PASS.
   - Verify: `npm run verify`
