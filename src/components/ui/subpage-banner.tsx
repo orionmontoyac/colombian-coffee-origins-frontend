@@ -66,7 +66,7 @@ export function SubpageBanner({
 
       <div className="relative">
         <div className={cx("flex flex-wrap items-center justify-between gap-3", roasted && "relative isolate")}>
-          {roasted ? <div aria-hidden="true" className="absolute -inset-x-3 -inset-y-2 -z-10 rounded-md bg-roast-dark" /> : null}
+          {roasted ? <div aria-hidden="true" className="absolute -inset-x-3 -inset-y-2 -z-10 rounded-md" /> : null}
           <Breadcrumbs items={breadcrumb} label={uiLabels[lang].breadcrumb} tone={roasted ? "roast" : "dark"} />
           {backLink ? (
             <Link

@@ -62,11 +62,6 @@ export default async function RootLayout({
       className={`${vollkorn.variable} ${firaSans.variable} ${ubuntu.variable} h-full antialiased`}
     >
       <body className="min-h-full">
-        <script
-          dangerouslySetInnerHTML={{
-            __html: "setTimeout(function(){document.documentElement.classList.add('fonts-on')},400)",
-          }}
-        />
         {children}
       </body>
     </html>

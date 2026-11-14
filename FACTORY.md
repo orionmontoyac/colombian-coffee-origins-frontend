@@ -15,19 +15,6 @@ A small team of Claude Code subagents builds the Colombian Coffee Origins websit
 | `design/boards/*.dc.html` | Exported Claude Design boards (exact sizes, spacing, copy) | read only |
 | `scripts/factory/*` | `verify.sh` (all gates), `is-done.sh` (finish line), `run.sh` (unattended loop), checkers, hooks | owner |
 
-## The crew
-
-| Agent | Model | Job |
-| --- | --- | --- |
-| planner | opus | Picks next tasks, assigns file ownership, runs Verify, ticks, commits |
-| foundation-builder | sonnet | Tooling, tokens, fonts, shared components, routes, data (runs alone) |
-| page-builder | sonnet | One page per instance; up to 4 in parallel |
-| content-seo | sonnet | Metadata, keywords, hreflang, sitemap, robots, OG images, JSON-LD |
-| ai-discoverability | sonnet | llms.txt, llms-full.txt, Markdown pages, FAQ, entity facts |
-| motion | sonnet | Opening effects, view transitions, interaction states, reduced motion |
-| qa | sonnet | Playwright e2e, screenshots vs boards, axe, Colombia-only checks |
-| reviewer | opus | Lighthouse, SEO/AI checker, DESIGN.md compliance, code review, impeccable audit |
-
 ## Autonomy rules (every agent)
 
 1. Work through `TASKS.md` top to bottom. **Do not ask the owner what to do next.**
@@ -46,31 +33,7 @@ A small team of Claude Code subagents builds the Colombian Coffee Origins websit
 
 ## How to run it
 
-**One-time setup (owner, ~5 minutes)**
-```bash
-cd ~/code/colombian-coffee-origins-frontend
-git switch main && git switch -c factory/website   # its own branch, from the latest home page
-npx impeccable install --providers=claude --scope=project  # optional but recommended
-chmod +x scripts/factory/*.sh scripts/factory/hooks/*.sh
-printf '\n# website factory\n/artifacts/\n/.factory/\n' >> .gitignore
-git add -A && git commit -m "Add website factory: agents, spec, tasks, gates"
-```
-
-**Option A — interactive (you can watch and step in)**
-```bash
-FACTORY_MODE=1 claude
-```
-Then say: *"Run the factory: follow FACTORY.md as the planner, starting at Phase 0."* Approve the plan once. The Stop hook keeps the session going while TASKS.md has unchecked boxes.
-
-**Option B — unattended loop (most reliable for long runs)**
-```bash
-bash scripts/factory/run.sh                 # up to 40 fresh sessions
-MAX_ITERATIONS=10 bash scripts/factory/run.sh
-```
-Each iteration starts a fresh headless session (`claude -p`), so long runs don't degrade; state lives in TASKS.md and git. Logs go to `.factory/logs/`. Stop with Ctrl+C and rerun to continue.
-
-**Your job after that**
-Look at `artifacts/screenshots/`, `artifacts/reports/review-final.md`, the Lighthouse results in `artifacts/lighthouse/`, then fill in `ASSETS.md` and answer the **OWNER** items in `DECISIONS.md`.
+Setup, run options (interactive or `scripts/factory/run.sh`) and the owner's review steps are in `docs/factory-runbook.md`. Agent roles, models and owned files are in `.claude/agents/*.md`.
 
 ## Safety
 

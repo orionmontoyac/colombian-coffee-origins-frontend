@@ -168,18 +168,6 @@
   --breakpoint-wide: 85rem;   /* 1360px: cards tuck into the banner, three columns */
 }
 
-/* Fira and Ubuntu stay on their local fallbacks until after first paint, so those
-   files don't queue ahead of the main script. shortcut: 400ms swap; drop it if
-   body text shifts enough to miss the CLS cap. */
-html[lang] {
-  --font-fira-sans: "firaSans Fallback", Arial, sans-serif;
-  --font-ubuntu: "ubuntu Fallback", Arial, sans-serif;
-}
-html[lang].fonts-on {
-  --font-fira-sans: firaSans, "firaSans Fallback", Arial, sans-serif;
-  --font-ubuntu: ubuntu, "ubuntu Fallback", Arial, sans-serif;
-}
-
 body {
   background: var(--white);
   color: var(--ink);
@@ -358,3 +346,16 @@ dialog[data-testid="cart-drawer"][open]::backdrop { animation: backdrop-in var(-
   .lift:hover, a[class*="rounded-full"]:active, button[class*="rounded-full"]:active { transform: none; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*), ::view-transition-image-pair(*) { animation: none !important; }
 }
+
+/* Uppercase Ubuntu labels (nav pills, eyebrows): Arial capitals run about 12% wider than Ubuntu's,
+   so the generic "ubuntu Fallback" (size-adjust 104.94%) made the pills shrink when Ubuntu arrived.
+   This fallback is sized for capitals, so the swap keeps their width. */
+@font-face {
+  font-family: "ubuntu Caps Fallback";
+  src: local(Arial);
+  ascent-override: 88.81%;
+  descent-override: 18.01%;
+  line-gap-override: 2.67%;
+  size-adjust: 93.7%;
+}
+.font-label.uppercase { font-family: ubuntu, "ubuntu Caps Fallback", Arial, sans-serif; }
