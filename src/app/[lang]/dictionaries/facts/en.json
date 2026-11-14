@@ -1,0 +1,40 @@
+{
+  "eyebrow": "Colombian coffee in numbers",
+  "titleStart": "Why",
+  "titleEm": "Colombian",
+  "titleEnd": "specialty",
+  "text": "Mountains, altitude and hundreds of thousands of family farms make Colombia one of the world's great coffee origins.",
+  "items": [
+    {
+      "value": "557K+",
+      "label": "coffee-growing families",
+      "text": "Coffee is a family business: most of the country's growers are smallholders."
+    },
+    {
+      "value": "14.8M",
+      "label": "bags in the 2024 harvest",
+      "text": "Colombia's biggest crop since 1992, according to the coffee growers' federation."
+    },
+    {
+      "value": "100%",
+      "label": "Arabica",
+      "text": "Colombia grows Arabica coffee, the species behind almost all specialty coffee."
+    },
+    {
+      "value": "2",
+      "label": "harvests a year",
+      "text": "Close to the equator, many regions have a main crop plus a smaller “mitaca”."
+    },
+    {
+      "value": "1,200–2,300 m",
+      "label": "above sea level",
+      "text": "High altitude means cooler nights and slower ripening, which builds sweetness and acidity."
+    },
+    {
+      "value": "80+",
+      "label": "points = specialty",
+      "text": "On the SCA 100-point cupping scale, coffees scoring 80 or more are graded specialty."
+    }
+  ],
+  "sources": "Sources: Federación Nacional de Cafeteros (2024 harvest and grower figures, as reported by Radio Nacional and Valora Analitik); Specialty Coffee Association grading scale."
+}

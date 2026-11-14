@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Our story: why Colombian Coffee Origins exists",
+    "description": "We connect Colombian family coffee farms, starting in Urrao, Antioquia, with roasters and importers. Learn why we exist and how we work with producers."
+  },
+  "breadcrumb": "Our story",
+  "banner": {
+    "chips": [
+      "Urrao & Medellín",
+      "Colombia"
+    ],
+    "title": "Our",
+    "accent": "story",
+    "description": "Named producers, traceable lots and a direct line to the farm.",
+    "stats": {
+      "origin": "First origin",
+      "lines": "Business lines",
+      "producers": "Producers listed"
+    },
+    "originValue": "Urrao",
+    "linesValue": "2"
+  },
+  "why": {
+    "title": "Why we",
+    "accent": "exist",
+    "paragraphs": [
+      "Colombia grows some of the most admired coffee in the world, yet the families who grow it are often invisible once the coffee leaves the farm. A lot is sold by region and grade, and the people, the farm and the story disappear.",
+      "We started in Urrao, Antioquia, because we know the roads and the farms. Our goal is simple: connect family farms with the roasters, importers and coffee shops who care where their coffee comes from, and keep every producer's name attached to every lot.",
+      "This page is a draft written for the preview. The founding story will be told in the owner's own words."
+    ],
+    "photoAlt": "Coffee pickers with harvest baskets on a Colombian hillside"
+  },
+  "how": {
+    "title": "How we work",
+    "accent": "with producers",
+    "text": "Four principles guide every lot we list.",
+    "items": [
+      {
+        "title": "Named, always",
+        "text": "Each lot shows the producer, farm and town. Producers keep their own name and story."
+      },
+      {
+        "title": "Verified in steps",
+        "text": "A lot can be Registered, Farm verified or Coffee verified, and we say which."
+      },
+      {
+        "title": "Taste before you buy",
+        "text": "Buyers can request a sample of any lot before placing an order."
+      },
+      {
+        "title": "Two lines, never mixed",
+        "text": "Green coffee for roasters worldwide, and roasted bags made by the producers for homes in Colombia."
+      }
+    ],
+    "linesLink": "See how buying works"
+  },
+  "team": {
+    "title": "The",
+    "accent": "team",
+    "text": "We will introduce the people behind the platform here. Names, roles and photos are placeholders until the owner provides them.",
+    "roleLabel": "[Role]",
+    "nameLabel": "[Name]",
+    "bioLabel": "[One-line bio, written by the team member]",
+    "photoLabel": "Team member portrait",
+    "count": 3
+  },
+  "cta": {
+    "eyebrow": "Work with us",
+    "title": "Meet the people",
+    "accent": "behind the coffee.",
+    "text": "Read the producers' profiles or ask us a question. We answer every message.",
+    "primary": "Meet the producers",
+    "secondary": "Contact us"
+  }
+}

@@ -1,21 +1,39 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Sans, Raleway } from "next/font/google";
+import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import "../globals.css";
+import { site } from "@/lib/site";
 import { getDictionary, hasLocale, locales } from "./dictionaries";
 
-const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
-const instrumentSans = Instrument_Sans({
-  variable: "--font-instrument-sans",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
+// Origin Ledger type: Vollkorn for headings and numbers, Fira Sans for body,
+// Ubuntu for labels (buttons, chips, nav, eyebrows). Files live in src/fonts.
+const vollkorn = localFont({
+  variable: "--font-vollkorn",
+  src: [
+    { path: "../../fonts/vollkorn/Vollkorn-Variable.woff2", weight: "400 900", style: "normal" },
+    { path: "../../fonts/vollkorn/Vollkorn-Italic-Variable.woff2", weight: "400 900", style: "italic" },
+  ],
 });
-// Only used for the giant hero word
-const raleway = Raleway({
-  variable: "--font-raleway",
-  subsets: ["latin"],
-  weight: "800",
-  style: "italic",
+const firaSans = localFont({
+  variable: "--font-fira-sans",
+  preload: false,
+  // Not preloaded (home LCP) and optional so the late swap never shifts layout (CLS); see DECISIONS.md 2026-11-14
+  display: "optional",
+  src: [
+    { path: "../../fonts/fira-sans/FiraSans-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../../fonts/fira-sans/FiraSans-Italic.woff2", weight: "400", style: "italic" },
+    { path: "../../fonts/fira-sans/FiraSans-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../../fonts/fira-sans/FiraSans-SemiBold.woff2", weight: "600", style: "normal" },
+  ],
+});
+const ubuntu = localFont({
+  variable: "--font-ubuntu",
+  preload: false,
+  display: "optional",
+  src: [
+    { path: "../../fonts/ubuntu/Ubuntu-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../../fonts/ubuntu/Ubuntu-Bold.woff2", weight: "700", style: "normal" },
+  ],
 });
 
 export async function generateStaticParams() {
@@ -28,7 +46,7 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary();
-  return { title: dict.meta.title, description: dict.meta.description };
+  return { metadataBase: new URL(site.baseUrl), title: dict.meta.title, description: dict.meta.description };
 }
 
 export default async function RootLayout({
@@ -41,9 +59,11 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${inter.variable} ${instrumentSans.variable} ${raleway.variable} h-full antialiased`}
+      className={`${vollkorn.variable} ${firaSans.variable} ${ubuntu.variable} h-full antialiased`}
     >
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        {children}
+      </body>
     </html>
   );
 }

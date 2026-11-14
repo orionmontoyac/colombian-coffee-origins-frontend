@@ -1,0 +1,32 @@
+{
+  "eyebrow": "Available now · 2026 harvest",
+  "titleStart": "Featured lots",
+  "titleEm": "from Urrao",
+  "text": "Traceable microlots from family farms high in the Antioquia mountains. Each lot shows its producer, variety, process and cup profile, and you can request a sample before you buy.",
+  "exploreAll": "Explore all lots",
+  "note": "Example listings for this design preview.",
+  "notesLabel": "Flavor notes",
+  "altitude": "Altitude",
+  "available": "Available",
+  "harvest": "Harvest",
+  "notCupped": "Not yet cupped",
+  "requestSample": "Request sample",
+  "priceOnRequest": "Price on request",
+  "greenFob": "Green coffee, FOB",
+  "sampleAvailable": "Sample available",
+  "badges": {
+    "coffeeVerified": "Coffee verified",
+    "farmVerified": "Farm verified",
+    "registered": "Registered"
+  },
+  "processes": {
+    "washed": "Washed",
+    "honey": "Honey",
+    "natural": "Natural"
+  },
+  "legend": {
+    "coffeeVerified": "lot cupped and documented",
+    "farmVerified": "farm reviewed by our team",
+    "registered": "details from the producer"
+  }
+}

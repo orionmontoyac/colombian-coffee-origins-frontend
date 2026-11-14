@@ -1,0 +1,109 @@
+{
+  "metaTitle": "Comprar café especial en línea en Colombia",
+  "metaDescription": "Café especial tostado de fincas familiares colombianas, tostado por encargo y enviado a todo el país. Envío gratis desde $150.000.",
+  "breadcrumbHome": "Inicio",
+  "breadcrumbShop": "Tienda de café tostado",
+  "chips": {
+    "roastedBy": "Tostado por los productores",
+    "ships": "Envíos dentro de Colombia",
+    "prices": "Precios en COP"
+  },
+  "title": "Café tostado,",
+  "accent": "directo de la finca",
+  "description": "Bolsas tostadas por las familias que cultivan el café. Compra directo a sus marcas, para tu casa o tu café.",
+  "stats": {
+    "coffees": "Cafés",
+    "brands": "Marcas de productores",
+    "from": "Desde"
+  },
+  "perksLabel": "Por qué comprar aquí",
+  "perks": [
+    { "title": "Tostado por encargo", "text": "Las bolsas salen de la finca a los pocos días de tostarse" },
+    { "title": "Envío gratis", "text": "En pedidos desde $150.000" },
+    { "title": "Paga a tu manera", "text": "PSE, Nequi y tarjetas llegan pronto" },
+    { "title": "Directo a las familias", "text": "Cada venta llega a la marca del productor" }
+  ],
+  "brands": {
+    "title": "Compra por",
+    "accent": "productor",
+    "text": "Cada marca es de una familia cafetera. Ellos lo cultivan, lo tuestan y lo venden con su propio nombre.",
+    "coffeeOne": "1 café",
+    "coffeeMany": "{count} cafés",
+    "filterAria": "Ver los cafés de {brand}"
+  },
+  "catalog": {
+    "title": "Encuentra",
+    "accent": "tu bolsa",
+    "filtersLabel": "Filtrar y ordenar cafés",
+    "filters": {
+      "all": "Todos",
+      "light": "Tostión clara",
+      "medium": "Tostión media",
+      "dark": "Tostión oscura",
+      "wholeBean": "Grano entero",
+      "ground": "Molido",
+      "under50": "Menos de $50.000"
+    },
+    "brandChip": "Marca: {brand}",
+    "brandClear": "Quitar el filtro de marca",
+    "sortLabel": "Ordenar",
+    "sort": {
+      "featured": "Destacados",
+      "priceAsc": "Precio: de menor a mayor",
+      "priceDesc": "Precio: de mayor a menor",
+      "roastAsc": "Tueste: de claro a oscuro"
+    },
+    "showing": "Mostrando {shown} de {total} cafés",
+    "emptyTitle": "Ningún café coincide con estos filtros",
+    "emptyText": "Quita algún filtro para ver toda la tienda.",
+    "reset": "Ver todos los cafés",
+    "add": "Agregar",
+    "addAria": "Agregar {name} al carrito",
+    "gridLabel": "Cafés",
+    "note": "Productos y marcas de ejemplo para esta vista previa del diseño. Los precios no son ofertas reales."
+  },
+  "club": {
+    "badge": "Suscripción",
+    "name": "Club del café",
+    "title": "Una finca nueva",
+    "accent": "cada mes",
+    "text": "Una bolsa recién tostada de un productor distinto cada mes, con la historia de la familia detrás. Pausa o cancela cuando quieras.",
+    "cta": "Empezar mi suscripción",
+    "from": "Desde",
+    "price": "$59.000",
+    "perMonth": "/ mes",
+    "note": "Precio de ejemplo. Confirmamos tu primera caja por WhatsApp.",
+    "message": "¡Hola! Quiero unirme al club del café (una bolsa de un productor distinto cada mes). ¿Me cuentas cómo empezar?"
+  },
+  "quiz": {
+    "title": "¿No sabes cuál elegir?",
+    "text": "Cuéntanos cómo lo preparas, moka, filtro o espresso, y te sugerimos un café.",
+    "cta": "Encontrar mi café",
+    "message": "¡Hola! Ayúdame a elegir un café. Lo preparo en: (moka / filtro / espresso). Me gusta: (frutal / achocolatado / dulce).",
+    "imageAlt": "Dibujo de una cafetera moka"
+  },
+  "delivery": {
+    "title": "De la finca",
+    "accent": "a tu puerta",
+    "steps": [
+      { "title": "Elige tus bolsas", "text": "Mezcla cafés de distintos productores en un solo carrito y termina tu pedido por WhatsApp. El pago en línea con PSE, Nequi y tarjetas llega pronto." },
+      { "title": "Tostado y empacado", "text": "Cada productor tuesta y empaca tus bolsas en la finca y las entrega a la transportadora." },
+      { "title": "En tu puerta en 1 a 5 días", "text": "Envío de $12.000 a cualquier lugar de Colombia, gratis en pedidos desde $150.000." }
+    ],
+    "citiesTitle": "Tiempos de entrega",
+    "cities": [
+      { "city": "Medellín y Urrao", "time": "1 a 2 días hábiles" },
+      { "city": "Bogotá", "time": "2 a 3 días hábiles" },
+      { "city": "Resto de Colombia", "time": "3 a 5 días hábiles" }
+    ],
+    "citiesNote": "Tiempos de ejemplo para esta vista previa, por confirmar con la transportadora.",
+    "legal": "Derecho de retracto y PQRS: condiciones por confirmar tras la revisión legal."
+  },
+  "sell": {
+    "eyebrow": "Para productores",
+    "title": "¿Tuestas",
+    "accent": "tu propio café?",
+    "text": "Abre tu tienda aquí y vende tus bolsas a hogares y cafés de toda Colombia. Nosotros llevamos los pedidos, tú conservas tu marca.",
+    "cta": "Abrir mi tienda"
+  }
+}

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Roasted coffee shop — Colombian Coffee Origins</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400&amp;family=Ubuntu:wght@400;500;700&amp;family=Vollkorn:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF;font-family:'Fira Sans',system-ui,sans-serif;color:#3B2416}
+a{text-decoration:none;color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid #7A4A2B;outline-offset:3px}
+@media (max-width: 1320px){ .pillnav{display:none !important} .hdr-notch{width:auto !important} }
+@media (max-width: 720px){ .hdr-logo-text,.hdr-es{display:none !important} }
+.shop-card{transition:transform .2s ease, box-shadow .2s ease}
+.shop-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(59,36,22,0.12)}
+.shop-pattern{position:absolute;inset:0;pointer-events:none;background:url("/_blob/0913480f5b787c493e1bb38433b626e6") repeat left top / 420px 420px}
+.shop-pattern-fade{opacity:.55;-webkit-mask-image:linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.12) 40%, #000 100%);mask-image:linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.12) 40%, #000 100%)}
+.shop-pattern-soft{opacity:.3}
+</style>
+</helmet>
+
+<div style="width: 100%; min-height: 100vh; margin: 0; background: #FFFFFF; padding: 16px; box-sizing: border-box">
+
+  <!-- Banner: dark roast brown with the coffee-bean pattern -->
+  <section style="position: relative; background: #3B2416; border-radius: 32px; padding: 104px 48px 44px; color: #FFFFFF; overflow: hidden">
+    <div aria-hidden="true" class="shop-pattern shop-pattern-fade"></div>
+
+    <header>
+      <div class="hdr-notch" style="position: absolute; left: 0; top: 0; width: 340px; height: 56px; background: #FFFFFF; border-radius: 0 0 28px 0; padding: 0 24px 0 4px; display: flex; align-items: center; box-sizing: border-box; z-index: 2">
+        <a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; font-family: 'Vollkorn', Georgia, serif; font-weight: 600; font-size: 20px; color: #0B3D2A; white-space: nowrap">
+          <svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="16" rx="9" ry="13" transform="rotate(35 16 16)" fill="#0B3D2A"></ellipse><path d="M10 24 C 14 18, 18 14, 22 8" stroke="#6FD13B" stroke-width="2.4" fill="none" stroke-linecap="round"></path></svg>
+          <span class="hdr-logo-text">Colombian Coffee Origins</span>
+        </a>
+        <div aria-hidden="true" style="position: absolute; left: 100%; top: 0; width: 28px; height: 28px; background: radial-gradient(circle at 100% 100%, transparent 27.5px, #FFFFFF 28px)"></div>
+        <div aria-hidden="true" style="position: absolute; left: 0; top: 100%; width: 28px; height: 28px; background: radial-gradient(circle at 100% 100%, transparent 27.5px, #FFFFFF 28px)"></div>
+      </div>
+      <nav class="pillnav" aria-label="Main" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: 56px; display: flex; align-items: center; gap: 6px; z-index: 2">
+        <a href="Main.dc.html" style="background: rgba(255,255,255,0.12); color: #FFFFFF; font-weight: 500; border-radius: 999px; padding: 10px 14px; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; font-family: 'Ubuntu', sans-serif">Home</a>
+        <a href="Lots.dc.html" style="background: rgba(255,255,255,0.12); color: #FFFFFF; font-weight: 500; border-radius: 999px; padding: 10px 14px; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; font-family: 'Ubuntu', sans-serif">Green Coffee</a>
+        <a href="Shop.dc.html" aria-current="page" style="background: #FFFFFF; color: #3B2416; font-weight: 700; border-radius: 999px; padding: 10px 14px; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; font-family: 'Ubuntu', sans-serif">Shop <span style="font-size: 9px; font-weight: 700; background: #7A4A2B; color: #FFFFFF; padding: 2px 6px; border-radius: 999px; letter-spacing: 0.04em">CO</span></a>
+        <a href="Producer.dc.html" style="background: rgba(255,255,255,0.12); color: #FFFFFF; font-weight: 500; border-radius: 999px; padding: 10px 14px; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; font-family: 'Ubuntu', sans-serif">Producers</a>
+        <a href="#" style="background: rgba(255,255,255,0.12); color: #FFFFFF; font-weight: 500; border-radius: 999px; padding: 10px 14px; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; font-family: 'Ubuntu', sans-serif">Our Story</a>
+      </nav>
+      <div class="hdr-notch" style="position: absolute; right: 0; top: 0; width: 340px; height: 56px; background: #FFFFFF; border-radius: 0 0 0 28px; padding: 0 4px 0 24px; display: flex; align-items: center; justify-content: flex-end; gap: 14px; box-sizing: border-box; z-index: 2">
+        <a href="#" aria-label="Language: English. Choose a language" class="hdr-es" style="display: inline-flex; align-items: center; gap: 6px; min-height: 46px; box-sizing: border-box; padding: 10px 14px; border: 1.5px solid #CFE0D3; border-radius: 999px; font-size: 14px; font-weight: 500; color: #0B3D2A; white-space: nowrap; font-family: 'Ubuntu', sans-serif"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B3D2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9s1.3-6.3 3.8-9z"></path></svg>EN<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#0B3D2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"></path></svg></a>
+        <a href="#" aria-label="Cart, 2 items, COP 116,000" style="display: inline-flex; align-items: center; gap: 10px; box-sizing: border-box; background: #7A4A2B; color: #FFFFFF; border-radius: 999px; padding: 13px 22px; font-size: 14px; font-weight: 500; white-space: nowrap; font-family: 'Ubuntu', sans-serif">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8z"></path><path d="M9 8V6.5a3 3 0 0 1 6 0V8"></path></svg>
+          Cart <span style="background: #FFFFFF; color: #7A4A2B; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px">2</span>
+        </a>
+        <div aria-hidden="true" style="position: absolute; right: 100%; top: 0; width: 28px; height: 28px; background: radial-gradient(circle at 0 100%, transparent 27.5px, #FFFFFF 28px)"></div>
+        <div aria-hidden="true" style="position: absolute; right: 0; top: 100%; width: 28px; height: 28px; background: radial-gradient(circle at 0 100%, transparent 27.5px, #FFFFFF 28px)"></div>
+      </div>
+    </header>
+
+    <div style="position: relative">
+      <nav aria-label="Breadcrumb" style="font-size: 15px; color: #C9A98A"><a href="Main.dc.html" style="color: #EAD9C6">Home</a> <span aria-hidden="true">›</span> <span style="color: #FFFFFF">Roasted coffee shop</span></nav>
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px 40px; flex-wrap: nowrap; margin-top: 18px">
+        <div style="flex: 1 1 auto; min-width: 0; max-width: 760px">
+          <div style="display: flex; flex-wrap: wrap; gap: 8px">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; background: #E9B57D; color: #3B2416; padding: 6px 12px; border-radius: 999px; font-family: 'Ubuntu', sans-serif">
+              <img src="/_blob/c580fea114423169fde9b0e68bdcb9ea" alt="" style="display: block; width: 12px; height: 16px">
+              Roasted by the producers</span>
+            <span style="font-size: 13px; font-weight: 500; background: rgba(255,255,255,0.1); color: #FFFFFF; border: 1px solid rgba(234,217,198,0.35); padding: 6px 12px; border-radius: 999px; font-family: 'Ubuntu', sans-serif">Ships within Colombia</span>
+            <span style="font-size: 13px; font-weight: 500; background: rgba(255,255,255,0.1); color: #FFFFFF; border: 1px solid rgba(234,217,198,0.35); padding: 6px 12px; border-radius: 999px; font-family: 'Ubuntu', sans-serif">Prices in COP</span>
+          </div>
+          <h1 style="margin: 14px 0 0; font-family: 'Vollkorn', Georgia, serif; font-size: 64px; line-height: 1.02; font-weight: 600; letter-spacing: -0.02em">Roasted coffee, <span style="font-style: italic; font-weight: 400; color: #E9B57D">straight from the farm</span></h1>
+          <p style="margin: 14px 0 0; font-size: 19px; line-height: 1.5; color: #EAD9C6">Bags roasted by the families who grow the coffee. Buy directly from their brands, for your home or your café.</p>
+        </div>
+        <dl style="margin: 0; flex: none; display: flex; gap: 12px; flex-wrap: nowrap">
+          <div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(234,217,198,0.22); border-radius: 20px; padding: 14px 20px; min-width: 120px"><dt style="font-size: 13px; color: #C9A98A">Coffees</dt><dd style="margin: 4px 0 0; font-family: 'Vollkorn', Georgia, serif; font-size: 28px; font-weight: 600; color: #E9B57D">24</dd></div>
+          <div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(234,217,198,0.22); border-radius: 20px; padding: 14px 20px; min-width: 120px"><dt style="font-size: 13px; color: #C9A98A">Producer brands</dt><dd style="margin: 4px 0 0; font-family: 'Vollkorn', Georgia, serif; font-size: 28px; font-weight: 600">8</dd></div>
+          <div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(234,217,198,0.22); border-radius: 20px; padding: 14px 20px; min-width: 120px"><dt style="font-size: 13px; color: #C9A98A">From</dt><dd style="margin: 4px 0 0; font-family: 'Vollkorn', Georgia, serif; font-size: 28px; font-weight: 600">COP 38,000</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promise strip -->
+  
+
+  <!-- Shop by producer -->
+  
+
+  <!-- Catalog -->
+  <section id="catalog" style="padding: 56px 0 8px">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px 40px; flex-wrap: wrap">
+      <div>
+        <p style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #7A4A2B; font-family: 'Ubuntu', sans-serif">All coffees</p>
+        <h2 style="margin: 8px 0 0; font-family: 'Vollkorn', Georgia, serif; font-size: 44px; line-height: 1.05; font-weight: 600; color: #3B2416">Find <span style="font-style: italic; font-weight: 400">your bag</span></h2>
+      </div>
+      <p style="margin: 0; font-size: 15px; color: #5A4636">Showing <strong style="color: #3B2416">8 of 24</strong> coffees</p>
+    </div>
+
+    <!-- Filter bar -->
+    <div role="search" style="position: sticky; top: 16px; z-index: 5; margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; background: #F5ECE2; border-radius: 24px; padding: 12px">
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: 500; background: #7A4A2B; color: #FFFFFF; font-family: 'Ubuntu', sans-serif">All</a>
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: 500; background: #FFFFFF; color: #3B2416; border: 1px solid #E5D3C1; font-family: 'Ubuntu', sans-serif">Light roast</a>
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: 500; background: #FFFFFF; color: #3B2416; border: 1px solid #E5D3C1; font-family: 'Ubuntu', sans-serif">Medium roast</a>
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: 500; background: #FFFFFF; color: #3B2416; border: 1px solid #E5D3C1; font-family: 'Ubuntu', sans-serif">Dark roast</a>
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: 500; background: #FFFFFF; color: #3B2416; border: 1px solid #E5D3C1; font-family: 'Ubuntu', sans-serif">Whole bean</a>
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: 500; background: #FFFFFF; color: #3B2416; border: 1px solid #E5D3C1; font-family: 'Ubuntu', sans-serif">Ground</a>
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: 500; background: #FFFFFF; color: #3B2416; border: 1px solid #E5D3C1; font-family: 'Ubuntu', sans-serif">Under COP 50,000</a>
+      </div>
+      <a href="#" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; box-sizing: border-box; padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: 500; background: #FFFFFF; color: #3B2416; border: 1px solid #E5D3C1; font-family: 'Ubuntu', sans-serif">Sort: Featured <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#3B2416" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"></path></svg></a>
+    </div>
+
+    <!-- Products -->
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 20px">
+      <sc-for list="{{products}}" as="p" hint-placeholder-count="8">
+        <article class="shop-card" style="background: #FFFFFF; border: 1px solid #EFE2D4; border-radius: 28px; overflow: hidden; display: flex; flex-direction: column">
+          <div style="position: relative; height: 290px; background: {{p.stage}}; display: flex; align-items: center; justify-content: center">
+            <span style="position: absolute; top: 14px; left: 14px; font-size: 12px; font-weight: 500; background: {{p.tagBg}}; color: {{p.tagFg}}; padding: 6px 11px; border-radius: 999px; font-family: 'Ubuntu', sans-serif">{{p.tag}}</span>
+            <button type="button" aria-label="Save {{p.name}}" style="position: absolute; top: 10px; right: 10px; width: 44px; height: 44px; border-radius: 999px; border: 0; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A4A2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg></button>
+            <!-- Bag with the bean logo on its label -->
+            <div aria-hidden="true" style="position: relative; width: 148px; height: 210px; border-radius: 14px 14px 10px 10px; background: {{p.bag}}; box-shadow: 0 20px 32px rgba(59,36,22,0.2); overflow: hidden; display: flex; flex-direction: column; align-items: center">
+              <div style="width: 100%; height: 24px; background: rgba(0,0,0,0.18)"></div>
+              <div style="width: 10px; height: 10px; border-radius: 999px; background: rgba(255,255,255,0.35); margin-top: 10px"></div>
+              <div style="margin-top: 12px; width: 112px; border-radius: 10px; background: #FFFFFF; padding: 10px 8px 12px; box-sizing: border-box; text-align: center">
+                <img src="/_blob/c580fea114423169fde9b0e68bdcb9ea" alt="" style="display: block; margin: 0 auto; width: 17px; height: 22px">
+                <p style="margin: 4px 0 0; font-family: 'Vollkorn', Georgia, serif; font-size: 13px; font-weight: 700; line-height: 1.1; color: #3B2416">{{p.labelBrand}}</p>
+                <p style="margin: 5px 0 0; font-size: 10px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #7A4A2B; font-family: 'Ubuntu', sans-serif">{{p.roast}}</p>
+                <p style="margin: 3px 0 0; font-size: 10px; color: #5A4636">{{p.size}}</p>
+              </div>
+            </div>
+          </div>
+          <div style="padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+            <p style="margin: 0; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #7A4A2B; font-family: 'Ubuntu', sans-serif">{{p.brand}}</p>
+            <h3 style="margin: 0; font-family: 'Vollkorn', Georgia, serif; font-size: 23px; line-height: 1.2; font-weight: 600; color: #3B2416">{{p.name}}</h3>
+            <p style="margin: 0; font-size: 14px; color: #5A4636">{{p.meta}}</p>
+            <p style="margin: 0; font-size: 14px; color: #5A4636; font-style: italic">{{p.notes}}</p>
+            <!-- Roast meter: five beans -->
+            <div style="display: flex; align-items: center; gap: 10px">
+              <span style="font-size: 12px; color: #5A4636; min-width: 40px">Roast</span>
+              <span role="img" aria-label="{{p.roast}}, level {{p.level}} of 5" style="display: inline-flex; gap: 4px">
+                <sc-for list="{{p.beans}}" as="bn" hint-placeholder-count="5">
+                  <img src="/_blob/c580fea114423169fde9b0e68bdcb9ea" alt="" style="display: block; width: 13px; height: 17px; opacity: {{bn.op}}">
+                </sc-for>
+              </span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 14px; border-top: 1px solid #EFE2D4">
+              <div>
+                <p style="margin: 0; font-family: 'Vollkorn', Georgia, serif; font-size: 22px; font-weight: 600; color: #3B2416">{{p.price}}</p>
+                <p style="margin: 2px 0 0; font-size: 12px; color: #5A4636">{{p.perKg}}</p>
+              </div>
+              <a href="#" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; box-sizing: border-box; background: #7A4A2B; color: #FFFFFF; border-radius: 999px; padding: 12px 18px; font-size: 15px; font-weight: 500; white-space: nowrap; font-family: 'Ubuntu', sans-serif">Add <span aria-hidden="true" style="font-size: 18px; line-height: 1">+</span></a>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 28px">
+      <a href="#" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; box-sizing: border-box; border: 1.5px solid #7A4A2B; border-radius: 999px; padding: 16px 32px; font-size: 17px; font-weight: 500; color: #7A4A2B; font-family: 'Ubuntu', sans-serif">Show 16 more coffees</a>
+    </div>
+  </section><section style="padding: 56px 0 8px">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px 40px; flex-wrap: wrap">
+      <div>
+        <p style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #7A4A2B; font-family: 'Ubuntu', sans-serif">Producer brands</p>
+        <h2 style="margin: 8px 0 0; font-family: 'Vollkorn', Georgia, serif; font-size: 44px; line-height: 1.05; font-weight: 600; color: #3B2416">Shop by <span style="font-style: italic; font-weight: 400">producer</span></h2>
+      </div>
+      <p style="margin: 0; max-width: 420px; font-size: 17px; line-height: 1.5; color: #5A4636">Every brand here belongs to a coffee family. They grow it, roast it and sell it under their own name.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; margin-top: 24px">
+      <sc-for list="{{brands}}" as="b" hint-placeholder-count="6">
+        <a href="Producer.dc.html" class="shop-card" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; border: 1px solid #E5D3C1; border-radius: 24px; padding: 22px 14px 18px; background: #FFFFFF">
+          <span aria-hidden="true" style="width: 72px; height: 72px; border-radius: 999px; background: {{b.color}}; display: flex; align-items: center; justify-content: center">
+            <img src="/_blob/9b140b4394f13f0fb4e8aecc36a8ec2b" alt="" style="display: block; width: 27px; height: 36px">
+          </span>
+          <span style="font-family: 'Vollkorn', Georgia, serif; font-size: 17px; font-weight: 600; line-height: 1.2; color: #3B2416">{{b.name}}</span>
+          <span style="font-size: 13px; color: #5A4636">{{b.place}}</span>
+          <span style="font-size: 12px; font-weight: 500; color: #7A4A2B; background: #F5ECE2; padding: 4px 10px; border-radius: 999px; font-family: 'Ubuntu', sans-serif">{{b.count}}</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Subscription -->
+  <section style="margin-top: 56px; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 16px">
+    <div style="position: relative; overflow: hidden; border-radius: 32px; background: #7A4A2B; color: #FFFFFF; padding: 48px; display: flex; flex-direction: column; justify-content: center; min-height: 360px; box-sizing: border-box">
+      <div aria-hidden="true" class="shop-pattern shop-pattern-soft"></div>
+      <div style="position: relative; max-width: 540px">
+        <p style="margin: 0; display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #F5D9B8; font-family: 'Ubuntu', sans-serif"><span style="background: #E9B57D; color: #3B2416; padding: 4px 10px; border-radius: 999px; letter-spacing: 0.04em">Subscription</span>Coffee club</p>
+        <h2 style="margin: 12px 0 0; font-family: 'Vollkorn', Georgia, serif; font-size: 48px; line-height: 1.05; font-weight: 600">A new farm <span style="font-style: italic; font-weight: 400; color: #F5D9B8">every month</span></h2>
+        <p style="margin: 14px 0 0; font-size: 18px; line-height: 1.55; color: #F5E6D5">One freshly roasted bag from a different producer each month, with the story of the family behind it. Pause or cancel anytime.</p>
+        <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 24px">
+          <a href="#" style="display: inline-flex; align-items: center; min-height: 56px; box-sizing: border-box; background: #FFFFFF; color: #3B2416; border-radius: 999px; padding: 16px 28px; font-size: 17px; font-weight: 500; font-family: 'Ubuntu', sans-serif">Start my subscription</a>
+          <p style="margin: 0; font-size: 15px; color: #F5E6D5">From <strong style="font-family: 'Vollkorn', Georgia, serif; font-size: 24px; color: #FFFFFF">COP 59,000</strong> / month</p>
+        </div>
+      </div>
+    </div>
+    <div style="border-radius: 32px; background: #F5ECE2; padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 14px">
+      <div aria-hidden="true" style="width: 150px; height: 190px; background: url(&quot;/_blob/2a9e6e6c1f4aa0d0aec70348b9a4cbc7&quot;) center / contain no-repeat"></div>
+      <h3 style="margin: 0; font-family: 'Vollkorn', Georgia, serif; font-size: 26px; font-weight: 600; color: #3B2416">Not sure which to pick?</h3>
+      <p style="margin: 0; max-width: 320px; font-size: 16px; line-height: 1.5; color: #5A4636">Tell us how you brew, moka pot, filter or espresso, and we'll suggest a coffee.</p>
+      <a href="#" style="display: inline-flex; align-items: center; min-height: 52px; box-sizing: border-box; border: 1.5px solid #7A4A2B; color: #7A4A2B; border-radius: 999px; padding: 14px 24px; font-size: 16px; font-weight: 500; font-family: 'Ubuntu', sans-serif">Find my coffee</a>
+    </div>
+  </section>
+
+  <!-- Delivery & payment -->
+  <section style="padding: 56px 0 8px">
+    <p style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #7A4A2B; font-family: 'Ubuntu', sans-serif">Delivery &amp; payment</p>
+    <h2 style="margin: 8px 0 0; font-family: 'Vollkorn', Georgia, serif; font-size: 44px; line-height: 1.05; font-weight: 600; color: #3B2416">From the farm <span style="font-style: italic; font-weight: 400">to your door</span></h2>
+    <ol style="list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+      <sc-for list="{{steps}}" as="s" hint-placeholder-count="3">
+        <li style="border: 1px solid #E5D3C1; border-radius: 28px; padding: 28px">
+          <span style="display: inline-flex; width: 44px; height: 44px; border-radius: 999px; background: #7A4A2B; color: #FFFFFF; align-items: center; justify-content: center; font-family: 'Vollkorn', Georgia, serif; font-size: 20px; font-weight: 600">{{s.n}}</span>
+          <h3 style="margin: 16px 0 0; font-family: 'Vollkorn', Georgia, serif; font-size: 24px; font-weight: 600; color: #3B2416">{{s.title}}</h3>
+          <p style="margin: 8px 0 0; font-size: 16px; line-height: 1.55; color: #5A4636">{{s.text}}</p>
+        </li>
+      </sc-for>
+    </ol>
+  </section>
+
+  <!-- Sell with us -->
+  <section style="margin-top: 48px; border-radius: 32px; background: #3B2416; color: #FFFFFF; padding: 44px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px 40px; flex-wrap: wrap">
+    <div style="max-width: 680px">
+      <p style="margin: 0; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #E9B57D; font-family: 'Ubuntu', sans-serif">For producers</p>
+      <h2 style="margin: 8px 0 0; font-family: 'Vollkorn', Georgia, serif; font-size: 40px; line-height: 1.1; font-weight: 600">Do you roast <span style="font-style: italic; font-weight: 400; color: #E9B57D">your own coffee?</span></h2>
+      <p style="margin: 12px 0 0; font-size: 18px; line-height: 1.5; color: #EAD9C6">Open your shop here and sell your bags to homes and cafés across Colombia. We handle payments and orders, you keep your brand.</p>
+    </div>
+    <a href="#" style="display: inline-flex; align-items: center; gap: 12px; min-height: 60px; box-sizing: border-box; background: #E9B57D; color: #3B2416; border-radius: 999px; padding: 18px 32px; font-size: 18px; font-weight: 600; white-space: nowrap">Open my shop <span aria-hidden="true">→</span></a>
+  </section>
+
+  
+
+  <!-- Footer (same as home) -->
+  <footer style="margin-top: 24px; border-radius: 32px; background: #0B3D2A; color: #FFFFFF; padding: 64px 48px 28px; overflow: hidden">
+    <div style="padding-bottom: 48px; border-bottom: 1px solid rgba(214,230,219,0.2); max-width: 560px">
+      <a href="Main.dc.html" style="display: inline-flex; align-items: center; gap: 14px; font-family: 'Vollkorn', Georgia, serif; font-size: 30px; font-weight: 600; color: #FFFFFF"><svg width="48" height="48" viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="16" rx="9" ry="13" transform="rotate(35 16 16)" fill="#6FD13B"></ellipse><path d="M10 24 C 14 18, 18 14, 22 8" stroke="#0B3D2A" stroke-width="2.4" fill="none" stroke-linecap="round"></path></svg>Colombian Coffee Origins</a>
+      <p style="margin: 18px 0 0; font-size: 18px; line-height: 1.6; color: #D6E6DB">Specialty coffee sourced directly from Colombian family farms, starting in Urrao, Antioquia. Traceable lots, samples before you buy, export support.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 1.2fr); gap: 32px; padding: 48px 0">
+      <sc-for list="{{footerCols}}" as="col" hint-placeholder-count="4">
+        <nav aria-label="{{col.title}}" style="min-width: 0">
+          <h3 style="margin: 0 0 12px; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #6FD13B; font-family: 'Ubuntu', sans-serif">{{col.title}}</h3>
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px">
+            <sc-for list="{{col.links}}" as="l" hint-placeholder-count="3">
+              <li><a href="#" style="display: inline-block; padding: 6px 0; font-size: 16px; color: #D6E6DB">{{l.label}}</a></li>
+            </sc-for>
+          </ul>
+        </nav>
+      </sc-for>
+      <div>
+        <h3 style="margin: 0 0 12px; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #6FD13B; font-family: 'Ubuntu', sans-serif">Get in touch</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #D6E6DB">Urrao &amp; Medellín, Antioquia<br>Colombia</p>
+        <a href="#" style="display: inline-block; margin-top: 10px; font-size: 16px; font-weight: 600; color: #FFFFFF; padding: 4px 0">[hello@yourdomain.com]</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-top: 24px; border-top: 1px solid rgba(214,230,219,0.2); font-size: 14px; color: #9FC4AE">
+      <span>© 2026 Colombian Coffee Origins. All rights reserved.</span>
+      <nav aria-label="Legal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+        <a href="#" style="padding: 8px 0; color: #9FC4AE">Privacy</a>
+        <a href="#" style="padding: 8px 0; color: #9FC4AE">Terms</a>
+        <a href="#" style="padding: 6px 12px; border: 1px solid rgba(214,230,219,0.35); border-radius: 999px; color: #FFFFFF; font-weight: 600">EN · ES</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+</x-dc>
+
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const n = (a) => a.map((label) => ({ label }));
+    const cop = (v) => 'COP ' + v.toLocaleString('en-US');
+    const beans = (level) => [1, 2, 3, 4, 5].map((i) => ({ op: i <= level ? 1 : 0.22 }));
+    const product = (o) => Object.assign(o, {
+      price: cop(o.cop),
+      perKg: cop(Math.round(o.cop / o.grams * 1000 / 100) * 100) + ' / kg',
+      beans: beans(o.level)
+    });
+    return {
+      perks: [
+        { title: 'Roasted to order', text: 'Bags leave the farm within days of roasting' },
+        { title: 'Free shipping', text: 'On orders over COP 150,000' },
+        { title: 'Pay your way', text: 'PSE, Nequi, cards or cash on delivery' },
+        { title: 'Direct to families', text: 'Each sale goes to the producer brand' }
+      ],
+      brands: [
+        { name: 'Café El Mirador', place: 'Urrao', count: '3 coffees', color: '#7A4A2B' },
+        { name: 'La Esperanza', place: 'Urrao', count: '2 coffees', color: '#0B3D2A' },
+        { name: 'Los Naranjos', place: 'Urrao', count: '4 coffees', color: '#C9877A' },
+        { name: 'Alto Penderisco', place: 'Urrao', count: '3 coffees', color: '#3E5448' },
+        { name: 'Finca La Cumbre', place: 'Urrao', count: '2 coffees', color: '#B0763F' },
+        { name: 'Doña Gloria', place: 'Urrao', count: '3 coffees', color: '#5B3A6B' }
+      ],
+      products: [
+        product({ brand: 'Café El Mirador', labelBrand: 'El Mirador', name: 'Chiroso Washed', meta: 'Whole bean · 340 g', notes: 'Jasmine, white peach, panela', roast: 'Light roast', level: 1, size: '340 g', grams: 340, cop: 68000, bag: '#7A4A2B', stage: '#EFE6D6', tag: 'Best seller', tagBg: '#7A4A2B', tagFg: '#FFFFFF' }),
+        product({ brand: 'Tostado La Esperanza', labelBrand: 'La Esperanza', name: 'Castillo Honey', meta: 'Whole bean · 340 g', notes: 'Red apple, caramel, cacao', roast: 'Medium roast', level: 3, size: '340 g', grams: 340, cop: 48000, bag: '#0B3D2A', stage: '#E3EDD2', tag: 'Best value', tagBg: '#3B2416', tagFg: '#FFFFFF' }),
+        product({ brand: 'Los Naranjos Coffee', labelBrand: 'Los Naranjos', name: 'Pink Bourbon Natural', meta: 'Whole bean · 250 g', notes: 'Strawberry, hibiscus, red wine', roast: 'Light roast', level: 2, size: '250 g', grams: 250, cop: 62000, bag: '#C9877A', stage: '#F1DFCF', tag: 'Limited', tagBg: '#FFFFFF', tagFg: '#7A4A2B' }),
+        product({ brand: 'Café Alto Penderisco', labelBrand: 'Alto Penderisco', name: 'Caturra House Blend', meta: 'Ground · 500 g', notes: 'Chocolate, panela, nuts', roast: 'Medium-dark', level: 4, size: '500 g', grams: 500, cop: 42000, bag: '#3E5448', stage: '#E7E3D3', tag: 'Ground', tagBg: '#FFFFFF', tagFg: '#3B2416' }),
+        product({ brand: 'Finca La Cumbre', labelBrand: 'La Cumbre', name: 'Geisha Washed', meta: 'Whole bean · 250 g', notes: 'Bergamot, honeysuckle, lime', roast: 'Light roast', level: 1, size: '250 g', grams: 250, cop: 95000, bag: '#B0763F', stage: '#F3E3CC', tag: 'Micro-lot', tagBg: '#3B2416', tagFg: '#FFFFFF' }),
+        product({ brand: 'Café Santa Isabel', labelBrand: 'Santa Isabel', name: 'Castillo Natural', meta: 'Whole bean · 340 g', notes: 'Blackberry, cocoa, molasses', roast: 'Medium roast', level: 3, size: '340 g', grams: 340, cop: 46000, bag: '#8A3B2E', stage: '#F0DAD2', tag: 'New', tagBg: '#E9B57D', tagFg: '#3B2416' }),
+        product({ brand: 'Doña Gloria Café', labelBrand: 'Doña Gloria', name: 'Tabi Washed', meta: 'Whole bean · 454 g', notes: 'Orange, brown sugar, almond', roast: 'Medium roast', level: 3, size: '454 g', grams: 454, cop: 54000, bag: '#5B3A6B', stage: '#E9E0EC', tag: 'Family farm', tagBg: '#FFFFFF', tagFg: '#3B2416' }),
+        product({ brand: 'Café Alto Penderisco', labelBrand: 'Alto Penderisco', name: 'Espresso Blend', meta: 'Ground · 500 g', notes: 'Dark chocolate, toasted nuts', roast: 'Dark roast', level: 5, size: '500 g', grams: 500, cop: 38000, bag: '#2B1A10', stage: '#E5DCD2', tag: 'For espresso', tagBg: '#FFFFFF', tagFg: '#3B2416' })
+      ],
+      steps: [
+        { n: '1', title: 'Order your bags', text: 'Mix coffees from different producers in one cart. You pay in pesos with PSE, Nequi, card or cash on delivery.' },
+        { n: '2', title: 'Roasted and packed', text: 'Each producer roasts and packs your bags at the farm, then hands them to the courier.' },
+        { n: '3', title: 'At your door in 2–4 days', text: 'Flat shipping of COP 12,000 anywhere in Colombia, free on orders over COP 150,000.' }
+      ],
+      footerCols: [
+        { title: 'Explore', links: n(['Green coffee lots', 'Producers', 'Regions', 'Roasted coffee shop']) },
+        { title: 'For buyers', links: n(['How sourcing works', 'Request samples', 'Sourcing request', 'Shipping & export']) },
+        { title: 'For producers', links: n(['Join the platform', 'Sell green coffee', 'Sell roasted coffee']) },
+        { title: 'Company', links: n(['Our story', 'Contact', 'Journal']) }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

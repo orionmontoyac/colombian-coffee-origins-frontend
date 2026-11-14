@@ -1,0 +1,148 @@
+{
+  "common": {
+    "draftChip": "Draft for legal review",
+    "draftNote": "Draft for legal review. This text is structured placeholder copy and is not legal advice. A Colombian lawyer must review and complete every bracketed item before launch.",
+    "stats": {
+      "status": "Status",
+      "updated": "Last updated",
+      "law": "Governing law"
+    },
+    "statusValue": "Draft",
+    "lawValue": "Colombia",
+    "updatedValue": "13 Nov 2026",
+    "tocLabel": "On this page",
+    "pqrsTitle": "PQRS contact",
+    "pqrsText": "Petitions, complaints, claims and suggestions (PQRS) about the roasted coffee shop, privacy or these documents go to {pqrs}. We reply within [X business days: lawyer to confirm].",
+    "pqrsLink": "Email PQRS",
+    "entityLine": "{entity} · NIT {nit}",
+    "related": {
+      "privacy": "Privacy policy",
+      "terms": "Terms of sale"
+    },
+    "relatedLabel": "Other legal pages"
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy policy: how we handle your data (draft)",
+      "description": "How Colombian Coffee Origins collects and uses personal data from buyers and shop customers, and how to exercise your rights. Draft for legal review."
+    },
+    "breadcrumb": "Privacy",
+    "banner": {
+      "title": "Privacy",
+      "accent": "policy",
+      "description": "What we collect, why, and how you can control it."
+    },
+    "sections": [
+      {
+        "title": "Who is responsible",
+        "paragraphs": [
+          "{entity}, NIT {nit}, operates Colombian Coffee Origins from Urrao and Medellín, Antioquia, Colombia, and is the data controller (responsable del tratamiento). [Registered address to add.]"
+        ]
+      },
+      {
+        "title": "What we collect",
+        "paragraphs": [
+          "When you use our forms we collect the data you enter: name, email, phone or WhatsApp number, company, country and your message. When you buy from the roasted coffee shop we also collect delivery address and order details. Our servers log basic technical data such as the pages you visit."
+        ]
+      },
+      {
+        "title": "Why we use it",
+        "paragraphs": [
+          "We use your data to answer your requests, send samples, prepare quotes, process and deliver shop orders, meet legal and tax obligations and keep the site secure. [The legal basis for each purpose is to be confirmed by the lawyer.]"
+        ]
+      },
+      {
+        "title": "Your rights",
+        "paragraphs": [
+          "Under Colombian data protection law (Ley 1581 de 2012 and its regulations, to be confirmed) you can know, update and correct your data, ask us to delete it, revoke your consent and complain to the Superintendencia de Industria y Comercio (SIC). To exercise a right, write to {pqrs} and tell us what you need."
+        ]
+      },
+      {
+        "title": "Who we share it with",
+        "paragraphs": [
+          "We share data only with providers that help us run the service, such as hosting, email, payments and couriers, and with producers when it is needed to fulfil your sample or order. [List of providers and international transfers to add.]"
+        ]
+      },
+      {
+        "title": "How long we keep it",
+        "paragraphs": [
+          "[Retention periods to define by data type.]"
+        ]
+      },
+      {
+        "title": "Cookies and analytics",
+        "paragraphs": [
+          "[To complete once cookies and analytics tools are chosen. Describe each cookie, its purpose and how to refuse it.]"
+        ]
+      },
+      {
+        "title": "Changes",
+        "paragraphs": [
+          "We will publish changes on this page and update the date at the top. [Notification process to define.]"
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "meta": {
+      "title": "Terms and conditions of sale (draft)",
+      "description": "Terms for green coffee orders and for the Colombia-only roasted coffee shop, including derecho de retracto and how to send a PQRS. Draft for legal review."
+    },
+    "breadcrumb": "Terms",
+    "banner": {
+      "title": "Terms",
+      "accent": "of sale",
+      "description": "How orders, shipping, withdrawal and complaints work."
+    },
+    "sections": [
+      {
+        "title": "About these terms",
+        "paragraphs": [
+          "These terms govern the use of the Colombian Coffee Origins website and purchases made through it. {entity}, NIT {nit}, sells through the platform together with the producers listed on it."
+        ]
+      },
+      {
+        "title": "Two business lines",
+        "paragraphs": [
+          "Green coffee lots are sold to roasters, importers and coffee shops worldwide, priced in USD per kilogram. The roasted coffee shop sells bags roasted by the producers to buyers in Colombia only, priced in Colombian pesos (COP)."
+        ]
+      },
+      {
+        "title": "Green coffee orders",
+        "paragraphs": [
+          "Samples and orders are agreed in writing. Each quote states price, FOB terms, quantity, packaging, payment terms, export documents and expected dates. [Payment terms, minimum order and lead times to define.]"
+        ]
+      },
+      {
+        "title": "Roasted coffee shop (Colombia)",
+        "paragraphs": [
+          "The shop delivers inside Colombia. Prices include [taxes to confirm]. Shipping cost and the free-shipping threshold are shown before checkout. Coffee is roasted to order and ships within [lead time to confirm]."
+        ]
+      },
+      {
+        "title": "Right of withdrawal (derecho de retracto)",
+        "paragraphs": [
+          "If you buy from the shop online, Colombian consumer law (Estatuto del Consumidor, Ley 1480 de 2011) gives you the right to withdraw from a distance sale. [Withdrawal period: 5 business days from delivery, lawyer to confirm.] To withdraw, email {pqrs} with your order number. [Return shipping cost, condition of the product and refund period, within [X days], to define.] [Exceptions for products that can spoil quickly or have been opened, to be confirmed by the lawyer.] Green coffee sold to businesses is not covered by this right [lawyer to confirm]."
+        ]
+      },
+      {
+        "title": "Warranty, complaints and PQRS",
+        "paragraphs": [
+          "If a product arrives damaged or is not what you ordered, tell us within [X days] at {pqrs}. You can send petitions, complaints, claims and suggestions (PQRS) to the same address. If we cannot solve a consumer complaint, you can go to the Superintendencia de Industria y Comercio (SIC)."
+        ]
+      },
+      {
+        "title": "Intellectual property",
+        "paragraphs": [
+          "Texts, photographs and the brand belong to {entity} or to the producers who gave permission. [Rules for reuse to define.]"
+        ]
+      },
+      {
+        "title": "Liability and governing law",
+        "paragraphs": [
+          "[Limits of liability to define.] These terms follow Colombian law, and disputes go to the courts of [city to define]. [Lawyer to confirm.]"
+        ]
+      }
+    ]
+  }
+}

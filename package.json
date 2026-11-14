@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test",
+    "lhci": "lhci autorun",
+    "check:tokens": "node scripts/factory/check-tokens.mjs",
+    "check:seo": "node scripts/factory/check-seo-ai.mjs",
+    "verify": "bash scripts/factory/verify.sh"
   },
   "dependencies": {
     "next": "16.4.5",
@@ -14,6 +20,9 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@lhci/cli": "0.16.1",
+    "@playwright/test": "1.65.0",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

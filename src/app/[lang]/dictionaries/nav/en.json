@@ -1,0 +1,21 @@
+{
+  "home": "Home",
+  "coffees": "Green Coffee",
+  "producers": "Producers",
+  "ourStory": "Our Story",
+  "contact": "Contact",
+  "cta": "Request Samples",
+  "menu": "Menu",
+  "mainLabel": "Main",
+  "footerLabel": "Footer",
+  "languageLabel": "Language: English. Choose a language",
+  "currentLanguage": "EN",
+  "languages": {
+    "en": "English",
+    "es": "Español"
+  },
+  "shop": "Shop",
+  "shopBadge": "CO",
+  "shopOnlyCo": "Colombia only",
+  "forBuyers": "For Buyers"
+}

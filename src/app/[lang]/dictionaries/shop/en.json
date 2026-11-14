@@ -1,0 +1,35 @@
+{
+  "badge": "New",
+  "eyebrow": "Roasted coffee shop",
+  "ships": "Ships within Colombia",
+  "titleStart": "Roasted at origin,",
+  "titleEm": "straight from the farm",
+  "text": "A multi-brand shop for Colombian producers who roast their own coffee. Buy bags directly from the farms, for your café or your home.",
+  "cta": "Shop roasted coffee",
+  "filtersLabel": "Shop filters",
+  "filters": [
+    "All",
+    "Light roast",
+    "Medium roast",
+    "Whole bean",
+    "Ground",
+    "Under COP 50,000"
+  ],
+  "addToCart": "Add to cart",
+  "note": "Example products and brands for this design preview.",
+  "tags": {
+    "producerBrand": "Producer brand",
+    "bestValue": "Best value",
+    "limited": "Limited lot",
+    "ground": "Ground"
+  },
+  "roast": {
+    "light": "Light roast",
+    "medium": "Medium roast",
+    "mediumDark": "Medium-dark"
+  },
+  "grind": {
+    "wholeBean": "Whole bean",
+    "ground": "Ground"
+  }
+}

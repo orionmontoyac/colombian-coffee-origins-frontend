@@ -7,3 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Design
+
+Before building or changing any UI, read `DESIGN.md` at the repo root. It is the single source of truth for the Origin Ledger design system: tokens, components, layout and content rules. Don't create other design docs or skills; change `DESIGN.md` instead and lint it with `npx -y @google/design.md@latest lint DESIGN.md`.

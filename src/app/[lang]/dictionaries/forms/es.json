@@ -1,0 +1,231 @@
+{
+  "shared": {
+    "errors": {
+      "required": "Este campo es obligatorio.",
+      "email": "Escribe un correo como nombre@empresa.com.",
+      "tooLong": "Es demasiado largo. Acórtalo, por favor.",
+      "invalid": "Elige una de las opciones de la lista.",
+      "consent": "Acepta la política de privacidad para enviar el formulario."
+    },
+    "summaryTitle": "Corrige esto antes de enviar",
+    "optional": "opcional",
+    "consent": {
+      "before": "He leído la ",
+      "link": "política de privacidad",
+      "after": " y acepto que usen estos datos para responderme.",
+      "label": "Consentimiento de privacidad"
+    },
+    "sending": "Enviando…",
+    "honeypotLabel": "Deja este campo vacío",
+    "labels": {
+      "name": "Tu nombre",
+      "email": "Correo electrónico",
+      "company": "Tostadora o empresa",
+      "country": "País",
+      "lot": "Lote",
+      "volume": "Volumen",
+      "address": "Dirección de envío",
+      "message": "Mensaje",
+      "topic": "Tema",
+      "farm": "Finca o cooperativa",
+      "phone": "Teléfono o WhatsApp",
+      "region": "Municipio y región",
+      "way": "Cómo quieres vender",
+      "consent": "Consentimiento de privacidad"
+    },
+    "backHome": "Volver al inicio",
+    "seeLots": "Ver lotes de café verde"
+  },
+  "samples": {
+    "meta": {
+      "title": "Pide muestras gratis de café verde | Origins",
+      "description": "Pide una muestra gratis de 200 g de café verde colombiano de fincas familiares de Urrao. Cátala en tu laboratorio y compra por caja de 35 kg."
+    },
+    "breadcrumb": { "home": "Inicio", "current": "Pedir muestras" },
+    "banner": {
+      "chips": ["Muestras gratis", "De Urrao, Antioquia"],
+      "title": "Pide muestras gratis de",
+      "accent": "café verde",
+      "description": "Dinos a dónde enviarla y qué lote quieres. Despachamos desde Colombia.",
+      "sizeLabel": "Tamaño de muestra",
+      "sizeValue": "200 g",
+      "lotsLabel": "Lotes con muestra",
+      "costLabel": "Costo para ti",
+      "costValue": "Gratis"
+    },
+    "aside": {
+      "title": "Prueba el café antes de",
+      "accent": "comprometerte",
+      "text": "La muestra es la forma de decidir. Elige un lote o cuéntanos qué necesita tu carta y te sugerimos uno parecido.",
+      "steps": [
+        { "title": "Envía el formulario", "text": "Tu nombre, tu tostadora y dónde debe llegar la muestra." },
+        { "title": "Despachamos desde Colombia", "text": "Confirmamos el lote y te avisamos cuándo sale el paquete." },
+        { "title": "Catas y decides", "text": "Cuéntanos qué te pareció. Si el lote es el indicado, cotizamos la caja de 35 kg." }
+      ],
+      "orWhatsApp": "¿Prefieres hablar? Escríbenos por WhatsApp.",
+      "whatsappLabel": "Escribir por WhatsApp",
+      "whatsappMessage": "Hola, quisiera pedir una muestra de café verde."
+    },
+    "form": {
+      "title": "¿A dónde la enviamos?",
+      "name": "Tu nombre",
+      "email": "Correo electrónico",
+      "company": "Tostadora o empresa",
+      "country": "País",
+      "lot": "Lote que quieres probar",
+      "lotPlaceholder": "Ayúdame a elegir",
+      "lotOption": "{code} · {name}",
+      "lotHint": "Puedes pedir otro lote en el mensaje.",
+      "volume": "¿Cuánto café verde compras al mes?",
+      "volumePlaceholder": "Elige un rango",
+      "volumes": {
+        "lt100": "Menos de 100 kg",
+        "100to500": "De 100 a 500 kg",
+        "gt500": "Más de 500 kg",
+        "unsure": "Aún no lo sé"
+      },
+      "address": "Dirección de envío",
+      "addressHint": "Calle, ciudad, código postal y país. Un teléfono ayuda a la transportadora.",
+      "message": "¿Algo más que debamos saber?",
+      "messageHint": "Por ejemplo los sabores que buscas o la máquina en la que tuestas.",
+      "submit": "Pedir mi muestra",
+      "success": {
+        "title": "Gracias, recibimos tu solicitud.",
+        "text": "Confirmaremos el lote y los datos de envío por correo. Si un lote ya no está disponible, te sugeriremos uno parecido."
+      }
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contacto | Colombian Coffee Origins",
+      "description": "Escríbenos por WhatsApp, correo o formulario: lotes de café verde, la tienda de café tostado o vender tu café desde Urrao."
+    },
+    "breadcrumb": { "home": "Inicio", "current": "Contacto" },
+    "banner": {
+      "chips": ["Café verde", "Tienda de café tostado"],
+      "title": "Habla con la gente",
+      "accent": "detrás del café",
+      "description": "Escríbenos en español o en inglés. Leemos cada mensaje.",
+      "langLabel": "Idiomas",
+      "langValue": "ES · EN",
+      "baseLabel": "Ubicados en",
+      "baseValue": "Urrao",
+      "channelLabel": "Escríbenos por",
+      "channelValue": "WhatsApp"
+    },
+    "channels": {
+      "title": "Escríbenos",
+      "accent": "como prefieras",
+      "text": "Datos de contacto de ejemplo para esta vista previa. El dueño los reemplaza antes del lanzamiento.",
+      "whatsappTitle": "WhatsApp",
+      "whatsappLabel": "Escribir por WhatsApp",
+      "whatsappMessage": "Hola, tengo una pregunta sobre Colombian Coffee Origins.",
+      "emailTitle": "Correo",
+      "addressTitle": "Dónde estamos",
+      "address": "Urrao y Medellín, Antioquia, Colombia",
+      "pqrsTitle": "Peticiones, quejas y reclamos de la tienda (PQRS)",
+      "pqrsText": "Las peticiones, quejas, reclamos y sugerencias sobre un pedido de la tienda llegan a este correo."
+    },
+    "form": {
+      "title": "O envíanos un mensaje",
+      "name": "Tu nombre",
+      "email": "Correo electrónico",
+      "topic": "¿De qué se trata?",
+      "topicPlaceholder": "Elige un tema",
+      "topics": {
+        "buying": "Comprar café verde",
+        "shop": "Un pedido de café tostado",
+        "press": "Prensa o alianzas",
+        "other": "Otro tema"
+      },
+      "message": "Mensaje",
+      "messageHint": "Incluye el código del lote, por ejemplo URR-024, si tienes uno en mente.",
+      "submit": "Enviar mensaje",
+      "success": {
+        "title": "Mensaje enviado, gracias.",
+        "text": "Te responderemos por correo. Si es urgente, escríbenos por WhatsApp."
+      }
+    }
+  },
+  "sell": {
+    "meta": {
+      "title": "Vende tu café con nosotros | Origins",
+      "description": "Vende tu café con nosotros: publica lotes de café verde para tostadores del mundo o bolsas tostadas en la tienda de Colombia. Requisitos y solicitud."
+    },
+    "breadcrumb": { "home": "Inicio", "shop": "Tienda", "current": "Vende con nosotros" },
+    "banner": {
+      "chips": ["Para productores", "Abierto a todos los países"],
+      "title": "Vende tu café",
+      "accent": "con nosotros",
+      "description": "Publica tu lote con tu nombre, tu finca y tu municipio. Dos formas de vender, una sola solicitud.",
+      "waysLabel": "Formas de vender",
+      "waysValue": "2",
+      "lotsLabel": "Lotes de ejemplo",
+      "levelsLabel": "Niveles de confianza",
+      "levelsValue": "3"
+    },
+    "ways": {
+      "title": "Dos formas",
+      "accent": "de vender",
+      "text": "Elige una o las dos. Cada línea tiene sus propios compradores, moneda y reglas.",
+      "green": {
+        "title": "Lotes de café verde",
+        "tag": "Todo el mundo",
+        "text": "Tostadores e importadores compran tu lote por caja, con precio en USD por kg (FOB). Tu nombre, finca, altitud, variedad, proceso y puntaje de catación van en cada tarjeta.",
+        "points": [
+          "Muestras enviadas a los compradores desde Colombia",
+          "Lotes por caja de 35 kg",
+          "Apoyo de exportación con los trámites"
+        ]
+      },
+      "roasted": {
+        "title": "Bolsas de café tostado",
+        "tag": "Solo Colombia",
+        "text": "Bolsas que tú tuestas y empacas, vendidas en nuestra tienda de Colombia en COP y entregadas dentro del país. Tu marca se queda en la bolsa.",
+        "points": [
+          "Bolsas de café en grano con tu marca y nivel de tueste",
+          "Precio en COP, con el precio por kg a la vista",
+          "Por ahora los pedidos llegan por WhatsApp"
+        ]
+      }
+    },
+    "requirements": {
+      "title": "Lo que",
+      "accent": "te pedimos",
+      "text": "Corto y práctico. Revisamos cada punto antes de publicar un lote y lo decimos en la página.",
+      "items": [
+        { "title": "Una finca cafetera real", "text": "Una finca o cooperativa en Colombia, con productor y municipio con nombre." },
+        { "title": "Un lote trazable", "text": "Cosecha, variedad y proceso que puedas indicar, y café suficiente para al menos una caja." },
+        { "title": "Una muestra que podamos catar", "text": "La catamos nosotros y publicamos el puntaje. Sin puntaje, no inventamos números." },
+        { "title": "Tu nombre en la página", "text": "Productor, finca y municipio son públicos, igual que las fotos que compartas." },
+        { "title": "Para bolsas tostadas", "text": "El registro sanitario que la ley colombiana exige para el café tostado. Lo explicamos en la primera llamada." }
+      ]
+    },
+    "form": {
+      "title": "Cuéntanos de tu café",
+      "text": "Es una primera conversación, no un contrato.",
+      "name": "Tu nombre",
+      "farm": "Finca o cooperativa",
+      "email": "Correo electrónico",
+      "phone": "Teléfono o WhatsApp",
+      "region": "Municipio y región",
+      "regionHint": "Por ejemplo: Urrao, Antioquia.",
+      "way": "¿Cómo quieres vender?",
+      "wayPlaceholder": "Elige una opción",
+      "ways": {
+        "green": "Lotes de café verde",
+        "roasted": "Bolsas tostadas (tienda de Colombia)",
+        "both": "Las dos"
+      },
+      "volume": "Café que podrías ofrecer por cosecha",
+      "volumeHint": "Un número aproximado en kg es suficiente.",
+      "message": "Sobre tu café",
+      "messageHint": "Variedades, altitud, proceso, certificaciones y lo que te enorgullece.",
+      "submit": "Enviar mi solicitud",
+      "success": {
+        "title": "Gracias, recibimos tu solicitud.",
+        "text": "Te escribiremos para coordinar una muestra y una llamada. No publicamos nada hasta que estés de acuerdo."
+      }
+    }
+  }
+}

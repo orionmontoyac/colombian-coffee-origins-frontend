@@ -1,0 +1,60 @@
+{
+  "$comment": "Every indexable page the factory must pass. Add new pages here as they are built. country = header sent as x-country. noindex = page is expected to be noindex.",
+  "pages": [
+    { "path": "/en" },
+    { "path": "/es" },
+    { "path": "/en/coffees" },
+    { "path": "/es/cafes" },
+    { "path": "/en/coffees/urr-024" },
+    { "path": "/es/cafes/urr-024" },
+    { "path": "/en/producers" },
+    { "path": "/es/productores" },
+    { "path": "/en/producers/luz-mery-higuita" },
+    { "path": "/es/productores/luz-mery-higuita" },
+    { "path": "/en/shop" },
+    { "path": "/es/tienda" },
+    { "path": "/es/tienda/el-mirador-chiroso" },
+    { "path": "/en/for-buyers" },
+    { "path": "/es/para-compradores" },
+    { "path": "/en/samples" },
+    { "path": "/en/contact" },
+    { "path": "/es/tienda/vender" },
+    { "path": "/en/regions/urrao" },
+    { "path": "/es/regiones/urrao" },
+    { "path": "/en/our-story" },
+    { "path": "/en/journal" },
+    { "path": "/en/journal/what-is-chiroso-coffee" },
+    { "path": "/en/privacy" }
+  ],
+  "markdownPages": [
+    "/en",
+    "/es",
+    "/en/coffees/urr-024",
+    "/en/producers/luz-mery-higuita",
+    "/en/for-buyers",
+    "/en/regions/urrao"
+  ],
+  "lighthouse": [
+    "/en",
+    "/es",
+    "/en/coffees",
+    "/en/coffees/urr-024",
+    "/en/producers/luz-mery-higuita",
+    "/es/tienda",
+    "/en/for-buyers",
+    "/en/regions/urrao"
+  ],
+  "aiCrawlers": [
+    "Googlebot",
+    "Bingbot",
+    "OAI-SearchBot",
+    "ChatGPT-User",
+    "GPTBot",
+    "ClaudeBot",
+    "Claude-SearchBot",
+    "Claude-User",
+    "PerplexityBot",
+    "Google-Extended",
+    "Applebot-Extended"
+  ]
+}

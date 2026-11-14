@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "title": "Colombian coffee regions: Urrao and beyond",
+    "description": "Explore the Colombian coffee regions we source from. Urrao, Antioquia is live now; Antioquia, Huila, Nariño and Cauca are coming."
+  },
+  "urraoMeta": {
+    "title": "Urrao coffee region: Chiroso, altitude and farms",
+    "description": "Urrao coffee region guide: farms at 1,800–2,300 m near the Páramo del Sol, Chiroso, Castillo and Caturra, harvest calendar, producers and green lots."
+  },
+  "breadcrumb": {
+    "regions": "Regions",
+    "urrao": "Urrao"
+  },
+  "index": {
+    "banner": {
+      "chips": [
+        "Colombia",
+        "One live origin"
+      ],
+      "title": "Colombian coffee",
+      "accent": "regions",
+      "description": "We start where we know every road and every farm; more regions follow.",
+      "stats": {
+        "live": "Live now",
+        "coming": "Coming soon",
+        "altitude": "Altitude up to"
+      },
+      "liveValue": "1",
+      "comingValue": "4",
+      "altitudeValue": "2,300 m"
+    },
+    "list": {
+      "title": "Where we",
+      "accent": "source",
+      "text": "Urrao is our first origin. The other regions are on our list, and none of them is for sale until we have visited the farms.",
+      "live": "Live",
+      "comingSoon": "Coming soon",
+      "explore": "Explore Urrao",
+      "photoAlt": "The church on Urrao's main square, with its orange spire against a blue sky",
+      "items": [
+        {
+          "id": "urrao",
+          "name": "Urrao",
+          "area": "Antioquia",
+          "text": "A mountain town at the edge of the Páramo del Sol: high altitude, cool nights, family farms and home of Chiroso."
+        },
+        {
+          "id": "antioquia",
+          "name": "Antioquia",
+          "area": "More of the department",
+          "text": "Other coffee municipalities of Antioquia, once the first farms in Urrao are working well."
+        },
+        {
+          "id": "huila",
+          "name": "Huila",
+          "area": "Southern Colombia",
+          "text": "One of the country's major coffee departments."
+        },
+        {
+          "id": "narino",
+          "name": "Nariño",
+          "area": "Southwest, near Ecuador",
+          "text": "High-altitude coffee in the far south of the country."
+        },
+        {
+          "id": "cauca",
+          "name": "Cauca",
+          "area": "Southwest Andes",
+          "text": "Coffee from the Andean slopes of the Cauca department."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Help us choose",
+      "title": "Tell us where",
+      "accent": "to look next.",
+      "text": "If you buy green coffee and there is a Colombian region you want to see here, send us a note.",
+      "primary": "Contact us",
+      "secondary": "How buying works"
+    }
+  },
+  "urrao": {
+    "banner": {
+      "chips": [
+        "Live origin",
+        "Antioquia, Colombia"
+      ],
+      "title": "Urrao",
+      "accent": "coffee region",
+      "description": "A mountain town at the edge of the Páramo del Sol, and home of Chiroso.",
+      "stats": {
+        "altitude": "Altitude up to",
+        "varieties": "Varieties",
+        "lots": "Lots live"
+      },
+      "altitudeValue": "2,300 m",
+      "varietiesValue": "3"
+    },
+    "facts": {
+      "title": "Urrao",
+      "accent": "at a glance",
+      "text": "The short version, in one table.",
+      "caption": "Facts about the Urrao coffee region",
+      "property": "Fact",
+      "value": "Detail",
+      "rows": [
+        {
+          "label": "Municipality",
+          "value": "Urrao, Antioquia, Colombia"
+        },
+        {
+          "label": "Landscape",
+          "value": "Andean slopes at the edge of the Páramo del Sol"
+        },
+        {
+          "label": "Altitude",
+          "value": "1,800–2,300 m"
+        },
+        {
+          "label": "Varieties",
+          "value": "Chiroso, Castillo, Caturra"
+        },
+        {
+          "label": "Farms",
+          "value": "Family farms"
+        },
+        {
+          "label": "Harvests",
+          "value": "A main crop and a smaller second crop"
+        }
+      ],
+      "note": "Example facts for this preview. We confirm every figure with the producers before launch."
+    },
+    "geography": {
+      "title": "A mountain town",
+      "accent": "with cool nights",
+      "paragraphs": [
+        "Urrao sits in the Andes of western Antioquia, in a valley surrounded by high ridges. Coffee farms climb the slopes toward the Páramo del Sol, where altitude keeps the nights cool.",
+        "In general, cool nights and slow ripening give the bean more time to build sugars. That is one reason high-grown Colombian coffees are often clean, sweet and lively in the cup."
+      ]
+    },
+    "varieties": {
+      "title": "Three varieties,",
+      "accent": "one valley",
+      "items": [
+        {
+          "name": "Chiroso",
+          "text": "The local specialty, valued for a floral, tea-like cup. Rarely planted outside this part of Antioquia."
+        },
+        {
+          "name": "Castillo",
+          "text": "Developed in Colombia for resistance to leaf rust, and widely grown across the country."
+        },
+        {
+          "name": "Caturra",
+          "text": "A compact, productive plant that Colombian farms have grown for decades."
+        }
+      ],
+      "read": "Read: What is Chiroso coffee?",
+      "note": "Variety descriptions are general and pending review by our team."
+    },
+    "calendar": {
+      "title": "Harvest",
+      "accent": "calendar",
+      "text": "Many Colombian regions harvest a larger main crop and a smaller second crop. The months below are an example until we confirm them with each producer.",
+      "caption": "Example harvest calendar for Urrao by month",
+      "season": "Season",
+      "harvesting": "Harvest",
+      "rows": [
+        "Main harvest",
+        "Smaller second harvest"
+      ],
+      "note": "Example calendar for this preview. Each lot page states its real harvest year."
+    },
+    "producers": {
+      "title": "Producers",
+      "accent": "in Urrao",
+      "text": "Family farms we list by name, with their farm and town.",
+      "viewProfile": "View profile",
+      "all": "All producers",
+      "lotCountOne": "{count} lot",
+      "lotCountOther": "{count} lots",
+      "altitudeLine": "{altitude} m · {varieties}"
+    },
+    "lots": {
+      "title": "Lots",
+      "accent": "from Urrao",
+      "text": "Green coffee you can sample today. Example listings for this preview.",
+      "viewLot": "View lot",
+      "all": "All green coffee lots"
+    },
+    "map": {
+      "title": "Find",
+      "accent": "Urrao",
+      "text": "Coordinates are those of the municipality, not of any single farm.",
+      "coords": "Approx. 6.32° N, 76.13° W",
+      "label": "Map of Urrao and the Páramo del Sol (interactive map to add)"
+    },
+    "cta": {
+      "eyebrow": "Taste the origin",
+      "title": "Start with",
+      "accent": "a sample.",
+      "text": "Pick a lot from Urrao and request a sample. Read the guide first if you want the full story.",
+      "primary": "Request samples",
+      "secondary": "Read the Urrao guide"
+    }
+  }
+}

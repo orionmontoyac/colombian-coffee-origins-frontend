@@ -1,0 +1,48 @@
+{
+  "tagline": "Specialty coffee sourced directly from Colombian family farms, starting in Urrao, Antioquia. Traceable lots, samples before you buy, export support.",
+  "columns": [
+    {
+      "title": "Explore",
+      "links": [
+        "Green coffee lots",
+        "Producers",
+        "Regions",
+        "Roasted coffee shop"
+      ]
+    },
+    {
+      "title": "For buyers",
+      "links": [
+        "How sourcing works",
+        "Request samples",
+        "Sourcing request",
+        "Shipping & export"
+      ]
+    },
+    {
+      "title": "For producers",
+      "links": [
+        "Join the platform",
+        "Sell green coffee",
+        "Sell roasted coffee"
+      ]
+    },
+    {
+      "title": "Company",
+      "links": [
+        "Our story",
+        "Contact",
+        "Journal"
+      ]
+    }
+  ],
+  "contactTitle": "Get in touch",
+  "location": "CO",
+  "country": "Colombia",
+  "email": "[hello@yourdomain.com]",
+  "contactCta": "Request samples",
+  "rights": "© 2026 Colombian Coffee Origins. All rights reserved.",
+  "legalLabel": "Legal",
+  "privacy": "Privacy",
+  "terms": "Terms"
+}

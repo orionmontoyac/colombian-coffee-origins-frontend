@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "Comprar café verde colombiano | Colombian Coffee Origins",
+    "description": "Comprar café verde colombiano: microlotes trazables de fincas familiares de Urrao, Antioquia. Compara puntajes y fichas, y pide una muestra gratis."
+  },
+  "breadcrumb": { "home": "Inicio", "current": "Café verde" },
+  "banner": {
+    "chips": ["Lotes trazables", "Muestras gratis", "Apoyo en exportación"],
+    "title": "Lotes de café",
+    "accent": "verde",
+    "description": "Comprar café verde colombiano de fincas familiares de Urrao. Compara fichas y puntajes de taza, y pide una muestra.",
+    "lotsLabel": "Lotes disponibles",
+    "harvestLabel": "Cosecha",
+    "harvestValue": "2026",
+    "regionLabel": "Región",
+    "regionValue": "Urrao"
+  },
+  "gridHeading": "Todos los lotes de café verde",
+  "filters": {
+    "label": "Filtrar y ordenar lotes",
+    "toggle": "Filtros",
+    "variety": "Variedad",
+    "process": "Proceso",
+    "altitude": "Altitud",
+    "altitudeOptions": {
+      "under-2000": "Menos de 2.000 m",
+      "2000-2100": "De 2.000 a 2.100 m",
+      "over-2100": "Más de 2.100 m"
+    },
+    "score": "Puntaje",
+    "scoreOption": "{n}+ SCA",
+    "availability": "Disponibilidad",
+    "availabilityOptions": {
+      "under-100": "Menos de 100 kg",
+      "100-300": "De 100 a 300 kg",
+      "over-300": "Más de 300 kg"
+    },
+    "price": "Precio",
+    "priceOptions": {
+      "under-10": "Menos de USD 10 / kg",
+      "10-15": "USD 10 a 15 / kg",
+      "over-15": "Más de USD 15 / kg",
+      "on-request": "Precio a consultar"
+    },
+    "sort": "Ordenar",
+    "sortOptions": {
+      "score": "Mayor puntaje",
+      "newest": "Más recientes",
+      "price": "Precio, de menor a mayor"
+    },
+    "countOne": "{n} lote",
+    "countOther": "{n} lotes",
+    "active": "Activos:",
+    "remove": "Quitar filtro: {name}",
+    "clearAll": "Borrar todo"
+  },
+  "legend": {
+    "coffeeVerified": "lote catado y documentado",
+    "farmVerified": "finca revisada por nuestro equipo",
+    "registered": "datos aportados por el productor",
+    "note": "Lotes de ejemplo para esta vista previa del diseño."
+  },
+  "card": {
+    "notesLabel": "Notas de sabor",
+    "altitude": "Altitud",
+    "available": "Disponible",
+    "harvest": "Cosecha",
+    "harvestValue": "2026",
+    "notCupped": "Aún sin catar",
+    "viewLot": "Ver lote",
+    "priceOnRequest": "Precio a consultar",
+    "greenFob": "Café verde, FOB",
+    "sampleAvailable": "Muestra disponible",
+    "save": "Guardar lote {code}",
+    "saved": "Quitar el lote {code} de guardados",
+    "badges": {
+      "coffeeVerified": "Café verificado",
+      "farmVerified": "Finca verificada",
+      "registered": "Registrado"
+    },
+    "processes": {
+      "washed": "Lavado",
+      "honey": "Honey",
+      "natural": "Natural"
+    }
+  },
+  "empty": {
+    "title": "Ningún lote coincide con estos filtros",
+    "text": "Prueba quitando un filtro o ampliando el rango. Sumamos lotes nuevos a medida que los productores terminan la cata.",
+    "reset": "Restablecer filtros"
+  },
+  "loadMore": {
+    "button": "Cargar más lotes",
+    "showing": "Mostrando {shown} de {total} lotes"
+  },
+  "cta": {
+    "eyebrow": "Abastecimiento a medida",
+    "title": "¿No encuentras",
+    "accent": "lo que buscas?",
+    "text": "Cuéntanos la variedad, el proceso, el perfil y el volumen que necesitas, y te conectamos con productores.",
+    "primary": "Enviar solicitud de abastecimiento",
+    "secondary": "Pedir muestras"
+  }
+}

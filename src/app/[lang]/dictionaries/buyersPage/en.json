@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "title": "How to import green coffee from Colombia | Origins",
+    "description": "How to import green coffee from Colombia: request a free sample, cup it, then buy by the 35 kg box at FOB prices, with export support from Urrao farms."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "current": "For buyers"
+  },
+  "banner": {
+    "chips": [
+      "FOB pricing",
+      "Free samples",
+      "Export support"
+    ],
+    "title": "How to import green coffee",
+    "accent": "from Colombia",
+    "description": "Five steps from the first lot you like to a box leaving Colombia, with the farm and the cup score visible all along.",
+    "lotsLabel": "Lots available",
+    "minLabel": "Minimum order",
+    "minValue": "{kg}\u00a0kg",
+    "sampleLabel": "Free sample",
+    "sampleValue": "{g}\u00a0g"
+  },
+  "steps": {
+    "title": "Five steps from",
+    "accent": "farm to your roastery",
+    "text": "You can import green coffee from Colombia in five steps: discover a lot, request a sample, evaluate it, buy, and ship. Each step is one message or one click.",
+    "items": [
+      {
+        "title": "Discover",
+        "text": "Browse lots with the producer, farm, altitude, variety, process and SCA score on every card. Filter by what your menu needs."
+      },
+      {
+        "title": "Sample",
+        "text": "Request a free 200 g sample of any lot marked sample available. We send it from Colombia and tell you when it ships."
+      },
+      {
+        "title": "Evaluate",
+        "text": "Cup the sample in your own lab. Tell us what you think; if a lot is not right, we point you to a closer match."
+      },
+      {
+        "title": "Buy",
+        "text": "Confirm the lot and quantity, starting at one 35 kg box. We agree the price, payment and dates in writing."
+      },
+      {
+        "title": "Ship",
+        "text": "We pack, document and hand the coffee over FOB. Your forwarder or ours moves it to your port."
+      }
+    ]
+  },
+  "trust": {
+    "title": "Three trust levels,",
+    "accent": "one clear rule",
+    "text": "Every lot carries a badge that says what we have checked ourselves. It never says more than that.",
+    "items": [
+      {
+        "level": "registered",
+        "label": "Registered",
+        "text": "The producer and farm are registered with us. We have not yet visited or cupped this lot, so treat the data as declared by the producer."
+      },
+      {
+        "level": "farmVerified",
+        "label": "Farm verified",
+        "text": "We have visited the farm and met the producer. Altitude, variety and process are confirmed on site."
+      },
+      {
+        "level": "coffeeVerified",
+        "label": "Coffee verified",
+        "text": "The farm is verified and this exact lot was cupped and its kilos confirmed. The score you see belongs to this lot."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing, minimums",
+    "accent": "and samples",
+    "text": "Green coffee is priced in US dollars per kilo, FOB Colombia. The minimum order is one 35 kg box, and the first 200 g sample is free for verified buyers.",
+    "rows": [
+      {
+        "label": "Price unit",
+        "value": "USD per kg, FOB Colombia"
+      },
+      {
+        "label": "Minimum order",
+        "value": "{kg} kg (one box)"
+      },
+      {
+        "label": "Sample",
+        "value": "Free, {g} g, for verified buyers"
+      },
+      {
+        "label": "Example prices",
+        "value": "USD {min} to {max} per kg"
+      },
+      {
+        "label": "Lots with price on request",
+        "value": "{n} of {total}"
+      },
+      {
+        "label": "Payment and lead time",
+        "value": "Agreed per order"
+      }
+    ],
+    "exampleNote": "Example prices for this preview. Real offers are confirmed lot by lot.",
+    "fobTitle": "What FOB means",
+    "fobText": "FOB (free on board) means our price covers the coffee, packing and delivery onto the vessel or aircraft in Colombia. Ocean or air freight, insurance, import duties and clearance are the buyer's."
+  },
+  "logistics": {
+    "title": "Export and logistics,",
+    "accent": "kept simple",
+    "text": "We prepare each shipment in Colombia and work with your freight forwarder, so the coffee clears on both sides without surprises.",
+    "items": [
+      {
+        "title": "Packing",
+        "text": "Lots ship in 35 kg boxes or bags. The packaging for each lot is listed on its page."
+      },
+      {
+        "title": "Documents",
+        "text": "We prepare the export paperwork and confirm the full document list for your destination before you pay."
+      },
+      {
+        "title": "Freight",
+        "text": "Bring your own forwarder or ask us for an introduction. You choose ocean or air by volume and time."
+      },
+      {
+        "title": "Updates",
+        "text": "You get a message at each handover: packed, with the carrier, and on arrival."
+      }
+    ],
+    "note": "Lead times depend on the lot and the harvest calendar. We confirm dates in your offer."
+  },
+  "faq": {
+    "title": "Questions buyers",
+    "accent": "ask us first",
+    "text": "Short answers to the questions that come up before a first order."
+  },
+  "cta": {
+    "eyebrow": "Ready when you are",
+    "title": "Start with a free",
+    "accent": "200 g sample",
+    "text": "Tell us the lot and where it should go. We reply with the next steps.",
+    "primary": "Request a sample",
+    "secondary": "Talk to us"
+  }
+}

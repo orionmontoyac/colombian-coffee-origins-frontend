@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "vollkorn hero fallback",
+        "createdAt": "2026-11-14T02:56:06.950Z",
+        "reason": "Loading fallback only: Arial sized so the hero title wraps like Vollkorn and does not shift. The painted face is still Vollkorn."
+      }
+    ]
+  }
+}

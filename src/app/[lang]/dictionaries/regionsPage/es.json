@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "title": "Regiones cafeteras de Colombia: Urrao y más",
+    "description": "Conoce las regiones cafeteras de Colombia de las que abastecemos café. Urrao, Antioquia, ya está activa; Antioquia, Huila, Nariño y Cauca vienen pronto."
+  },
+  "urraoMeta": {
+    "title": "Región cafetera de Urrao: Chiroso, altitud y fincas",
+    "description": "Guía de Urrao, Antioquia: fincas entre 1.800 y 2.300 m junto al Páramo del Sol, Chiroso, Castillo y Caturra, calendario de cosecha, productores y lotes."
+  },
+  "breadcrumb": {
+    "regions": "Regiones",
+    "urrao": "Urrao"
+  },
+  "index": {
+    "banner": {
+      "chips": [
+        "Colombia",
+        "Un origen activo"
+      ],
+      "title": "Regiones cafeteras",
+      "accent": "de Colombia",
+      "description": "Empezamos donde conocemos cada camino y cada finca; las demás regiones vendrán después.",
+      "stats": {
+        "live": "Activas",
+        "coming": "Próximamente",
+        "altitude": "Altitud hasta"
+      },
+      "liveValue": "1",
+      "comingValue": "4",
+      "altitudeValue": "2.300 m"
+    },
+    "list": {
+      "title": "De dónde",
+      "accent": "traemos el café",
+      "text": "Urrao es nuestro primer origen. Las demás regiones están en nuestra lista y ninguna se vende hasta que visitemos las fincas.",
+      "live": "Activa",
+      "comingSoon": "Próximamente",
+      "explore": "Explorar Urrao",
+      "photoAlt": "La iglesia de la plaza principal de Urrao, con su aguja naranja contra un cielo azul",
+      "items": [
+        {
+          "id": "urrao",
+          "name": "Urrao",
+          "area": "Antioquia",
+          "text": "Un pueblo de montaña en el borde del Páramo del Sol: altura, noches frías, fincas familiares y cuna del Chiroso."
+        },
+        {
+          "id": "antioquia",
+          "name": "Antioquia",
+          "area": "Más del departamento",
+          "text": "Otros municipios cafeteros de Antioquia, cuando las primeras fincas de Urrao funcionen bien."
+        },
+        {
+          "id": "huila",
+          "name": "Huila",
+          "area": "Sur de Colombia",
+          "text": "Uno de los grandes departamentos cafeteros del país."
+        },
+        {
+          "id": "narino",
+          "name": "Nariño",
+          "area": "Suroccidente, cerca de Ecuador",
+          "text": "Café de alta montaña en el extremo sur del país."
+        },
+        {
+          "id": "cauca",
+          "name": "Cauca",
+          "area": "Andes del suroccidente",
+          "text": "Café de las laderas andinas del departamento del Cauca."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Ayúdanos a elegir",
+      "title": "Dinos dónde",
+      "accent": "buscar después.",
+      "text": "Si compras café verde y hay una región de Colombia que quieres ver aquí, escríbenos.",
+      "primary": "Escríbenos",
+      "secondary": "Cómo funciona comprar"
+    }
+  },
+  "urrao": {
+    "banner": {
+      "chips": [
+        "Origen activo",
+        "Antioquia, Colombia"
+      ],
+      "title": "Región cafetera",
+      "accent": "de Urrao",
+      "description": "Un pueblo de montaña en el borde del Páramo del Sol y hogar del Chiroso.",
+      "stats": {
+        "altitude": "Altitud hasta",
+        "varieties": "Variedades",
+        "lots": "Lotes activos"
+      },
+      "altitudeValue": "2.300 m",
+      "varietiesValue": "3"
+    },
+    "facts": {
+      "title": "Urrao",
+      "accent": "de un vistazo",
+      "text": "La versión corta, en una tabla.",
+      "caption": "Datos de la región cafetera de Urrao",
+      "property": "Dato",
+      "value": "Detalle",
+      "rows": [
+        {
+          "label": "Municipio",
+          "value": "Urrao, Antioquia, Colombia"
+        },
+        {
+          "label": "Paisaje",
+          "value": "Laderas andinas en el borde del Páramo del Sol"
+        },
+        {
+          "label": "Altitud",
+          "value": "1.800–2.300 m"
+        },
+        {
+          "label": "Variedades",
+          "value": "Chiroso, Castillo, Caturra"
+        },
+        {
+          "label": "Fincas",
+          "value": "Fincas familiares"
+        },
+        {
+          "label": "Cosechas",
+          "value": "Una cosecha principal y una segunda más pequeña"
+        }
+      ],
+      "note": "Datos de ejemplo para esta vista previa. Confirmamos cada cifra con los productores antes del lanzamiento."
+    },
+    "geography": {
+      "title": "Un pueblo de montaña",
+      "accent": "de noches frías",
+      "paragraphs": [
+        "Urrao está en los Andes del occidente de Antioquia, en un valle rodeado de cordilleras altas. Las fincas cafeteras suben por las laderas hacia el Páramo del Sol, donde la altura mantiene las noches frías.",
+        "En general, las noches frías y la maduración lenta le dan al grano más tiempo para acumular azúcares. Por eso los cafés colombianos de altura suelen ser limpios, dulces y vivos en taza."
+      ]
+    },
+    "varieties": {
+      "title": "Tres variedades,",
+      "accent": "un solo valle",
+      "items": [
+        {
+          "name": "Chiroso",
+          "text": "La especialidad local, apreciada por su taza floral y de cuerpo como de té. Se siembra poco fuera de esta zona de Antioquia."
+        },
+        {
+          "name": "Castillo",
+          "text": "Desarrollada en Colombia por su resistencia a la roya y muy sembrada en todo el país."
+        },
+        {
+          "name": "Caturra",
+          "text": "Una planta compacta y productiva que las fincas colombianas cultivan desde hace décadas."
+        }
+      ],
+      "read": "Lee: ¿Qué es el café Chiroso?",
+      "note": "Las descripciones de variedades son generales y están pendientes de revisión por nuestro equipo."
+    },
+    "calendar": {
+      "title": "Calendario",
+      "accent": "de cosecha",
+      "text": "Muchas regiones de Colombia tienen una cosecha principal más grande y una segunda más pequeña. Los meses de abajo son un ejemplo hasta que los confirmemos con cada productor.",
+      "caption": "Calendario de cosecha de ejemplo para Urrao, por mes",
+      "season": "Temporada",
+      "harvesting": "Cosecha",
+      "rows": [
+        "Cosecha principal",
+        "Segunda cosecha, más pequeña"
+      ],
+      "note": "Calendario de ejemplo para esta vista previa. Cada lote indica su año de cosecha real."
+    },
+    "producers": {
+      "title": "Productores",
+      "accent": "de Urrao",
+      "text": "Fincas familiares que mostramos con nombre, finca y pueblo.",
+      "viewProfile": "Ver perfil",
+      "all": "Todos los productores",
+      "lotCountOne": "{count} lote",
+      "lotCountOther": "{count} lotes",
+      "altitudeLine": "{altitude} m · {varieties}"
+    },
+    "lots": {
+      "title": "Lotes",
+      "accent": "de Urrao",
+      "text": "Café verde que puedes probar hoy. Listados de ejemplo para esta vista previa.",
+      "viewLot": "Ver lote",
+      "all": "Todos los lotes de café verde"
+    },
+    "map": {
+      "title": "Ubica",
+      "accent": "Urrao",
+      "text": "Las coordenadas son las del municipio, no las de una finca en particular.",
+      "coords": "Aprox. 6,32° N, 76,13° O",
+      "label": "Mapa de Urrao y el Páramo del Sol (mapa interactivo por agregar)"
+    },
+    "cta": {
+      "eyebrow": "Prueba el origen",
+      "title": "Empieza con",
+      "accent": "una muestra.",
+      "text": "Elige un lote de Urrao y pide una muestra. Lee antes la guía si quieres la historia completa.",
+      "primary": "Pedir muestras",
+      "secondary": "Leer la guía de Urrao"
+    }
+  }
+}
