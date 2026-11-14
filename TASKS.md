@@ -197,7 +197,7 @@ Each page task has these **standard checkpoints** in addition to its own:
 
 - [ ] **T6.1 Owner hand-off**
   - [ ] Summary at the top of this file: pages built, Lighthouse table, open decisions.
-  - [ ] ASSETS.md sorted by priority (hero and lot photos first) with exact specs.
+  - [x] ASSETS.md sorted by priority (hero and lot photos first) with exact specs.
   - [ ] DECISIONS.md reviewed; items that need the owner marked **OWNER**.
   - [ ] Branch `factory/website` pushed is **not** done automatically — leave it local and say so.
   - Verify: `bash scripts/factory/is-done.sh`
