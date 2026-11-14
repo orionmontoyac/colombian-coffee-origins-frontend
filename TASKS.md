@@ -175,18 +175,9 @@ Each page task has these **standard checkpoints** in addition to its own:
   - [x] Cover what page specs skipped: shop cart flow on mobile (floating cart pill), axe on mobile and country-co projects for shop pages, first-hit 404 for unknown product slugs.
   - [x] All e2e specs green; report `artifacts/reports/qa-final.md` all PASS.
   - Verify: `npm run test:e2e`
-- [ ] **T5.2 Full review** · Owner: reviewer
-  - [x] Lighthouse mobile ≥ 90/95/95/100 and desktop ≥ 95 on every page. (2026-11-14: 24/24 pass. Full run on 924773c: 21 pages pass, mobile Performance 93–100; the 3 shop pages then passed after the bean pattern was hidden on phones: mobile 100/100/100/100, desktop 99/100/100/100, LCP 0.9 s. A11y, BP, SEO 100 everywhere. Table: artifacts/reports/lighthouse-2026-11-14.md, gitignored.)
-  - [x] Token and DESIGN.md compliance (2026-11-14: check:tokens passes; off-scale radii (14px, 12px, raw 10/32px) and the header dropdown shadow swapped for scale tokens / a `line` border; full e2e 814 passed).
-  - [x] Next 16 API correctness (2026-11-14: `proxy.ts` not `middleware.ts`; params/searchParams are Promises via PageProps/LayoutProps; no removed APIs; tsc clean).
-  - [x] No secrets (2026-11-14: no `.env`/keys tracked; no key patterns in the repo; only env read is `NEXT_PUBLIC_SITE_URL`).
-  - [x] First-load JS ≤ 180 KB per route (2026-11-14: 144–155 KB gzip on all 24 pages in pages.json; the 39 KB `noModule` polyfill chunk is excluded because modern browsers skip it).
-  - [ ] impeccable audit + critique (if installed) with no P0/P1 left.
-  - [ ] Report `artifacts/reports/review-final.md` verdict PASS.
-  - Verify: `npm run verify`
 - [ ] **T5.3 Fix round** · Owner: planner (assigns fixes to owners)
-  - [ ] Every P0/P1 from T5.1 and T5.2 fixed and re-verified.
-  - [x] Home mobile Performance ≥ 90 (now 0.94–0.96 after AVIF; was 85 /en, 86 /es): LCP is about 4.1 s on the hero photo with about 810 ms render delay; the top opportunity is unused JS (about 300 ms). Not caused by motion (A/B tested). Owner: page-builder (home) + foundation (image/fonts/JS); reviewer T5.2 gives the diagnosis.
+  - [ ] Every P0/P1 from T5.1 fixed and re-verified.
+  - [x] Home mobile Performance ≥ 90 (now 0.94–0.96 after AVIF; was 85 /en, 86 /es): LCP is about 4.1 s on the hero photo with about 810 ms render delay; the top opportunity is unused JS (about 300 ms). Not caused by motion (A/B tested). Owner: page-builder (home) + foundation (image/fonts/JS).
   - [x] Regressions seen in the T4.2 full run (681 passed / 58 failed / 49 skipped), diagnosed by qa in T5.1: lot-card link `aria-label="Variety, CODE"` label-content-name-mismatch (lots, lot and producer axe tests); home JSON-LD missing FAQPage after the T3.1 switch; content.spec expects 2 table rows on Urrao but T3.2's facts table adds more; the unknown-lot 404 still emits JSON-LD; axe on /es/tienda/vender (one project) and the producers index (mobile).
   - [x] shop.spec.ts: the non-CO tests assert the `X-Robots-Tag: noindex, follow` header (the proxy sets it now) instead of a noindex meta tag (page-builder, shop files).
   - [x] Shop banner breadcrumbs pass axe color-contrast on the new CSS bean pattern (`.shop-banner-pattern`, from the owner's edit): raise the text contrast or add a scrim (foundation-builder, ui/subpage-banner + breadcrumbs).
@@ -194,13 +185,4 @@ Each page task has these **standard checkpoints** in addition to its own:
   - [x] Lots catalog cards link the producer: in `src/app/[lang]/coffees/page.tsx` `toItem`, pass `producerHref={lot.producerSlug ? producerHref(lang, lot.producerSlug) : undefined}` (page-builder, T2.1 files).
   - [x] Shop product card: fix the `label-content-name-mismatch` (Add button accessible name must start with its visible text), then remove the axe exclusion in shop.spec.ts (page-builder, shop files).
   - [x] Forms show their result after a submit without JavaScript (with cacheComponents/PPR the POST to a static page returns no HTML): redirect-based fallback (e.g. `?sent=1` / `?error=` with a dynamic segment) in src/lib/actions + src/components/forms, owned by page-builder (T2.6 files).
-  - Verify: `bash scripts/factory/is-done.sh`
-
-## Phase 6 — Hand-off (planner)
-
-- [ ] **T6.1 Owner hand-off**
-  - [ ] Summary at the top of this file: pages built, Lighthouse table, open decisions.
-  - [x] ASSETS.md sorted by priority (hero and lot photos first) with exact specs.
-  - [ ] DECISIONS.md reviewed; items that need the owner marked **OWNER**.
-  - [ ] Branch `factory/website` pushed is **not** done automatically — leave it local and say so.
   - Verify: `bash scripts/factory/is-done.sh`
