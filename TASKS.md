@@ -169,11 +169,11 @@ Each page task has these **standard checkpoints** in addition to its own:
 
 ## Phase 5 — Quality gates (qa and reviewer, then fixes by owners)
 
-- [ ] **T5.1 Full QA pass** · Owner: qa · Owns: tests/e2e/**, artifacts/**
-  - [ ] Screenshots of every page in `pages.json` at 1440/390, EN/ES (and CO / non-CO for shop pages).
-  - [ ] axe: zero serious/critical; keyboard walk of header, filters, forms, cart.
-  - [ ] Cover what page specs skipped: shop cart flow on mobile (floating cart pill), axe on mobile and country-co projects for shop pages, first-hit 404 for unknown product slugs.
-  - [ ] All e2e specs green; report `artifacts/reports/qa-final.md` all PASS.
+- [x] **T5.1 Full QA pass** · Owner: qa · Owns: tests/e2e/**, artifacts/**
+  - [x] Screenshots of every page in `pages.json` at 1440/390, EN/ES (and CO / non-CO for shop pages).
+  - [x] axe: zero serious/critical; keyboard walk of header, filters, forms, cart.
+  - [x] Cover what page specs skipped: shop cart flow on mobile (floating cart pill), axe on mobile and country-co projects for shop pages, first-hit 404 for unknown product slugs.
+  - [x] All e2e specs green; report `artifacts/reports/qa-final.md` all PASS.
   - Verify: `npm run test:e2e`
 - [ ] **T5.2 Full review** · Owner: reviewer
   - [ ] Lighthouse mobile ≥ 90/95/95/100 and desktop ≥ 95 on every page.

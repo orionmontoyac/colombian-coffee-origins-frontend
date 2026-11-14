@@ -99,7 +99,7 @@ export function UrraoPage({ lang, dict, answer }: { lang: Locale; dict: Dictiona
 
         <section className="px-4 pb-2 pt-14">
           <SectionHeader title={t.calendar.title} accent={t.calendar.accent} text={t.calendar.text} />
-          <div role="region" aria-label={t.calendar.caption} tabIndex={0} className="mt-8 overflow-x-auto rounded-lg bg-surface p-4 focus-visible:outline-3 focus-visible:outline-primary sm:p-6">
+          <div role="region" aria-label={t.calendar.caption} tabIndex={0} className="relative mt-8 overflow-x-auto rounded-lg bg-surface p-4 focus-visible:outline-3 focus-visible:outline-primary sm:p-6">
             <table className="w-full min-w-[640px] border-collapse text-center">
               <caption className="sr-only">{t.calendar.caption}</caption>
               <thead>
