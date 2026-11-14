@@ -154,7 +154,7 @@ Each page task has these **standard checkpoints** in addition to its own:
 ## Phase 4 — Motion (motion agent)
 
 - [ ] **T4.1 Motion system + DESIGN.md rule update** · Owns: src/components/motion/**, the `/* motion */` block of globals.css
-  - [ ] Planner updates DESIGN.md motion rules (hero entrance, sub-page banner entrance, view transitions, restrained one-time section reveals, interaction states; all with reduced-motion fallback) and logs it in DECISIONS.md.
+  - [x] Planner updates DESIGN.md motion rules (hero entrance, sub-page banner entrance, view transitions, restrained one-time section reveals, interaction states; all with reduced-motion fallback) and logs it in DECISIONS.md.
   - [ ] Motion tokens (easings, 4 durations) in globals.css and DESIGN.md.
   - Verify: `npm run check:tokens && npm run build`
 - [ ] **T4.2 Opening effects and transitions**

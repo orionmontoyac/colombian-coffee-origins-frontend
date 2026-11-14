@@ -456,6 +456,26 @@ Nothing is square-cornered. Nothing uses a radius outside this list.
 - **Footer.** Canopy green panel with the logo and tagline, four link columns plus "Get in touch", and a bottom bar with Privacy, Terms and EN · ES.
 - **Inputs.** Pill-shaped, white, 52px tall; error text in ripe cherry below the field, never a red-filled field.
 
+## Motion
+
+Motion is restrained and purposeful: it shows arrival and continuity, never decoration. Everything animates `transform` and `opacity` only (no layout properties), content is visible and readable before any animation starts, and every effect has a `prefers-reduced-motion: reduce` fallback in which nothing moves (state changes are instant).
+
+| Token | Value | Use |
+| --- | --- | --- |
+| `--ease-out` | `cubic-bezier(0.22, 1, 0.36, 1)` | Entrances, reveals, drawer open |
+| `--ease-in-out` | `cubic-bezier(0.65, 0, 0.35, 1)` | Crossfades, view transitions |
+| `--duration-fast` | 150ms | Press, chip and color changes |
+| `--duration-base` | 240ms | Hover lift, filter crossfade, cart count |
+| `--duration-slow` | 480ms | Banner entrance, section reveal, drawer |
+| `--duration-hero` | 900ms | Home hero sequence (photo scale up to 1600ms) |
+
+- **Home hero entrance (once per load):** title rises 16px and fades in; the giant display word un-blurs (6px to 0); the hero photo scales slowly from 1.04 to 1. The H1 is in the DOM and visible immediately (transform-only), so LCP is never delayed.
+- **Sub-page banner entrance:** chips, H1 and stat boxes rise 12px in a short stagger (60ms), `--duration-slow`.
+- **View transitions (where supported, feature-detected):** lot card image → lot gallery and product bag → product page share an element (`view-transition-name` from `data-vt-name`); everything else crossfades. Unsupported browsers get a normal navigation.
+- **Section reveals:** only section headers and card grids, once, 12px rise plus fade on first entry into the viewport. Never on body text, never repeating, never parallax.
+- **Interaction states:** card hover lift (translateY -4px, `--duration-base`), button press scale (0.98, `--duration-fast`), chip and filter crossfades, cart drawer slide-in with focus trap, cart count "bean pop" (scale 1 → 1.15 → 1), roast meter fill on first view.
+- **Reduced motion:** all of the above are off; the page renders in its final state.
+
 ## Do's and Don'ts
 
 - **Do** keep each page or section in one line: green *or* brown. **Don't** put a lime button on a brown panel or a brown button on a green banner.
@@ -473,7 +493,7 @@ Nothing is square-cornered. Nothing uses a radius outside this list.
 - **Do** mark Colombia-only content with the CO pill and wrap it in `<OnlyInCountry country="CO">`.
 - **Do** label example data as example ("Example products for this design preview").
 - **Do** set every button, chip, nav item and eyebrow in `font-label` (Ubuntu). **Don't** set body text or headings in Ubuntu.
-- **Don't** animate on scroll. Only hover lifts on cards (translateY -4px, 200ms ease) and color changes on buttons move.
+- **Don't** animate on scroll beyond the one-time section reveals in Motion; no parallax, no scroll-jacking, no looping animation. Every motion has a reduced-motion fallback.
 
 ## Assets
 
