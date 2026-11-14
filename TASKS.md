@@ -176,7 +176,7 @@ Each page task has these **standard checkpoints** in addition to its own:
   - [x] All e2e specs green; report `artifacts/reports/qa-final.md` all PASS.
   - Verify: `npm run test:e2e`
 - [ ] **T5.2 Full review** · Owner: reviewer
-  - [ ] Lighthouse mobile ≥ 90/95/95/100 and desktop ≥ 95 on every page. (2026-11-14, build 924773c: 21/24 pass; only the 3 shop pages miss mobile Performance at 86–88, LCP 3.9–4.2 s on the bean-pattern banner. Re-run after removing the country rule: shop pages still 86–93 (mostly 87), so the LCP is the decorative pattern layer, not geo. Table: artifacts/reports/lighthouse-2026-11-14.md)
+  - [x] Lighthouse mobile ≥ 90/95/95/100 and desktop ≥ 95 on every page. (2026-11-14: 24/24 pass. Full run on 924773c: 21 pages pass, mobile Performance 93–100; the 3 shop pages then passed after the bean pattern was hidden on phones: mobile 100/100/100/100, desktop 99/100/100/100, LCP 0.9 s. A11y, BP, SEO 100 everywhere. Table: artifacts/reports/lighthouse-2026-11-14.md, gitignored.)
   - [x] Token and DESIGN.md compliance (2026-11-14: check:tokens passes; off-scale radii (14px, 12px, raw 10/32px) and the header dropdown shadow swapped for scale tokens / a `line` border; full e2e 814 passed).
   - [x] Next 16 API correctness (2026-11-14: `proxy.ts` not `middleware.ts`; params/searchParams are Promises via PageProps/LayoutProps; no removed APIs; tsc clean).
   - [x] No secrets (2026-11-14: no `.env`/keys tracked; no key patterns in the repo; only env read is `NEXT_PUBLIC_SITE_URL`).

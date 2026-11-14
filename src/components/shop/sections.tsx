@@ -37,7 +37,7 @@ export function ClubAndQuiz({ copy }: { copy: Dictionary["shopPage"] }) {
   return (
     <section className="mt-14 grid gap-4 lg:grid-cols-[1.3fr_1fr]">
       <div className="relative flex min-h-[360px] items-center overflow-hidden rounded-xl bg-roast px-6 py-12 text-on-primary sm:px-12">
-        <div aria-hidden="true" className="shop-banner-pattern pointer-events-none absolute inset-0" />
+        <div aria-hidden="true" className="shop-banner-pattern pointer-events-none absolute inset-0 max-sm:hidden" />
         <div className="relative isolate max-w-[540px]">
           <div aria-hidden="true" className="absolute -inset-6 -z-10 rounded-lg bg-roast-dark/90" />
           <p className="inline-flex flex-wrap items-center gap-2.5 font-label text-[13px] font-medium uppercase tracking-[0.08em] text-on-roast-body">

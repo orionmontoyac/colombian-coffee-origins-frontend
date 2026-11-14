@@ -52,8 +52,8 @@ export function SubpageBanner({
   cart,
 }: SubpageBannerProps) {
   const roasted = line === "roasted";
-  // The bean pattern is a CSS mask, so the browser finds it late; it is the LCP element on shop pages
-  if (roasted) preload("/images/coffe-beans-pattern.webp", { as: "image", fetchPriority: "high" });
+  // The bean pattern is a CSS mask, so the browser finds it late. Hidden on phones (it was the mobile LCP; owner 2026-11-14)
+  if (roasted) preload("/images/coffe-beans-pattern.webp", { as: "image", fetchPriority: "high", media: "(min-width: 640px)" });
   return (
     <section
       className={cx(
@@ -61,7 +61,7 @@ export function SubpageBanner({
         roasted ? "bg-roast-dark" : "hero-banner",
       )}
     >
-      {roasted ? <div aria-hidden="true" className="shop-banner-pattern pointer-events-none absolute inset-0" /> : null}
+      {roasted ? <div aria-hidden="true" className="shop-banner-pattern pointer-events-none absolute inset-0 max-sm:hidden" /> : null}
       <SiteHeader lang={lang} nav={nav} active={active} variant={roasted ? "shop" : "default"} cart={cart} />
 
       <div className="relative">
