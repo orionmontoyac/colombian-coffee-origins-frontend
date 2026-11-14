@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { SharedElement } from "@/components/motion/shared-element";
 import { BagMockup } from "./bag-mockup";
 import { Button } from "./button";
 import { RoastMeter } from "./roast-meter";
@@ -35,14 +36,20 @@ export function ProductCard({
           {tag.label}
         </span>
       ) : null}
-      <BagMockup color={bag.color} brand={bag.label} roastLabel={bag.roastLabel} size={bag.size} beanIcon={bag.beanIcon} />
+      {vtName ? (
+        <SharedElement name={vtName}>
+          <div><BagMockup color={bag.color} brand={bag.label} roastLabel={bag.roastLabel} size={bag.size} beanIcon={bag.beanIcon} /></div>
+        </SharedElement>
+      ) : (
+        <BagMockup color={bag.color} brand={bag.label} roastLabel={bag.roastLabel} size={bag.size} beanIcon={bag.beanIcon} />
+      )}
     </>
   );
 
   return (
     <article
       data-vt-name={vtName}
-      className={`flex flex-col overflow-hidden rounded-lg bg-neutral${bordered ? " border border-surface-sunken" : ""}`}
+      className={`lift flex flex-col overflow-hidden rounded-lg bg-neutral${bordered ? " border border-surface-sunken" : ""}`}
     >
       {href ? (
         <Link

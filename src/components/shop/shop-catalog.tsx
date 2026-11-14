@@ -131,7 +131,7 @@ export function ShopCatalog({
             </Button>
           </div>
         ) : (
-          <ul aria-label={copy.gridLabel} className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <ul key={visible.map((p) => p.slug).join()} aria-label={copy.gridLabel} className="filter-fade mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {visible.map((p) => (
               <li key={p.slug} data-vt-name={`product-${p.slug}`} className="rounded-lg border border-roast-line">
                 <ProductCard
@@ -145,6 +145,7 @@ export function ShopCatalog({
                   price={p.price}
                   pricePerKg={p.pricePerKg}
                   href={p.href}
+                  vtName={`product-${p.slug}`}
                   addSlot={
                     <AddButton
                       slug={p.slug}

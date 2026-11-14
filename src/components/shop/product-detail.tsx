@@ -1,3 +1,4 @@
+import { SharedElement } from "@/components/motion/shared-element";
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { SiteFooter } from "@/components/home/sections";
@@ -139,6 +140,7 @@ export function ProductDetail({ lang, dict, product: p }: { lang: Locale; dict: 
       <main id="main">
         <section className="mt-2 grid gap-6 pt-6 lg:grid-cols-[1.15fr_1fr]">
           <div>
+            <SharedElement name={`product-${p.slug}`}>
             <div
               data-vt-name={`product-${p.slug}`}
               className="flex min-h-[420px] items-center justify-center rounded-xl py-16"
@@ -148,6 +150,7 @@ export function ProductDetail({ lang, dict, product: p }: { lang: Locale; dict: 
                 <BagMockup color={p.bag} brand={p.labelBrand} roastLabel={roast} size={`${size.grams} g`} />
               </div>
             </div>
+            </SharedElement>
             <ul aria-label={t.galleryLabel} className="mt-4 grid grid-cols-3 gap-4">
               {t.photoViews.map((view, i) => (
                 <li key={view}>

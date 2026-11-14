@@ -1,5 +1,6 @@
 "use client";
 
+import { SharedElement } from "@/components/motion/shared-element";
 import { useState, type ReactNode } from "react";
 
 export type GallerySlide = {
@@ -36,6 +37,7 @@ export function LotGallery({
 
   return (
     <div role="group" aria-label={label}>
+      <SharedElement name={vtName}>
       <div
         data-vt-name={vtName}
         className="relative h-[320px] overflow-hidden rounded-xl bg-placeholder sm:h-[440px] lg:h-[540px]"
@@ -48,6 +50,7 @@ export function LotGallery({
           {fill(counterTemplate, { current: active + 1, total: slides.length })} · {slide.caption}
         </p>
       </div>
+      </SharedElement>
       <ul className="mt-3 grid grid-cols-4 gap-3">
         {slides.map((s, i) => (
           <li key={s.caption + i}>

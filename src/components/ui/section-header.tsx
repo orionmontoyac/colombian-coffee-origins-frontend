@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Reveal } from "@/components/motion/reveal";
 import { cx } from "./cx";
 
 /**
@@ -79,11 +80,11 @@ export function SectionHeader({
       ) : null}
     </div>
   );
-  if (!action) return <div className={className}>{header}</div>;
+  if (!action) return <Reveal className={className}>{header}</Reveal>;
   return (
-    <div className={cx("flex flex-wrap items-end justify-between gap-x-10 gap-y-6", className)}>
+    <Reveal className={cx("flex flex-wrap items-end justify-between gap-x-10 gap-y-6", className)}>
       <div className="max-w-[720px]">{header}</div>
       {action}
-    </div>
+    </Reveal>
   );
 }

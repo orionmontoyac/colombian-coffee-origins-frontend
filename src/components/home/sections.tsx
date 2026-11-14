@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/reveal";
 import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
@@ -116,7 +117,7 @@ export function FeaturedLots({ lang, dict }: { lang: Locale; dict: Dictionary })
         ))}
       </ul>
 
-      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <Reveal className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {sampleLots.map((lot) => {
           const fullLot = getLot(lot.code);
           return (
@@ -149,7 +150,7 @@ export function FeaturedLots({ lang, dict }: { lang: Locale; dict: Dictionary })
           />
           );
         })}
-      </div>
+      </Reveal>
       <p className="mt-[18px] text-[13px] text-muted">{l.note}</p>
     </section>
   );
@@ -179,7 +180,7 @@ export function Facts({ dict }: { dict: Dictionary }) {
   return (
     <section className="px-4 pb-2 pt-14">
       <SectionHeader size="xl" eyebrow={f.eyebrow} title={f.titleStart} accent={f.titleEm} titleEnd={f.titleEnd || undefined} text={f.text} />
-      <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <Reveal className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {f.items.map((item, i) => {
           const highlight = i === 0;
           return (
@@ -201,7 +202,7 @@ export function Facts({ dict }: { dict: Dictionary }) {
             </div>
           );
         })}
-      </div>
+      </Reveal>
       <p className="mt-[18px] text-[13px] text-muted">{f.sources}</p>
     </section>
   );

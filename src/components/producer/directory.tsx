@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/reveal";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { ProducersBand, SiteFooter } from "@/components/home/sections";
 import { Chip } from "@/components/ui/chip";
@@ -44,7 +45,7 @@ export function Directory({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       <main id="main">
         <section className="px-4 pb-2 pt-14">
           <SectionHeader eyebrow={t.list.eyebrow} title={t.list.title} accent={t.list.accent} text={t.list.text} />
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Reveal className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {producers.map((p) => {
               const lotCount = lotsByProducer(p.slug).length;
               return (
@@ -78,7 +79,7 @@ export function Directory({ lang, dict }: { lang: Locale; dict: Dictionary }) {
                 />
               );
             })}
-          </div>
+          </Reveal>
           <p className="mt-[18px] text-[13px] text-muted">{t.list.note}</p>
         </section>
 

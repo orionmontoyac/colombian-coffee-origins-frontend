@@ -26,7 +26,7 @@ export function RoastMeter({
       >
         <span aria-hidden="true" className="inline-flex items-center gap-1">
           {[1, 2, 3, 4, 5].map((i) => (
-            <Bean key={i} size={size} style={{ opacity: i <= level ? 1 : 0.22 }} />
+            <Bean key={i} size={size} className="roast-bean" style={{ opacity: i <= level ? 1 : 0.22, "--i": i } as React.CSSProperties} />
           ))}
         </span>
         <span className="sr-only">{label}</span>

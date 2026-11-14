@@ -1,5 +1,6 @@
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
+import { SharedElement } from "@/components/motion/shared-element";
 import { Button } from "./button";
 import { TrustBadge, type TrustLevel } from "./trust-badge";
 import { PlaceholderImage } from "./placeholder-image";
@@ -72,14 +73,16 @@ export function LotCard(p: LotCardProps) {
   );
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-notch bg-surface">
+    <article className="lift flex flex-col overflow-hidden rounded-notch bg-surface">
       {p.detailHref ? (
         <Link
           href={p.detailHref}
           aria-label={`${p.variety}, ${p.code}`}
           className="relative block h-60 focus-visible:outline-3 focus-visible:outline-offset-[-3px] focus-visible:outline-primary"
         >
-          {photo}
+          <SharedElement name={`lot-${p.code.toLowerCase()}`}>
+            <div className="absolute inset-0">{photo}</div>
+          </SharedElement>
         </Link>
       ) : (
         <div className="relative h-60">{photo}</div>

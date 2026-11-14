@@ -1,5 +1,6 @@
 "use client";
 
+import { BeanPop } from "@/components/motion/bean-pop";
 import Link from "next/link";
 import { useEffect, useId, useRef, useState, type MouseEvent } from "react";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
@@ -130,7 +131,7 @@ export function SiteHeader({
       {cartLabel}
       <span className="rounded-full bg-neutral px-2 py-0.5 text-xs font-medium text-roast">
         <span className="sr-only">: </span>
-        {cart?.count ?? 0}
+        <BeanPop value={cart?.count ?? 0}>{cart?.count ?? 0}</BeanPop>
       </span>
     </>
   );

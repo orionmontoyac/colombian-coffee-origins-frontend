@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { SiteHeader, type NavKey } from "@/components/home/site-header";
 import { Breadcrumbs, type BreadcrumbItem } from "./breadcrumbs";
@@ -76,21 +76,22 @@ export function SubpageBanner({
 
         <div className="mt-8 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-10">
           <div className="min-w-0">
-            {chips ? <div className="mb-4 flex flex-wrap items-center gap-2">{chips}</div> : null}
-            <h1 className="font-display text-[40px] font-semibold leading-[1.02] tracking-[-0.02em] sm:text-headline-xl">
+            {chips ? <div style={{ "--i": 0 } as CSSProperties} className="banner-in mb-4 flex flex-wrap items-center gap-2">{chips}</div> : null}
+            <h1 style={{ "--i": 1 } as CSSProperties} className="banner-in-h1 font-display text-[40px] font-semibold leading-[1.02] tracking-[-0.02em] sm:text-headline-xl">
               {title}{" "}
               <span className={cx("font-normal italic", roasted ? "text-caramel" : "text-accent")}>{accent}</span>
             </h1>
             <p
+              style={{ "--i": 2 } as CSSProperties}
               className={cx(
-                "mt-4 max-w-[640px] text-body-lg",
+                "banner-in mt-4 max-w-[640px] text-body-lg",
                 roasted ? "text-on-roast-body" : "text-on-primary-body",
               )}
             >
               {description}
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-3 lg:flex-none">
+          <div style={{ "--i": 3 } as CSSProperties} className="banner-in grid grid-cols-3 gap-3 lg:flex-none">
             {stats.map((stat) => (
               <StatBox key={stat.label} label={stat.label} value={stat.value} accent={stat.accent} line={line} className="min-w-0 lg:min-w-[132px]" />
             ))}
