@@ -1,6 +1,7 @@
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { lots } from "@/data/lots";
 import { submitSamples } from "@/lib/actions/forms";
+import type { FormState } from "@/lib/actions/types";
 import { href } from "@/lib/routes";
 import { Button } from "@/components/ui";
 import { FormShell, SelectField, TextArea, TextField } from "./form-shell";
@@ -11,7 +12,7 @@ import { fill, formStrings } from "./strings";
  * src/data/lots.ts, so unknown codes are ignored). Keeping the page static means the form
  * is in the first HTML and visible without JavaScript.
  */
-export function SamplesForm({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+export function SamplesForm({ lang, dict, initial }: { lang: Locale; dict: Dictionary; initial?: FormState }) {
   const t = dict.forms.samples.form;
   const options = lots
     .filter((l) => l.sampleAvailable)
@@ -22,6 +23,7 @@ export function SamplesForm({ lang, dict }: { lang: Locale; dict: Dictionary }) 
     <FormShell
       formId={f}
       action={submitSamples}
+      initial={initial}
       lang={lang}
       t={formStrings(dict.forms, t)}
       labels={dict.forms.shared.labels}

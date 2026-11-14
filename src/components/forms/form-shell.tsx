@@ -31,9 +31,9 @@ const inputBase =
   "w-full bg-neutral px-5 font-sans text-body-md text-ink ring-[1.5px] ring-inset ring-line placeholder:text-muted focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-primary aria-[invalid=true]:ring-error";
 
 /**
- * One form: runs the Server Action through `useActionState`, so it also works without
- * JavaScript. Shows an error summary, moves focus to the first invalid field, and swaps
- * the form for a success message.
+ * One form. The action redirects to `?sent=1` or `?error=`, which works without JavaScript
+ * (a static-page POST does not return HTML). `initial` is that result, read on the server.
+ * Shows an error summary, moves focus to the first invalid field, and swaps the form for a success message.
  */
 export function FormShell({
   action,
@@ -44,6 +44,7 @@ export function FormShell({
   successExtra,
   children,
   formId,
+  initial = idleState,
 }: {
   action: (prev: FormState, data: FormData) => Promise<FormState>;
   lang: string;
@@ -53,9 +54,10 @@ export function FormShell({
   privacyHref: string;
   successExtra?: ReactNode;
   formId: string;
+  initial?: FormState;
   children: ReactNode;
 }) {
-  const [state, formAction, pending] = useActionState(action, idleState);
+  const [state, formAction, pending] = useActionState(action, initial);
   const formRef = useRef<HTMLFormElement>(null);
   const successRef = useRef<HTMLDivElement>(null);
 

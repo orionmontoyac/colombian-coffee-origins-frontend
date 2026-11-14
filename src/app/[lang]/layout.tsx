@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import "../globals.css";
-import { JsonLd, graph, organization, website } from "@/lib/seo/jsonld";
 import { site } from "@/lib/site";
 import { getDictionary, hasLocale, locales } from "./dictionaries";
 
@@ -17,6 +16,7 @@ const vollkorn = localFont({
 });
 const firaSans = localFont({
   variable: "--font-fira-sans",
+  preload: false,
   src: [
     { path: "../../fonts/fira-sans/FiraSans-Regular.woff2", weight: "400", style: "normal" },
     { path: "../../fonts/fira-sans/FiraSans-Italic.woff2", weight: "400", style: "italic" },
@@ -26,6 +26,7 @@ const firaSans = localFont({
 });
 const ubuntu = localFont({
   variable: "--font-ubuntu",
+  preload: false,
   src: [
     { path: "../../fonts/ubuntu/Ubuntu-Medium.woff2", weight: "500", style: "normal" },
     { path: "../../fonts/ubuntu/Ubuntu-Bold.woff2", weight: "700", style: "normal" },
@@ -58,7 +59,11 @@ export default async function RootLayout({
       className={`${vollkorn.variable} ${firaSans.variable} ${ubuntu.variable} h-full antialiased`}
     >
       <body className="min-h-full">
-        <JsonLd data={graph(organization(), website())} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "setTimeout(function(){document.documentElement.classList.add('fonts-on')},400)",
+          }}
+        />
         {children}
       </body>
     </html>

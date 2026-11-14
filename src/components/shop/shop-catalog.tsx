@@ -173,7 +173,6 @@ export function ShopCatalog({
                 <button
                   type="button"
                   aria-pressed={on}
-                  aria-label={fill(brandsCopy.filterAria, { brand: b.name })}
                   onClick={() => {
                     setBrand(on ? null : b.slug);
                     if (!on) document.getElementById("catalog")?.scrollIntoView();

@@ -6,7 +6,7 @@ import { fill, formatCop } from "@/components/shop/format";
 import { ProductDetail } from "@/components/shop/product-detail";
 import { shopMetadata } from "@/components/shop/seo";
 import { ShopUnavailable } from "@/components/shop/unavailable";
-import { defaultSize, getProduct, productParams, roastLabels } from "@/data/products";
+import { brandName, defaultSize, getProduct, productParams, roastLabels } from "@/data/products";
 import { productAlternates } from "@/lib/routes";
 import { getDictionary, hasLocale } from "../../dictionaries";
 
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/shop/[slug
   const dict = await getDictionary();
   const size = defaultSize(product);
   const vars = {
-    brand: product.brand,
+    brand: brandName(product.brand, lang),
     name: product.name[lang],
     roast: roastLabels[product.roastLevel][lang].toLowerCase(),
     grams: size.grams,

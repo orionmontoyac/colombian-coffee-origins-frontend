@@ -6,9 +6,13 @@ import { FormLayout, FormPageFrame } from "@/components/forms/page-frame";
 import { formJsonLd, formMetadata } from "@/components/forms/seo";
 import { OnlyInCountry } from "@/components/only-in-country";
 import { SectionHeader, WhatsAppButton } from "@/components/ui";
+import { stateFromSearch } from "@/lib/actions/query";
 import { href } from "@/lib/routes";
 import { site } from "@/lib/site";
 import { getDictionary, hasLocale } from "../dictionaries";
+
+// The result (`?sent=1` / `?error=`) has to be in the first HTML. A streamed hole is invisible without JS.
+export const instant = false;
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/contact">): Promise<Metadata> {
   const { lang } = await params;
@@ -17,8 +21,9 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/contact">)
   return formMetadata(lang, "contact", forms.contact.meta, cherries.src);
 }
 
-export default async function ContactPage({ params }: PageProps<"/[lang]/contact">) {
+export default async function ContactPage({ params, searchParams }: PageProps<"/[lang]/contact">) {
   const { lang } = await params;
+  const initial = stateFromSearch(await searchParams);
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary();
   const t = dict.forms.contact;
@@ -86,7 +91,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
           </>
         }
       >
-        <ContactForm lang={lang} dict={dict} />
+        <ContactForm lang={lang} dict={dict} initial={initial} />
       </FormLayout>
     </FormPageFrame>
   );

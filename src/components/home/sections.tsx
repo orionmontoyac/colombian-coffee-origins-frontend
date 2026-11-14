@@ -9,6 +9,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { TrustBadge } from "@/components/ui/trust-badge";
 import { getLot } from "@/data/lots";
 import { href, lotHref, producerHref, type RouteKey } from "@/lib/routes";
+import { site } from "@/lib/site";
 import beansPattern from "@/assets/home/coffee-beans-pattern.png";
 import urraoSquare from "@/assets/home/urrao-main-square.jpg";
 import farmersHarvest from "@/assets/home/farmers-harvest.jpg";
@@ -413,13 +414,16 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           <Link href={href(lang, "terms")} className="py-2 hover:text-white">
             {f.terms}
           </Link>
-          {/* TODO: real social profile URLs */}
-          <a href="#" className="py-2 hover:text-white">
-            Instagram
-          </a>
-          <a href="#" className="py-2 hover:text-white">
-            LinkedIn
-          </a>
+          {site.social.instagram ? (
+            <a href={site.social.instagram} className="py-2 hover:text-white">
+              Instagram
+            </a>
+          ) : null}
+          {site.social.linkedin ? (
+            <a href={site.social.linkedin} className="py-2 hover:text-white">
+              LinkedIn
+            </a>
+          ) : null}
           <Link
             href={href(other, "home")}
             hrefLang={other}

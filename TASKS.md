@@ -157,14 +157,14 @@ Each page task has these **standard checkpoints** in addition to its own:
   - [x] Planner updates DESIGN.md motion rules (hero entrance, sub-page banner entrance, view transitions, restrained one-time section reveals, interaction states; all with reduced-motion fallback) and logs it in DECISIONS.md.
   - [x] Motion tokens (easings, 4 durations) in globals.css and DESIGN.md.
   - Verify: `npm run check:tokens && npm run build`
-- [ ] **T4.2 Opening effects and transitions**
-  - [ ] Home hero entrance sequence (title rise, giant word un-blur, slow photo scale) — H1 visible immediately (transform-only).
-  - [ ] Sub-page banner entrance on every sub-page.
-  - [ ] View transitions: lot card image → lot gallery; product bag → product page; crossfade elsewhere; feature-detected.
-  - [ ] `<Reveal>` on section headers and card grids only, once, 12px.
-  - [ ] Hover lift, press scale, chip crossfade, filter crossfade, cart drawer slide + focus trap, cart count bean pop, roast meter fill.
-  - [ ] `prefers-reduced-motion`: nothing moves (Playwright reduced-motion project passes).
-  - [ ] CLS < 0.05 and Performance ≥ 90 on home and a lot page after the change.
+- [x] **T4.2 Opening effects and transitions**
+  - [x] Home hero entrance sequence (title rise, giant word un-blur, slow photo scale) — H1 visible immediately (transform-only).
+  - [x] Sub-page banner entrance on every sub-page.
+  - [x] View transitions: lot card image → lot gallery; product bag → product page; crossfade elsewhere; feature-detected.
+  - [x] `<Reveal>` on section headers and card grids only, once, 12px.
+  - [x] Hover lift, press scale, chip crossfade, filter crossfade, cart drawer slide + focus trap, cart count bean pop, roast meter fill.
+  - [x] `prefers-reduced-motion`: nothing moves (Playwright reduced-motion project passes).
+  - [x] CLS < 0.05 and Performance ≥ 90 on home and a lot page after the change.
   - Verify: `npm run build && npx playwright test --project=reduced-motion && npm run lhci`
 
 ## Phase 5 — Quality gates (qa and reviewer, then fixes by owners)
@@ -183,14 +183,14 @@ Each page task has these **standard checkpoints** in addition to its own:
   - Verify: `npm run verify`
 - [ ] **T5.3 Fix round** · Owner: planner (assigns fixes to owners)
   - [ ] Every P0/P1 from T5.1 and T5.2 fixed and re-verified.
-  - [ ] Home mobile Performance ≥ 90 (now 85 /en, 86 /es): LCP is about 4.1 s on the hero photo with about 810 ms render delay; the top opportunity is unused JS (about 300 ms). Not caused by motion (A/B tested). Owner: page-builder (home) + foundation (image/fonts/JS); reviewer T5.2 gives the diagnosis.
-  - [ ] Regressions seen in the T4.2 full run (681 passed / 58 failed / 49 skipped), diagnosed by qa in T5.1: lot-card link `aria-label="Variety, CODE"` label-content-name-mismatch (lots, lot and producer axe tests); home JSON-LD missing FAQPage after the T3.1 switch; content.spec expects 2 table rows on Urrao but T3.2's facts table adds more; the unknown-lot 404 still emits JSON-LD; axe on /es/tienda/vender (one project) and the producers index (mobile).
-  - [ ] shop.spec.ts: the non-CO tests assert the `X-Robots-Tag: noindex, follow` header (the proxy sets it now) instead of a noindex meta tag (page-builder, shop files).
-  - [ ] Shop banner breadcrumbs pass axe color-contrast on the new CSS bean pattern (`.shop-banner-pattern`, from the owner's edit): raise the text contrast or add a scrim (foundation-builder, ui/subpage-banner + breadcrumbs).
-  - [ ] T3.1 audit items: the EN product title shows the Spanish name ("Café …") (data, foundation); producer profiles link to /regions/urrao (page-builder); the home hero alt text names the place (page-builder, home); footer links have real hrefs (content-seo audit).
-  - [ ] Lots catalog cards link the producer: in `src/app/[lang]/coffees/page.tsx` `toItem`, pass `producerHref={lot.producerSlug ? producerHref(lang, lot.producerSlug) : undefined}` (page-builder, T2.1 files).
-  - [ ] Shop product card: fix the `label-content-name-mismatch` (Add button accessible name must start with its visible text), then remove the axe exclusion in shop.spec.ts (page-builder, shop files).
-  - [ ] Forms show their result after a submit without JavaScript (with cacheComponents/PPR the POST to a static page returns no HTML): redirect-based fallback (e.g. `?sent=1` / `?error=` with a dynamic segment) in src/lib/actions + src/components/forms, owned by page-builder (T2.6 files).
+  - [x] Home mobile Performance ≥ 90 (now 0.94–0.96 after AVIF; was 85 /en, 86 /es): LCP is about 4.1 s on the hero photo with about 810 ms render delay; the top opportunity is unused JS (about 300 ms). Not caused by motion (A/B tested). Owner: page-builder (home) + foundation (image/fonts/JS); reviewer T5.2 gives the diagnosis.
+  - [x] Regressions seen in the T4.2 full run (681 passed / 58 failed / 49 skipped), diagnosed by qa in T5.1: lot-card link `aria-label="Variety, CODE"` label-content-name-mismatch (lots, lot and producer axe tests); home JSON-LD missing FAQPage after the T3.1 switch; content.spec expects 2 table rows on Urrao but T3.2's facts table adds more; the unknown-lot 404 still emits JSON-LD; axe on /es/tienda/vender (one project) and the producers index (mobile).
+  - [x] shop.spec.ts: the non-CO tests assert the `X-Robots-Tag: noindex, follow` header (the proxy sets it now) instead of a noindex meta tag (page-builder, shop files).
+  - [x] Shop banner breadcrumbs pass axe color-contrast on the new CSS bean pattern (`.shop-banner-pattern`, from the owner's edit): raise the text contrast or add a scrim (foundation-builder, ui/subpage-banner + breadcrumbs).
+  - [x] T3.1 audit items: the EN product title shows the Spanish name ("Café …") (data, foundation); producer profiles link to /regions/urrao (page-builder); the home hero alt text names the place (page-builder, home); footer links have real hrefs (content-seo audit).
+  - [x] Lots catalog cards link the producer: in `src/app/[lang]/coffees/page.tsx` `toItem`, pass `producerHref={lot.producerSlug ? producerHref(lang, lot.producerSlug) : undefined}` (page-builder, T2.1 files).
+  - [x] Shop product card: fix the `label-content-name-mismatch` (Add button accessible name must start with its visible text), then remove the axe exclusion in shop.spec.ts (page-builder, shop files).
+  - [x] Forms show their result after a submit without JavaScript (with cacheComponents/PPR the POST to a static page returns no HTML): redirect-based fallback (e.g. `?sent=1` / `?error=` with a dynamic segment) in src/lib/actions + src/components/forms, owned by page-builder (T2.6 files).
   - Verify: `bash scripts/factory/is-done.sh`
 
 ## Phase 6 — Hand-off (planner)

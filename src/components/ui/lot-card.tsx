@@ -42,7 +42,7 @@ export function LotCard(p: LotCardProps) {
       {p.image ? (
         <Image
           src={p.image}
-          alt={p.imageAlt ?? ""}
+          alt={p.detailHref ? "" : (p.imageAlt ?? "")}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover"
@@ -77,7 +77,6 @@ export function LotCard(p: LotCardProps) {
       {p.detailHref ? (
         <Link
           href={p.detailHref}
-          aria-label={`${p.variety}, ${p.code}`}
           className="relative block h-60 focus-visible:outline-3 focus-visible:outline-offset-[-3px] focus-visible:outline-primary"
         >
           <SharedElement name={`lot-${p.code.toLowerCase()}`}>

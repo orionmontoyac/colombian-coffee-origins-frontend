@@ -139,6 +139,12 @@ export const products: Product[] = [
   },
 ];
 
+/** English titles drop the Spanish "Café" / "Tostado" so the product title reads in English. */
+export function brandName(brand: string, lang: Locale): string {
+  if (lang === "es") return brand;
+  return brand.replace(/^Café /, "").replace(/ Café$/, " Coffee").replace(/^Tostado /, "");
+}
+
 export const getProduct = (slug: string): Product | undefined => products.find((p) => p.slug === slug);
 export const getBrand = (slug: string): Brand | undefined => brands.find((b) => b.slug === slug);
 export const productsByProducer = (producerSlug: string): Product[] =>

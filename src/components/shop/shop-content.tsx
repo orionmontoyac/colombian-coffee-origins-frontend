@@ -54,7 +54,7 @@ export function ShopContent({ lang, dict, answer }: { lang: Locale; dict: Dictio
           "@context": "https://schema.org",
           "@graph": [
             organizationLd(),
-            websiteLd(lang),
+            websiteLd(),
             breadcrumbLd([{ name: home.label, path: home.href }, { name: t.breadcrumbShop }]),
             {
               "@type": "ItemList",

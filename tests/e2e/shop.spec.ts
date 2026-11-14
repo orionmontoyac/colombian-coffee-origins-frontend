@@ -99,7 +99,7 @@ test.describe("shop in Colombia", () => {
   test("no serious or critical axe violations on the shop", async ({ page }, testInfo) => {
     test.skip(testInfo.project.name !== "desktop", "one axe run is enough");
     await ready(page, "/en/shop");
-    const results = await new AxeBuilder({ page }).disableRules(["label-content-name-mismatch"]).analyze();
+    const results = await new AxeBuilder({ page }).analyze();
     const bad = results.violations.filter((v) => v.impact === "serious" || v.impact === "critical");
     expect(bad.map((v) => `${v.id}: ${v.nodes[0]?.target}`)).toEqual([]);
   });
@@ -110,10 +110,13 @@ test.describe("shop outside Colombia", () => {
 
   for (const path of ["/en/shop", "/es/tienda", "/en/shop/el-mirador-chiroso"]) {
     test(`${path} says the shop ships inside Colombia only (200, noindex)`, async ({ page }) => {
-      await ready(page, path);
+      // noindex comes from the proxy's X-Robots-Tag header (DECISIONS.md "T3.x-proxy"), not a meta tag.
+      const response = await page.goto(path);
+      expect(response?.status()).toBe(200);
+      expect(response?.headers()["x-robots-tag"]).toBe("noindex, follow");
+      await page.waitForLoadState("networkidle");
       await expect(page.locator("h1")).toHaveCount(1);
       await expect(page.locator("h1")).toContainText("Colombia");
-      await expect(page.locator('meta[name="robots"][content*="noindex"]')).toHaveCount(1);
       await expect(page.locator('main a[href$="/coffees"], main a[href$="/cafes"]')).toHaveCount(1);
       await expect(page.getByTestId("add-to-cart")).toHaveCount(0);
     });

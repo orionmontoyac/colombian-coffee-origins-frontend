@@ -23,7 +23,7 @@ export function StatBox({
     <div
       className={cx(
         "rounded-md p-3 text-left sm:p-4",
-        roasted ? "border border-on-roast-body/20 bg-white/8" : "bg-primary-raised",
+        roasted ? "border border-on-roast-body/20 bg-roast-dark/90" : "bg-primary-raised",
         className,
       )}
     >

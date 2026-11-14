@@ -20,9 +20,11 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
     <section className="relative flex min-h-[calc(105dvh-0.5rem)] flex-col overflow-hidden rounded-b-[32px] bg-green-900 px-4 pt-[124px] text-center text-white sm:px-8 sm:pt-[144px] wide:rounded-b-none">
       <Image
         src={coffeeHills}
-        alt=""
+        alt={hero.photoAlt}
         fill
-        priority
+        preload
+        fetchPriority="high"
+        quality={50}
         placeholder="blur"
         sizes="100vw"
         className="hero-photo object-cover object-bottom"

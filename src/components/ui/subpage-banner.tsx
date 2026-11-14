@@ -62,8 +62,9 @@ export function SubpageBanner({
       <SiteHeader lang={lang} nav={nav} active={active} variant={roasted ? "shop" : "default"} cart={cart} />
 
       <div className="relative">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <Breadcrumbs items={breadcrumb} label={uiLabels[lang].breadcrumb} tone="dark" />
+        <div className={cx("flex flex-wrap items-center justify-between gap-3", roasted && "relative isolate")}>
+          {roasted ? <div aria-hidden="true" className="absolute -inset-x-3 -inset-y-2 -z-10 rounded-md bg-roast-dark" /> : null}
+          <Breadcrumbs items={breadcrumb} label={uiLabels[lang].breadcrumb} tone={roasted ? "roast" : "dark"} />
           {backLink ? (
             <Link
               href={backLink.href}
@@ -75,7 +76,8 @@ export function SubpageBanner({
         </div>
 
         <div className="mt-8 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-10">
-          <div className="min-w-0">
+          <div className={cx("min-w-0", roasted && "relative isolate")}>
+            {roasted ? <div aria-hidden="true" className="absolute -inset-x-4 -inset-y-3 -z-10 rounded-lg bg-roast-dark/90" /> : null}
             {chips ? <div style={{ "--i": 0 } as CSSProperties} className="banner-in mb-4 flex flex-wrap items-center gap-2">{chips}</div> : null}
             <h1 style={{ "--i": 1 } as CSSProperties} className="banner-in-h1 font-display text-[40px] font-semibold leading-[1.02] tracking-[-0.02em] sm:text-headline-xl">
               {title}{" "}

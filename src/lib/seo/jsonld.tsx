@@ -3,8 +3,8 @@ import { absoluteUrl, sameAs, site } from "@/lib/site";
 
 /**
  * Typed JSON-LD builders (SPEC section 6). Rules: never output a property without real or clearly
- * example data, and never output aggregateRating or review. Organization and WebSite are rendered
- * once by the [lang] layout; pages reference them by @id.
+ * example data, and never output aggregateRating or review. `graph()` includes Organization and
+ * WebSite so a 404, which does not call it, emits no JSON-LD.
  */
 export type Node = Record<string, unknown>;
 
@@ -31,7 +31,7 @@ export function JsonLd({ data }: { data: object }) {
 
 /** `{ "@context", "@graph" }` wrapper. */
 export function graph(...nodes: (Node | false | null | undefined)[]) {
-  return { "@context": "https://schema.org", "@graph": nodes.filter(Boolean) as Node[] };
+  return { "@context": "https://schema.org", "@graph": [organization(), website(), ...(nodes.filter(Boolean) as Node[])] };
 }
 
 export function organization(): Node {

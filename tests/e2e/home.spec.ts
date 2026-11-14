@@ -16,8 +16,12 @@ for (const p of pages) {
       expect(response?.status()).toBe(200);
       await expect(page.locator("h1")).toHaveCount(1);
       await expect(page.locator("main#main")).toHaveCount(1);
-      const raw = await page.locator('script[type="application/ld+json"]').first().textContent();
-      const types = (JSON.parse(raw!)["@graph"] as { "@type": string }[]).map((n) => n["@type"]);
+      // Organization + WebSite come from the layout graph and FAQPage from the page (T3.1, DECISIONS.md "JSON-LD validation" line).
+      const blocks = await page.locator('script[type="application/ld+json"]').allTextContents();
+      const types = blocks.flatMap((raw) => {
+        const json = JSON.parse(raw);
+        return ((json["@graph"] ?? [json]) as { "@type": string }[]).map((n) => n["@type"]);
+      });
       expect(types).toEqual(expect.arrayContaining(["Organization", "WebSite", "FAQPage"]));
     });
 

@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
 import type { Locale } from "@/app/[lang]/dictionaries";
-import { JsonLd, ORG_ID, WEBSITE_ID, breadcrumb } from "@/lib/seo/jsonld";
+import { JsonLd, breadcrumb, organization, website } from "@/lib/seo/jsonld";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export { JsonLd };
 
-/**
- * The layout renders the full Organization and WebSite once; these return node references by @id
- * so existing graphs stay valid without repeating the nodes.
- */
+/** Full Organization and WebSite nodes. Shop pages build their graph by hand, not via `graph()`. */
 export function organizationLd() {
-  return { "@id": ORG_ID };
+  return organization();
 }
-export function websiteLd(_lang?: Locale) {
-  return { "@id": WEBSITE_ID };
+export function websiteLd() {
+  return website();
 }
 export const breadcrumbLd = breadcrumb;
 

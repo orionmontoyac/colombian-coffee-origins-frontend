@@ -7,8 +7,12 @@ import { SellForm } from "@/components/forms/sell-form";
 import { Ways } from "@/components/forms/sell-sections";
 import { SectionHeader } from "@/components/ui";
 import { lots } from "@/data/lots";
+import { stateFromSearch } from "@/lib/actions/query";
 import { href } from "@/lib/routes";
 import { getDictionary, hasLocale } from "../../dictionaries";
+
+// The result (`?sent=1` / `?error=`) has to be in the first HTML. A streamed hole is invisible without JS.
+export const instant = false;
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/shop/sell">): Promise<Metadata> {
   const { lang } = await params;
@@ -17,8 +21,9 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/shop/sell"
   return formMetadata(lang, "sellWithUs", forms.sell.meta, cherries.src);
 }
 
-export default async function SellPage({ params }: PageProps<"/[lang]/shop/sell">) {
+export default async function SellPage({ params, searchParams }: PageProps<"/[lang]/shop/sell">) {
   const { lang } = await params;
+  const initial = stateFromSearch(await searchParams);
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary();
   const t = dict.forms.sell;
@@ -61,7 +66,7 @@ export default async function SellPage({ params }: PageProps<"/[lang]/shop/sell"
           ))}
         </ul>
         <div id="apply" className="scroll-mt-8">
-          <SellForm lang={lang} dict={dict} />
+          <SellForm lang={lang} dict={dict} initial={initial} />
         </div>
       </FormLayout>
     </FormPageFrame>

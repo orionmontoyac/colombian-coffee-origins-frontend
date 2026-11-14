@@ -1,17 +1,19 @@
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { Button } from "@/components/ui";
 import { submitContact } from "@/lib/actions/forms";
+import type { FormState } from "@/lib/actions/types";
 import { href } from "@/lib/routes";
 import { FormShell, SelectField, TextArea, TextField } from "./form-shell";
 import { formStrings } from "./strings";
 
-export function ContactForm({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+export function ContactForm({ lang, dict, initial }: { lang: Locale; dict: Dictionary; initial?: FormState }) {
   const t = dict.forms.contact.form;
   const f = "contact";
   return (
     <FormShell
       formId={f}
       action={submitContact}
+      initial={initial}
       lang={lang}
       t={formStrings(dict.forms, t)}
       labels={dict.forms.shared.labels}

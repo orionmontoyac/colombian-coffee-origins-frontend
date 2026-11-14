@@ -168,6 +168,18 @@
   --breakpoint-wide: 85rem;   /* 1360px: cards tuck into the banner, three columns */
 }
 
+/* Fira and Ubuntu stay on their local fallbacks until after first paint, so those
+   files don't queue ahead of the main script. shortcut: 400ms swap; drop it if
+   body text shifts enough to miss the CLS cap. */
+html[lang] {
+  --font-fira-sans: "firaSans Fallback", Arial, sans-serif;
+  --font-ubuntu: "ubuntu Fallback", Arial, sans-serif;
+}
+html[lang].fonts-on {
+  --font-fira-sans: firaSans, "firaSans Fallback", Arial, sans-serif;
+  --font-ubuntu: ubuntu, "ubuntu Fallback", Arial, sans-serif;
+}
+
 body {
   background: var(--white);
   color: var(--ink);
@@ -270,8 +282,33 @@ summary { list-style: none; }
 @keyframes bean-pop { 50% { transform: scale(1.15); } }
 @keyframes fill-bean { from { opacity: 0.001; transform: scale(0.6); } }
 
+/* Arial, drawn narrower so the hero title wraps like Vollkorn while that webfont is in flight.
+   shortcut: phone widths only; Spanish around 640px can still gain a line when Vollkorn arrives. */
+@font-face {
+  font-family: "Vollkorn Hero Fallback";
+  src: local("Arial");
+  font-weight: 100 900;
+  font-style: normal;
+  size-adjust: 90%;
+  ascent-override: 96%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Vollkorn Hero Fallback";
+  src: local("Arial Italic");
+  font-weight: 100 900;
+  font-style: italic;
+  size-adjust: 90%;
+  ascent-override: 96%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
 /* Home hero entrance: content is in the SSR HTML; keyframes only define the starting state */
-.hero-h1 { animation: rise-16 var(--duration-slow) var(--ease-out) both; }
+.hero-h1 {
+  font-family: vollkorn, "Vollkorn Hero Fallback";
+  animation: rise-16 var(--duration-slow) var(--ease-out) both;
+}
 .hero-sub { animation: rise-12 var(--duration-slow) var(--ease-out) 90ms both; }
 .hero-cta { animation: rise-12 var(--duration-slow) var(--ease-out) 180ms both; }
 .hero-word { animation: unblur var(--duration-hero) var(--ease-out) 150ms both; }

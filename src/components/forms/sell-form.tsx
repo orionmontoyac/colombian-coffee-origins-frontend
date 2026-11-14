@@ -1,17 +1,19 @@
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { Button } from "@/components/ui";
 import { submitSell } from "@/lib/actions/forms";
+import type { FormState } from "@/lib/actions/types";
 import { href } from "@/lib/routes";
 import { FormShell, SelectField, TextArea, TextField } from "./form-shell";
 import { formStrings } from "./strings";
 
-export function SellForm({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+export function SellForm({ lang, dict, initial }: { lang: Locale; dict: Dictionary; initial?: FormState }) {
   const t = dict.forms.sell.form;
   const f = "sell";
   return (
     <FormShell
       formId={f}
       action={submitSell}
+      initial={initial}
       lang={lang}
       t={formStrings(dict.forms, t)}
       labels={dict.forms.shared.labels}

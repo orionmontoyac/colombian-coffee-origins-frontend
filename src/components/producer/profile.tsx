@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import cherries from "@/assets/home/lot-chiroso-cherries.jpg";
@@ -107,7 +108,7 @@ export function Profile({ lang, dict, producer, answer }: { lang: Locale; dict: 
             <Roasted lang={lang} dict={dict} producer={producer} />
           </OnlyInCountry>
         ) : null}
-        <Farm dict={dict} producer={producer} />
+        <Farm lang={lang} dict={dict} producer={producer} />
 
         <CtaPanel
           eyebrow={t.cta.eyebrow}
@@ -288,8 +289,9 @@ function Roasted({ lang, dict, producer }: { lang: Locale; dict: Dictionary; pro
   );
 }
 
-function Farm({ dict, producer }: { dict: Dictionary; producer: Producer }) {
+function Farm({ lang, dict, producer }: { lang: Locale; dict: Dictionary; producer: Producer }) {
   const t = dict.producerPage.farm;
+  const [beforeUrrao, afterUrrao] = t.location.split("Urrao");
   const tile = "overflow-hidden rounded-notch";
   // "Finca El Mirador" -> "Finca" + italic "El Mirador"
   const [farmTitle, ...rest] = producer.farm.split(" ");
@@ -297,7 +299,13 @@ function Farm({ dict, producer }: { dict: Dictionary; producer: Producer }) {
   return (
     <section id="farm" className="scroll-mt-24 px-4 pb-2 pt-14">
       <SectionHeader eyebrow={t.eyebrow} title={farmTitle} accent={farmAccent} />
-      <p className="mt-3 text-body-md text-muted">{t.location}</p>
+      <p className="mt-3 text-body-md text-muted">
+        {beforeUrrao}
+        <Link href={href(lang, "urrao")} className="text-primary underline underline-offset-4 hover:text-primary-hover">
+          Urrao
+        </Link>
+        {afterUrrao}
+      </p>
       <div className="mt-6 grid auto-rows-[220px] gap-4 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
         <div className={`${tile} relative sm:col-span-2 lg:col-span-1 lg:row-span-2`}>
           <Image src={heroHills} alt={t.altHills} fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />

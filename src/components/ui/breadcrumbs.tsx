@@ -12,23 +12,28 @@ export function Breadcrumbs({
 }: {
   items: BreadcrumbItem[];
   label: string;
-  tone?: "light" | "dark";
+  tone?: "light" | "dark" | "roast";
   className?: string;
 }) {
-  const dark = tone === "dark";
+  const onDark = tone !== "light";
   return (
     <nav aria-label={label} className={className}>
-      <ol className={cx("flex flex-wrap items-center gap-x-2 gap-y-1 text-[15px]", dark ? "text-on-primary-muted" : "text-muted")}>
+      <ol
+        className={cx(
+          "flex flex-wrap items-center gap-x-2 gap-y-1 text-[15px]",
+          tone === "roast" ? "text-on-roast-body" : onDark ? "text-on-primary-muted" : "text-muted",
+        )}
+      >
         {items.map((item, i) => {
           const last = i === items.length - 1;
           return (
             <li key={`${item.label}-${i}`} className="inline-flex items-center gap-2">
               {item.href && !last ? (
-                <Link href={item.href} className={cx("underline-offset-4 hover:underline", dark ? "hover:text-on-primary" : "hover:text-primary")}>
+                <Link href={item.href} className={cx("underline-offset-4 hover:underline", onDark ? "hover:text-on-primary" : "hover:text-primary")}>
                   {item.label}
                 </Link>
               ) : (
-                <span aria-current={last ? "page" : undefined} className={cx(last && (dark ? "text-on-primary" : "text-primary"))}>
+                <span aria-current={last ? "page" : undefined} className={cx(last && (onDark ? "text-on-primary" : "text-primary"))}>
                   {item.label}
                 </span>
               )}

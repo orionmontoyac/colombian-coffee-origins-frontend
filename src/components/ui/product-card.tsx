@@ -54,7 +54,6 @@ export function ProductCard({
       {href ? (
         <Link
           href={href}
-          aria-label={name}
           className={`${stageClass} focus-visible:outline-3 focus-visible:outline-offset-[-3px] focus-visible:outline-roast`}
           style={{ background: bag.stage }}
         >

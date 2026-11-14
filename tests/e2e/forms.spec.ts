@@ -27,6 +27,20 @@ async function fillValid(page: Page, name: string) {
   }
 }
 
+test.describe("samples form without JavaScript", () => {
+  test.use({ javaScriptEnabled: false });
+
+  test("a valid submit still shows the success state", async ({ page }, testInfo) => {
+    testInfo.skip(testInfo.project.name !== "desktop", "one project is enough");
+    await page.goto("/en/samples");
+    await fillValid(page, "samples");
+    await page.locator("#samples-consent").check();
+    await page.locator("form#samples button[type=submit]").click();
+    await expect(page.getByTestId("form-success")).toBeVisible();
+    await expect(page).toHaveURL(/[?&]sent=1/);
+  });
+});
+
 for (const form of forms) {
   for (const path of [form.en, form.es]) {
     test.describe(path, () => {
@@ -83,6 +97,9 @@ for (const form of forms) {
 
       test("has no serious or critical axe violations", async ({ page }) => {
         await page.goto(path);
+        await page.waitForLoadState("networkidle");
+        // Let one-time reveals (T4.2, 480ms) finish: axe scanned mid-fade text and reported false contrast failures.
+        await page.waitForFunction(() => document.getAnimations().every((a) => a.playState !== "running"));
         const clean = await new AxeBuilder({ page }).analyze();
         const errorsState = async () => {
           await page.locator(`form#${form.name} button[type=submit]`).click();

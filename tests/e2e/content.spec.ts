@@ -76,10 +76,11 @@ for (const path of ["/en/regions/urrao", "/es/regiones/urrao"]) {
     const place = (await jsonLdNodes(page)).find((n) => n["@type"] === "Place") as { geo?: { latitude?: number }; containedInPlace?: unknown } | undefined;
     expect(place?.geo?.latitude).toBeTruthy();
     expect(JSON.stringify(place?.containedInPlace)).toContain("Antioquia");
+    // Tables: key facts, T3.2 facts table, harvest calendar.
     await expect(page.locator("table").first().locator("tbody tr")).toHaveCount(6);
     await expect(page.locator("main article h3")).not.toHaveCount(0);
     await expect(page.locator('[data-asset-id="urrao-region-map"]')).toHaveCount(1);
-    await expect(page.locator("table").nth(1).locator("tbody tr")).toHaveCount(2);
+    await expect(page.locator("table").nth(2).locator("tbody tr")).toHaveCount(2);
   });
 }
 

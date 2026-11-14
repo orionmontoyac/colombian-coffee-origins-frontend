@@ -9,7 +9,7 @@ import { RoastMeter } from "@/components/ui/roast-meter";
 import { SectionHeader } from "@/components/ui/section-header";
 import { uiLabels } from "@/components/ui/labels";
 import { getProducer } from "@/data/producers";
-import { defaultSize, pricePerKgCop, products, roastLabels, type Product } from "@/data/products";
+import { brandName, defaultSize, pricePerKgCop, products, roastLabels, type Product } from "@/data/products";
 import { href, productHref, producerHref } from "@/lib/routes";
 import { roastedProduct } from "@/lib/seo/jsonld";
 import { absoluteUrl } from "@/lib/site";
@@ -31,7 +31,7 @@ function productLd(lang: Locale, dict: Dictionary, p: Product) {
   const roast = roastLabels[p.roastLevel][lang];
   const description = fill(dict.productPage.jsonLdDescription, {
     name: p.name[lang],
-    brand: p.brand,
+    brand: brandName(p.brand, lang),
     roast: roast.toLowerCase(),
     town: "Urrao",
     notes: p.notes[lang],
@@ -40,8 +40,8 @@ function productLd(lang: Locale, dict: Dictionary, p: Product) {
   return roastedProduct({
     url: absoluteUrl(productHref(lang, p.slug)),
     sku: p.slug,
-    name: `${p.brand} ${p.name[lang]}`,
-    brand: p.brand,
+    name: `${brandName(p.brand, lang)} ${p.name[lang]}`,
+    brand: brandName(p.brand, lang),
     description,
     // TODO(owner): add `image` when real bag photos exist (ASSETS.md, product-photos-*)
     grams: size.grams,
@@ -60,6 +60,7 @@ export function ProductDetail({ lang, dict, product: p }: { lang: Locale; dict: 
   const t = dict.productPage;
   const size = defaultSize(p);
   const name = p.name[lang];
+  const brand = brandName(p.brand, lang);
   const roast = roastLabels[p.roastLevel][lang];
   const producer = p.producerSlug ? getProducer(p.producerSlug) : undefined;
   const town = producer?.town ?? "Urrao, Antioquia";
@@ -71,10 +72,10 @@ export function ProductDetail({ lang, dict, product: p }: { lang: Locale; dict: 
 
   const description = producer
     ? fill(t.descriptionProducer, { producer: producer.name, farm: producer.farm, town, notes })
-    : fill(t.description, { brand: p.brand, town: "Urrao", notes });
+    : fill(t.description, { brand, town: "Urrao", notes });
 
   const facts: [string, React.ReactNode][] = [
-    [t.about.facts.brand, p.brand],
+    [t.about.facts.brand, brand],
     [
       t.about.facts.producer,
       producer ? (
@@ -105,11 +106,11 @@ export function ProductDetail({ lang, dict, product: p }: { lang: Locale; dict: 
           "@context": "https://schema.org",
           "@graph": [
             organizationLd(),
-            websiteLd(lang),
+            websiteLd(),
             breadcrumbLd([
               { name: home.label, path: home.href },
               { name: shop.label, path: shop.href },
-              { name: `${p.brand} ${name}` },
+              { name: `${brand} ${name}` },
             ]),
             productLd(lang, dict, p),
           ],
@@ -127,7 +128,7 @@ export function ProductDetail({ lang, dict, product: p }: { lang: Locale; dict: 
             <BannerChip>{roast}</BannerChip>
           </>
         }
-        title={p.brand}
+        title={brand}
         accent={name}
         description={description}
         stats={[
@@ -156,7 +157,7 @@ export function ProductDetail({ lang, dict, product: p }: { lang: Locale; dict: 
                 <li key={view}>
                   <PlaceholderImage
                     assetId={`product-photos-${p.slug}-${i + 1}`}
-                    label={fill(t.photoLabel, { name: `${p.brand} ${name}`, view })}
+                    label={fill(t.photoLabel, { name: `${brand} ${name}`, view })}
                     ratio="1 / 1"
                     className="!p-3"
                   />
@@ -166,7 +167,7 @@ export function ProductDetail({ lang, dict, product: p }: { lang: Locale; dict: 
           </div>
 
           <div className="self-start rounded-xl bg-roast-surface p-6 sm:p-8 lg:sticky lg:top-4">
-            <p className="font-label text-xs font-medium uppercase tracking-[0.08em] text-roast">{p.brand}</p>
+            <p className="font-label text-xs font-medium uppercase tracking-[0.08em] text-roast">{brand}</p>
             <p className="mt-1 mb-5 text-body-md text-roast-body">
               {producer ? `${producer.name} · ${producer.farm} · ${town}` : town}
             </p>

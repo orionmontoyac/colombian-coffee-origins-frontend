@@ -22,7 +22,7 @@ export function ShopUnavailable({ lang, dict, answer }: { lang: Locale; dict: Di
           "@context": "https://schema.org",
           "@graph": [
             organizationLd(),
-            websiteLd(lang),
+            websiteLd(),
             breadcrumbLd([
               { name: home.label, path: home.href },
               { name: n.breadcrumbShop },

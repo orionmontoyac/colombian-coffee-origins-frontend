@@ -8,7 +8,7 @@ import type { CatalogItem } from "@/components/lots/filters";
 import { lotsJsonLd, lotsMetadata } from "@/components/lots/seo";
 import { Chip, CtaPanel, LotCard, SubpageBanner } from "@/components/ui";
 import { lots, type Lot } from "@/data/lots";
-import { href, lotHref } from "@/lib/routes";
+import { href, lotHref, producerHref } from "@/lib/routes";
 import { getDictionary, hasLocale, type Locale } from "../dictionaries";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/coffees">): Promise<Metadata> {
@@ -56,6 +56,7 @@ function toItem(lot: Lot, lang: Locale, t: Awaited<ReturnType<typeof getDictiona
         ctaLabel={c.viewLot}
         ctaHref={lotHref(lang, lot.code)}
         detailHref={lotHref(lang, lot.code)}
+        producerHref={lot.producerSlug ? producerHref(lang, lot.producerSlug) : undefined}
       />
     ),
   };
