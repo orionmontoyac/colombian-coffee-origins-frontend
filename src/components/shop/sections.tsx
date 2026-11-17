@@ -3,6 +3,7 @@ import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import mokaPot from "@/assets/home/moka-pot-sketch.png";
 import { Bean } from "@/components/ui/bean";
 import { Button } from "@/components/ui/button";
+import { ColombiaIcon } from "@/components/ui/colombia-icons";
 import { SectionHeader } from "@/components/ui/section-header";
 import { href } from "@/lib/routes";
 import { whatsappLink } from "@/lib/site";
@@ -14,15 +15,15 @@ const externalBase =
 /** Four promises in one crema strip (benefits row of the Shop board). */
 export function Perks({ copy }: { copy: Dictionary["shopPage"] }) {
   return (
-    <section className="mt-2 rounded-xl bg-roast-surface px-6 py-8 sm:px-12">
+    <section className="mt-2 rounded-xl bg-roast-surface px-4 py-5 sm:px-12 sm:py-8">
       <h2 className="sr-only">{copy.perksLabel}</h2>
-      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-roast-line">
+      <ul className="grid grid-cols-2 gap-x-4 gap-y-5 sm:gap-6 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-roast-line">
         {copy.perks.map((perk) => (
-          <li key={perk.title} className="flex gap-3.5 lg:px-6 lg:first:pl-0 lg:last:pr-0">
-            <Bean size={28} className="mt-0.5" />
+          <li key={perk.title} className="flex flex-col gap-2 sm:flex-row sm:gap-3.5 lg:px-6 lg:first:pl-0 lg:last:pr-0">
+            <Bean size={24} className="shrink-0 sm:mt-0.5" />
             <div>
-              <h3 className="font-display text-headline-sm text-roast-dark">{perk.title}</h3>
-              <p className="mt-1 text-body-sm text-roast-body">{perk.text}</p>
+              <h3 className="font-display text-[17px] font-semibold leading-tight text-roast-dark sm:text-headline-sm">{perk.title}</h3>
+              <p className="mt-1 text-[13px] leading-snug text-roast-body sm:text-body-sm">{perk.text}</p>
             </div>
           </li>
         ))}
@@ -132,7 +133,7 @@ export function SellBand({ lang, copy }: { lang: Locale; copy: Dictionary["shopP
         <p className="mt-3 text-lg leading-normal text-on-roast-body">{s.text}</p>
       </div>
       <Button href={href(lang, "sellWithUs")} variant="shop-on-dark" size="lg">
-        {s.cta} <span aria-hidden="true">→</span>
+        {s.cta} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
       </Button>
     </section>
   );

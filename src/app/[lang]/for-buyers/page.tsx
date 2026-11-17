@@ -34,6 +34,7 @@ export default async function ForBuyersPage({ params }: PageProps<"/[lang]/for-b
       <SubpageBanner
         lang={lang}
         nav={dict.nav}
+        active="forBuyers"
         line="green"
         breadcrumb={[{ label: t.breadcrumb.home, href: href(lang, "home") }, { label: t.breadcrumb.current }]}
         chips={t.banner.chips.map((label, i) => (

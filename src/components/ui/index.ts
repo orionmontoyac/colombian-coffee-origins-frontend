@@ -8,6 +8,7 @@ export { FilterBar } from "./filter-bar";
 export { LotCard, type LotCardProps } from "./lot-card";
 export { PlaceholderImage } from "./placeholder-image";
 export { ProducerCard } from "./producer-card";
+export { ColombiaIcon, CornerMark, type ColombiaIconName } from "./colombia-icons";
 export { ProductCard, type ProductCardProps } from "./product-card";
 export { RoastMeter } from "./roast-meter";
 export { SectionHeader } from "./section-header";

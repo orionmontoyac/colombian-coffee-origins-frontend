@@ -2,6 +2,7 @@ import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
+import { ColombiaIcon } from "@/components/ui/colombia-icons";
 import { href } from "@/lib/routes";
 import coffeeBranch from "@/assets/home/coffee-branch-sketch.png";
 import mokaPot from "@/assets/home/moka-pot-sketch.png";
@@ -66,7 +67,7 @@ function LineCard({
           href={ctaHref}
           className={`inline-flex min-h-[52px] items-center gap-2.5 whitespace-nowrap rounded-full px-7 py-4 font-label text-lg font-medium text-white sm:text-xl ${t.button}`}
         >
-          {cta} <span aria-hidden="true">↗</span>
+          {cta} <ColombiaIcon name="flecha-derecha" size={20} strokeWidth={2} className="-rotate-45 [--nudge:3px_-3px]" />
         </Link>
         {left ? (
           <>

@@ -1,13 +1,15 @@
+import { ColombiaIcon } from "./colombia-icons";
+
 export function ArrowCircle({ tone, size = 30 }: { tone: "lime" | "crema"; size?: number }) {
   return (
     <span
       aria-hidden="true"
       style={{ width: size, height: size }}
-      className={`flex flex-none items-center justify-center rounded-full text-base ${
+      className={`flex flex-none items-center justify-center rounded-full ${
         tone === "lime" ? "bg-accent text-on-accent" : "bg-roast-surface text-roast"
       }`}
     >
-      →
+      <ColombiaIcon name="flecha-derecha" size={Math.round(size * 0.55)} strokeWidth={2} />
     </span>
   );
 }

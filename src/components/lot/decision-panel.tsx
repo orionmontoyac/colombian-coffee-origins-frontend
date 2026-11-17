@@ -1,5 +1,6 @@
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { Button } from "@/components/ui/button";
+import { ColombiaIcon } from "@/components/ui/colombia-icons";
 import { TrustBadge } from "@/components/ui/trust-badge";
 import type { Lot } from "@/data/lots";
 import { href } from "@/lib/routes";
@@ -85,7 +86,7 @@ export function DecisionPanel({ lang, dict, lot, processLabel }: { lang: Locale;
       </dl>
 
       <Button href={sampleHref} variant="primary" size="lg" className="w-full">
-        {p.requestSample} <span aria-hidden="true">→</span>
+        {p.requestSample} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
       </Button>
       <div className="flex gap-2.5">
         <Button href={askHref} variant="secondary" size="md" className="min-h-[52px] flex-1 ring-primary">

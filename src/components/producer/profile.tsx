@@ -9,6 +9,7 @@ import urraoSquare from "@/assets/home/urrao-main-square.jpg";
 import { SiteFooter } from "@/components/home/sections";
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/ui/chip";
+import { ColombiaIcon } from "@/components/ui/colombia-icons";
 import { CtaPanel } from "@/components/ui/cta-panel";
 import { LotCard } from "@/components/ui/lot-card";
 import { PlaceholderImage } from "@/components/ui/placeholder-image";
@@ -181,7 +182,7 @@ function GreenLots({ lang, dict, lots }: { lang: Locale; dict: Dictionary; lots:
         accent={t.accent}
         action={
           <Button href={href(lang, "coffees")} variant="secondary" size="md">
-            {t.all} <span aria-hidden="true">→</span>
+            {t.all} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
           </Button>
         }
       />
@@ -244,7 +245,7 @@ function Roasted({ lang, dict, producer }: { lang: Locale; dict: Dictionary; pro
         accent={t.accent}
         action={
           <Button href={href(lang, "shop")} variant="shop" size="md">
-            {t.visitShop} <span aria-hidden="true">→</span>
+            {t.visitShop} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
           </Button>
         }
       />

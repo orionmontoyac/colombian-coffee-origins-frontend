@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { SiteFooter } from "@/components/home/sections";
 import { fill } from "@/components/producer/format";
-import { Chip, CtaPanel, SectionHeader, SubpageBanner } from "@/components/ui";
+import { Chip, ColombiaIcon, CtaPanel, SectionHeader, SubpageBanner } from "@/components/ui";
 import { href } from "@/lib/routes";
 import { articleHref, articles, getArticle } from "./articles";
 import { formatDate, getBlocks, readingMinutes, slugify } from "./content";
@@ -88,7 +88,7 @@ export function ArticlePage({ lang, dict, id }: { lang: Locale; dict: Dictionary
                 {RELATED.map((k) => (
                   <li key={k}>
                     <Link href={resolveTarget(lang, k)} className="inline-flex min-h-tap-target items-center gap-2 font-label text-label-md text-primary underline-offset-4 hover:underline">
-                      {t.article.related.links[k]} <span aria-hidden="true">→</span>
+                      {t.article.related.links[k]} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
                     </Link>
                   </li>
                 ))}

@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { SiteFooter } from "@/components/home/sections";
 import { fill } from "@/components/producer/format";
-import { Chip, SectionHeader, SubpageBanner } from "@/components/ui";
+import { Chip, ColombiaIcon, SectionHeader, SubpageBanner } from "@/components/ui";
 import { href } from "@/lib/routes";
 import { articleHref, articles } from "./articles";
 import { formatDate, getBlocks, readingMinutes } from "./content";
@@ -32,7 +32,7 @@ export function JournalIndex({ lang, dict }: { lang: Locale; dict: Dictionary })
       />
       <main id="main">
         <section className="px-4 pb-2 pt-14">
-          <SectionHeader title={t.list.title} accent={t.list.accent} text={t.list.text} />
+          <SectionHeader icon="selva-amazonica" title={t.list.title} accent={t.list.accent} text={t.list.text} />
           <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {articles.map((a) => {
               const c = t.articles[a.id];
@@ -53,7 +53,7 @@ export function JournalIndex({ lang, dict }: { lang: Locale; dict: Dictionary })
                     </h3>
                     <p className="text-body-md text-body">{c.excerpt}</p>
                     <Link href={articleHref(lang, a.id)} className="mt-auto inline-flex min-h-tap-target items-center gap-2 font-label text-label-md text-primary underline-offset-4 hover:underline">
-                      {t.list.read} <span aria-hidden="true">→</span>
+                      {t.list.read} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
                     </Link>
                   </div>
                 </article>

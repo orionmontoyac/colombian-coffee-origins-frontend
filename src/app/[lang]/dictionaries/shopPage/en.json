@@ -36,6 +36,7 @@
     "accent": "your bag",
     "filtersLabel": "Filter and sort coffees",
     "filters": {
+      "toggle": "Filters",
       "all": "All",
       "light": "Light roast",
       "medium": "Medium roast",

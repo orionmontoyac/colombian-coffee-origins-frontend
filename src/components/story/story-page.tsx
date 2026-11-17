@@ -4,7 +4,7 @@ import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import cherries from "@/assets/home/lot-chiroso-cherries.jpg";
 import farmers from "@/assets/home/farmers-harvest.jpg";
 import { SiteFooter } from "@/components/home/sections";
-import { Chip, CtaPanel, PlaceholderImage, SectionHeader, SubpageBanner } from "@/components/ui";
+import { Chip, ColombiaIcon, CtaPanel, PlaceholderImage, SectionHeader, SubpageBanner } from "@/components/ui";
 import { producers } from "@/data/producers";
 import { href } from "@/lib/routes";
 
@@ -34,7 +34,7 @@ export function StoryPage({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       <main id="main">
         <section className="grid items-center gap-10 px-4 pb-2 pt-14 lg:grid-cols-2">
           <div>
-            <SectionHeader title={t.why.title} accent={t.why.accent} />
+            <SectionHeader icon="ceiba" title={t.why.title} accent={t.why.accent} />
             <div className="mt-6 flex max-w-[65ch] flex-col gap-4 text-body-lg text-body">
               {t.why.paragraphs.map((p) => (
                 <p key={p.slice(0, 30)}>{p}</p>
@@ -47,7 +47,7 @@ export function StoryPage({ lang, dict }: { lang: Locale; dict: Dictionary }) {
         </section>
 
         <section className="px-4 pb-2 pt-14">
-          <SectionHeader title={t.how.title} accent={t.how.accent} text={t.how.text} />
+          <SectionHeader icon="cascada" title={t.how.title} accent={t.how.accent} text={t.how.text} />
           <ol className="mt-8 grid gap-4 md:grid-cols-2">
             {t.how.items.map((item) => (
               <li key={item.title} className="rounded-lg bg-surface p-xl">
@@ -58,13 +58,13 @@ export function StoryPage({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           </ol>
           <p className="mt-6">
             <Link href={href(lang, "forBuyers")} className="inline-flex min-h-tap-target items-center gap-2 font-label text-label-md text-primary underline underline-offset-4">
-              {t.how.linesLink} <span aria-hidden="true">→</span>
+              {t.how.linesLink} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
             </Link>
           </p>
         </section>
 
         <section className="px-4 pb-2 pt-14">
-          <SectionHeader title={t.team.title} accent={t.team.accent} text={t.team.text} />
+          <SectionHeader icon="palma-de-cera" title={t.team.title} accent={t.team.accent} text={t.team.text} />
           <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {Array.from({ length: t.team.count }, (_, i) => (
               <li key={i} className="flex flex-col gap-3 rounded-lg bg-surface p-4">

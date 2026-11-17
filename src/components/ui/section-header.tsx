@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/motion/reveal";
+import { ColombiaIcon, type ColombiaIconName } from "./colombia-icons";
 import { cx } from "./cx";
 
 /**
@@ -18,6 +19,7 @@ export function SectionHeader({
   size = "lg",
   as: Heading = "h2",
   id,
+  icon,
   className,
 }: {
   eyebrow?: ReactNode;
@@ -31,11 +33,16 @@ export function SectionHeader({
   as?: "h1" | "h2";
   /** Id on the heading, for `aria-labelledby` on the section */
   id?: string;
+  /** Small Colombia nature icon above the eyebrow/title (DESIGN.md: one per section) */
+  icon?: ColombiaIconName;
   className?: string;
 }) {
   const roasted = line === "roasted";
   const header = (
     <div className="max-w-[760px]">
+      {icon ? (
+        <ColombiaIcon name={icon} size={32} className={cx("mb-3", roasted ? "text-roast" : "text-success")} />
+      ) : null}
       {eyebrow ? (
         <p
           className={cx(

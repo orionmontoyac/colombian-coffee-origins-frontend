@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { ColombiaIcon } from "./colombia-icons";
 import { TrustBadge, type TrustLevel } from "./trust-badge";
 
 /**
@@ -36,7 +37,7 @@ export function ProducerCard({
       <p className="text-body-md text-body">{story}</p>
       {meta ? <p className="border-t border-line pt-3 text-body-sm text-muted">{meta}</p> : null}
       <Link href={href} className="mt-auto inline-flex min-h-tap-target items-center gap-2 font-label text-label-md text-primary underline-offset-4 hover:underline">
-        {ctaLabel} <span aria-hidden="true">→</span>
+        {ctaLabel} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
       </Link>
     </article>
   );

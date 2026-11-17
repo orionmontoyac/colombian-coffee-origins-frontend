@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { SiteFooter } from "@/components/home/sections";
 import { articleHref } from "@/components/journal/articles";
-import { Button, Chip, CtaPanel, LotCard, PlaceholderImage, ProducerCard, SectionHeader, SubpageBanner } from "@/components/ui";
+import { Button, Chip, ColombiaIcon, CtaPanel, LotCard, PlaceholderImage, ProducerCard, SectionHeader, SubpageBanner } from "@/components/ui";
 import cherries from "@/assets/home/lot-chiroso-cherries.jpg";
 import { lots, lotsByProducer } from "@/data/lots";
 import { producers } from "@/data/producers";
@@ -68,7 +68,7 @@ export function UrraoPage({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             <p className="mt-4 text-body-sm text-muted">{t.facts.note}</p>
           </div>
           <div>
-            <SectionHeader title={t.geography.title} accent={t.geography.accent} />
+            <SectionHeader icon="sierra-nevada" title={t.geography.title} accent={t.geography.accent} />
             <div className="mt-6 flex max-w-[65ch] flex-col gap-4 text-body-md text-body">
               {t.geography.paragraphs.map((p) => (
                 <p key={p}>{p}</p>
@@ -96,7 +96,7 @@ export function UrraoPage({ lang, dict }: { lang: Locale; dict: Dictionary }) {
         </section>
 
         <section className="px-4 pb-2 pt-14">
-          <SectionHeader title={t.calendar.title} accent={t.calendar.accent} text={t.calendar.text} />
+          <SectionHeader icon="mariposa" title={t.calendar.title} accent={t.calendar.accent} text={t.calendar.text} />
           <div role="region" aria-label={t.calendar.caption} tabIndex={0} className="relative mt-8 overflow-x-auto rounded-lg bg-surface p-4 focus-visible:outline-3 focus-visible:outline-primary sm:p-6">
             <table className="w-full min-w-[640px] border-collapse text-center">
               <caption className="sr-only">{t.calendar.caption}</caption>
@@ -137,7 +137,7 @@ export function UrraoPage({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             text={t.producers.text}
             action={
               <Button href={href(lang, "producers")} variant="secondary" size="md">
-                {t.producers.all} <span aria-hidden="true">→</span>
+                {t.producers.all} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
               </Button>
             }
           />
@@ -170,7 +170,7 @@ export function UrraoPage({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             text={t.lots.text}
             action={
               <Button href={href(lang, "coffees")} variant="secondary" size="md">
-                {t.lots.all} <span aria-hidden="true">→</span>
+                {t.lots.all} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
               </Button>
             }
           />
@@ -207,7 +207,7 @@ export function UrraoPage({ lang, dict }: { lang: Locale; dict: Dictionary }) {
         </section>
 
         <section className="px-4 pb-2 pt-14">
-          <SectionHeader title={t.map.title} accent={t.map.accent} text={t.map.text} />
+          <SectionHeader icon="rio" title={t.map.title} accent={t.map.accent} text={t.map.text} />
           <PlaceholderImage assetId="urrao-region-map" label={t.map.label} ratio="4 / 1" className="mt-8 min-h-[220px] [&_span]:text-ink" />
           <p className="mt-3 text-body-sm text-muted">{t.map.coords}</p>
         </section>

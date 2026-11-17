@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
+import { ColombiaIcon } from "@/components/ui/colombia-icons";
 import { href } from "@/lib/routes";
 import coffeeHills from "@/assets/home/hero-coffee-hills.jpg";
 import { SiteHeader } from "./site-header";
@@ -44,14 +45,15 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             href={href(lang, "coffees")}
             className="inline-flex min-h-14 items-center gap-2.5 rounded-full bg-lime-500 px-7 py-4 font-label text-[17px] font-medium text-green-900 hover:brightness-95"
           >
-            {hero.greenCta} <span aria-hidden="true">→</span>
+            {hero.greenCta} <ColombiaIcon name="flecha-derecha" size={20} strokeWidth={2} />
           </Link>
           <Link
             href={href(lang, "shop")}
             className="inline-flex min-h-14 items-center gap-2.5 rounded-full bg-brown px-7 py-4 font-label text-[17px] font-medium text-white hover:bg-roast-hover"
           >
             {hero.shopCta}
-            <span className="rounded-full bg-white/20 px-2 py-[3px] text-[11px] font-bold">{hero.shopBadge}</span>
+            {/* <span className="rounded-full bg-white/20 px-2 py-[3px] text-[11px] font-bold">{hero.shopBadge}</span> */}
+            <ColombiaIcon name="silueta-colombia" size={22} />
           </Link>
         </div>
 

@@ -1,5 +1,5 @@
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
-import { SectionHeader, TrustBadge } from "@/components/ui";
+import { CornerMark, SectionHeader, TrustBadge } from "@/components/ui";
 import type { TrustLevel } from "@/components/ui";
 import type { Lot } from "@/data/lots";
 import type { FaqItem } from "./seo";
@@ -16,7 +16,7 @@ const focus = "focus-visible:outline-3 focus-visible:outline-offset-3 focus-visi
 export function Steps({ t }: { t: T["steps"] }) {
   return (
     <section aria-label={`${t.title} ${t.accent}`} className={`${section} grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16`}>
-      <SectionHeader title={t.title} accent={t.accent} text={t.text} className="lg:sticky lg:top-8 lg:self-start" />
+      <SectionHeader icon="salto-del-tequendama" title={t.title} accent={t.accent} text={t.text} className="lg:sticky lg:top-8 lg:self-start" />
       <ol className="border-t border-line">
         {t.items.map((item, i) => (
           <li key={item.title} className="grid grid-cols-[48px_1fr] gap-x-4 border-b border-line py-6 sm:grid-cols-[72px_1fr]">
@@ -37,7 +37,8 @@ export function Steps({ t }: { t: T["steps"] }) {
 /** Trust levels on a parchment panel, separated by hairlines instead of nested cards. */
 export function TrustLevels({ t }: { t: T["trust"] }) {
   return (
-    <section aria-label={`${t.title} ${t.accent}`} className={`${section} rounded-xl bg-surface px-6 py-12 sm:px-12`}>
+    <section aria-label={`${t.title} ${t.accent}`} className={`${section} relative overflow-hidden rounded-xl bg-surface px-6 py-12 sm:px-12`}>
+      <CornerMark name="volcan" />
       <SectionHeader title={t.title} accent={t.accent} text={t.text} />
       <ul className="mt-10 grid gap-8 md:grid-cols-3 md:gap-0">
         {t.items.map((item, i) => (

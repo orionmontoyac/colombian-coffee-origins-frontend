@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { sampleRoastedProducts, type SampleRoastedProduct } from "@/data/sample-roasted";
+import { ColombiaIcon } from "@/components/ui/colombia-icons";
 import { ProductCard } from "@/components/ui/product-card";
 import { href, productHref } from "@/lib/routes";
 
@@ -47,8 +48,8 @@ export function RoastedShop({ lang, dict }: { lang: Locale; dict: Dictionary }) 
           className="inline-flex min-h-[60px] items-center gap-3 whitespace-nowrap rounded-full bg-brown px-8 py-[18px] font-label text-lg font-medium text-white hover:bg-roast-hover"
         >
           {s.cta}
-          <span aria-hidden="true" className="flex size-[30px] items-center justify-center rounded-full bg-roast-surface text-base text-brown">
-            →
+          <span aria-hidden="true" className="flex size-[30px] items-center justify-center rounded-full bg-roast-surface text-brown">
+            <ColombiaIcon name="flecha-derecha" size={16} strokeWidth={2} />
           </span>
         </Link>
       </div>

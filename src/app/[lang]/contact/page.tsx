@@ -49,7 +49,7 @@ export default async function ContactPage({ params, searchParams }: PageProps<"/
       <FormLayout
         aside={
           <>
-            <SectionHeader title={t.channels.title} accent={t.channels.accent} text={t.channels.text} />
+            <SectionHeader icon="mar-caribe" title={t.channels.title} accent={t.channels.accent} text={t.channels.text} />
             <dl className="mt-8 grid gap-6 border-t border-line pt-6">
               <div>
                 <dt className="font-display text-headline-sm text-primary">{t.channels.whatsappTitle}</dt>

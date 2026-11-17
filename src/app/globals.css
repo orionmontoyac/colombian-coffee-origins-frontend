@@ -321,6 +321,9 @@ a[class*="rounded-full"], button[class*="rounded-full"] {
   transition: transform var(--duration-fast) var(--ease-out), background-color var(--duration-fast), color var(--duration-fast), filter var(--duration-fast);
 }
 a[class*="rounded-full"]:active, button[class*="rounded-full"]:active { transform: scale(0.98); }
+/* Arrow nudge: set --nudge on the icon to change the direction (diagonal arrows) */
+[data-icon="flecha-derecha"] { transition: translate var(--duration-base) var(--ease-out); }
+:is(a, button):is(:hover, :focus-visible) [data-icon="flecha-derecha"] { translate: var(--nudge, 4px 0); }
 .bean-pop { animation: bean-pop var(--duration-base) var(--ease-out); }
 .roast-bean { animation: fill-bean var(--duration-slow) var(--ease-out) calc(var(--i, 0) * 80ms) both; }
 .filter-fade { animation: rise-12 var(--duration-base) var(--ease-in-out) both; }
@@ -344,6 +347,7 @@ dialog[data-testid="cart-drawer"][open]::backdrop { animation: backdrop-in var(-
   [data-reveal], [data-reveal="wait"], [data-reveal="in"] { opacity: 1; transform: none; transition: none; }
   .lift, a[class*="rounded-full"], button[class*="rounded-full"] { transition: none; }
   .lift:hover, a[class*="rounded-full"]:active, button[class*="rounded-full"]:active { transform: none; }
+  [data-icon="flecha-derecha"] { transition: none; translate: none !important; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*), ::view-transition-image-pair(*) { animation: none !important; }
 }
 

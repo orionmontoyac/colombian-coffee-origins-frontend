@@ -65,10 +65,10 @@ export function ProductCard({
         </div>
       )}
       <div className="flex flex-1 flex-col gap-2.5 px-5 pb-[22px] pt-5">
-        <p className="font-display text-headline-sm text-roast-dark">{brand}</p>
-        <Heading className="text-body-md font-medium text-roast">
-          {href ? <Link href={href}>{name}</Link> : name}
-        </Heading>
+        <p className="font-display text-headline-sm text-roast-dark">
+          {href ? <Link href={href}>{brand}</Link> : brand}
+        </p>
+        <Heading className="text-body-md font-medium text-roast">{name}</Heading>
         <p className="text-sm text-body">{meta}</p>
         <p className="text-sm italic text-muted">{notes}</p>
         {roast ? <RoastMeter level={roast.level} label={roast.label} hint={roast.hint} /> : null}

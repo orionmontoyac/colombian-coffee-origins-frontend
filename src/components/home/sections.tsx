@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { sampleLots, type SampleLot } from "@/data/sample-lots";
+import { ColombiaIcon } from "@/components/ui/colombia-icons";
 import { CtaPanel } from "@/components/ui/cta-panel";
 import { LotCard } from "@/components/ui/lot-card";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -42,7 +43,7 @@ export function Farmers({ lang, dict }: { lang: Locale; dict: Dictionary }) {
     <section className="px-4 pb-2 pt-14">
       <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-14">
         <div>
-          <SectionHeader size="xl" eyebrow={f.eyebrow} title={f.titleStart} accent={f.titleEm} text={f.text} />
+          <SectionHeader size="xl" icon="cocora-valle" eyebrow={f.eyebrow} title={f.titleStart} accent={f.titleEm} text={f.text} />
           <ul className="mt-7 flex flex-col gap-[18px]">
             {f.points.map((point) => (
               <li key={point.title} className="flex items-start gap-3.5">
@@ -61,8 +62,8 @@ export function Farmers({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             className="mt-8 inline-flex min-h-14 items-center gap-3 rounded-full bg-green-900 px-7 py-4 text-[17px] font-label font-medium text-white hover:bg-green-700"
           >
             {f.cta}
-            <span aria-hidden="true" className="flex size-7 items-center justify-center rounded-full bg-lime-500 text-[15px] text-green-900">
-              →
+            <span aria-hidden="true" className="flex size-7 items-center justify-center rounded-full bg-lime-500 text-green-900">
+              <ColombiaIcon name="flecha-derecha" size={16} strokeWidth={2} />
             </span>
           </Link>
         </div>
@@ -92,6 +93,7 @@ export function FeaturedLots({ lang, dict }: { lang: Locale; dict: Dictionary })
     <section className="px-4 pb-2 pt-14">
       <SectionHeader
         size="xl"
+        icon="planta-de-cafe"
         eyebrow={l.eyebrow}
         title={l.titleStart}
         accent={l.titleEm}
@@ -102,8 +104,8 @@ export function FeaturedLots({ lang, dict }: { lang: Locale; dict: Dictionary })
             className="inline-flex min-h-[60px] items-center gap-3 whitespace-nowrap rounded-full bg-green-900 px-8 py-[18px] text-lg font-label font-medium text-white hover:bg-green-700"
           >
             {l.exploreAll}
-            <span aria-hidden="true" className="flex size-[30px] items-center justify-center rounded-full bg-lime-500 text-base text-green-900">
-              →
+            <span aria-hidden="true" className="flex size-[30px] items-center justify-center rounded-full bg-lime-500 text-green-900">
+              <ColombiaIcon name="flecha-derecha" size={16} strokeWidth={2} />
             </span>
           </Link>
         }
@@ -258,7 +260,7 @@ export function Regions({ lang, dict }: { lang: Locale; dict: Dictionary }) {
               href={href(lang, "urrao")}
               className="inline-flex min-h-[50px] items-center gap-2.5 rounded-full bg-lime-500 px-[22px] py-3.5 text-base font-label font-medium text-green-900 hover:brightness-95"
             >
-              {r.seeLots} <span aria-hidden="true">→</span>
+              {r.seeLots} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
             </Link>
             <Link
               href={href(lang, "producers")}
@@ -299,7 +301,7 @@ export function ProducersBand({ lang, dict }: { lang: Locale; dict: Dictionary }
             href={href(lang, "producers")}
             className="mt-1.5 inline-flex min-h-[52px] items-center gap-2.5 self-start rounded-full bg-lime-500 px-6 py-[15px] font-label text-base font-medium text-green-900 hover:brightness-95"
           >
-            {p.green.cta} <span aria-hidden="true">→</span>
+            {p.green.cta} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
           </Link>
         </article>
         <article className="flex flex-col gap-3.5 rounded-[28px] bg-roast-card p-8 text-roast-dark">
@@ -312,7 +314,7 @@ export function ProducersBand({ lang, dict }: { lang: Locale; dict: Dictionary }
             href={href(lang, "sellWithUs")}
             className="mt-1.5 inline-flex min-h-[52px] items-center gap-2.5 self-start rounded-full bg-brown px-6 py-[15px] font-label text-base font-medium text-white hover:bg-roast-hover"
           >
-            {p.roasted.cta} <span aria-hidden="true">→</span>
+            {p.roasted.cta} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
           </Link>
         </article>
       </div>

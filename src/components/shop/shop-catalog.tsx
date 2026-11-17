@@ -38,6 +38,7 @@ export function ShopCatalog({
   const [under50, setUnder50] = useState(false);
   const [brand, setBrand] = useState<string | null>(null);
   const [sort, setSort] = useState<SortKey>("featured");
+  const [open, setOpen] = useState(false);
 
   const visible = useMemo(() => {
     const list = products.filter(
@@ -54,6 +55,7 @@ export function ShopCatalog({
   }, [products, roast, grind, under50, brand, sort]);
 
   const noFilters = !roast && !grind && !under50 && !brand;
+  const activeCount = [roast, grind, under50, brand].filter(Boolean).length;
   const reset = () => {
     setRoast(null);
     setGrind(null);
@@ -77,7 +79,7 @@ export function ShopCatalog({
         <FilterBar
           line="roasted"
           label={copy.filtersLabel}
-          className="mt-5"
+          className="mt-5 !items-start"
           count={fill(copy.showing, { shown: visible.length, total: products.length })}
           sort={
             <div className="relative">
@@ -102,24 +104,43 @@ export function ShopCatalog({
             </div>
           }
         >
-          {toggle(f.all, noFilters, reset, "filter-all")}
-          {toggle(f.light, roast === "light", () => setRoast(roast === "light" ? null : "light"), "filter-light")}
-          {toggle(f.medium, roast === "medium", () => setRoast(roast === "medium" ? null : "medium"))}
-          {toggle(f.dark, roast === "dark", () => setRoast(roast === "dark" ? null : "dark"))}
-          {toggle(f.wholeBean, grind === "wholeBean", () => setGrind(grind === "wholeBean" ? null : "wholeBean"))}
-          {toggle(f.ground, grind === "ground", () => setGrind(grind === "ground" ? null : "ground"))}
-          {toggle(f.under50, under50, () => setUnder50(!under50))}
-          {activeBrand ? (
+          <div className="flex w-full flex-col gap-3">
             <button
               type="button"
-              onClick={() => setBrand(null)}
-              aria-label={copy.brandClear}
-              className={`${pill} ${pillOn} gap-2`}
+              aria-expanded={open}
+              aria-controls="shop-filters"
+              onClick={() => setOpen((v) => !v)}
+              className={`${pill} ${pillOff} gap-2 self-start lg:hidden`}
             >
-              {fill(copy.brandChip, { brand: activeBrand.name })}
-              <span aria-hidden="true">×</span>
+              {f.toggle}
+              {activeCount ? (
+                <span className="rounded-full bg-roast px-2 py-0.5 text-xs text-on-primary">{activeCount}</span>
+              ) : null}
+              <svg className={`transition-transform ${open ? "rotate-180" : ""}`} width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M3 4.5l3 3 3-3" />
+              </svg>
             </button>
-          ) : null}
+            <div id="shop-filters" className={`flex-wrap items-center gap-2 lg:flex ${open ? "flex" : "hidden"}`}>
+              {toggle(f.all, noFilters, reset, "filter-all")}
+              {toggle(f.light, roast === "light", () => setRoast(roast === "light" ? null : "light"), "filter-light")}
+              {toggle(f.medium, roast === "medium", () => setRoast(roast === "medium" ? null : "medium"))}
+              {toggle(f.dark, roast === "dark", () => setRoast(roast === "dark" ? null : "dark"))}
+              {toggle(f.wholeBean, grind === "wholeBean", () => setGrind(grind === "wholeBean" ? null : "wholeBean"))}
+              {toggle(f.ground, grind === "ground", () => setGrind(grind === "ground" ? null : "ground"))}
+              {toggle(f.under50, under50, () => setUnder50(!under50))}
+            </div>
+            {activeBrand ? (
+              <button
+                type="button"
+                onClick={() => setBrand(null)}
+                aria-label={copy.brandClear}
+                className={`${pill} ${pillOn} gap-2 self-start`}
+              >
+                {fill(copy.brandChip, { brand: activeBrand.name })}
+                <span aria-hidden="true">×</span>
+              </button>
+            ) : null}
+          </div>
         </FilterBar>
 
         {visible.length === 0 ? (

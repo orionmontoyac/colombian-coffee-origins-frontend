@@ -342,7 +342,7 @@ A page or section belongs to exactly one line. Green is the platform; brown alwa
 **What this system gives up, on purpose:**
 - **Dark mode.** The site is light only; the dark surfaces are deliberate banners and panels, not a theme.
 - **Shadows and depth effects.** Hierarchy comes from tone and the notched cut-outs, not elevation.
-- **Decoration.** No gradients beyond the banner's soft light streak, no glassmorphism, no stock icons in tinted squares. The only illustrations are hand-drawn sketches (coffee branch, moka pot) and the user's own coffee-bean pattern and icon.
+- **Decoration.** No gradients beyond the banner's soft light streak, no glassmorphism, no stock icons in tinted squares. The only illustrations are hand-drawn sketches (coffee branch, moka pot), the user's own coffee-bean pattern and icon, and the Colombia nature line icons (below).
 - **Density.** Big type, generous rounded panels and few items per row. This is a catalog people browse, not a trading terminal.
 
 Light theme only. Bilingual (English default, Spanish at `/es`). Source of truth for visuals is the Claude Design canvas: `Main`, `Lots`, `Lot`, `Producer`, `Shop` (`Mobile` is outdated).
@@ -488,7 +488,8 @@ Motion is restrained and purposeful: it shows arrival and continuity, never deco
 - **Don't** use neutral greys (#808080 family); use `muted`, `body` or `roast-body`.
 - **Don't** add a "Key facts" / answer-first box (summary sentence + facts table + "example data" note) to any page. The owner removed it on 2026-11-14; that content belongs only in `/md/*` and `llms.txt`.
 - **Don't** use stock photos from other countries or generic coffee imagery. Use real photos from Urrao or a labelled placeholder.
-- **Don't** add icons in tinted rounded squares. The only icons are line icons (globe, chevron, cart, heart) and the user's coffee-bean icon.
+- **Don't** add icons in tinted rounded squares. The only icons are line icons (globe, chevron, cart, heart), the user's coffee-bean icon and the Colombia nature icons.
+- **Do** use at most one Colombia nature icon per section, either as a **header mark** (`SectionHeader icon`, 32px, `success` on green / `roast` on brown) or a **corner mark** (`CornerMark`, 180px, thin stroke, low opacity, hidden below 640px, bottom corner when navigation sits top-right). **Don't** put them in buttons, cards or tinted squares, animate them beyond `Reveal`, or use them on shop pages (those keep the coffee-bean icon). Icons are mood, not facts: no icon that claims something untrue about a place (no volcano on Urrao).
 - **Do** name the producer, farm and town wherever a coffee appears.
 - **Do** format prices as `USD 18.50 / kg` (green) and `COP 68,000` in English or `$68.000` in Spanish (shop), always with price per kg in the shop.
 - **Do** mark roasted-coffee content with the CO pill (it ships inside Colombia only). **Don't** hide it by visitor country: since 2026-11-14 everyone sees the shop, and the cart states the Colombia-only shipping.
@@ -505,6 +506,7 @@ Motion is restrained and purposeful: it shows arrival and continuity, never deco
 | Moka pot sketch | Roasted-line card, "Not sure which to pick?" |
 | Coffee-bean pattern (`coffe-beans-pattern.svg`) | Story section (brown on parchment), shop banner and coffee club (caramel on dark roast) |
 | Coffee-bean icon (`coffe-bean.svg`) | Every single-bean icon: shop perks, brand circles, bag-label logo, roast meter |
+| Colombia nature icons (`src/components/ui/colombia-icons.tsx`, from Mteheran/colombia-icons, MIT) | Header and corner marks on green-line pages: ceiba, palma-de-cera, rio, selva-amazonica, mar-caribe, volcan, mariposa, jaguar, cascada, arbol-tropical, salto-del-tequendama, sierra-nevada, cocora-valle, colibri, planta-de-cafe |
 | Real photos (farmers, cherries, Urrao square) | Producer and lot content |
 
 ## Pages

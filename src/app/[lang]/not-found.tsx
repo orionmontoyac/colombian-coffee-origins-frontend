@@ -3,6 +3,7 @@ import Link from "next/link";
 import { lang as getLang } from "next/root-params";
 import { SiteFooter } from "@/components/home/sections";
 import { SiteHeader } from "@/components/home/site-header";
+import { ColombiaIcon, CornerMark } from "@/components/ui/colombia-icons";
 import { href, type RouteKey } from "@/lib/routes";
 import { getDictionary, hasLocale } from "./dictionaries";
 
@@ -23,6 +24,7 @@ export default async function NotFound() {
     <div className="min-h-screen p-page-margin">
       <section className="hero-banner relative overflow-hidden rounded-xl px-4 pb-12 pt-[84px] text-on-primary sm:px-8 lg:px-panel-padding lg:pb-16">
         <SiteHeader lang={lang} nav={dict.nav} />
+        <CornerMark name="jaguar" line="dark" corner="bottom" />
         <div className="relative mt-12 max-w-[760px]">
           <p aria-hidden="true" className="font-display text-[96px] font-semibold leading-[0.9] tracking-[-0.03em] text-accent sm:text-[160px]">
             {t.code}
@@ -44,7 +46,7 @@ export default async function NotFound() {
                 <span className="font-display text-headline-md text-primary">{l.title}</span>
                 <span className="text-body-md text-body">{l.text}</span>
                 <span className="mt-auto pt-2 font-label text-label-md text-primary">
-                  {t.open} <span aria-hidden="true">→</span>
+                  {t.open} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} className="inline align-[-3px]" />
                 </span>
               </Link>
             </li>

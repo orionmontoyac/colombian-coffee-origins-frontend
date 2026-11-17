@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import urraoSquare from "@/assets/home/urrao-main-square.jpg";
 import { SiteFooter } from "@/components/home/sections";
-import { Chip, CtaPanel, SectionHeader, SubpageBanner } from "@/components/ui";
+import { Chip, ColombiaIcon, CtaPanel, SectionHeader, SubpageBanner } from "@/components/ui";
 import { href } from "@/lib/routes";
 import cherries from "@/assets/home/lot-chiroso-cherries.jpg";
 
@@ -33,7 +33,7 @@ export function RegionsIndex({ lang, dict }: { lang: Locale; dict: Dictionary })
       />
       <main id="main">
         <section className="px-4 pb-2 pt-14">
-          <SectionHeader title={l.title} accent={l.accent} text={l.text} />
+          <SectionHeader icon="arbol-tropical" title={l.title} accent={l.accent} text={l.text} />
           <div className="mt-8 grid gap-6 lg:grid-cols-[1.2fr_1fr]">
             <article className="relative flex min-h-[420px] flex-col justify-end overflow-hidden rounded-notch bg-primary text-on-primary">
               <Image src={urraoSquare} alt={l.photoAlt} fill sizes="(min-width: 1024px) 55vw, 100vw" className="object-cover" />
@@ -48,7 +48,7 @@ export function RegionsIndex({ lang, dict }: { lang: Locale; dict: Dictionary })
                   href={href(lang, "urrao")}
                   className="mt-2 inline-flex min-h-[52px] items-center gap-2 self-start rounded-full bg-accent px-6 font-label text-label-md text-on-accent hover:bg-accent-hover"
                 >
-                  {l.explore} <span aria-hidden="true">→</span>
+                  {l.explore} <ColombiaIcon name="flecha-derecha" size={18} strokeWidth={2} />
                 </Link>
               </div>
             </article>

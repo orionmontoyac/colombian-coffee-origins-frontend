@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/ui/chip";
+import { ColombiaIcon } from "@/components/ui/colombia-icons";
 import { LotCard } from "@/components/ui/lot-card";
 import { SectionHeader } from "@/components/ui/section-header";
 import { lots as allLots, relatedLots, type Lot } from "@/data/lots";
@@ -164,7 +165,7 @@ export function ProducerBlock({ lang, dict, lot }: Props) {
             <Button href={producerHref(lang, producer.slug)} variant="on-dark" size="lg">
               {p.viewProfile}
               <span aria-hidden="true" className="flex size-7 items-center justify-center rounded-full bg-accent text-on-accent">
-                →
+                <ColombiaIcon name="flecha-derecha" size={16} strokeWidth={2} />
               </span>
             </Button>
           ) : (
@@ -272,7 +273,7 @@ export function MoreLots({ lang, dict, lot }: Props) {
             <Button href={href(lang, "coffees")} variant="on-dark" size="lg">
               {m.all}
               <span aria-hidden="true" className="flex size-7 items-center justify-center rounded-full bg-accent text-on-accent">
-                →
+                <ColombiaIcon name="flecha-derecha" size={16} strokeWidth={2} />
               </span>
             </Button>
           }

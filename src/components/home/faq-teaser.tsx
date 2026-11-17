@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
+import { ColombiaIcon } from "@/components/ui/colombia-icons";
 import { SectionHeader } from "@/components/ui/section-header";
 import { href } from "@/lib/routes";
 import type { FaqItem } from "./seo";
@@ -18,14 +19,14 @@ export function FaqTeaser({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   return (
     <section aria-labelledby="home-faq" className="grid gap-10 px-4 pb-2 pt-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
       <div className="flex flex-col items-start gap-7 lg:sticky lg:top-8 lg:self-start">
-        <SectionHeader size="xl" id="home-faq" eyebrow={t.eyebrow} title={t.title} accent={t.accent} text={t.text} />
+        <SectionHeader size="xl" icon="colibri" id="home-faq" eyebrow={t.eyebrow} title={t.title} accent={t.accent} text={t.text} />
         <Link
           href={href(lang, "forBuyers")}
           className="inline-flex min-h-14 items-center gap-3 rounded-full bg-green-900 px-7 py-4 font-label text-[17px] font-medium text-white hover:bg-green-700"
         >
           {t.cta}
-          <span aria-hidden="true" className="flex size-7 items-center justify-center rounded-full bg-lime-500 text-[15px] text-green-900">
-            →
+          <span aria-hidden="true" className="flex size-7 items-center justify-center rounded-full bg-lime-500 text-green-900">
+            <ColombiaIcon name="flecha-derecha" size={16} strokeWidth={2} />
           </span>
         </Link>
       </div>

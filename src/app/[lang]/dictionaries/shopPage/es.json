@@ -36,6 +36,7 @@
     "accent": "tu bolsa",
     "filtersLabel": "Filtrar y ordenar cafés",
     "filters": {
+      "toggle": "Filtros",
       "all": "Todos",
       "light": "Tostión clara",
       "medium": "Tostión media",
